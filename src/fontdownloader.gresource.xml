@@ -2,5 +2,7 @@
 <gresources>
   <gresource prefix="/org/gustavoperedo/FontDownloader">
     <file>window.ui</file>
+    <file>font-list-pane.ui</file>
+    <file>font-box.ui</file>
   </gresource>
 </gresources>

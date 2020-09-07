@@ -1,37 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.36.0 -->
 <interface>
-  <requires lib="gtk+" version="3.24"/>
-  <object class="GtkImage" id="image1">
-    <property name="visible">True</property>
+  <requires lib="gtk+" version="3.22"/>
+  <requires lib="libhandy" version="2.0"/>
+  <object class="GtkPopoverMenu" id="contact_sheet_menu">
     <property name="can_focus">False</property>
-    <property name="icon_name">edit-find-symbolic</property>
-  </object>
-  <template class="FontdownloaderWindow" parent="GtkApplicationWindow">
-    <property name="can_focus">False</property>
-    <property name="default_width">600</property>
-    <property name="default_height">300</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkSearchBar" id="searchBar">
-            <property name="visible">True</property>
+          <object class="GtkModelButton">
             <property name="can_focus">False</property>
-            <property name="search_mode_enabled">True</property>
-            <child>
-              <object class="GtkSearchEntry" id="searchEntry">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="caps_lock_warning">False</property>
-                <property name="primary_icon_name">edit-find-symbolic</property>
-                <property name="primary_icon_activatable">False</property>
-                <property name="primary_icon_sensitive">False</property>
-                <property name="placeholder_text" translatable="yes">Search for fonts...</property>
-              </object>
-            </child>
+            <property name="receives_default">False</property>
+            <property name="action_name">window.share-contact</property>
+            <property name="text" translatable="yes">Share</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -40,9 +24,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkListBox" id="list">
+          <object class="GtkModelButton">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="receives_default">False</property>
+            <property name="action_name">window.edit-contact</property>
+            <property name="text" translatable="yes">Edit</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -50,24 +37,405 @@
             <property name="position">1</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkModelButton" id="unlink_button">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="receives_default">False</property>
+            <property name="action_name">window.unlink-contact</property>
+            <property name="text" translatable="yes">Unlink</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="receives_default">False</property>
+            <property name="action_name">window.delete-contact</property>
+            <property name="text" translatable="yes">Delete</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+      </object>
+      <packing>
+        <property name="submenu">main</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+  </object>
+  <object class="GtkPopover" id="hamburger_menu_popover">
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkBox" id="hamburger_menu_box">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="action_name">app.about</property>
+            <property name="text" translatable="yes">About Font Downloader</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">9</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">edit-find-symbolic</property>
+  </object>
+  <template class="FontdownloaderWindow" parent="GtkApplicationWindow">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Contacts</property>
+    <property name="default_width">800</property>
+    <property name="default_height">600</property>
+    <property name="icon_name">gnome-contacts</property>
+    <signal name="delete-event" handler="delete_event_cb" object="FontdownloaderWindow" swapped="no"/>
+    <signal name="key-press-event" handler="key_press_event_cb" object="FontdownloaderWindow" after="yes" swapped="no"/>
+    <child>
+      <object class="GtkOverlay" id="notification_overlay">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="HdyLeaflet" id="content_box">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="can_swipe_back">True</property>
+            <signal name="notify::child-transition-running" handler="on_child_transition_running" object="FontdownloaderWindow" after="yes" swapped="no"/>
+            <signal name="notify::folded" handler="on_folded" object="FontdownloaderWindow" after="yes" swapped="no"/>
+            <child>
+              <object class="GtkStack" id="list_pane_stack">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="hexpand">False</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="name">TempName</property>
+                    <property name="width_request">300</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <property name="homogeneous">True</property>
+                    <child>
+                      <object class="GtkSpinner">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="valign">end</property>
+                        <property name="active">True</property>
+                        <style>
+                          <class name="contacts-watermark"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="valign">start</property>
+                        <property name="label" translatable="yes">Loading</property>
+                        <style>
+                          <class name="contacts-watermark"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="name">temName</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">list-pane</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparator">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <style>
+                  <class name="sidebar"/>
+                </style>
+              </object>
+              <packing>
+                <property name="navigatable">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkOverlay" id="contact_pane_container">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="hexpand">True</property>
+              </object>
+              <packing>
+                <property name="name">contact-pane</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="index">-1</property>
+          </packing>
+        </child>
       </object>
     </child>
     <child type="titlebar">
-      <object class="GtkHeaderBar" id="header_bar">
+      <object class="HdyTitleBar" id="titlebar">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="title">Font Downloader</property>
-        <property name="has_subtitle">False</property>
-        <property name="show_close_button">True</property>
         <child>
-          <object class="GtkButton" id="searchButton">
+          <object class="HdyLeaflet" id="header">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="image">image1</property>
+            <property name="can_focus">False</property>
+            <property name="transition_type" bind-source="content_box" bind-property="transition-type" bind-flags="bidirectional|sync-create">over</property>
+            <property name="mode_transition_duration" bind-source="content_box" bind-property="mode-transition-duration" bind-flags="bidirectional|sync-create">0</property>
+            <property name="child_transition_duration" bind-source="content_box" bind-property="child-transition-duration" bind-flags="bidirectional|sync-create">0</property>
+            <child>
+              <object class="GtkHeaderBar" id="left_header">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="hexpand">False</property>
+                <property name="title" translatable="yes">Font Downloader</property>
+                <property name="show_close_button">True</property>
+                <child>
+                  <object class="GtkToggleButton">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image1</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkMenuButton" id="hamburger_menu_button">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="focus_on_click">False</property>
+                    <property name="receives_default">False</property>
+                    <property name="popover">hamburger_menu_popover</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="icon_name">open-menu-symbolic</property>
+                      </object>
+                    </child>
+                    <accelerator key="F10" signal="clicked"/>
+                  </object>
+                  <packing>
+                    <property name="pack_type">end</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="select_cancel_button">
+                    <property name="label" translatable="yes">Cancel</property>
+                    <property name="can_focus">True</property>
+                    <property name="focus_on_click">False</property>
+                    <property name="receives_default">False</property>
+                    <property name="tooltip_text" translatable="yes">Cancel selection</property>
+                  </object>
+                  <packing>
+                    <property name="pack_type">end</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">list-pane</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparator" id="header_separator">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <style>
+                  <class name="sidebar"/>
+                </style>
+              </object>
+              <packing>
+                <property name="navigatable">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHeaderBar" id="right_header">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="hexpand">True</property>
+                <property name="show_close_button">True</property>
+                <child>
+                  <object class="GtkRevealer" id="back_revealer">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="transition_type">slide-right</property>
+                    <property name="transition_duration" bind-source="content_box" bind-property="mode-transition-duration" bind-flags="bidirectional|sync-create">0</property>
+                    <child>
+                      <object class="GtkButton" id="back">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="receives_default">False</property>
+                        <property name="valign">center</property>
+                        <property name="use_underline">True</property>
+                        <signal name="clicked" handler="on_back_clicked" swapped="no"/>
+                        <child>
+                          <object class="GtkImage" id="back_image">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="icon_name">go-previous-symbolic</property>
+                            <property name="icon_size">1</property>
+                          </object>
+                        </child>
+                        <style>
+                          <class name="image-button"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="cancel_button">
+                    <property name="label" translatable="yes">Cancel</property>
+                    <property name="width_request">70</property>
+                    <property name="can_focus">True</property>
+                    <property name="focus_on_click">False</property>
+                    <property name="receives_default">False</property>
+                    <property name="valign">center</property>
+                    <signal name="notify::visible" handler="on_cancel_visible" object="FontdownloaderWindow" after="yes" swapped="no"/>
+                    <style>
+                      <class name="text-button"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkMenuButton" id="contact_menu_button">
+                    <property name="can_focus">True</property>
+                    <property name="focus_on_click">False</property>
+                    <property name="receives_default">False</property>
+                    <property name="popover">contact_sheet_menu</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="icon_name">view-more-symbolic</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="pack_type">end</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkToggleButton" id="favorite_button">
+                    <property name="can_focus">True</property>
+                    <property name="focus_on_click">False</property>
+                    <property name="receives_default">False</property>
+                    <property name="valign">center</property>
+                    <signal name="toggled" handler="on_favorite_button_toggled" swapped="no"/>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="icon_name">starred-symbolic</property>
+                        <property name="icon_size">1</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="pack_type">end</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="done_button">
+                    <property name="label" translatable="yes">Done</property>
+                    <property name="width_request">70</property>
+                    <property name="can_focus">True</property>
+                    <property name="focus_on_click">False</property>
+                    <property name="receives_default">False</property>
+                    <property name="valign">center</property>
+                    <style>
+                      <class name="text-button"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="pack_type">end</property>
+                    <property name="position">4</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">contact-pane</property>
+              </packing>
+            </child>
           </object>
         </child>
       </object>
     </child>
   </template>
+  <object class="HdyHeaderGroup">
+    <property name="decorate_all" bind-source="content_box" bind-property="folded" bind-flags="sync-create">False</property>
+    <headerbars>
+      <headerbar name="left_header"/>
+      <headerbar name="right_header"/>
+    </headerbars>
+  </object>
+  <object class="GtkSizeGroup" id="left_pane_size_group">
+    <widgets>
+      <widget name="left_header"/>
+      <widget name="list_pane_stack"/>
+    </widgets>
+  </object>
+  <object class="GtkSizeGroup" id="right_pane_size_group">
+    <widgets>
+      <widget name="right_header"/>
+      <widget name="contact_pane_container"/>
+    </widgets>
+  </object>
+  <object class="HdySwipeGroup" id="swipe_group">
+    <swipeables>
+      <swipeable name="header"/>
+      <swipeable name="content_box"/>
+    </swipeables>
+  </object>
 </interface>
