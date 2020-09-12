@@ -196,12 +196,9 @@
                   <class name="sidebar"/>
                 </style>
               </object>
-              <packing>
-                <property name="navigatable">False</property>
-              </packing>
             </child>
             <child>
-              <object class="GtkOverlay" id="contact_pane_container">
+              <object class="GtkOverlay" id="fontpreview_pane">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="hexpand">True</property>
@@ -290,9 +287,6 @@
                   <class name="sidebar"/>
                 </style>
               </object>
-              <packing>
-                <property name="navigatable">False</property>
-              </packing>
             </child>
             <child>
               <object class="GtkHeaderBar" id="right_header">
@@ -414,7 +408,6 @@
     </child>
   </template>
   <object class="HdyHeaderGroup">
-    <property name="decorate_all" bind-source="content_box" bind-property="folded" bind-flags="sync-create">False</property>
     <headerbars>
       <headerbar name="left_header"/>
       <headerbar name="right_header"/>
@@ -429,7 +422,7 @@
   <object class="GtkSizeGroup" id="right_pane_size_group">
     <widgets>
       <widget name="right_header"/>
-      <widget name="contact_pane_container"/>
+      <widget name="fontpreview_pane"/>
     </widgets>
   </object>
   <object class="HdySwipeGroup" id="swipe_group">

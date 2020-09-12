@@ -11,13 +11,19 @@
       <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="margin_left">8</property>
         <property name="orientation">vertical</property>
         <property name="homogeneous">True</property>
         <child>
-          <object class="GtkLabel" id="fontName">
+          <object class="GtkLabel" id="fontFamily">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="halign">start</property>
             <property name="label" translatable="yes">hold</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+              <attribute name="size" value="16384"/>
+            </attributes>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -26,10 +32,15 @@
           </packing>
         </child>
         <child>
-          <object class="GtkLabel" id="descriptionName">
+          <object class="GtkLabel" id="fontCategory">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="halign">start</property>
             <property name="label" translatable="yes">hold</property>
+            <attributes>
+              <attribute name="style" value="oblique"/>
+              <attribute name="foreground" value="#88888a8a8585"/>
+            </attributes>
           </object>
           <packing>
             <property name="expand">False</property>

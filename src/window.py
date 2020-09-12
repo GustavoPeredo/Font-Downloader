@@ -15,18 +15,30 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, Handy, GObject
+from gi.repository import Gtk, Handy, GObject, WebKit2
+import json
+
+WebKit2.WebView()
+
+"Update webfonts.json"
+
+from urllib.request import urlretrieve
+urlretrieve('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyA2dEVFiF8o1q8JnSGCsq1reUAbzZR6z0I', 'webfonts.json')
+webfontsData = json.load(open("webfonts.json", 'r'))
+
+
 
 @Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/font-box.ui')
 class FontBox(Gtk.Frame):
     __gtype_name__ = 'FontBox'
 
-    fontName = Gtk.Template.Child()
-    descriptionName = Gtk.Template.Child()
+    fontFamily = Gtk.Template.Child()
+    fontCategory = Gtk.Template.Child()
 
-    def __init__(self, text, **kwargs):
+    def __init__(self, familyName, category, **kwargs):
         super().__init__(**kwargs)
-        self.fontName.set_text(text)
+        self.fontFamily.set_text(familyName)
+        self.fontCategory.set_text(category)
 
 @Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/font-list-pane.ui')
 class FontListPane(Gtk.Frame):
@@ -36,13 +48,23 @@ class FontListPane(Gtk.Frame):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        for i in range(10):
-            self.newBox = FontBox(str(i))
+
+        for i in range(25):
+            self.newBox = FontBox(webfontsData['items'][i]['family'],webfontsData['items'][i]['category'])
             self.newBox.set_visible(True)
             self.fontsListBox.add(self.newBox)
 
         self.fontsListBox.show()
 
+@Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/fontpreview.ui')
+class FontPreviewPane(Gtk.Frame):
+    __gtype_name__ = 'FontPreviewPane'
+
+    fontPreview = Gtk.Template.Child()
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.fontPreview.show()
 
 GObject.type_ensure(Handy.TitleBar)
 @Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/window.ui')
@@ -50,11 +72,13 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'FontdownloaderWindow'
 
     list_pane_stack = Gtk.Template.Child()
+    fontpreview_pane = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
         self.FontsList = FontListPane()
+        self.FontPreview = FontPreviewPane()
 
         self.FontsList.set_visible(True)
 
@@ -62,9 +86,11 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
 
         self.list_pane_stack.set_visible_child_name('Font List Pane')
 
-        print(self.list_pane_stack.get_visible_child_name())
-
         self.list_pane_stack.show()
+
+        self.fontpreview_pane.add(self.FontPreview)
+
+        self.fontpreview_pane.show()
 
 
 

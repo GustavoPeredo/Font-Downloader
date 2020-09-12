@@ -3,6 +3,7 @@
 <interface>
   <requires lib="gtk+" version="3.22"/>
   <requires lib="libhandy" version="2.0"/>
+  <requires lib="webkit2gtk" version="2.12"/>
   <object class="GtkPopoverMenu" id="contact_sheet_menu">
     <property name="can_focus">False</property>
     <child>
@@ -196,15 +197,14 @@
                   <class name="sidebar"/>
                 </style>
               </object>
-              <packing>
-                <property name="navigatable">False</property>
-              </packing>
             </child>
             <child>
-              <object class="GtkOverlay" id="contact_pane_container">
+              <object class="WebKitWebView" type-func="webkit_web_view_get_type">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="hexpand">True</property>
+                <property name="can_focus">True</property>
+                <child>
+                  <placeholder/>
+                </child>
               </object>
               <packing>
                 <property name="name">contact-pane</property>
@@ -233,7 +233,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="hexpand">False</property>
-                <property name="title" translatable="yes">Contacts</property>
+                <property name="title" translatable="yes">Font Downloader</property>
                 <property name="show_close_button">True</property>
                 <child>
                   <object class="GtkToggleButton">
@@ -290,9 +290,6 @@
                   <class name="sidebar"/>
                 </style>
               </object>
-              <packing>
-                <property name="navigatable">False</property>
-              </packing>
             </child>
             <child>
               <object class="GtkHeaderBar" id="right_header">
@@ -414,7 +411,6 @@
     </child>
   </template>
   <object class="HdyHeaderGroup">
-    <property name="decorate_all" bind-source="content_box" bind-property="folded" bind-flags="sync-create">False</property>
     <headerbars>
       <headerbar name="left_header"/>
       <headerbar name="right_header"/>
@@ -426,16 +422,11 @@
       <widget name="list_pane_stack"/>
     </widgets>
   </object>
-  <object class="GtkSizeGroup" id="right_pane_size_group">
-    <widgets>
-      <widget name="right_header"/>
-      <widget name="contact_pane_container"/>
-    </widgets>
-  </object>
   <object class="HdySwipeGroup" id="swipe_group">
     <swipeables>
       <swipeable name="header"/>
       <swipeable name="content_box"/>
     </swipeables>
   </object>
+  <object class="GtkSizeGroup" id="right_pane_size_group"/>
 </interface>
