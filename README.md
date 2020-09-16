@@ -1,3 +1,51 @@
-# A Simple GTK application to dowload fonts
+# A Simple GTK application to install and download fonts.
 
-It searches for fonts in Google Fonts and downloads/installs them in your computer. Still WIP.
+## About
+
+One day I was bored of my terminal font and wanted to switch, unfortunately going through the entire porcess of searching Google Fonts for a font, then downloading, then copying and pasting it into my .fonts folder to only then test a font was a pain. So I decided to create this app!
+
+## Screenshots
+
+![](https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/entire.png)
+![](https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/compact.png)
+![](https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/dark_entire.png)
+![](https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/dark_compact.png)
+
+## How to compile
+
+If you use GNOME Builder, simply cloning the project is enough, otherwise you need to install libhandy as a dependency.
+
+Dependencies in Fedora:
+```
+sudo dnf install cmake meson ninja 
+sudo dnf install libhandy1-dev
+```
+
+
+Then build using meson:
+
+```
+git clone https://github.com/GustavoPeredo/font-downloader.git
+cd font-downloader
+mkdir build
+meson build .
+cd build
+ninja
+ninja install
+```
+
+To run it from terminal:
+```
+fontdownloader
+```
+
+## To-Dos
+
+* Learn how po works
+* Do some translations
+* See if it is ready for flatpak
+* Add GtkFileChooser dialog for user to choose where to download fonts to
+* Create settings panel (default installation directory and dark mode)
+* Create about window
+* Add new filters (depending on language, will probably require a redesign of the app)
+* Optimize code
