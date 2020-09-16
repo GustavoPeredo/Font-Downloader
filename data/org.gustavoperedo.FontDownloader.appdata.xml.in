@@ -14,5 +14,19 @@
   <releases>
     <release version="1.0.0" date="2020-09-16"/>
   </releases>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/entire.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/entire_dark.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/compact.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/compact_dark.png</image>
+    </screenshot>
+  </screenshots>
   <content_rating type="oars-1.1"/>
 </component>
