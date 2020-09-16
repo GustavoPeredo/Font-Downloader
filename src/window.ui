@@ -3,19 +3,19 @@
 <interface>
   <requires lib="gtk+" version="3.22"/>
   <requires lib="libhandy" version="2.0"/>
-  <object class="GtkPopoverMenu" id="contact_sheet_menu">
+  <object class="GtkPopover" id="hamburger_menu_popover">
     <property name="can_focus">False</property>
     <child>
-      <object class="GtkBox">
+      <object class="GtkBox" id="hamburger_menu_box">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkModelButton">
+          <object class="GtkLabel">
+            <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="receives_default">False</property>
-            <property name="action_name">window.share-contact</property>
-            <property name="text" translatable="yes">Share</property>
+            <property name="halign">start</property>
+            <property name="label" translatable="yes">  Font type: </property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -24,12 +24,101 @@
           </packing>
         </child>
         <child>
-          <object class="GtkModelButton">
+          <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="receives_default">False</property>
-            <property name="action_name">window.edit-contact</property>
-            <property name="text" translatable="yes">Edit</property>
+            <property name="margin_start">8</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkCheckButton" id="all_check">
+                <property name="label" translatable="yes">All</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="serif_check">
+                <property name="label" translatable="yes">Serif</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="sans_check">
+                <property name="label" translatable="yes">Sans Serif</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="display_check">
+                <property name="label" translatable="yes">Display</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="handwriting_check">
+                <property name="label" translatable="yes">Handwriting</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="mono_check">
+                <property name="label" translatable="yes">Monospace</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">5</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -37,59 +126,6 @@
             <property name="position">1</property>
           </packing>
         </child>
-        <child>
-          <object class="GtkModelButton" id="unlink_button">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="receives_default">False</property>
-            <property name="action_name">window.unlink-contact</property>
-            <property name="text" translatable="yes">Unlink</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkSeparator">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">3</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkModelButton">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="receives_default">False</property>
-            <property name="action_name">window.delete-contact</property>
-            <property name="text" translatable="yes">Delete</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">4</property>
-          </packing>
-        </child>
-      </object>
-      <packing>
-        <property name="submenu">main</property>
-        <property name="position">1</property>
-      </packing>
-    </child>
-  </object>
-  <object class="GtkPopover" id="hamburger_menu_popover">
-    <property name="can_focus">False</property>
-    <child>
-      <object class="GtkBox" id="hamburger_menu_box">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
         <child>
           <object class="GtkModelButton">
             <property name="visible">True</property>
@@ -122,9 +158,14 @@
     <property name="can_focus">False</property>
     <property name="icon_name">document-save-symbolic</property>
   </object>
+  <object class="GtkImage" id="image4">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">document-save-symbolic</property>
+  </object>
   <template class="FontdownloaderWindow" parent="GtkApplicationWindow">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Contacts</property>
+    <property name="title" translatable="yes">Font Downloader</property>
     <property name="default_width">800</property>
     <property name="default_height">600</property>
     <property name="icon_name">gnome-contacts</property>
@@ -275,19 +316,6 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton" id="select_cancel_button">
-                    <property name="label" translatable="yes">Cancel</property>
-                    <property name="can_focus">True</property>
-                    <property name="focus_on_click">False</property>
-                    <property name="receives_default">False</property>
-                    <property name="tooltip_text" translatable="yes">Cancel selection</property>
-                  </object>
-                  <packing>
-                    <property name="pack_type">end</property>
-                    <property name="position">2</property>
-                  </packing>
-                </child>
-                <child>
                   <object class="GtkButton" id="back_button">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
@@ -311,7 +339,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton" id="compact_download_button">
+                  <object class="GtkButton" id="compact_install_button">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -323,6 +351,18 @@
                   <packing>
                     <property name="pack_type">end</property>
                     <property name="position">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="compact_download_button">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image4</property>
+                  </object>
+                  <packing>
+                    <property name="pack_type">end</property>
+                    <property name="position">5</property>
                   </packing>
                 </child>
               </object>
@@ -358,24 +398,6 @@
                       <class name="text-button"/>
                     </style>
                   </object>
-                  <packing>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkMenuButton" id="contact_menu_button">
-                    <property name="can_focus">True</property>
-                    <property name="focus_on_click">False</property>
-                    <property name="receives_default">False</property>
-                    <property name="popover">contact_sheet_menu</property>
-                    <child>
-                      <placeholder/>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="pack_type">end</property>
-                    <property name="position">1</property>
-                  </packing>
                 </child>
                 <child>
                   <object class="GtkButton" id="done_button">
@@ -391,12 +413,12 @@
                   </object>
                   <packing>
                     <property name="pack_type">end</property>
-                    <property name="position">2</property>
+                    <property name="position">1</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton" id="main_download_button">
-                    <property name="label" translatable="yes"> Download</property>
+                  <object class="GtkButton" id="main_install_button">
+                    <property name="label" translatable="yes">  Install</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -408,12 +430,24 @@
                   </object>
                   <packing>
                     <property name="pack_type">end</property>
-                    <property name="position">10</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="main_download_button">
+                    <property name="label" translatable="yes">Download</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="pack_type">end</property>
+                    <property name="position">3</property>
                   </packing>
                 </child>
               </object>
               <packing>
-                <property name="name">contact-pane</property>
+                <property name="name">preview-header-pane</property>
               </packing>
             </child>
           </object>

@@ -40,6 +40,7 @@ class FontBox(Gtk.Frame):
 
     def __init__(self, familyName, category, **kwargs):
         super().__init__(**kwargs)
+        self.data = [familyName, category]
         self.fontFamily.set_text(familyName)
         self.fontCategory.set_text(category)
 
@@ -49,12 +50,14 @@ class FontListPane(Gtk.Frame):
 
     fontsListBox = Gtk.Template.Child()
     searchBar = Gtk.Template.Child()
+    searchEntry = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
         for i in range(len(webfontsData['items'])):
             self.newBox = FontBox(webfontsData['items'][i]['family'],webfontsData['items'][i]['category'])
+
             self.newBox.set_visible(True)
             self.fontsListBox.add(self.newBox)
         self.fontsListBox.select_row(self.fontsListBox.get_row_at_index(0))
@@ -83,7 +86,15 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
     back_button = Gtk.Template.Child()
     main_download_button = Gtk.Template.Child()
     compact_download_button = Gtk.Template.Child()
+    main_install_button = Gtk.Template.Child()
+    compact_install_button = Gtk.Template.Child()
     search_button = Gtk.Template.Child()
+    all_check = Gtk.Template.Child()
+    serif_check = Gtk.Template.Child()
+    sans_check = Gtk.Template.Child()
+    display_check = Gtk.Template.Child()
+    handwriting_check = Gtk.Template.Child()
+    mono_check = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -91,6 +102,13 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
         self.CurrentText = 'The quick brown fox jumps over the lazy dog.'
         self.CurrentStatus = 'LONG'
         self.CurrentWidth = 0
+        self.CurrentFilters = {
+            'serif': self.serif_check.get_active(),
+            'sans-serif': self.sans_check.get_active(),
+            'display': self.display_check.get_active(),
+            'handwriting': self.handwriting_check.get_active(),
+            'monospace': self.mono_check.get_active()
+        }
 
         self.FontsList = FontListPane()
         self.FontPreview = FontPreviewPane()
@@ -115,16 +133,27 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
         self.back_button.connect('clicked', self.bringListFoward)
         self.main_download_button.connect('clicked', self.downloadFont)
         self.compact_download_button.connect('clicked', self.downloadFont)
+        self.main_install_button.connect('clicked', self.installFont)
+        self.compact_install_button.connect('clicked', self.installFont)
         self.search_button.connect('toggled', self.toggleSearch)
+        self.all_check.connect('toggled', self.checkAllFilters)
+        self.serif_check.connect('toggled', self.updateFilter)
+        self.sans_check.connect('toggled', self.updateFilter)
+        self.display_check.connect('toggled', self.updateFilter)
+        self.handwriting_check.connect('toggled', self.updateFilter)
+        self.mono_check.connect('toggled', self.updateFilter)
+
+        self.FontsList.searchEntry.connect('changed', self.updateFilter)
 
         self.fontpreview_pane.show()
         self.list_pane_stack.show()
         self.back_button.hide()
         self.compact_download_button.hide()
+        self.compact_install_button.hide()
 
         self.fontChanged(self, 1)
 
-    def downloadFont(self, *args, **kwargs):
+    def installFont(self, *args, **kwargs):
         links = webfontsData['items'][self.FontsList.fontsListBox.get_selected_row().get_index()]['files']
         absolutePath = path.join(path.expanduser('~'), '.fonts')
         if not path.exists(absolutePath):
@@ -132,6 +161,39 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
         for key in links:
            urlretrieve(links[key], path.join(absolutePath, self.CurrentSelectedFont + " " + key + links[key][-4:]))
 
+    def downloadFont(self, *args, **kwargs):
+        links = webfontsData['items'][self.FontsList.fontsListBox.get_selected_row().get_index()]['files']
+        absolutePath = path.join(path.expanduser('~'), 'Downloads')
+        if not path.exists(absolutePath):
+            makedirs(absolutePath)
+        for key in links:
+           urlretrieve(links[key], path.join(absolutePath, self.CurrentSelectedFont + " " + key + links[key][-4:]))
+
+
+    def checkAllFilters(self, *args, **kwargs):
+        isAll = self.all_check.get_active()
+        self.serif_check.set_active(isAll)
+        self.sans_check.set_active(isAll)
+        self.display_check.set_active(isAll)
+        self.handwriting_check.set_active(isAll)
+        self.mono_check.set_active(isAll)
+        updateFilter()
+
+    def updateFilter(self, *args, **kwargs):
+        self.FontsList.fontsListBox.set_filter_func(self.filterFonts, None, True)
+
+    def filterFonts(self, row, data, notifyDestroy):
+        self.CurrentFilters = {
+            'serif': self.serif_check.get_active(),
+            'sans-serif': self.sans_check.get_active(),
+            'display': self.display_check.get_active(),
+            'handwriting': self.handwriting_check.get_active(),
+            'monospace': self.mono_check.get_active()
+        }
+
+        filtered = [filters for filters in self.CurrentFilters if self.CurrentFilters[filters]]
+        searchBarText = self.FontsList.searchEntry.get_text().lower()
+        return ((searchBarText == row.get_child().data[0][:len(searchBarText)].lower()) and (row.get_child().data[1] in filtered))
 
     def fontChanged(self, widget, which, *args, **kwargs):
         self.CurrentSelectedFont = ((self.FontsList.fontsListBox.get_selected_row()).get_child()).fontFamily.get_text()
@@ -174,11 +236,15 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
 
         if self.CurrentStatus == 'COMPACT':
             self.compact_download_button.show()
+            self.compact_install_button.show()
             self.list_pane_stack.set_transition_type(Gtk.StackTransitionType.OVER_LEFT)
             self.list_pane_stack.set_visible_child_name('Font Preview Pane')
             self.back_button.show()
+            self.search_button.hide()
         else:
+            self.search_button.show()
             self.compact_download_button.hide()
+            self.compact_install_button.hide()
 
     def toggleSearch(self, *args, **kwargs):
         self.FontsList.searchBar.set_search_mode(not self.FontsList.searchBar.get_search_mode())
@@ -187,7 +253,9 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
         self.list_pane_stack.set_transition_type(Gtk.StackTransitionType.UNDER_RIGHT)
         self.list_pane_stack.set_visible_child_name('Font List Pane')
         self.back_button.hide()
+        self.search_button.show()
         self.compact_download_button.hide()
+        self.compact_install_button.hide()
 
     def switchLayouts(self, *args, **kwargs):
         self.CurrentWidth = self.get_size()[0]
@@ -196,12 +264,16 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
             self.list_pane_stack.set_visible_child_name('Font Preview Pane')
             self.back_button.show()
             self.compact_download_button.show()
+            self.compact_install_button.show()
+            self.search_button.hide()
             self.CurrentStatus = 'COMPACT'
         elif (self.CurrentWidth > 434) and (self.CurrentStatus == 'COMPACT'):
             self.list_pane_stack.set_transition_type(Gtk.StackTransitionType.UNDER_RIGHT)
             self.list_pane_stack.set_visible_child_name('Font List Pane')
             self.back_button.hide()
             self.compact_download_button.hide()
+            self.compact_install_button.hide()
+            self.search_button.show()
             self.CurrentStatus = 'LONG'
 
 
