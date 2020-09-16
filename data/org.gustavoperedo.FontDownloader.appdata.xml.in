@@ -19,13 +19,13 @@
       <image type="source">https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/entire.png</image>
     </screenshot>
     <screenshot>
-      <image type="source">https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/entire_dark.png</image>
+      <image type="source">https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/dark_entire.png</image>
     </screenshot>
     <screenshot>
       <image type="source">https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/compact.png</image>
     </screenshot>
     <screenshot>
-      <image type="source">https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/compact_dark.png</image>
+      <image type="source">https://raw.githubusercontent.com/GustavoPeredo/font-downloader/master/data/screenshots/dark_compact.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1"/>
