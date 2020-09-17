@@ -1,3 +1,8 @@
+iconsdir = get_option('datadir') / 'icons' / 'hicolor'
+foreach size: ['scalable', 'symbolic']
+  install_subdir('icons/hicolor/' + size, install_dir: iconsdir)
+endforeach
+
 desktop_file = i18n.merge_file(
   input: 'org.gustavoperedo.FontDownloader.desktop.in',
   output: 'org.gustavoperedo.FontDownloader.desktop',
@@ -17,9 +22,10 @@ endif
 appstream_file = i18n.merge_file(
   input: 'org.gustavoperedo.FontDownloader.appdata.xml.in',
   output: 'org.gustavoperedo.FontDownloader.appdata.xml',
+  type: 'xml',
   po_dir: '../po',
   install: true,
-  install_dir: join_paths(get_option('datadir'), 'appdata')
+  install_dir: join_paths(get_option('datadir'), 'metainfo')
 )
 
 appstream_util = find_program('appstream-util', required: false)

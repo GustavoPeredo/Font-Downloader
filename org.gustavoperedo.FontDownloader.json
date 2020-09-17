@@ -51,7 +51,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "file:///home/gustavo/Projects/FontDownloader"
+                    "url" : "https://github.com/GustavoPeredo/font-downloader.git"
                 }
             ]
         }
