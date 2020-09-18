@@ -2,7 +2,7 @@
 
 ## About
 
-One day I was bored of my terminal font and wanted to switch, unfortunately going through the entire porcess of searching Google Fonts for a font, then downloading, then copying and pasting it into my .fonts folder to only then test a font was a pain. So I decided to create this app!
+One day I was bored of my terminal font and wanted to switch, unfortunately going through the entire process of searching Google Fonts for a font, then downloading, then copying and pasting it into my .fonts folder to only then test a font was a pain. So I decided to create this app!
 
 ## Screenshots
 
@@ -47,5 +47,7 @@ fontdownloader
 * Add GtkFileChooser dialog for user to choose where to download fonts to
 * Create settings panel (default installation directory and dark mode)
 * Create about window
-* Add new filters (depending on language, will probably require a redesign of the app)
+* Visual feedback for when fonts are done installing/downloading
+* Show a little check for when a font is already installed
+* Add new filters (depending on alphabet, will probably require a redesign of the app)
 * Optimize code
