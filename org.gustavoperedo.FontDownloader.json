@@ -52,7 +52,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/GustavoPeredo/font-downloader.git",
-                    "branch" : "v1"
+                    "branch" : "release"
                 }
             ]
         }
