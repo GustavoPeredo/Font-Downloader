@@ -47,5 +47,7 @@ fontdownloader
 * Add GtkFileChooser dialog for user to choose where to download fonts to
 * Create settings panel (default installation directory and dark mode)
 * Create about window
+* Visual feedback for when fonts are done installing/downloading
+* Show a little check for when a font is already installed
 * Add new filters (depending on language, will probably require a redesign of the app)
 * Optimize code
