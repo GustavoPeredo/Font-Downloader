@@ -10,7 +10,8 @@
         "--device=dri",
         "--socket=fallback-x11",
         "--socket=wayland",
-        "--filesystem=home"
+        "--filesystem=~/.local/share/fonts",
+        "--filesystem=~/Downloads"
     ],
     "cleanup" : [
         "/include",
