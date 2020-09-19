@@ -155,7 +155,7 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
 
     def installFont(self, *args, **kwargs):
         links = webfontsData['items'][self.FontsList.fontsListBox.get_selected_row().get_index()]['files']
-        absolutePath = path.join(path.expanduser('~'), '.fonts')
+        absolutePath = path.join(path.expanduser('~'), '.local/share/.fonts')
         if not path.exists(absolutePath):
             makedirs(absolutePath)
         for key in links:
