@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, Handy, GObject, WebKit2
+from gi.repository import Gtk, Handy, GLib, GObject, WebKit2
 from os import path, makedirs
 import json
 
@@ -163,7 +163,7 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
 
     def downloadFont(self, *args, **kwargs):
         links = webfontsData['items'][self.FontsList.fontsListBox.get_selected_row().get_index()]['files']
-        absolutePath = path.join(path.expanduser('~'), 'Downloads')
+        absolutePath = GLib.get_user_special_dir(GLib.USER_DIRECTORY_DOWNLOAD)
         if not path.exists(absolutePath):
             makedirs(absolutePath)
         for key in links:
@@ -259,21 +259,29 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
 
     def switchLayouts(self, *args, **kwargs):
         self.CurrentWidth = self.get_size()[0]
-        if (self.CurrentWidth <= 434) and (self.CurrentStatus == 'LONG'):
+        if (self.CurrentWidth <= 635) and (self.CurrentStatus == 'LONG'):
+            self.FontPreview2.show()
             self.list_pane_stack.set_transition_type(Gtk.StackTransitionType.OVER_LEFT)
             self.list_pane_stack.set_visible_child_name('Font Preview Pane')
             self.back_button.show()
+            self.main_download_button.hide()
+            self.main_install_button.hide()
             self.compact_download_button.show()
             self.compact_install_button.show()
             self.search_button.hide()
+            self.FontPreview.hide()
             self.CurrentStatus = 'COMPACT'
-        elif (self.CurrentWidth > 434) and (self.CurrentStatus == 'COMPACT'):
+        elif (self.CurrentWidth > 635) and (self.CurrentStatus == 'COMPACT'):
             self.list_pane_stack.set_transition_type(Gtk.StackTransitionType.UNDER_RIGHT)
             self.list_pane_stack.set_visible_child_name('Font List Pane')
             self.back_button.hide()
             self.compact_download_button.hide()
             self.compact_install_button.hide()
+            self.main_download_button.show()
+            self.main_install_button.show()
             self.search_button.show()
+            self.FontPreview.show()
+            self.FontPreview2.hide()
             self.CurrentStatus = 'LONG'
 
 
