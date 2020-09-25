@@ -21,11 +21,6 @@
               <attribute name="weight" value="bold" />
             </attributes>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">0</property>
-          </packing>
         </child>
         <child>
           <object class="GtkBox">
@@ -41,11 +36,6 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="serif_check">
@@ -56,11 +46,6 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="sans_check">
@@ -71,11 +56,6 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
-              </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="display_check">
@@ -86,11 +66,6 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">3</property>
-              </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="handwriting_check">
@@ -101,11 +76,6 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">4</property>
-              </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="mono_check">
@@ -116,18 +86,8 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">5</property>
-              </packing>
             </child>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">1</property>
-          </packing>
         </child>
         <child>
           <object class="GtkSeparator">
@@ -144,11 +104,6 @@
             <property name="action_name">app.about</property>
             <property name="text" translatable="yes">About Font Downloader</property>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">9</property>
-          </packing>
         </child>
       </object>
     </child>
