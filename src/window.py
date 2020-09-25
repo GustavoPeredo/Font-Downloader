@@ -31,7 +31,7 @@ webfontsData = json.load(open("webfonts.json", 'r'))
 
 
 @Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/font-box.ui')
-class FontBox(Gtk.Frame):
+class FontBox(Gtk.Box):
     __gtype_name__ = 'FontBox'
 
     fontFamily = Gtk.Template.Child()
