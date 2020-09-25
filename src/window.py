@@ -226,6 +226,7 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
 	        <style>
 	        body {
 	            overflow-wrap: break-word;
+	            background-color: white;
 	            font-family: '""" + self.CurrentSelectedFont + """';
 	        }
 	        @media(prefers-color-scheme: dark) {
