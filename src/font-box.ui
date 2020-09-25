@@ -13,6 +13,7 @@
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <property name="homogeneous">True</property>
+        <property name="margin">6</property>
         <child>
           <object class="GtkLabel" id="fontFamily">
             <property name="visible">True</property>
