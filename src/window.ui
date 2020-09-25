@@ -246,6 +246,7 @@
               <object class="GtkSeparator">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
                 <style>
                   <class name="sidebar"/>
                 </style>
@@ -374,6 +375,7 @@
               <object class="GtkSeparator" id="header_separator">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
                 <style>
                   <class name="sidebar"/>
                 </style>
