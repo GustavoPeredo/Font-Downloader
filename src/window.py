@@ -20,6 +20,7 @@ from gi.repository import Gdk, Gio, Gtk, Handy, GObject, WebKit2
 from os import path, makedirs
 import json
 
+Handy.init()
 WebKit2.WebView()
 
 "Update webfonts.json"
@@ -75,9 +76,6 @@ class FontPreviewPane(Gtk.Frame):
         self.html = ''
         super().__init__(**kwargs)
 
-
-
-GObject.type_ensure(Handy.TitleBar)
 @Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/window.ui')
 class FontdownloaderWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'FontdownloaderWindow'
