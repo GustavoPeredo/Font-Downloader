@@ -9,25 +9,23 @@
       <object class="GtkBox" id="hamburger_menu_box">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="margin">12</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="label" translatable="yes">  Font type: </property>
+            <property name="halign">center</property>
+            <property name="label" translatable="yes">Font type</property>
+            <attributes>
+              <attribute name="weight" value="bold" />
+            </attributes>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">0</property>
-          </packing>
         </child>
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="margin_start">8</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkCheckButton" id="all_check">
@@ -38,11 +36,6 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="serif_check">
@@ -53,11 +46,6 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="sans_check">
@@ -68,11 +56,6 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
-              </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="display_check">
@@ -83,11 +66,6 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">3</property>
-              </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="handwriting_check">
@@ -98,11 +76,6 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">4</property>
-              </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="mono_check">
@@ -113,32 +86,24 @@
                 <property name="active">True</property>
                 <property name="draw_indicator">True</property>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">5</property>
-              </packing>
             </child>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">1</property>
-          </packing>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="visible">True</property>
+            <property name="margin-top">6</property>
+            <property name="margin-bottom">6</property>
+          </object>
         </child>
         <child>
           <object class="GtkModelButton">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
-            <property name="action_name">app.about</property>
+            <property name="action_name">win.about</property>
             <property name="text" translatable="yes">About Font Downloader</property>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">9</property>
-          </packing>
         </child>
       </object>
     </child>
@@ -246,6 +211,7 @@
               <object class="GtkSeparator">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
                 <style>
                   <class name="sidebar"/>
                 </style>
@@ -374,6 +340,7 @@
               <object class="GtkSeparator" id="header_separator">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
                 <style>
                   <class name="sidebar"/>
                 </style>
