@@ -3,6 +3,7 @@
 <interface>
   <requires lib="gtk+" version="3.22"/>
   <requires lib="libhandy" version="2.0"/>
+  <requires lib="webkit2gtk" version="2.12"/>
   <object class="GtkPopover" id="hamburger_menu_popover">
     <property name="can_focus">False</property>
     <child>
@@ -142,11 +143,10 @@
           </packing>
         </child>
         <child>
-          <object class="GtkModelButton">
+          <object class="GtkModelButton" id="about_button">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
-            <property name="action_name">win.about</property>
             <property name="text" translatable="yes">About Font Downloader</property>
           </object>
           <packing>
@@ -166,143 +166,43 @@
   <object class="GtkImage" id="image2">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="icon_name">document-save-symbolic</property>
+    <property name="icon_name">go-previous-symbolic</property>
   </object>
   <object class="GtkImage" id="image3">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="icon_name">document-save-symbolic</property>
   </object>
-  <object class="GtkImage" id="image4">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="icon_name">document-save-symbolic</property>
-  </object>
-  <template class="FontdownloaderWindow" parent="GtkApplicationWindow">
+  <template class="FontdownloaderWindow" parent="HdyWindow">
+    <property name="name">FontdownloaderWindow</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Font Downloader</property>
     <property name="default_width">800</property>
     <property name="default_height">600</property>
-    <property name="icon_name">gnome-contacts</property>
-    <signal name="delete-event" handler="delete_event_cb" object="FontdownloaderWindow" swapped="no"/>
-    <signal name="key-press-event" handler="key_press_event_cb" object="FontdownloaderWindow" after="yes" swapped="no"/>
+    <property name="icon_name">org.gustavoperedo.FontDownloader</property>
     <child>
-      <object class="GtkOverlay" id="notification_overlay">
+      <object class="HdyLeaflet" id="leaflet">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="visible_child">box1</property>
+        <property name="transition_type">under</property>
+        <property name="mode_transition_duration">400</property>
+        <property name="child_transition_duration">350</property>
+        <property name="can_swipe_back">True</property>
+        <property name="can_swipe_forward">True</property>
         <child>
-          <object class="HdyLeaflet" id="content_box">
+          <object class="GtkBox" id="box1">
+            <property name="width_request">280</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="can_swipe_back">True</property>
-            <signal name="notify::child-transition-running" handler="on_child_transition_running" object="FontdownloaderWindow" after="yes" swapped="no"/>
-            <signal name="notify::folded" handler="on_folded" object="FontdownloaderWindow" after="yes" swapped="no"/>
+            <property name="hexpand">False</property>
+            <property name="orientation">vertical</property>
             <child>
-              <object class="GtkStack" id="list_pane_stack">
+              <object class="HdyHeaderBar" id="headerbar1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="hexpand">False</property>
-                <property name="transition_duration">300</property>
-                <property name="transition_type">over-left</property>
-                <child>
-                  <object class="GtkBox">
-                    <property name="name">TempName</property>
-                    <property name="width_request">300</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="orientation">vertical</property>
-                    <property name="homogeneous">True</property>
-                    <child>
-                      <object class="GtkSpinner">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="halign">center</property>
-                        <property name="valign">end</property>
-                        <property name="active">True</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="label1">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="halign">center</property>
-                        <property name="valign">start</property>
-                        <property name="label" translatable="yes">Loading</property>
-                        <style>
-                          <class name="contacts-watermark"/>
-                        </style>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">2</property>
-                      </packing>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="name">temName</property>
-                  </packing>
-                </child>
-              </object>
-              <packing>
-                <property name="name">list-pane</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkSeparator">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="orientation">vertical</property>
-                <style>
-                  <class name="sidebar"/>
-                </style>
-              </object>
-            </child>
-            <child>
-              <object class="GtkOverlay" id="fontpreview_pane">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="hexpand">True</property>
-              </object>
-            </child>
-          </object>
-          <packing>
-            <property name="index">-1</property>
-          </packing>
-        </child>
-      </object>
-    </child>
-    <child type="titlebar">
-      <object class="HdyTitleBar" id="titlebar">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <child>
-          <object class="HdyLeaflet" id="header">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="transition_type" bind-source="content_box" bind-property="transition-type" bind-flags="bidirectional|sync-create">over</property>
-            <property name="mode_transition_duration" bind-source="content_box" bind-property="mode-transition-duration" bind-flags="bidirectional|sync-create">0</property>
-            <property name="child_transition_duration" bind-source="content_box" bind-property="child-transition-duration" bind-flags="bidirectional|sync-create">0</property>
-            <child>
-              <object class="GtkHeaderBar" id="left_header">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="hexpand">False</property>
                 <property name="title" translatable="yes">Font Downloader</property>
                 <property name="show_close_button">True</property>
-                <child>
-                  <object class="GtkToggleButton" id="search_button">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="image">image1</property>
-                  </object>
-                </child>
                 <child>
                   <object class="GtkMenuButton" id="hamburger_menu_button">
                     <property name="visible">True</property>
@@ -321,76 +221,105 @@
                   </object>
                   <packing>
                     <property name="pack_type">end</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkToggleButton" id="search_button">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image1</property>
+                  </object>
+                  <packing>
                     <property name="position">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkButton" id="back_button">
-                    <property name="can_focus">False</property>
-                    <property name="receives_default">False</property>
-                    <property name="valign">center</property>
-                    <property name="use_underline">True</property>
-                    <child>
-                      <object class="GtkImage" id="back_image">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="icon_name">go-previous-symbolic</property>
-                        <property name="icon_size">1</property>
-                      </object>
-                    </child>
-                    <style>
-                      <class name="image-button"/>
-                    </style>
-                  </object>
-                  <packing>
-                    <property name="position">3</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkButton" id="compact_install_button">
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="image">image2</property>
-                    <style>
-                      <class name="suggested-action"/>
-                    </style>
-                  </object>
-                  <packing>
-                    <property name="pack_type">end</property>
-                    <property name="position">4</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkButton" id="compact_download_button">
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="image">image4</property>
-                  </object>
-                  <packing>
-                    <property name="pack_type">end</property>
-                    <property name="position">5</property>
                   </packing>
                 </child>
               </object>
               <packing>
-                <property name="name">list-pane</property>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
               </packing>
             </child>
             <child>
-              <object class="GtkSeparator" id="header_separator">
+              <object class="GtkBox">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="vexpand">True</property>
                 <property name="orientation">vertical</property>
-                <style>
-                  <class name="sidebar"/>
-                </style>
+                <child>
+                  <object class="HdySearchBar" id="search_bar">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkSearchEntry" id="search_entry">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="primary_icon_name">edit-find-symbolic</property>
+                        <property name="primary_icon_activatable">False</property>
+                        <property name="primary_icon_sensitive">False</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkScrolledWindow">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <child>
+                      <object class="GtkViewport">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="shadow_type">none</property>
+                        <child>
+                          <object class="GtkListBox" id="fonts_list">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
               </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
             </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+          </object>
+          <packing>
+            <property name="navigatable">False</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="box2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="hexpand">True</property>
+            <property name="orientation">vertical</property>
             <child>
-              <object class="GtkHeaderBar" id="right_header">
+              <object class="HdyHeaderBar" id="headerbar2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="hexpand">True</property>
                 <property name="show_close_button">True</property>
                 <child>
                   <object class="GtkButton" id="main_install_button">
@@ -406,7 +335,6 @@
                   </object>
                   <packing>
                     <property name="pack_type">end</property>
-                    <property name="position">2</property>
                   </packing>
                 </child>
                 <child>
@@ -418,12 +346,63 @@
                   </object>
                   <packing>
                     <property name="pack_type">end</property>
-                    <property name="position">3</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="back_button">
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image2</property>
+                  </object>
+                  <packing>
+                    <property name="position">2</property>
                   </packing>
                 </child>
               </object>
               <packing>
-                <property name="name">preview-header-pane</property>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="WebKitWebView" type-func="webkit_web_view_get_type" id="font_preview">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="text_entry">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="placeholder_text" translatable="yes">Type here your text...</property>
+                    <property name="show_emoji_icon">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
               </packing>
             </child>
           </object>
@@ -433,26 +412,8 @@
   </template>
   <object class="HdyHeaderGroup">
     <headerbars>
-      <headerbar name="left_header"/>
-      <headerbar name="right_header"/>
+      <headerbar name="headerbar1"/>
+      <headerbar name="headerbar2"/>
     </headerbars>
-  </object>
-  <object class="GtkSizeGroup" id="left_pane_size_group">
-    <widgets>
-      <widget name="left_header"/>
-      <widget name="list_pane_stack"/>
-    </widgets>
-  </object>
-  <object class="GtkSizeGroup" id="right_pane_size_group">
-    <widgets>
-      <widget name="right_header"/>
-      <widget name="fontpreview_pane"/>
-    </widgets>
-  </object>
-  <object class="HdySwipeGroup" id="swipe_group">
-    <swipeables>
-      <swipeable name="header"/>
-      <swipeable name="content_box"/>
-    </swipeables>
   </object>
 </interface>
