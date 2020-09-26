@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-	<id>org.gustavoperedo.FontDownloader.desktop</id>
+	<id>org.gustavoperedo.FontDownloader</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
   <name>Font Downloader</name>
