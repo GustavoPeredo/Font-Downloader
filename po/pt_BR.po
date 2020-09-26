@@ -1,70 +1,61 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-26 18:41-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../src/fontpreview.ui:37
-msgid "Type in here a custom text..."
-msgstr ""
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Font Downloader\n"
+"Language: pt-br\n"
 
 #: ../src/window.py:140 ../src/window.ui:179 ../src/window.ui:204
 msgid "Font Downloader"
-msgstr ""
+msgstr "Descarregador de Fontes"
+
+#: ../src/fontpreview.ui:37
+msgid "Type in here a custom text..."
+msgstr "Digite aqui um texto..."
 
 #: ../src/window.ui:19
 msgid "Font type"
-msgstr ""
+msgstr "Tipo da fonte"
 
 #: ../src/window.ui:37
 msgid "All"
-msgstr ""
+msgstr "Todas"
 
 #: ../src/window.ui:52
 msgid "Serif"
-msgstr ""
+msgstr "Serifada"
 
 #: ../src/window.ui:67
 msgid "Sans Serif"
-msgstr ""
+msgstr "Não serifada"
 
 #: ../src/window.ui:82
 msgid "Display"
-msgstr ""
+msgstr "Exibição"
 
 #: ../src/window.ui:97
 msgid "Handwriting"
-msgstr ""
+msgstr "Manuscrita"
 
 #: ../src/window.ui:112
 msgid "Monospace"
-msgstr ""
+msgstr "Mono-espaçada"
 
 #: ../src/window.ui:150
 msgid "About Font Downloader"
-msgstr ""
+msgstr "Sobre o Descarregado de Fontes"
 
 #: ../src/window.ui:326
 msgid "  Install"
-msgstr ""
+msgstr "  Instalar"
 
 #: ../src/window.ui:342
 msgid "Download"
-msgstr ""
+msgstr "Descarregar"
 
 #: ../src/window.ui:392
 msgid "Type here your text..."
-msgstr ""
+msgstr "Digite aqui um texto..."
+
