@@ -15,7 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, Handy, GObject, WebKit2
+from gettext import gettext as _
+from gi.repository import Gdk, Gio, Gtk, Handy, GObject, WebKit2
 from os import path, makedirs
 import json
 
@@ -31,7 +32,7 @@ webfontsData = json.load(open("webfonts.json", 'r'))
 
 
 @Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/font-box.ui')
-class FontBox(Gtk.Frame):
+class FontBox(Gtk.Box):
     __gtype_name__ = 'FontBox'
 
     fontFamily = Gtk.Template.Child()
@@ -153,6 +154,39 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
 
         self.fontChanged(self, 1)
 
+        self.setup_css();
+
+        action = Gio.SimpleAction.new("about", None)
+        action.connect("activate", self.on_about)
+        self.add_action(action)
+
+    def on_about(self, action, param):
+        authors = ['GustavoPeredo']
+
+        dialog = Gtk.AboutDialog(transient_for=self, modal=True)
+        dialog.props.authors = authors
+        dialog.props.copyright = 'Copyright \xa9 2020 GustavoPeredo'
+        dialog.props.license_type = Gtk.License.GPL_3_0
+        dialog.props.logo_icon_name = 'org.gustavoperedo.FontDownloader'
+        dialog.props.program_name = _('Font Downloader')
+
+        dialog.present()
+
+
+    def setup_css(self):
+        """Setup the CSS and load it."""
+        uri = 'resource:///org/gustavoperedo/FontDownloader/style.css'
+        provider_file = Gio.File.new_for_uri(uri)
+
+        provider = Gtk.CssProvider()
+        provider.load_from_file(provider_file)
+
+        Gtk.StyleContext.add_provider_for_screen(
+            Gdk.Screen.get_default(),
+            provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_USER
+        )
+
     def installFont(self, *args, **kwargs):
         links = webfontsData['items'][self.FontsList.fontsListBox.get_selected_row().get_index()]['files']
         absolutePath = path.join(path.expanduser('~'), '.local/share/fonts')
@@ -210,7 +244,7 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
 	        <style>
 	        body {
 	            overflow-wrap: break-word;
-	            background-color: #F6F5F4;
+	            background-color: white;
 	            font-family: '""" + self.CurrentSelectedFont + """';
 	        }
 	        @media(prefers-color-scheme: dark) {

@@ -48,6 +48,9 @@
                   <object class="GtkListBox" id="fontsListBox">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <style>
+                      <class name="sidebar"/>
+                    </style>
                   </object>
                 </child>
               </object>

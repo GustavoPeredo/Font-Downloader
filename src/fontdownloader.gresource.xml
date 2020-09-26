@@ -5,6 +5,7 @@
     <file>font-list-pane.ui</file>
     <file>font-box.ui</file>
     <file>fontpreview.ui</file>
+    <file>style.css</file>
     <file>webfonts.json</file>
   </gresource>
 </gresources>
