@@ -94,6 +94,8 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
     display_check = Gtk.Template.Child()
     handwriting_check = Gtk.Template.Child()
     mono_check = Gtk.Template.Child()
+    right_header = Gtk.Template.Child()
+    left_header = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -128,7 +130,6 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
         self.FontsList.fontsListBox.connect('row-activated', self.fontChanged)
         self.FontPreview.fontPreviewText.connect('changed', self.fontChanged, 1)
         self.FontPreview2.fontPreviewText.connect('changed', self.fontChanged, 2)
-        self.connect('check-resize', self.switchLayouts)
         self.back_button.connect('clicked', self.bringListFoward)
         self.main_download_button.connect('clicked', self.downloadFont)
         self.compact_download_button.connect('clicked', self.downloadFont)
@@ -266,10 +267,9 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
         self.FontPreview.fontPreviewWebview.load_html(self.FontPreview.html)
         self.FontPreview2.fontPreviewWebview.load_html(self.FontPreview.html)
 
-        if self.CurrentStatus == 'COMPACT':
+        if (self.get_size()[0] <= 434):
             self.compact_download_button.show()
             self.compact_install_button.show()
-            self.list_pane_stack.set_transition_type(Gtk.StackTransitionType.OVER_LEFT)
             self.list_pane_stack.set_visible_child_name('Font Preview Pane')
             self.back_button.show()
             self.search_button.hide()
@@ -284,29 +284,11 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
     def bringListFoward(self, *args, **kwargs):
         self.list_pane_stack.set_transition_type(Gtk.StackTransitionType.UNDER_RIGHT)
         self.list_pane_stack.set_visible_child_name('Font List Pane')
+        self.list_pane_stack.set_transition_type(Gtk.StackTransitionType.OVER_LEFT)
         self.back_button.hide()
         self.search_button.show()
         self.compact_download_button.hide()
         self.compact_install_button.hide()
-
-    def switchLayouts(self, *args, **kwargs):
-        self.CurrentWidth = self.get_size()[0]
-        if (self.CurrentWidth <= 434) and (self.CurrentStatus == 'LONG'):
-            self.list_pane_stack.set_transition_type(Gtk.StackTransitionType.OVER_LEFT)
-            self.list_pane_stack.set_visible_child_name('Font Preview Pane')
-            self.back_button.show()
-            self.compact_download_button.show()
-            self.compact_install_button.show()
-            self.search_button.hide()
-            self.CurrentStatus = 'COMPACT'
-        elif (self.CurrentWidth > 434) and (self.CurrentStatus == 'COMPACT'):
-            self.list_pane_stack.set_transition_type(Gtk.StackTransitionType.UNDER_RIGHT)
-            self.list_pane_stack.set_visible_child_name('Font List Pane')
-            self.back_button.hide()
-            self.compact_download_button.hide()
-            self.compact_install_button.hide()
-            self.search_button.show()
-            self.CurrentStatus = 'LONG'
 
 
 

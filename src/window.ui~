@@ -14,8 +14,11 @@
           <object class="GtkLabel">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="label" translatable="yes">  Font type: </property>
+            <property name="halign">center</property>
+            <property name="label" translatable="yes">Font type</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+            </attributes>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -27,7 +30,6 @@
           <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="margin_start">8</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkCheckButton" id="all_check">
@@ -127,17 +129,30 @@
           </packing>
         </child>
         <child>
+          <object class="GtkSeparator">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_top">6</property>
+            <property name="margin_bottom">6</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
           <object class="GtkModelButton">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">False</property>
-            <property name="action_name">app.about</property>
+            <property name="action_name">win.about</property>
             <property name="text" translatable="yes">About Font Downloader</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">9</property>
+            <property name="position">3</property>
           </packing>
         </child>
       </object>
@@ -169,7 +184,6 @@
     <property name="default_width">800</property>
     <property name="default_height">600</property>
     <property name="icon_name">gnome-contacts</property>
-    <signal name="check-resize" handler="on_FontdownloaderWindow_check_resize" swapped="no"/>
     <signal name="delete-event" handler="delete_event_cb" object="FontdownloaderWindow" swapped="no"/>
     <signal name="key-press-event" handler="key_press_event_cb" object="FontdownloaderWindow" after="yes" swapped="no"/>
     <child>
@@ -205,9 +219,6 @@
                         <property name="halign">center</property>
                         <property name="valign">end</property>
                         <property name="active">True</property>
-                        <style>
-                          <class name="contacts-watermark"/>
-                        </style>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -246,6 +257,7 @@
               <object class="GtkSeparator">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
                 <style>
                   <class name="sidebar"/>
                 </style>
@@ -258,7 +270,7 @@
                 <property name="hexpand">True</property>
               </object>
               <packing>
-                <property name="name">contact-pane</property>
+                <property name="name">fontpreview</property>
               </packing>
             </child>
           </object>
@@ -317,7 +329,6 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="back_button">
-                    <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="receives_default">False</property>
                     <property name="valign">center</property>
@@ -340,7 +351,6 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="compact_install_button">
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="image">image2</property>
@@ -355,7 +365,6 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="compact_download_button">
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="image">image4</property>
@@ -374,6 +383,7 @@
               <object class="GtkSeparator" id="header_separator">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
                 <style>
                   <class name="sidebar"/>
                 </style>
@@ -385,37 +395,6 @@
                 <property name="can_focus">False</property>
                 <property name="hexpand">True</property>
                 <property name="show_close_button">True</property>
-                <child>
-                  <object class="GtkButton" id="cancel_button">
-                    <property name="label" translatable="yes">Cancel</property>
-                    <property name="width_request">70</property>
-                    <property name="can_focus">True</property>
-                    <property name="focus_on_click">False</property>
-                    <property name="receives_default">False</property>
-                    <property name="valign">center</property>
-                    <signal name="notify::visible" handler="on_cancel_visible" object="FontdownloaderWindow" after="yes" swapped="no"/>
-                    <style>
-                      <class name="text-button"/>
-                    </style>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="done_button">
-                    <property name="label" translatable="yes">Done</property>
-                    <property name="width_request">70</property>
-                    <property name="can_focus">True</property>
-                    <property name="focus_on_click">False</property>
-                    <property name="receives_default">False</property>
-                    <property name="valign">center</property>
-                    <style>
-                      <class name="text-button"/>
-                    </style>
-                  </object>
-                  <packing>
-                    <property name="pack_type">end</property>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
                 <child>
                   <object class="GtkButton" id="main_install_button">
                     <property name="label" translatable="yes">  Install</property>
