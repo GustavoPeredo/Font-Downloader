@@ -159,11 +159,11 @@ class FontdownloaderWindow(Gtk.ApplicationWindow):
         self.add_action(action)
 
     def on_about(self, action, param):
-        authors = ['GustavoPeredo']
+        authors = ['Gustavo Peredo']
 
         dialog = Gtk.AboutDialog(transient_for=self, modal=True)
         dialog.props.authors = authors
-        dialog.props.copyright = 'Copyright \xa9 2020 GustavoPeredo'
+        dialog.props.copyright = 'Copyright \xa9 2020 Gustavo Peredo'
         dialog.props.license_type = Gtk.License.GPL_3_0
         dialog.props.logo_icon_name = 'org.gustavoperedo.FontDownloader'
         dialog.props.program_name = _('Font Downloader')
