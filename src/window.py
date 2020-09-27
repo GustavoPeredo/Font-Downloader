@@ -252,12 +252,12 @@ class FontdownloaderWindow(Handy.Window):
 
         #If the screen is too small, change to font preview pane and show
         #the return button, otherwise, do the opposite
-        if self.get_size()[0] < 542:
+        if self.leaflet.get_folded():
             self.back_button.show()
+            self.main_download_button.set_label('')
             self.leaflet.set_visible_child(self.box2)
         else:
-            self.back_button.hide()
-            self.leaflet.set_visible_child(self.box1)
+            self.bringListForward()
 
     #Turns search on or off
     def toggleSearch(self, *args, **kwargs):
@@ -266,4 +266,5 @@ class FontdownloaderWindow(Handy.Window):
     #If the user press back_button, return focus to list view
     def bringListForward(self, *args, **kwargs):
         self.leaflet.set_visible_child(self.box1)
+        self.main_download_button.set_label(_('Download'))
         self.back_button.hide()

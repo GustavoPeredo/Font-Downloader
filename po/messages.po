@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-27 08:49-0300\n"
+"POT-Creation-Date: 2020-09-27 14:25-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:3
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:179
-#: src/window.ui:204 src/window.py:140
+#: src/window.ui:203 src/window.py:140
 msgid "Font Downloader"
 msgstr ""
 
@@ -77,14 +77,14 @@ msgstr ""
 msgid "About Font Downloader"
 msgstr ""
 
-#: src/window.ui:326
-msgid "  Install"
+#: src/window.ui:328
+msgid "Install"
 msgstr ""
 
-#: src/window.ui:342
+#: src/window.ui:343 src/window.py:269
 msgid "Download"
 msgstr ""
 
-#: src/window.ui:392
+#: src/window.ui:395
 msgid "Type here your text..."
 msgstr ""

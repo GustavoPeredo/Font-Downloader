@@ -189,7 +189,6 @@
         <property name="mode_transition_duration">400</property>
         <property name="child_transition_duration">350</property>
         <property name="can_swipe_back">True</property>
-        <property name="can_swipe_forward">True</property>
         <child>
           <object class="GtkBox" id="box1">
             <property name="width_request">280</property>
@@ -299,6 +298,9 @@
               </packing>
             </child>
           </object>
+          <packing>
+            <property name="name">box1</property>
+          </packing>
         </child>
         <child>
           <object class="GtkSeparator">
@@ -323,11 +325,10 @@
                 <property name="show_close_button">True</property>
                 <child>
                   <object class="GtkButton" id="main_install_button">
-                    <property name="label" translatable="yes">  Install</property>
+                    <property name="label" translatable="yes">Install</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
-                    <property name="image">image3</property>
                     <property name="always_show_image">True</property>
                     <style>
                       <class name="suggested-action"/>
@@ -343,6 +344,8 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
+                    <property name="image">image3</property>
+                    <property name="always_show_image">True</property>
                   </object>
                   <packing>
                     <property name="pack_type">end</property>
@@ -406,6 +409,9 @@
               </packing>
             </child>
           </object>
+          <packing>
+            <property name="name">box2</property>
+          </packing>
         </child>
       </object>
     </child>
