@@ -25,7 +25,6 @@ from urllib.request import urlretrieve
 #Init Webkit and Handy libs
 Handy.init()
 WebKit2.WebView()
-
 #Try to update webfonts, otherwise pass
 try:
     urlretrieve('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyA2dEVFiF8o1q8JnSGCsq1reUAbzZR6z0I', 'webfonts.json')
@@ -268,3 +267,4 @@ class FontdownloaderWindow(Handy.Window):
         self.leaflet.set_visible_child(self.box1)
         self.main_download_button.set_label(_('Download'))
         self.back_button.hide()
+        print(_('Download'))
