@@ -16,15 +16,19 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #Import nescessary libraries and modules
-from gettext import gettext as _
+#from gettext import gettext as _
 from gi.repository import Gdk, Gio, Gtk, Handy, GObject, WebKit2
 from os import path, makedirs
+import locale
 import json
 from urllib.request import urlretrieve
 
 #Init Webkit and Handy libs
 Handy.init()
 WebKit2.WebView()
+
+locale.bindtextdomain('fontdownloader', path.join(path.dirname(__file__).split('fontdownloader')[0],'locale'))
+locale.textdomain('fontdownloader')
 #Try to update webfonts, otherwise pass
 try:
     urlretrieve('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyA2dEVFiF8o1q8JnSGCsq1reUAbzZR6z0I', 'webfonts.json')

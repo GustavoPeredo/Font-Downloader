@@ -79,5 +79,5 @@ msgstr "Gustavo Peredo"
 
 #: src/window.ui:328
 msgid "Install"
-msgstr "Install"
+msgstr "Instalar"
 

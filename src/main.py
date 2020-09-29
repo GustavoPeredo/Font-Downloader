@@ -17,7 +17,6 @@
 
 import sys
 import gi
-import gettext
 
 gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
