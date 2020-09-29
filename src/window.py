@@ -271,4 +271,3 @@ class FontdownloaderWindow(Handy.Window):
         self.leaflet.set_visible_child(self.box1)
         self.main_download_button.set_label(_('Download'))
         self.back_button.hide()
-        print(_('Download'))
