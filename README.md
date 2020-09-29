@@ -46,7 +46,7 @@ They are here and need your help! I translated the app for languages that I've h
 ## To-Dos
 
 * ~~Learn how po works~~
-* ~Do some translations~~
+* ~~Do some translations~~
 * ~~See if it is ready for flatpak~~
 * Add GtkFileChooser dialog for user to choose where to download fonts to
 * Create settings panel (default installation directory and dark mode)
