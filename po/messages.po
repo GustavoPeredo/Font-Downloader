@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-28 13:58-0300\n"
+"POT-Creation-Date: 2020-09-30 08:03-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +19,7 @@ msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:3
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:179
-#: src/window.ui:203 src/window.py:139
+#: src/window.ui:203 src/window.py:144
 msgid "Font Downloader"
 msgstr ""
 
@@ -80,10 +81,14 @@ msgstr ""
 msgid "Install"
 msgstr ""
 
-#: src/window.ui:343 src/window.py:268 src/window.py:270
+#: src/window.ui:343 src/window.py:273
 msgid "Download"
 msgstr ""
 
 #: src/window.ui:395
 msgid "Type here your text..."
+msgstr ""
+
+#: src/window.py:140
+msgid "Translators"
 msgstr ""
