@@ -6,6 +6,9 @@ project('fontdownloader',
 )
 
 i18n = import('i18n')
+prefix = get_option('prefix')
+
+localedir = join_paths(prefix, get_option('localedir'))
 
 dependency('libhandy-1', version: '>= 0.90.0')
 
