@@ -23,7 +23,12 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="2.0" date="2020-09-30">
+    <release version="2.0.1" date="2020-10-01">
+      <description>
+        <p>Fixes Spanish translation</p>
+      </description>
+    </release>
+    <release version="2.0.0" date="2020-09-30">
       <description>
         <p>This release brings major improvements:</p>
         <ul>
