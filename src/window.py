@@ -110,7 +110,7 @@ class FontdownloaderWindow(Handy.Window):
 
         #Connect buttons, clicks, key presses to their functions
         self.fonts_list.connect('row-activated', self.fontChanged)
-        self.search_entry.connect('changed', self.fontChanged)
+        self.text_entry.connect('changed', self.fontChanged)
         self.back_button.connect('clicked', self.bringListForward)
         self.main_download_button.connect('clicked', self.downloadFont)
         self.main_install_button.connect('clicked', self.installFont)
