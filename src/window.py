@@ -137,7 +137,7 @@ class FontdownloaderWindow(Handy.Window):
         translators = ['Gustavo Machado Peredo', 'Victor Ibragimov']
         dialog = Gtk.AboutDialog(transient_for=self, modal=True)
         dialog.props.authors = authors
-        dialog.add_credit_section("Translators", translators)
+        dialog.add_credit_section(_("Translators"), translators)
         dialog.props.copyright = 'Copyright \xa9 2020 Gustavo Peredo'
         dialog.props.license_type = Gtk.License.GPL_3_0
         dialog.props.logo_icon_name = 'org.gustavoperedo.FontDownloader'
