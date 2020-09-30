@@ -23,6 +23,18 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="2.0" date="2020-09-30">
+      <description>
+        <p>This release brings major improvements:</p>
+        <ul>
+          <li>Better resource usage</li>
+          <li>Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to Ibragimov for ru and tg translations)</li>
+          <li>Added credits dialog!</li>
+          <li>New, prettier icon!</li>
+          <li>You can now swipe back to fonts catalog with you trackpad or screen!</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.0" date="2020-09-16"/>
   </releases>
   <url type="homepage">https://github.com/GustavoPeredo/font-downloader</url>
