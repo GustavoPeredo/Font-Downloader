@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Font Downloader\n"
 "Language: ru\n"
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:2
+#: data/org.gustavoperedo.FontDownloader.desktop.in:3
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
 #: src/window.ui:298 src/window.py:223
 msgid "Font Downloader"
@@ -61,7 +61,7 @@ msgstr "Загрузить"
 msgid "Type here your text..."
 msgstr "Введите свой текст здесь..."
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:6
+#: data/org.gustavoperedo.FontDownloader.desktop.in:7
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
 msgstr "Простой загрузчик шрифта на основе GTK напрямую устанавливает шрифты с сайта Google Fonts."
 
@@ -88,198 +88,198 @@ msgstr "Переводчики"
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:6
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:7
 msgid "Dark mode"
-msgstr ""
+msgstr "Тёмная тема"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:12
 msgid "Any alphabet"
-msgstr ""
+msgstr "Все алфавиты"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Default installation directory"
-msgstr ""
+msgstr "Каталог установки по умолчанию"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:21
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:22
 msgid "Which alphabets aren't filtered"
-msgstr ""
+msgstr "Неотфильтрованные алфавиты"
 
 #: src/window.ui:231 src/window.ui:556
 msgid "Settings"
-msgstr ""
+msgstr "Параметры"
 
 #: src/window.ui:559
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: src/window.ui:605
 msgid "<b> Alphabets </b>"
-msgstr ""
+msgstr "<b> Алфавиты </b>"
 
 #: src/window.ui:616
 msgid "Any"
-msgstr ""
+msgstr "Все"
 
 #: src/window.ui:652
 msgid "Arabic"
-msgstr ""
+msgstr "Арабский"
 
 #: src/window.ui:666
 msgid "Bengali"
-msgstr ""
+msgstr "Бенгальский"
 
 #: src/window.ui:679
 msgid "Chinese \n"
 "Hong Kong"
-msgstr ""
+msgstr "Китайский (Гонконг)"
 
 #: src/window.ui:693
 msgid "Chinese\n"
 "Simplified"
-msgstr ""
+msgstr "Китайский (Упрощённый)"
 
 #: src/window.ui:707
 msgid "Chinese\n"
 "Traditional"
-msgstr ""
+msgstr "Китайский (Традиционный)"
 
 #: src/window.ui:721
 msgid "Cyrillic"
-msgstr ""
+msgstr "Кириллица"
 
 #: src/window.ui:734
 msgid "Cyrillic\n"
 "Extended"
-msgstr ""
+msgstr "Кириллица (Расширенная)"
 
 #: src/window.ui:748
 msgid "Kannada"
-msgstr ""
+msgstr "Каннада"
 
 #: src/window.ui:762
 msgid "Khmer"
-msgstr ""
+msgstr "Кхмерский"
 
 #: src/window.ui:775
 msgid "Korean"
-msgstr ""
+msgstr "Корейский"
 
 #: src/window.ui:788
 msgid "Latin"
-msgstr ""
+msgstr "Латинский"
 
 #: src/window.ui:801
 msgid "Latin\n"
 "Extended"
-msgstr ""
+msgstr "Латинский (Расширенная)"
 
 #: src/window.ui:815
 msgid "Malayalam"
-msgstr ""
+msgstr "Малаялам"
 
 #: src/window.ui:828
 msgid "Myanmar"
-msgstr ""
+msgstr "Мьянма"
 
 #: src/window.ui:841
 msgid "Oriya"
-msgstr ""
+msgstr "Ория"
 
 #: src/window.ui:855
 msgid "Sinhala"
-msgstr ""
+msgstr "Сингальский"
 
 #: src/window.ui:868
 msgid "Tamil"
-msgstr ""
+msgstr "Тамильский"
 
 #: src/window.ui:881
 msgid "Telugu"
-msgstr ""
+msgstr "Телугу"
 
 #: src/window.ui:894
 msgid "Thai"
-msgstr ""
+msgstr "Тайский"
 
 #: src/window.ui:907
 msgid "Tibetan"
-msgstr ""
+msgstr "Тибетский"
 
 #: src/window.ui:920
 msgid "Vietnamese"
-msgstr ""
+msgstr "Вьетнамский"
 
 #: src/window.ui:933
 msgid "Devanagari"
-msgstr ""
+msgstr "Деванагари"
 
 #: src/window.ui:947
 msgid "Greek"
-msgstr ""
+msgstr "Греческий"
 
 #: src/window.ui:960
 msgid "Greek\n"
 "Extended"
-msgstr ""
+msgstr "Греческий (Расширенный)"
 
 #: src/window.ui:974
 msgid "Gujarati"
-msgstr ""
+msgstr "Гуджарати"
 
 #: src/window.ui:987
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Гурмуки"
 
 #: src/window.ui:1000
 msgid "Hebrew"
-msgstr ""
+msgstr "Иврит"
 
 #: src/window.ui:1013
 msgid "Japanese"
-msgstr ""
+msgstr "Японский"
 
 #: src/window.ui:1051
 msgid "<b> File Settings </b>"
-msgstr ""
+msgstr "<b> Параметры файла </b>"
 
 #: src/window.ui:1088
 msgid "Default font installation folder:"
-msgstr ""
+msgstr "Каталог установки шрифта по умолчанию:"
 
 #: src/window.ui:1098
 msgid "Choose directory"
-msgstr ""
+msgstr "Выберите каталог"
 
 #: src/window.ui:1141
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
-msgstr ""
+msgstr "Предупреждение: Если вы не можете найти каталог, в который хотите установить шрифты, это может быть связано с тем, что у этого приложения нет доступа к нему. Чтобы исправить это, установите «Flatseal» и предоставьте этому приложению доступ к каталогу."
 
 #: src/window.ui:1163
 msgid "Reset"
-msgstr ""
+msgstr "Сбросить"
 
 #: src/window.py:48 src/window.py:355
 msgid "sans-serif"
-msgstr ""
+msgstr "без засечек"
 
 #: src/window.py:48 src/window.py:355
 msgid "serif"
-msgstr ""
+msgstr "с засечками"
 
 #: src/window.py:48 src/window.py:355
 msgid "display"
-msgstr ""
+msgstr "декоративный"
 
 #: src/window.py:48 src/window.py:355
 msgid "monospaced"
-msgstr ""
+msgstr "моноширинный"
 
 #: src/window.py:48 src/window.py:355
 msgid "handwriting"
-msgstr ""
+msgstr "рукописный"
 
 #: src/window.py:395
 msgid "Please choose a folder"
-msgstr ""
+msgstr "Пожалуйста, выберите каталог"
 
