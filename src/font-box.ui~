@@ -1,29 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.36.0 -->
+<!-- Generated with glade 3.38.0 -->
 <interface>
   <requires lib="gtk+" version="3.10"/>
-  <template class="FontBox" parent="GtkFrame">
-    <property name="can_focus">False</property>
-    <property name="hexpand">False</property>
-    <property name="label_xalign">0</property>
-    <property name="shadow_type">none</property>
+  <template class="FontBox" parent="GtkBox">
+    <property name="can-focus">False</property>
+    <property name="margin-left">12</property>
+    <property name="margin-right">12</property>
+    <property name="margin-top">12</property>
+    <property name="margin-bottom">12</property>
+    <property name="orientation">vertical</property>
+    <property name="homogeneous">True</property>
+    <child>
+      <object class="GtkLabel" id="fontFamily">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="halign">start</property>
+        <property name="label" translatable="yes">family</property>
+        <attributes>
+          <attribute name="weight" value="bold"/>
+        </attributes>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="margin_left">8</property>
-        <property name="orientation">vertical</property>
-        <property name="homogeneous">True</property>
+        <property name="can-focus">False</property>
         <child>
-          <object class="GtkLabel" id="fontFamily">
+          <object class="GtkLabel" id="fontCategory">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="halign">start</property>
-            <property name="label" translatable="yes">hold</property>
+            <property name="label" translatable="yes">category</property>
             <attributes>
-              <attribute name="weight" value="bold"/>
-              <attribute name="size" value="16384"/>
+              <attribute name="style" value="oblique"/>
+              <attribute name="scale" value="0.81999999999999995"/>
             </attributes>
+            <style>
+              <class name="dim-label"/>
+            </style>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -32,23 +51,51 @@
           </packing>
         </child>
         <child>
-          <object class="GtkLabel" id="fontCategory">
+          <object class="GtkBox" id="installed_box">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="label" translatable="yes">hold</property>
-            <attributes>
-              <attribute name="style" value="oblique"/>
-              <attribute name="foreground" value="#88888a8a8585"/>
-            </attributes>
+            <property name="can-focus">False</property>
+            <property name="valign">center</property>
+            <property name="spacing">4</property>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="valign">center</property>
+                <property name="icon-name">emblem-default-symbolic</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="valign">center</property>
+                <property name="label" translatable="yes">Installed</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
+            <property name="pack-type">end</property>
             <property name="position">1</property>
           </packing>
         </child>
       </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">2</property>
+      </packing>
     </child>
   </template>
 </interface>

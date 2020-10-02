@@ -17,7 +17,7 @@
 #Import nescessary libraries and modules
 #from gettext import gettext as _
 from gi.repository import Gdk, Gio, Gtk, Handy, GObject, WebKit2
-from os import path, makedirs
+from os import path, makedirs, listdir
 import locale
 import json
 from urllib.request import urlretrieve
@@ -36,6 +36,7 @@ class FontBox(Gtk.Box):
 
     fontFamily = Gtk.Template.Child()
     fontCategory = Gtk.Template.Child()
+    installed_box = Gtk.Template.Child()
 
     def __init__(self, familyName, category, index, variants, subset, **kwargs):
         super().__init__(**kwargs)
@@ -201,6 +202,8 @@ class FontdownloaderWindow(Handy.Window):
         #Sets up borders
         self.setup_css();
 
+        self.checkForInstalledFonts()
+
 
     #About dialog, courtesy of GeorgesStavracas
     def on_about(self, *args, **kwargs):
@@ -241,6 +244,7 @@ class FontdownloaderWindow(Handy.Window):
         for key in links:
            urlretrieve(links[key], path.join(absolutePath,
                         self.CurrentSelectedFont + " " + key + links[key][-4:]))
+        self.checkForInstalledFonts()
 
     def downloadFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
@@ -414,6 +418,19 @@ class FontdownloaderWindow(Handy.Window):
         self.folder_settings_button.set_label('Default')
         self.any_alphabet_button.set_active(True)
         self.updateAlphabet()
+
+    def checkForInstalledFonts(self, *args, **kwargs):
+        defaultPath = path.join(path.expanduser('~'), '.local/share/fonts') if self.settings.get_string('default-directory') == 'Default' else self.settings.get_string('default-directory')
+        onlyfiles = [f for f in listdir(defaultPath) if path.isfile(path.join(defaultPath, f))]
+        getrows = []
+        for i in webfontsData['items']:
+            getrows.append(i['family'])
+        for i in getrows:
+            for j in onlyfiles:
+                if i in j[:len(j[:-4])]:
+                    self.fonts_list.get_row_at_index(getrows.index(i)).get_child().installed_box.show()
+
+
 
 
 
