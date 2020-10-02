@@ -123,121 +123,127 @@ msgstr "Cualquier"
 
 #: src/window.ui:652
 msgid "Arabic"
-msgstr ""
+msgstr "Arábica"
 
 #: src/window.ui:666
 msgid "Bengali"
-msgstr ""
+msgstr "Bengalí"
 
 #: src/window.ui:679
 msgid "Chinese \n"
 "Hong Kong"
-msgstr ""
+msgstr "Chino\n"
+"Hong Kong"
 
 #: src/window.ui:693
 msgid "Chinese\n"
 "Simplified"
-msgstr ""
+msgstr "Chino\n"
+"Simplificado"
 
 #: src/window.ui:707
 msgid "Chinese\n"
 "Traditional"
-msgstr ""
+msgstr "Chino\n"
+"Tradicional"
 
 #: src/window.ui:721
 msgid "Cyrillic"
-msgstr ""
+msgstr "Cirílico"
 
 #: src/window.ui:734
 msgid "Cyrillic\n"
 "Extended"
-msgstr ""
+msgstr "Cirílico\n"
+"Extendido"
 
 #: src/window.ui:748
 msgid "Kannada"
-msgstr ""
+msgstr "Canarés"
 
 #: src/window.ui:762
 msgid "Khmer"
-msgstr ""
+msgstr "Jemer"
 
 #: src/window.ui:775
 msgid "Korean"
-msgstr ""
+msgstr "Coreano"
 
 #: src/window.ui:788
 msgid "Latin"
-msgstr ""
+msgstr "Latín"
 
 #: src/window.ui:801
 msgid "Latin\n"
 "Extended"
-msgstr ""
+msgstr "Latín\n"
+"Extendido"
 
 #: src/window.ui:815
 msgid "Malayalam"
-msgstr ""
+msgstr "Malayalam"
 
 #: src/window.ui:828
 msgid "Myanmar"
-msgstr ""
+msgstr "Myanmar"
 
 #: src/window.ui:841
 msgid "Oriya"
-msgstr ""
+msgstr "Oriya"
 
 #: src/window.ui:855
 msgid "Sinhala"
-msgstr ""
+msgstr "Sinhala"
 
 #: src/window.ui:868
 msgid "Tamil"
-msgstr ""
+msgstr "Tamil"
 
 #: src/window.ui:881
 msgid "Telugu"
-msgstr ""
+msgstr "Telugu"
 
 #: src/window.ui:894
 msgid "Thai"
-msgstr ""
+msgstr "tailandés"
 
 #: src/window.ui:907
 msgid "Tibetan"
-msgstr ""
+msgstr "Tibetano"
 
 #: src/window.ui:920
 msgid "Vietnamese"
-msgstr ""
+msgstr "vietnamita"
 
 #: src/window.ui:933
 msgid "Devanagari"
-msgstr ""
+msgstr "Devanagari"
 
 #: src/window.ui:947
 msgid "Greek"
-msgstr ""
+msgstr "Griego"
 
 #: src/window.ui:960
 msgid "Greek\n"
 "Extended"
-msgstr ""
+msgstr "Griego\n"
+"Extendido"
 
 #: src/window.ui:974
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #: src/window.ui:987
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #: src/window.ui:1000
 msgid "Hebrew"
-msgstr ""
+msgstr "Hebreo"
 
 #: src/window.ui:1013
 msgid "Japanese"
-msgstr ""
+msgstr "Japonés"
 
 #: src/window.ui:1051
 msgid "<b> File Settings </b>"
@@ -253,7 +259,7 @@ msgstr "Elige un directorio"
 
 #: src/window.ui:1141
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
-msgstr "Advertencia: Si nu puedes encontrar la carpeta en la que desea instalar su fuentes, puede ser que esta aplicación no tienga accesso a ella, para corregir esto, instale Flatseal y permita acceso a esta aplicación a la carpeta."
+msgstr "Advertencia: Si no encontraste la carpeta en la que deseas instalar tus fuentes, puede ser que no tengas acceso a esta. Para resolver esto, instale Flatseal y permita a esta aplicación el acceso a la carpeta."
 
 #: src/window.ui:1163
 msgid "Reset"
