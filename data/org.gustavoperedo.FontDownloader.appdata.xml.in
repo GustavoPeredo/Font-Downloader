@@ -23,6 +23,19 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="3.0.0" date="2020-10-02">
+      <description>
+        <p>This release aims to be the last feature release:</p>
+        <ul>
+          <li>Dark mode!</li>
+          <li>Option to filter by alphabets!</li>
+          <li>You can see installed fonts now!</li>
+          <li>Swipe back and forth easily!</li>
+          <li>Change default installation dialog!</li>
+          <li>Added a file chooser dialog for downloads!</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.0.1" date="2020-10-01">
       <description>
         <p>Fixes Spanish translation</p>

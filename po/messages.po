@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-30 08:03-0300\n"
+"POT-Creation-Date: 2020-10-01 23:23-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:3
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:179
-#: src/window.ui:203 src/window.py:144
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
+#: src/window.ui:298 src/window.py:223
 msgid "Font Downloader"
 msgstr ""
 
@@ -41,54 +41,261 @@ msgid ""
 "and install fonts directly from Google Fonts' website!"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:29
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
 msgid "Gustavo Peredo"
 msgstr ""
 
-#: src/window.ui:19
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:6
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:7
+msgid "Dark mode"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:11
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:12
+msgid "Any alphabet"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:16
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:17
+msgid "Default installation directory"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:21
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:22
+msgid "Which alphabets aren't filtered"
+msgstr ""
+
+#: src/window.ui:100
 msgid "Font type"
 msgstr ""
 
-#: src/window.ui:37
+#: src/window.ui:118
 msgid "All"
 msgstr ""
 
-#: src/window.ui:52
+#: src/window.ui:133
 msgid "Serif"
 msgstr ""
 
-#: src/window.ui:67
+#: src/window.ui:148
 msgid "Sans Serif"
 msgstr ""
 
-#: src/window.ui:82
+#: src/window.ui:163
 msgid "Display"
 msgstr ""
 
-#: src/window.ui:97
+#: src/window.ui:178
 msgid "Handwriting"
 msgstr ""
 
-#: src/window.ui:112
+#: src/window.ui:193
 msgid "Monospace"
 msgstr ""
 
-#: src/window.ui:150
+#: src/window.ui:231 src/window.ui:556
+msgid "Settings"
+msgstr ""
+
+#: src/window.ui:245
 msgid "About Font Downloader"
 msgstr ""
 
-#: src/window.ui:328
+#: src/window.ui:423
 msgid "Install"
 msgstr ""
 
-#: src/window.ui:343 src/window.py:273
+#: src/window.ui:438 src/window.py:377
 msgid "Download"
 msgstr ""
 
-#: src/window.ui:395
+#: src/window.ui:490
 msgid "Type here your text..."
 msgstr ""
 
-#: src/window.py:140
+#: src/window.ui:559
+msgid "Close"
+msgstr ""
+
+#: src/window.ui:605
+msgid "<b> Alphabets </b>"
+msgstr ""
+
+#: src/window.ui:616
+msgid "Any"
+msgstr ""
+
+#: src/window.ui:652
+msgid "Arabic"
+msgstr ""
+
+#: src/window.ui:666
+msgid "Bengali"
+msgstr ""
+
+#: src/window.ui:679
+msgid ""
+"Chinese \n"
+"Hong Kong"
+msgstr ""
+
+#: src/window.ui:693
+msgid ""
+"Chinese\n"
+"Simplified"
+msgstr ""
+
+#: src/window.ui:707
+msgid ""
+"Chinese\n"
+"Traditional"
+msgstr ""
+
+#: src/window.ui:721
+msgid "Cyrillic"
+msgstr ""
+
+#: src/window.ui:734
+msgid ""
+"Cyrillic\n"
+"Extended"
+msgstr ""
+
+#: src/window.ui:748
+msgid "Kannada"
+msgstr ""
+
+#: src/window.ui:762
+msgid "Khmer"
+msgstr ""
+
+#: src/window.ui:775
+msgid "Korean"
+msgstr ""
+
+#: src/window.ui:788
+msgid "Latin"
+msgstr ""
+
+#: src/window.ui:801
+msgid ""
+"Latin\n"
+"Extended"
+msgstr ""
+
+#: src/window.ui:815
+msgid "Malayalam"
+msgstr ""
+
+#: src/window.ui:828
+msgid "Myanmar"
+msgstr ""
+
+#: src/window.ui:841
+msgid "Oriya"
+msgstr ""
+
+#: src/window.ui:855
+msgid "Sinhala"
+msgstr ""
+
+#: src/window.ui:868
+msgid "Tamil"
+msgstr ""
+
+#: src/window.ui:881
+msgid "Telugu"
+msgstr ""
+
+#: src/window.ui:894
+msgid "Thai"
+msgstr ""
+
+#: src/window.ui:907
+msgid "Tibetan"
+msgstr ""
+
+#: src/window.ui:920
+msgid "Vietnamese"
+msgstr ""
+
+#: src/window.ui:933
+msgid "Devanagari"
+msgstr ""
+
+#: src/window.ui:947
+msgid "Greek"
+msgstr ""
+
+#: src/window.ui:960
+msgid ""
+"Greek\n"
+"Extended"
+msgstr ""
+
+#: src/window.ui:974
+msgid "Gujarati"
+msgstr ""
+
+#: src/window.ui:987
+msgid "Gurmukhi"
+msgstr ""
+
+#: src/window.ui:1000
+msgid "Hebrew"
+msgstr ""
+
+#: src/window.ui:1013
+msgid "Japanese"
+msgstr ""
+
+#: src/window.ui:1051
+msgid "<b> File Settings </b>"
+msgstr ""
+
+#: src/window.ui:1088
+msgid "Default font installation folder:"
+msgstr ""
+
+#: src/window.ui:1098
+msgid "Choose directory"
+msgstr ""
+
+#: src/window.ui:1141
+msgid ""
+"Warning: If you can't find the folder you are wishing to install fonts to, "
+"it might be because this application doesn't have access to it, to correct "
+"this, install Flatseal and give this application access to the folder."
+msgstr ""
+
+#: src/window.ui:1163
+msgid "Reset"
+msgstr ""
+
+#: src/window.py:48 src/window.py:355
+msgid "sans-serif"
+msgstr ""
+
+#: src/window.py:48 src/window.py:355
+msgid "serif"
+msgstr ""
+
+#: src/window.py:48 src/window.py:355
+msgid "display"
+msgstr ""
+
+#: src/window.py:48 src/window.py:355
+msgid "monospaced"
+msgstr ""
+
+#: src/window.py:48 src/window.py:355
+msgid "handwriting"
+msgstr ""
+
+#: src/window.py:219
 msgid "Translators"
+msgstr ""
+
+#: src/window.py:395
+msgid "Please choose a folder"
 msgstr ""
