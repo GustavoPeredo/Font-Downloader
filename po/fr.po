@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Font Downloader\n"
 "Language: fr\n"
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:2
+#: data/org.gustavoperedo.FontDownloader.desktop.in:3
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
 #: src/window.ui:298 src/window.py:223
 msgid "Font Downloader"
@@ -61,7 +61,7 @@ msgstr "Télécharger"
 msgid "Type here your text..."
 msgstr "Tapez ici un texte..."
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:6
+#: data/org.gustavoperedo.FontDownloader.desktop.in:7
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
 msgstr "Un simple police télécharger écrit en GTK qui installe polices directement de Google Fonts."
 
@@ -88,42 +88,42 @@ msgstr "Traducteurs"
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:6
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:7
 msgid "Dark mode"
-msgstr ""
+msgstr "Mode sombre"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:12
 msgid "Any alphabet"
-msgstr ""
+msgstr "Tout l'alhabet"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Default installation directory"
-msgstr ""
+msgstr "Répertoire d'installation par défaut"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:21
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:22
 msgid "Which alphabets aren't filtered"
-msgstr ""
+msgstr "Quel alphabet n'est filtré pas"
 
 #: src/window.ui:231 src/window.ui:556
 msgid "Settings"
-msgstr ""
+msgstr "Réglages"
 
 #: src/window.ui:559
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: src/window.ui:605
 msgid "<b> Alphabets </b>"
-msgstr ""
+msgstr "<b> Alphabets </b>"
 
 #: src/window.ui:616
 msgid "Any"
-msgstr ""
+msgstr "Tout"
 
 #: src/window.ui:652
 msgid "Arabic"
-msgstr ""
+msgstr "Arabe"
 
 #: src/window.ui:666
 msgid "Bengali"
@@ -132,26 +132,30 @@ msgstr ""
 #: src/window.ui:679
 msgid "Chinese \n"
 "Hong Kong"
-msgstr ""
+msgstr "Chinois\n"
+"Hong Kong"
 
 #: src/window.ui:693
 msgid "Chinese\n"
 "Simplified"
-msgstr ""
+msgstr "Chinois\n"
+"Simplifiée"
 
 #: src/window.ui:707
 msgid "Chinese\n"
 "Traditional"
-msgstr ""
+msgstr "Chinois\n"
+"Traditionnel"
 
 #: src/window.ui:721
 msgid "Cyrillic"
-msgstr ""
+msgstr "Cyrillique"
 
 #: src/window.ui:734
 msgid "Cyrillic\n"
 "Extended"
-msgstr ""
+msgstr "Cyrillique\n"
+"Étendu"
 
 #: src/window.ui:748
 msgid "Kannada"
@@ -163,16 +167,17 @@ msgstr ""
 
 #: src/window.ui:775
 msgid "Korean"
-msgstr ""
+msgstr "Coréen"
 
 #: src/window.ui:788
 msgid "Latin"
-msgstr ""
+msgstr "Latin"
 
 #: src/window.ui:801
 msgid "Latin\n"
 "Extended"
-msgstr ""
+msgstr "Latin\n"
+"Étendu"
 
 #: src/window.ui:815
 msgid "Malayalam"
@@ -241,45 +246,45 @@ msgstr ""
 
 #: src/window.ui:1051
 msgid "<b> File Settings </b>"
-msgstr ""
+msgstr "<b> Paramètres de Fichier </b>"
 
 #: src/window.ui:1088
 msgid "Default font installation folder:"
-msgstr ""
+msgstr "Répertoire d'installation des polices par défaut"
 
 #: src/window.ui:1098
 msgid "Choose directory"
-msgstr ""
+msgstr "Choisissez répertoire"
 
 #: src/window.ui:1141
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
-msgstr ""
+msgstr "Attention: Si vous ne trouvez pas de répertoire dans lequel vous voulez installed les polices, c'est peut-être que cette application n'y a pas accès dans le répertoire, pour corriger cela, installez Flatseal et donnez à cette application l'accès au répertoire."
 
 #: src/window.ui:1163
 msgid "Reset"
-msgstr ""
+msgstr "Réinitialiser"
 
 #: src/window.py:48 src/window.py:355
 msgid "sans-serif"
-msgstr ""
+msgstr "sans-serif"
 
 #: src/window.py:48 src/window.py:355
 msgid "serif"
-msgstr ""
+msgstr "serif"
 
 #: src/window.py:48 src/window.py:355
 msgid "display"
-msgstr ""
+msgstr "afficher"
 
 #: src/window.py:48 src/window.py:355
 msgid "monospaced"
-msgstr ""
+msgstr "monospace"
 
 #: src/window.py:48 src/window.py:355
 msgid "handwriting"
-msgstr ""
+msgstr "manuscrit"
 
 #: src/window.py:395
 msgid "Please choose a folder"
-msgstr ""
+msgstr "Veuillez choisir un répertoire"
 
