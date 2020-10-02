@@ -415,6 +415,7 @@ class FontdownloaderWindow(Handy.Window):
                 self.current_alphabet_list.append(self.alphabet_list[i])
         self.settings.set_boolean('any-alphabet', self.any_alphabet_button.get_active())
         self.settings.set_string('current-alphabet', ';'.join(self.current_alphabet_list))
+        self.updateFilter()
 
     def anyAlphabet(self, *args, **kwargs):
         any_alphabet = self.any_alphabet_button.get_active()

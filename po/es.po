@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Font Downloader\n"
 "Language: es\n"
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:3
+#: data/org.gustavoperedo.FontDownloader.desktop.in:2
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
 #: src/window.ui:298 src/window.py:223
 msgid "Font Downloader"
@@ -61,13 +61,13 @@ msgstr "Descarregar"
 msgid "Type here your text..."
 msgstr "Digite aquí un texto..."
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:7
+#: data/org.gustavoperedo.FontDownloader.desktop.in:6
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
 msgstr "Un simples descarregador de fuentes escrito en GTK que instala fuentes directamente de Google Fonts."
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
 msgid "A simple GTK font downloader."
-msgstr "Un sistema de descarga de fuentes topográficas en GTK.\n"
+msgstr "Un sistema de descarga de fuentes topográficas en GTK."
 ""
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
