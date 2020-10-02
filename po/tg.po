@@ -1,49 +1,89 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-01 23:23-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Font Downloader\n"
+"Language: tg\n"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:3
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
 #: src/window.ui:298 src/window.py:223
 msgid "Font Downloader"
-msgstr ""
+msgstr "Боркунандаи ҳуруф"
+
+#: ../src/fontpreview.ui:37
+msgid "Type in here a custom text..."
+msgstr "Матни санҷиширо дар ин ҷо ворид намоед..."
+
+#: src/window.ui:100
+msgid "Font type"
+msgstr "Навъи ҳарф"
+
+#: src/window.ui:118
+msgid "All"
+msgstr "Ҳама"
+
+#: src/window.ui:133
+msgid "Serif"
+msgstr "Барҷаста"
+
+#: src/window.ui:148
+msgid "Sans Serif"
+msgstr "Ғайрибарҷаста"
+
+#: src/window.ui:163
+msgid "Display"
+msgstr "Ороишӣ"
+
+#: src/window.ui:178
+msgid "Handwriting"
+msgstr "Дастнавис"
+
+#: src/window.ui:193
+msgid "Monospace"
+msgstr "Яклухт"
+
+#: src/window.ui:245
+msgid "About Font Downloader"
+msgstr "Дар бораи Боркунандаи ҳуруф"
+
+#: src/window.ui:326
+msgid "  Install"
+msgstr "  Насб кардан"
+
+#: src/window.ui:438 src/window.py:377
+msgid "Download"
+msgstr "Боргирӣ кардан"
+
+#: src/window.ui:490
+msgid "Type here your text..."
+msgstr "Матни худро дар ин ҷо ворид намоед..."
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:7
-msgid ""
-"Simple font downloader written in GTK that installs fonts directly from "
-"Google Fonts."
-msgstr ""
+msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
+msgstr "Боркунандаи ҳуруф ин барномаи осон барои насб кардани ҳуруф рост аз Google Fonts мебошад. Ин барнома дар асоси GTK барномарезӣ карда шудааст."
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
 msgid "A simple GTK font downloader."
-msgstr ""
+msgstr "Боркунандаи ҳуруф ин барномаи GTK-и осон мебошад."
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
-msgid ""
-"Have you ever wanted to change the font in your terminal, but didn't want to "
-"go through the entire process of searching, downloading and installing a "
-"font? This simple to use and adaptive GTK application allows you to search "
-"and install fonts directly from Google Fonts' website!"
-msgstr ""
+msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
+msgstr "Шумо ягон бор мехостед ҳуруфро дар намуди зоҳирии терминали худ иваз намоед, аммо барои ҷустуҷӯ, боргирӣ ва насб кардани ҳуруф хоҳиш надоштед? Ин барномаи GTK-и осон ва мувофиқшаванда ба шумо барои ҷустуҷӯ ва насб кардани ҳуруф рост аз сомонаи Google Fonts имкон медиҳад!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
 msgid "Gustavo Peredo"
-msgstr ""
+msgstr "Густаво Передо"
+
+#: src/window.ui:423
+msgid "Install"
+msgstr "Насб кардан"
+
+#: src/window.py:219
+msgid "Translators"
+msgstr "Тарҷумонҳо"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:6
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:7
@@ -65,52 +105,8 @@ msgstr ""
 msgid "Which alphabets aren't filtered"
 msgstr ""
 
-#: src/window.ui:100
-msgid "Font type"
-msgstr ""
-
-#: src/window.ui:118
-msgid "All"
-msgstr ""
-
-#: src/window.ui:133
-msgid "Serif"
-msgstr ""
-
-#: src/window.ui:148
-msgid "Sans Serif"
-msgstr ""
-
-#: src/window.ui:163
-msgid "Display"
-msgstr ""
-
-#: src/window.ui:178
-msgid "Handwriting"
-msgstr ""
-
-#: src/window.ui:193
-msgid "Monospace"
-msgstr ""
-
 #: src/window.ui:231 src/window.ui:556
 msgid "Settings"
-msgstr ""
-
-#: src/window.ui:245
-msgid "About Font Downloader"
-msgstr ""
-
-#: src/window.ui:423
-msgid "Install"
-msgstr ""
-
-#: src/window.ui:438 src/window.py:377
-msgid "Download"
-msgstr ""
-
-#: src/window.ui:490
-msgid "Type here your text..."
 msgstr ""
 
 #: src/window.ui:559
@@ -134,20 +130,17 @@ msgid "Bengali"
 msgstr ""
 
 #: src/window.ui:679
-msgid ""
-"Chinese \n"
+msgid "Chinese \n"
 "Hong Kong"
 msgstr ""
 
 #: src/window.ui:693
-msgid ""
-"Chinese\n"
+msgid "Chinese\n"
 "Simplified"
 msgstr ""
 
 #: src/window.ui:707
-msgid ""
-"Chinese\n"
+msgid "Chinese\n"
 "Traditional"
 msgstr ""
 
@@ -156,8 +149,7 @@ msgid "Cyrillic"
 msgstr ""
 
 #: src/window.ui:734
-msgid ""
-"Cyrillic\n"
+msgid "Cyrillic\n"
 "Extended"
 msgstr ""
 
@@ -178,8 +170,7 @@ msgid "Latin"
 msgstr ""
 
 #: src/window.ui:801
-msgid ""
-"Latin\n"
+msgid "Latin\n"
 "Extended"
 msgstr ""
 
@@ -228,8 +219,7 @@ msgid "Greek"
 msgstr ""
 
 #: src/window.ui:960
-msgid ""
-"Greek\n"
+msgid "Greek\n"
 "Extended"
 msgstr ""
 
@@ -262,10 +252,7 @@ msgid "Choose directory"
 msgstr ""
 
 #: src/window.ui:1141
-msgid ""
-"Warning: If you can't find the folder you are wishing to install fonts to, "
-"it might be because this application doesn't have access to it, to correct "
-"this, install Flatseal and give this application access to the folder."
+msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
 msgstr ""
 
 #: src/window.ui:1163
@@ -292,10 +279,7 @@ msgstr ""
 msgid "handwriting"
 msgstr ""
 
-#: src/window.py:219
-msgid "Translators"
-msgstr ""
-
 #: src/window.py:395
 msgid "Please choose a folder"
 msgstr ""
+
