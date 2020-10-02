@@ -57,5 +57,5 @@ They are here and need your help! I translated the app for languages that I've h
 * ~~Optimize code~~
 * ~~Update to libhandy 1.0 and update glade files acordingly~~
 * ~~Find a way to remove the "back_button" without check-resize~~
-* Fix fonts names
-* Update new strings
+* ~~Fix fonts names~~
+* Translate new strings
