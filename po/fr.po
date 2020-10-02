@@ -127,7 +127,7 @@ msgstr "Arabe"
 
 #: src/window.ui:666
 msgid "Bengali"
-msgstr ""
+msgstr "Bengali"
 
 #: src/window.ui:679
 msgid "Chinese \n"
@@ -159,11 +159,11 @@ msgstr "Cyrillique\n"
 
 #: src/window.ui:748
 msgid "Kannada"
-msgstr ""
+msgstr "Kannada"
 
 #: src/window.ui:762
 msgid "Khmer"
-msgstr ""
+msgstr "Khmer"
 
 #: src/window.ui:775
 msgid "Korean"
@@ -181,68 +181,69 @@ msgstr "Latin\n"
 
 #: src/window.ui:815
 msgid "Malayalam"
-msgstr ""
+msgstr "Malayalam"
 
 #: src/window.ui:828
 msgid "Myanmar"
-msgstr ""
+msgstr "Myanmar"
 
 #: src/window.ui:841
 msgid "Oriya"
-msgstr ""
+msgstr "Oriya"
 
 #: src/window.ui:855
 msgid "Sinhala"
-msgstr ""
+msgstr "Cinghalais"
 
 #: src/window.ui:868
 msgid "Tamil"
-msgstr ""
+msgstr "Tamil"
 
 #: src/window.ui:881
 msgid "Telugu"
-msgstr ""
+msgstr "Telugu"
 
 #: src/window.ui:894
 msgid "Thai"
-msgstr ""
+msgstr "thaïlandais"
 
 #: src/window.ui:907
 msgid "Tibetan"
-msgstr ""
+msgstr "Tibétain"
 
 #: src/window.ui:920
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamien"
 
 #: src/window.ui:933
 msgid "Devanagari"
-msgstr ""
+msgstr "Devanagari"
 
 #: src/window.ui:947
 msgid "Greek"
-msgstr ""
+msgstr "Grec"
 
 #: src/window.ui:960
 msgid "Greek\n"
 "Extended"
-msgstr ""
+msgstr "Grec\n"
+"Élargi"
 
 #: src/window.ui:974
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarati"
 
 #: src/window.ui:987
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Gurmukhi"
 
 #: src/window.ui:1000
 msgid "Hebrew"
-msgstr ""
+msgstr "Hébreu"
 
 #: src/window.ui:1013
 msgid "Japanese"
-msgstr ""
+msgstr "Japonais"
 
 #: src/window.ui:1051
 msgid "<b> File Settings </b>"
