@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Font Downloader\n"
 "Language: tg\n"
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:2
+#: data/org.gustavoperedo.FontDownloader.desktop.in:3
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
 #: src/window.ui:298 src/window.py:223
 msgid "Font Downloader"
@@ -61,7 +61,7 @@ msgstr "Боргирӣ кардан"
 msgid "Type here your text..."
 msgstr "Матни худро дар ин ҷо ворид намоед..."
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:6
+#: data/org.gustavoperedo.FontDownloader.desktop.in:7
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
 msgstr "Боркунандаи ҳуруф ин барномаи осон барои насб кардани ҳуруф рост аз Google Fonts мебошад. Ин барнома дар асоси GTK барномарезӣ карда шудааст."
 
@@ -88,198 +88,198 @@ msgstr "Тарҷумонҳо"
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:6
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:7
 msgid "Dark mode"
-msgstr ""
+msgstr "Реҷаи торик"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:12
 msgid "Any alphabet"
-msgstr ""
+msgstr "Ҳамаи алифбоҳо"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Default installation directory"
-msgstr ""
+msgstr "Феҳристи насбкунии пешфарз"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:21
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:22
 msgid "Which alphabets aren't filtered"
-msgstr ""
+msgstr "Алифбоҳое, ки ҷудо нашуданд"
 
 #: src/window.ui:231 src/window.ui:556
 msgid "Settings"
-msgstr ""
+msgstr "Танзимот"
 
 #: src/window.ui:559
 msgid "Close"
-msgstr ""
+msgstr "Пӯшидан"
 
 #: src/window.ui:605
 msgid "<b> Alphabets </b>"
-msgstr ""
+msgstr "<b> Алифбоҳо </b>"
 
 #: src/window.ui:616
 msgid "Any"
-msgstr ""
+msgstr "Ҳама"
 
 #: src/window.ui:652
 msgid "Arabic"
-msgstr ""
+msgstr "Арабӣ"
 
 #: src/window.ui:666
 msgid "Bengali"
-msgstr ""
+msgstr "Банголӣ"
 
 #: src/window.ui:679
 msgid "Chinese \n"
 "Hong Kong"
-msgstr ""
+msgstr "Чинӣ (Ҳонконг)"
 
 #: src/window.ui:693
 msgid "Chinese\n"
 "Simplified"
-msgstr ""
+msgstr "Чинӣ (соддакардашуда)"
 
 #: src/window.ui:707
 msgid "Chinese\n"
 "Traditional"
-msgstr ""
+msgstr "Чинӣ (анъанавӣ)"
 
 #: src/window.ui:721
 msgid "Cyrillic"
-msgstr ""
+msgstr "Кириллӣ"
 
 #: src/window.ui:734
 msgid "Cyrillic\n"
 "Extended"
-msgstr ""
+msgstr "Кириллӣ (васеъшуда)"
 
 #: src/window.ui:748
 msgid "Kannada"
-msgstr ""
+msgstr "Каннада"
 
 #: src/window.ui:762
 msgid "Khmer"
-msgstr ""
+msgstr "Хмерӣ"
 
 #: src/window.ui:775
 msgid "Korean"
-msgstr ""
+msgstr "Кореягӣ"
 
 #: src/window.ui:788
 msgid "Latin"
-msgstr ""
+msgstr "Лотинӣ"
 
 #: src/window.ui:801
 msgid "Latin\n"
 "Extended"
-msgstr ""
+msgstr "Лотинӣ (васеъшуда)"
 
 #: src/window.ui:815
 msgid "Malayalam"
-msgstr ""
+msgstr "Малаяламӣ"
 
 #: src/window.ui:828
 msgid "Myanmar"
-msgstr ""
+msgstr "Мянма"
 
 #: src/window.ui:841
 msgid "Oriya"
-msgstr ""
+msgstr "Ория"
 
 #: src/window.ui:855
 msgid "Sinhala"
-msgstr ""
+msgstr "Сингалӣ"
 
 #: src/window.ui:868
 msgid "Tamil"
-msgstr ""
+msgstr "Тамилӣ"
 
 #: src/window.ui:881
 msgid "Telugu"
-msgstr ""
+msgstr "Телугу"
 
 #: src/window.ui:894
 msgid "Thai"
-msgstr ""
+msgstr "Тайӣ"
 
 #: src/window.ui:907
 msgid "Tibetan"
-msgstr ""
+msgstr "Тибетӣ"
 
 #: src/window.ui:920
 msgid "Vietnamese"
-msgstr ""
+msgstr "Ветнамӣ"
 
 #: src/window.ui:933
 msgid "Devanagari"
-msgstr ""
+msgstr "Деванагарӣ"
 
 #: src/window.ui:947
 msgid "Greek"
-msgstr ""
+msgstr "Юнонӣ"
 
 #: src/window.ui:960
 msgid "Greek\n"
 "Extended"
-msgstr ""
+msgstr "Юнонӣ (васеъшуда)"
 
 #: src/window.ui:974
 msgid "Gujarati"
-msgstr ""
+msgstr "Гуҷаротӣ"
 
 #: src/window.ui:987
 msgid "Gurmukhi"
-msgstr ""
+msgstr "Гурмухӣ"
 
 #: src/window.ui:1000
 msgid "Hebrew"
-msgstr ""
+msgstr "Яҳудӣ"
 
 #: src/window.ui:1013
 msgid "Japanese"
-msgstr ""
+msgstr "Ҷопонӣ"
 
 #: src/window.ui:1051
 msgid "<b> File Settings </b>"
-msgstr ""
+msgstr "<b> Танзимоти файл </b>"
 
 #: src/window.ui:1088
 msgid "Default font installation folder:"
-msgstr ""
+msgstr "Феҳристи насбкунии пешфарзи ҳуруф"
 
 #: src/window.ui:1098
 msgid "Choose directory"
-msgstr ""
+msgstr "Интихоби феҳрист"
 
 #: src/window.ui:1141
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
-msgstr ""
+msgstr "Огоҳӣ: Агар шумо феҳристи дилхоҳро барои насб кардани ҳуруф ёфт карда натавонед, эҳтимол ин барнома ба он феҳрист иҷозати дастрасӣ надорад. Барои ҳал кардани ин масъала, барномаи \"Flatseal\"-ро насб намуда, ба феҳристи дилхоҳ аз ин барномаи дастрасӣ пайдо намоед."
 
 #: src/window.ui:1163
 msgid "Reset"
-msgstr ""
+msgstr "Бозсозӣ"
 
 #: src/window.py:48 src/window.py:355
 msgid "sans-serif"
-msgstr ""
+msgstr "ғайрибарҷаста"
 
 #: src/window.py:48 src/window.py:355
 msgid "serif"
-msgstr ""
+msgstr "барҷаста"
 
 #: src/window.py:48 src/window.py:355
 msgid "display"
-msgstr ""
+msgstr "ороишӣ"
 
 #: src/window.py:48 src/window.py:355
 msgid "monospaced"
-msgstr ""
+msgstr "яклухт"
 
 #: src/window.py:48 src/window.py:355
 msgid "handwriting"
-msgstr ""
+msgstr "дастнавис"
 
 #: src/window.py:395
 msgid "Please choose a folder"
-msgstr ""
+msgstr "Лутфан, феҳристеро интихоб намоед"
 
