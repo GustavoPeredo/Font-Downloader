@@ -52,9 +52,9 @@ They are here and need your help! I translated the app for languages that I've h
 * ~~Create settings panel (default installation directory and dark mode)~~
 * ~~Create about window~~
 * ~~Visual feedback for when fonts are done installing/downloading~~
-* Show a little check for when a font is already installed
+* ~~Show a little check for when a font is already installed~~
 * ~~Add new filters (depending on alphabet, will probably require a redesign of the app)~~
 * ~~Optimize code~~
 * ~~Update to libhandy 1.0 and update glade files acordingly~~
-* Find a way to remove the "back_button" without check-resize
+* ~~Find a way to remove the "back_button" without check-resize~~
 * Update new strings

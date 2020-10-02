@@ -268,6 +268,30 @@
     <property name="can-focus">False</property>
     <property name="icon-name">document-save-symbolic</property>
   </object>
+  <object class="GtkImage" id="image4">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">emblem-ok-symbolic</property>
+  </object>
+  <object class="GtkImage" id="image5">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">emblem-ok-symbolic</property>
+    <style>
+      <class name="color-button"/>
+      <class name="dark-color"/>
+    </style>
+  </object>
+  <object class="GtkImage" id="image6">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">document-open-symbolic</property>
+  </object>
+  <object class="GtkImage" id="image7">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">document-save-symbolic</property>
+  </object>
   <template class="FontdownloaderWindow" parent="HdyWindow">
     <property name="name">FontdownloaderWindow</property>
     <property name="can-focus">False</property>
@@ -457,6 +481,17 @@
                     <property name="position">2</property>
                   </packing>
                 </child>
+                <child>
+                  <object class="GtkButton" id="compact_download_button">
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                    <property name="image">image7</property>
+                  </object>
+                  <packing>
+                    <property name="pack-type">end</property>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -511,31 +546,6 @@
       </object>
     </child>
   </template>
-  <object class="HdyHeaderGroup">
-    <headerbars>
-      <headerbar name="headerbar1"/>
-      <headerbar name="headerbar2"/>
-    </headerbars>
-  </object>
-  <object class="GtkImage" id="image4">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">emblem-ok-symbolic</property>
-  </object>
-  <object class="GtkImage" id="image5">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">emblem-ok-symbolic</property>
-    <style>
-      <class name="color-button"/>
-      <class name="dark-color"/>
-    </style>
-  </object>
-  <object class="GtkImage" id="image6">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">document-open-symbolic</property>
-  </object>
   <object class="HdyWindow" id="SettingsWindow">
     <property name="can-focus">False</property>
     <property name="modal">True</property>
@@ -1200,5 +1210,11 @@ Extended</property>
         </child>
       </object>
     </child>
+  </object>
+  <object class="HdyHeaderGroup" id="header_group">
+    <headerbars>
+      <headerbar name="headerbar1"/>
+      <headerbar name="headerbar2"/>
+    </headerbars>
   </object>
 </interface>

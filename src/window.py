@@ -113,6 +113,7 @@ class FontdownloaderWindow(Handy.Window):
     vietnamese_button = Gtk.Template.Child()
     any_alphabet_button = Gtk.Template.Child()
     reset_button = Gtk.Template.Child()
+    header_group = Gtk.Template.Child()
 
     WebKit2.WebView()
     #On initalization do:
@@ -164,6 +165,7 @@ class FontdownloaderWindow(Handy.Window):
         self.folder_settings_button.connect('clicked', self.on_open)
         self.any_alphabet_button.connect('clicked', self.anyAlphabet)
         self.reset_button.connect('clicked', self.reset)
+        self.header_group.connect('update-decoration-layouts', self.updateSize)
 
         self.alphabet_buttons = [self.arabic_button, self.bengali_button,
         self.chinese_hk_button, self.chinese_SIMP_button,
@@ -204,6 +206,9 @@ class FontdownloaderWindow(Handy.Window):
 
         self.checkForInstalledFonts()
 
+    @property
+    def folded(self):
+        self.fontChanged()
 
     #About dialog, courtesy of GeorgesStavracas
     def on_about(self, *args, **kwargs):
@@ -349,12 +354,16 @@ class FontdownloaderWindow(Handy.Window):
         self.headerbar2.set_title(self.CurrentSelectedFont)
         self.headerbar2.set_subtitle(self.temp_data[1].replace('sans-serif',(_('sans-serif'))).replace('serif',(_('serif'))).replace('display',(_('display'))).replace('monospaced',(_('monospaced'))).replace('handwriting',(_('handwriting'))))
 
+        self.leaflet.set_visible_child(self.box2)
+
+
+    def updateSize(self, *args, **kwargs):
         #If the screen is too small, change to font preview pane and show
         #the return button, otherwise, do the opposite
         if self.leaflet.get_folded():
             self.back_button.show()
             self.main_download_button.set_label('')
-            self.leaflet.set_visible_child(self.box2)
+            #self.leaflet.set_visible_child(self.box2)
         else:
             self.bringListForward()
 
