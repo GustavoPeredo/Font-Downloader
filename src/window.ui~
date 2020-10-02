@@ -1211,11 +1211,10 @@ Extended</property>
       </object>
     </child>
   </object>
-  <object class="HdyHeaderGroup">
+  <object class="HdyHeaderGroup" id="header_group">
     <headerbars>
       <headerbar name="headerbar1"/>
       <headerbar name="headerbar2"/>
     </headerbars>
-    <signal name="update-decoration-layouts" handler="folded" swapped="no"/>
   </object>
 </interface>
