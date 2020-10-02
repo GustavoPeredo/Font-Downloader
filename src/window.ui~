@@ -284,6 +284,7 @@
         <property name="mode-transition-duration">400</property>
         <property name="child-transition-duration">350</property>
         <property name="can-swipe-back">True</property>
+        <property name="can-swipe-forward">True</property>
         <child>
           <object class="GtkBox" id="box1">
             <property name="width-request">280</property>

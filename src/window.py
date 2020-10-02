@@ -188,8 +188,16 @@ class FontdownloaderWindow(Handy.Window):
         'tamil', 'telugu', 'thai', 'tibetan', 'vietnamese']
 
         self.current_alphabet_list = self.settings.get_string('current-alphabet').split(';')
-        self.any_alphabet = self.settings.get_boolean('any-alphabet')
+        self.any_alphabet_button.set_active(self.settings.get_boolean('any-alphabet'))
+        self.any_alphabet = self.any_alphabet_button.get_active()
 
+        for i in range(len(self.alphabet_list)):
+            if self.alphabet_list[i] in self.current_alphabet_list:
+                self.alphabet_buttons[i].set_active(True)
+            else:
+                self.alphabet_buttons[i].set_active(False)
+
+        self.anyAlphabet()
         self.folder_settings_button.set_label(self.settings.get_string('default-directory'))
 
         for buttons in self.alphabet_buttons:
@@ -197,7 +205,6 @@ class FontdownloaderWindow(Handy.Window):
 
         #Calls fontChanged function to update first view
         self.fontChanged()
-        self.anyAlphabet()
 
         self.dark_mode_button.set_active(self.settings.get_boolean('dark-mode'))
         self.changeTheme()
@@ -353,8 +360,7 @@ class FontdownloaderWindow(Handy.Window):
         #Load the html, set title and subtitle
         self.font_preview.load_html(self.html)
         self.headerbar2.set_title(self.CurrentSelectedFont)
-        self.headerbar2.set_subtitle(self.temp_data[1].replace('sans-serif',(_('sans-serif'))).replace('serif',(_('serif'))).replace('display',(_('display'))).replace('monospaced',(_('monospaced'))).replace('handwriting',(_('handwriting'))))
-
+        self.headerbar2.set_subtitle(_('sans-serif') if self.temp_data[1]=='sans-serif' else (_('serif') if self.temp_data[1]=='serif' else (_('display') if self.temp_data[1]=='display' else (_('monospaced') if self.temp_data[1]=='monospaced' else _('handwriting')))))
         self.leaflet.set_visible_child(self.box2)
 
 
@@ -412,16 +418,19 @@ class FontdownloaderWindow(Handy.Window):
     def updateAlphabet(self, *args, **kwargs):
         self.current_alphabet_list = []
         for i in range(len(self.alphabet_list)):
-            if self.alphabet_buttons[i].get_active():
+            if self.any_alphabet:
+                self.alphabet_buttons[i].set_active(self.any_alphabet)
+            elif self.alphabet_buttons[i].get_active():
                 self.current_alphabet_list.append(self.alphabet_list[i])
-        self.settings.set_boolean('any-alphabet', self.any_alphabet_button.get_active())
         self.settings.set_string('current-alphabet', ';'.join(self.current_alphabet_list))
         self.updateFilter()
 
     def anyAlphabet(self, *args, **kwargs):
-        any_alphabet = self.any_alphabet_button.get_active()
-        for i in range(len(self.alphabet_list)):
-            self.alphabet_buttons[i].set_active(any_alphabet)
+        self.any_alphabet = self.any_alphabet_button.get_active()
+        if self.any_alphabet:
+            for i in range(len(self.alphabet_list)):
+                self.alphabet_buttons[i].set_active(self.any_alphabet)
+        self.settings.set_boolean('any-alphabet', self.any_alphabet)
         self.updateAlphabet()
 
     def reset(self, *args, **kwargs):
