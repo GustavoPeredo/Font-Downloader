@@ -48,12 +48,13 @@ They are here and need your help! I translated the app for languages that I've h
 * ~~Learn how po works~~
 * ~~Do some translations~~
 * ~~See if it is ready for flatpak~~
-* Add GtkFileChooser dialog for user to choose where to download fonts to
-* Create settings panel (default installation directory and dark mode)
+* ~~Add GtkFileChooser dialog for user to choose where to download fonts to~~
+* ~~Create settings panel (default installation directory and dark mode)~~
 * ~~Create about window~~
-* Visual feedback for when fonts are done installing/downloading
+* ~~Visual feedback for when fonts are done installing/downloading~~
 * Show a little check for when a font is already installed
-* Add new filters (depending on alphabet, will probably require a redesign of the app)
+* ~~Add new filters (depending on alphabet, will probably require a redesign of the app)~~
 * ~~Optimize code~~
 * ~~Update to libhandy 1.0 and update glade files acordingly~~
 * Find a way to remove the "back_button" without check-resize
+* Update new strings
