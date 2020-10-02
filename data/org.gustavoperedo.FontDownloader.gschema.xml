@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="fontdownloader">
 	<schema id="org.gustavoperedo.FontDownloader" path="/org/gustavoperedo/FontDownloader/">
+    <key name="dark-mode" type="b">
+      <default>false</default>
+      <summary>Dark mode</summary>
+      <description>Dark mode</description>
+    </key>
+    <key name="any-alphabet" type="b">
+      <default>true</default>
+      <summary>Any alphabet</summary>
+      <description>Any alphabet</description>
+    </key>
+    <key name="default-directory" type="s">
+      <default>'Default'</default>
+      <summary>Default installation directory</summary>
+      <description>Default installation directory</description>
+    </key>
+    <key name="current-alphabet" type="s">
+      <default>''</default>
+      <summary>Which alphabets aren't filtered</summary>
+      <description>Which alphabets aren't filtered</description>
+    </key>
 	</schema>
 </schemalist>
