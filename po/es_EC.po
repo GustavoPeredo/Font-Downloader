@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: Font Downloader\n"
 "Language: es\n"
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:3
+#: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
-#: src/window.ui:298 src/window.py:223
+#: src/window.ui:299 src/window.py:231
 msgid "Font Downloader"
 msgstr "Descargador de Fuentes"
 
@@ -53,15 +53,15 @@ msgstr "Sobre Descarregador de Fuentes"
 msgid "  Install"
 msgstr "  Instalar"
 
-#: src/window.ui:438 src/window.py:377
+#: src/window.ui:439 src/window.py:384
 msgid "Download"
 msgstr "Descarregar"
 
-#: src/window.ui:490
+#: src/window.ui:491
 msgid "Type here your text..."
 msgstr "Digite aquí un texto..."
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:7
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
 msgstr "Un simples descarregador de fuentes escrito en GTK que instala fuentes directamente de Google Fonts."
 
@@ -73,15 +73,15 @@ msgstr "Un sistema de descarga de fuentes topográficas en GTK."
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
 msgstr "¿Alguna vez has querido cambiar tu fuente de terminal, pero no quisiste pasar por el proceso de buscar, descargar e instalar una fuente? Este aplicativo simple y adaptativo en GTK permite que busques e instales fuentes directamente del website de Google Fonts"
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
 msgid "Gustavo Peredo"
 msgstr "Gustavo Peredo"
 
-#: src/window.ui:423
+#: src/window.ui:424
 msgid "Install"
 msgstr "Instalar"
 
-#: src/window.py:219
+#: src/window.py:227
 msgid "Translators"
 msgstr "Traductores"
 
@@ -105,19 +105,19 @@ msgstr "Directorio de instalación estándar"
 msgid "Which alphabets aren't filtered"
 msgstr "Cual alfabetos no son filtrados"
 
-#: src/window.ui:231 src/window.ui:556
+#: src/window.ui:231 src/window.ui:557
 msgid "Settings"
 msgstr "Configuraciones"
 
-#: src/window.ui:559
+#: src/window.ui:560
 msgid "Close"
 msgstr "Cerrar"
 
-#: src/window.ui:605
+#: src/window.ui:606
 msgid "<b> Alphabets </b>"
 msgstr "<b> Alfabetos </b>"
 
-#: src/window.ui:616
+#: src/window.ui:617
 msgid "Any"
 msgstr "Cualquier"
 
@@ -265,27 +265,43 @@ msgstr "Advertencia: Si no encontraste la carpeta en la que deseas instalar tus 
 msgid "Reset"
 msgstr "Reajustar"
 
-#: src/window.py:48 src/window.py:355
+#: src/window.py:49 src/window.py:363
 msgid "sans-serif"
 msgstr "sin serifa"
 
-#: src/window.py:48 src/window.py:355
+#: src/window.py:49 src/window.py:363
 msgid "serif"
 msgstr "serifada"
 
-#: src/window.py:48 src/window.py:355
+#: src/window.py:49 src/window.py:363
 msgid "display"
 msgstr "exhibición"
 
-#: src/window.py:48 src/window.py:355
+#: src/window.py:49 src/window.py:363
 msgid "monospaced"
 msgstr "monoespaciada"
 
-#: src/window.py:48 src/window.py:355
+#: src/window.py:49 src/window.py:363
 msgid "handwriting"
 msgstr "escrito a mano"
 
-#: src/window.py:395
+#: src/window.py:402
 msgid "Please choose a folder"
 msgstr "Elija una carpeta"
+
+#: src/font-box.ui:18
+msgid "family"
+msgstr "familia"
+
+#: src/font-box.ui:38
+msgid "category"
+msgstr "categoria"
+
+#: src/font-box.ui:76
+msgid "Installed"
+msgstr "Instalado"
+
+#: src/window.py:201
+msgid "Default"
+msgstr "Estándar"
 
