@@ -1,6 +1,7 @@
 data/org.gustavoperedo.FontDownloader.desktop.in
 data/org.gustavoperedo.FontDownloader.appdata.xml.in
 data/org.gustavoperedo.FontDownloader.gschema.xml
+src/font-box.ui
 src/window.ui
 src/main.py
 src/window.py

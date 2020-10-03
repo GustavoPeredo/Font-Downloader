@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-01 23:23-0300\n"
+"POT-Creation-Date: 2020-10-03 10:04-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:3
+#: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
-#: src/window.ui:298 src/window.py:223
+#: src/window.ui:299 src/window.py:231
 msgid "Font Downloader"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:7
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid ""
 "Simple font downloader written in GTK that installs fonts directly from "
 "Google Fonts."
@@ -41,7 +41,7 @@ msgid ""
 "and install fonts directly from Google Fonts' website!"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
 msgid "Gustavo Peredo"
 msgstr ""
 
@@ -63,6 +63,18 @@ msgstr ""
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:21
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:22
 msgid "Which alphabets aren't filtered"
+msgstr ""
+
+#: src/font-box.ui:18
+msgid "family"
+msgstr ""
+
+#: src/font-box.ui:38
+msgid "category"
+msgstr ""
+
+#: src/font-box.ui:76
+msgid "Installed"
 msgstr ""
 
 #: src/window.ui:100
@@ -93,7 +105,7 @@ msgstr ""
 msgid "Monospace"
 msgstr ""
 
-#: src/window.ui:231 src/window.ui:556
+#: src/window.ui:231 src/window.ui:557
 msgid "Settings"
 msgstr ""
 
@@ -101,27 +113,27 @@ msgstr ""
 msgid "About Font Downloader"
 msgstr ""
 
-#: src/window.ui:423
+#: src/window.ui:424
 msgid "Install"
 msgstr ""
 
-#: src/window.ui:438 src/window.py:377
+#: src/window.ui:439 src/window.py:384
 msgid "Download"
 msgstr ""
 
-#: src/window.ui:490
+#: src/window.ui:491
 msgid "Type here your text..."
 msgstr ""
 
-#: src/window.ui:559
+#: src/window.ui:560
 msgid "Close"
 msgstr ""
 
-#: src/window.ui:605
+#: src/window.ui:606
 msgid "<b> Alphabets </b>"
 msgstr ""
 
-#: src/window.ui:616
+#: src/window.ui:617
 msgid "Any"
 msgstr ""
 
@@ -272,30 +284,34 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: src/window.py:48 src/window.py:355
+#: src/window.py:49 src/window.py:363
 msgid "sans-serif"
 msgstr ""
 
-#: src/window.py:48 src/window.py:355
+#: src/window.py:49 src/window.py:363
 msgid "serif"
 msgstr ""
 
-#: src/window.py:48 src/window.py:355
+#: src/window.py:49 src/window.py:363
 msgid "display"
 msgstr ""
 
-#: src/window.py:48 src/window.py:355
+#: src/window.py:49 src/window.py:363
 msgid "monospaced"
 msgstr ""
 
-#: src/window.py:48 src/window.py:355
+#: src/window.py:49 src/window.py:363
 msgid "handwriting"
 msgstr ""
 
-#: src/window.py:219
+#: src/window.py:201
+msgid "Default"
+msgstr ""
+
+#: src/window.py:227
 msgid "Translators"
 msgstr ""
 
-#: src/window.py:395
+#: src/window.py:402
 msgid "Please choose a folder"
 msgstr ""

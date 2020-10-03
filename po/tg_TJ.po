@@ -1,0 +1,285 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Font Downloader\n"
+"Language: tg\n"
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:3
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
+#: src/window.ui:298 src/window.py:223
+msgid "Font Downloader"
+msgstr "Боркунандаи ҳуруф"
+
+#: ../src/fontpreview.ui:37
+msgid "Type in here a custom text..."
+msgstr "Матни санҷиширо дар ин ҷо ворид намоед..."
+
+#: src/window.ui:100
+msgid "Font type"
+msgstr "Навъи ҳарф"
+
+#: src/window.ui:118
+msgid "All"
+msgstr "Ҳама"
+
+#: src/window.ui:133
+msgid "Serif"
+msgstr "Барҷаста"
+
+#: src/window.ui:148
+msgid "Sans Serif"
+msgstr "Ғайрибарҷаста"
+
+#: src/window.ui:163
+msgid "Display"
+msgstr "Ороишӣ"
+
+#: src/window.ui:178
+msgid "Handwriting"
+msgstr "Дастнавис"
+
+#: src/window.ui:193
+msgid "Monospace"
+msgstr "Яклухт"
+
+#: src/window.ui:245
+msgid "About Font Downloader"
+msgstr "Дар бораи Боркунандаи ҳуруф"
+
+#: src/window.ui:326
+msgid "  Install"
+msgstr "  Насб кардан"
+
+#: src/window.ui:438 src/window.py:377
+msgid "Download"
+msgstr "Боргирӣ кардан"
+
+#: src/window.ui:490
+msgid "Type here your text..."
+msgstr "Матни худро дар ин ҷо ворид намоед..."
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:7
+msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
+msgstr "Боркунандаи ҳуруф ин барномаи осон барои насб кардани ҳуруф рост аз Google Fonts мебошад. Ин барнома дар асоси GTK барномарезӣ карда шудааст."
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
+msgid "A simple GTK font downloader."
+msgstr "Боркунандаи ҳуруф ин барномаи GTK-и осон мебошад."
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
+msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
+msgstr "Шумо ягон бор мехостед ҳуруфро дар намуди зоҳирии терминали худ иваз намоед, аммо барои ҷустуҷӯ, боргирӣ ва насб кардани ҳуруф хоҳиш надоштед? Ин барномаи GTK-и осон ва мувофиқшаванда ба шумо барои ҷустуҷӯ ва насб кардани ҳуруф рост аз сомонаи Google Fonts имкон медиҳад!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
+msgid "Gustavo Peredo"
+msgstr "Густаво Передо"
+
+#: src/window.ui:423
+msgid "Install"
+msgstr "Насб кардан"
+
+#: src/window.py:219
+msgid "Translators"
+msgstr "Тарҷумонҳо"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:6
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:7
+msgid "Dark mode"
+msgstr "Реҷаи торик"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:11
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:12
+msgid "Any alphabet"
+msgstr "Ҳамаи алифбоҳо"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:16
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:17
+msgid "Default installation directory"
+msgstr "Феҳристи насбкунии пешфарз"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:21
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:22
+msgid "Which alphabets aren't filtered"
+msgstr "Алифбоҳое, ки ҷудо нашуданд"
+
+#: src/window.ui:231 src/window.ui:556
+msgid "Settings"
+msgstr "Танзимот"
+
+#: src/window.ui:559
+msgid "Close"
+msgstr "Пӯшидан"
+
+#: src/window.ui:605
+msgid "<b> Alphabets </b>"
+msgstr "<b> Алифбоҳо </b>"
+
+#: src/window.ui:616
+msgid "Any"
+msgstr "Ҳама"
+
+#: src/window.ui:652
+msgid "Arabic"
+msgstr "Арабӣ"
+
+#: src/window.ui:666
+msgid "Bengali"
+msgstr "Банголӣ"
+
+#: src/window.ui:679
+msgid "Chinese \n"
+"Hong Kong"
+msgstr "Чинӣ (Ҳонконг)"
+
+#: src/window.ui:693
+msgid "Chinese\n"
+"Simplified"
+msgstr "Чинӣ (соддакардашуда)"
+
+#: src/window.ui:707
+msgid "Chinese\n"
+"Traditional"
+msgstr "Чинӣ (анъанавӣ)"
+
+#: src/window.ui:721
+msgid "Cyrillic"
+msgstr "Кириллӣ"
+
+#: src/window.ui:734
+msgid "Cyrillic\n"
+"Extended"
+msgstr "Кириллӣ (васеъшуда)"
+
+#: src/window.ui:748
+msgid "Kannada"
+msgstr "Каннада"
+
+#: src/window.ui:762
+msgid "Khmer"
+msgstr "Хмерӣ"
+
+#: src/window.ui:775
+msgid "Korean"
+msgstr "Кореягӣ"
+
+#: src/window.ui:788
+msgid "Latin"
+msgstr "Лотинӣ"
+
+#: src/window.ui:801
+msgid "Latin\n"
+"Extended"
+msgstr "Лотинӣ (васеъшуда)"
+
+#: src/window.ui:815
+msgid "Malayalam"
+msgstr "Малаяламӣ"
+
+#: src/window.ui:828
+msgid "Myanmar"
+msgstr "Мянма"
+
+#: src/window.ui:841
+msgid "Oriya"
+msgstr "Ория"
+
+#: src/window.ui:855
+msgid "Sinhala"
+msgstr "Сингалӣ"
+
+#: src/window.ui:868
+msgid "Tamil"
+msgstr "Тамилӣ"
+
+#: src/window.ui:881
+msgid "Telugu"
+msgstr "Телугу"
+
+#: src/window.ui:894
+msgid "Thai"
+msgstr "Тайӣ"
+
+#: src/window.ui:907
+msgid "Tibetan"
+msgstr "Тибетӣ"
+
+#: src/window.ui:920
+msgid "Vietnamese"
+msgstr "Ветнамӣ"
+
+#: src/window.ui:933
+msgid "Devanagari"
+msgstr "Деванагарӣ"
+
+#: src/window.ui:947
+msgid "Greek"
+msgstr "Юнонӣ"
+
+#: src/window.ui:960
+msgid "Greek\n"
+"Extended"
+msgstr "Юнонӣ (васеъшуда)"
+
+#: src/window.ui:974
+msgid "Gujarati"
+msgstr "Гуҷаротӣ"
+
+#: src/window.ui:987
+msgid "Gurmukhi"
+msgstr "Гурмухӣ"
+
+#: src/window.ui:1000
+msgid "Hebrew"
+msgstr "Яҳудӣ"
+
+#: src/window.ui:1013
+msgid "Japanese"
+msgstr "Ҷопонӣ"
+
+#: src/window.ui:1051
+msgid "<b> File Settings </b>"
+msgstr "<b> Танзимоти файл </b>"
+
+#: src/window.ui:1088
+msgid "Default font installation folder:"
+msgstr "Феҳристи насбкунии пешфарзи ҳуруф"
+
+#: src/window.ui:1098
+msgid "Choose directory"
+msgstr "Интихоби феҳрист"
+
+#: src/window.ui:1141
+msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
+msgstr "Огоҳӣ: Агар шумо феҳристи дилхоҳро барои насб кардани ҳуруф ёфт карда натавонед, эҳтимол ин барнома ба он феҳрист иҷозати дастрасӣ надорад. Барои ҳал кардани ин масъала, барномаи \"Flatseal\"-ро насб намуда, ба феҳристи дилхоҳ аз ин барномаи дастрасӣ пайдо намоед."
+
+#: src/window.ui:1163
+msgid "Reset"
+msgstr "Бозсозӣ"
+
+#: src/window.py:48 src/window.py:355
+msgid "sans-serif"
+msgstr "ғайрибарҷаста"
+
+#: src/window.py:48 src/window.py:355
+msgid "serif"
+msgstr "барҷаста"
+
+#: src/window.py:48 src/window.py:355
+msgid "display"
+msgstr "ороишӣ"
+
+#: src/window.py:48 src/window.py:355
+msgid "monospaced"
+msgstr "яклухт"
+
+#: src/window.py:48 src/window.py:355
+msgid "handwriting"
+msgstr "дастнавис"
+
+#: src/window.py:395
+msgid "Please choose a folder"
+msgstr "Лутфан, феҳристеро интихоб намоед"
+

@@ -198,7 +198,7 @@ class FontdownloaderWindow(Handy.Window):
                 self.alphabet_buttons[i].set_active(False)
 
         self.anyAlphabet()
-        self.folder_settings_button.set_label(self.settings.get_string('default-directory'))
+        self.folder_settings_button.set_label(_('Default') if self.settings.get_string('default-directory')=='Default' else self.settings.get_string('default-directory'))
 
         for buttons in self.alphabet_buttons:
             buttons.connect("toggled", self.updateAlphabet)
