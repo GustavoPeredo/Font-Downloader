@@ -1,5 +1,6 @@
 [Desktop Entry]
 
+
 Name=Font Downloader
 Exec=fontdownloader
 Terminal=false
