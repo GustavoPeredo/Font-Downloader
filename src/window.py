@@ -46,7 +46,7 @@ class FontBox(Gtk.Box):
         self.fontFamily.set_text(familyName)
         #Change category to it's translation
 
-        self.fontCategory.set_text(_('sans-serif') if category=='sans-serif' else (_('serif') if category=='serif' else (_('display') if category=='display' else (_('monospaced') if category=='monospaced' else _('handwriting')))))
+        self.fontCategory.set_text(_('sans-serif') if category=='sans-serif' else (_('serif') if category=='serif' else (_('display') if category=='display' else (_('monospaced') if category=='monospace' else _('handwriting')))))
 
 
 #Here we import the main window template
