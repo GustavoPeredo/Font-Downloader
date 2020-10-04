@@ -441,6 +441,8 @@ class FontdownloaderWindow(Handy.Window):
 
     def checkForInstalledFonts(self, *args, **kwargs):
         defaultPath = path.join(path.expanduser('~'), '.local/share/fonts') if self.settings.get_string('default-directory') == 'Default' else self.settings.get_string('default-directory')
+        if not path.exists(defaultPath):
+            makedirs(defaultPath)
         onlyfiles = [f for f in listdir(defaultPath) if path.isfile(path.join(defaultPath, f))]
         getrows = []
         for i in webfontsData['items']:
