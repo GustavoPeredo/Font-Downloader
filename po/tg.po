@@ -285,17 +285,17 @@ msgstr "Лутфан, феҳристеро интихоб намоед"
 
 #: src/font-box.ui:18
 msgid "family"
-msgstr ""
+msgstr "оила"
 
 #: src/font-box.ui:38
 msgid "category"
-msgstr ""
+msgstr "категория"
 
 #: src/font-box.ui:76
 msgid "Installed"
-msgstr ""
+msgstr "Насбшуда"
 
 #: src/window.py:201
 msgid "Default"
-msgstr ""
+msgstr "Пешфарз"
 
