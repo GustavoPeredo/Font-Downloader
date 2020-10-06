@@ -23,16 +23,10 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="3.10.1" date="2020-10-4">
-      <description>
-        <p> Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start</p>
-      </description>
-    </release>
     <release version="3.10.2" date="2020-10-6">
       <description>
         <p> Version 3.10.2 </p>
         <p> Updated translations</p>
-        <p> </p>
         <p> Version 3.0.0 </p>
         <p>This release aims to be the last feature release:</p>
         <ul>
@@ -43,6 +37,11 @@
           <li>Change default installation dialog!</li>
           <li>Added a file chooser dialog for downloads!</li>
         </ul>
+      </description>
+    </release>
+    <release version="3.10.1" date="2020-10-4">
+      <description>
+        <p> Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start</p>
       </description>
     </release>
     <release version="3.10.0" date="2020-10-4">
