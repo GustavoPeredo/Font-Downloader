@@ -360,7 +360,7 @@ class FontdownloaderWindow(Handy.Window):
         #Load the html, set title and subtitle
         self.font_preview.load_html(self.html)
         self.headerbar2.set_title(self.CurrentSelectedFont)
-        self.headerbar2.set_subtitle(_('sans-serif') if self.temp_data[1]=='sans-serif' else (_('serif') if self.temp_data[1]=='serif' else (_('display') if self.temp_data[1]=='display' else (_('monospaced') if self.temp_data[1]=='monospaced' else _('handwriting')))))
+        self.headerbar2.set_subtitle(_('sans-serif') if self.temp_data[1]=='sans-serif' else (_('serif') if self.temp_data[1]=='serif' else (_('display') if self.temp_data[1]=='display' else (_('monospaced') if self.temp_data[1]=='monospace' else _('handwriting')))))
         self.leaflet.set_visible_child(self.box2)
 
 
