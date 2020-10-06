@@ -27,7 +27,7 @@ Handy.init()
 
 locale.bindtextdomain('fontdownloader', path.join(path.dirname(__file__).split('fontdownloader')[0],'locale'))
 locale.textdomain('fontdownloader')
-webfontsData = json.load(open("/app/share/fontdownloader/fontdownloader/webfonts.json", 'r'))
+webfontsData = json.load(open(path.join(path.dirname(__file__).split('fontdownloader')[0],'fontdownloader/fontdownloader/webfonts.json'), 'r'))
 
 #Here we import the font-box template which is used for the fonts' boxes
 @Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/font-box.ui')
