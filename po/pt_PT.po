@@ -11,7 +11,7 @@ msgstr ""
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
 #: src/window.ui:299 src/window.py:231
 msgid "Font Downloader"
-msgstr "Intalador de Fontes"
+msgstr "Descarregador de Fontes"
 
 #: ../src/fontpreview.ui:37
 msgid "Type in here a custom text..."
@@ -47,7 +47,7 @@ msgstr "Mono-espaçada"
 
 #: src/window.ui:245
 msgid "About Font Downloader"
-msgstr "Sobre o Instalador de Fontes"
+msgstr "Sobre o Descarregador de Fontes"
 
 #: src/window.ui:326
 msgid "  Install"
@@ -63,11 +63,11 @@ msgstr "Digite aqui um texto..."
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
-msgstr "Um simples instalador de fontes escrito em GTK, que instala fontes diretamente do Google Fonts"
+msgstr "Um simples descarregador de fontes escrito em GTK, que instala fontes diretamente do Google Fonts"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
 msgid "A simple GTK font downloader."
-msgstr "Um simples instalador de fontes em GTK"
+msgstr "Um simples descarregador de fontes em GTK"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
