@@ -11,7 +11,7 @@ msgstr ""
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
 #: src/window.ui:299 src/window.py:231
 msgid "Font Downloader"
-msgstr "Intalador de Fontes"
+msgstr "Instalador de Fontes"
 
 #: ../src/fontpreview.ui:37
 msgid "Type in here a custom text..."
