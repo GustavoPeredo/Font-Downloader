@@ -23,6 +23,27 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="3.12.0" date="2020-11-25">
+      <description>
+        <p> Version 3.12.0 </p>
+        <ul>
+          <li> Translation Updates </li>
+          <li> More touch friendly ui </li>
+          <li> Bug fixes </li>
+          <li> Updated font links and versions to latest </li>
+          <li> Version 3.0.0 </li>
+          <li>This release aims to be the last feature release:</li>
+        </ul>
+        <ul>
+          <li>Dark mode!</li>
+          <li>Option to filter by alphabets!</li>
+          <li>You can see installed fonts now!</li>
+          <li>Swipe back and forth easily!</li>
+          <li>Change default installation dialog!</li>
+          <li>Added a file chooser dialog for downloads!</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.11.0" date="2020-10-25">
       <description>
         <p> Version 3.11.0 </p>
