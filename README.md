@@ -1,8 +1,12 @@
-# A Simple GTK application to install and download fonts.
+<h1><img src="./data/icons/hicolor/scalable/apps/org.gustavoperedo.FontDownloader.svg"> Font Downloader</h1>
 
 ## About
 
 One day I was bored of my terminal font and wanted to switch, unfortunately going through the entire process of searching Google Fonts for a font, then downloading, then copying and pasting it into my .fonts folder to only then test a font was a pain. So I decided to create this app!
+<div align="right">
+    <a href='https://flathub.org/apps/details/org.gustavoperedo.FontDownloader'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
+</div>
+
 
 ## Screenshots
 
@@ -60,3 +64,8 @@ They are here and need your help! I translated the app for languages that I've h
 * ~~Fix fonts names~~
 * ~~Translate new strings~~
 * ~~Migrate to gitlab~~
+
+<div align="center">
+    <p><b> Proudly part of the GNOME Circle </b></p>
+    <a href='https://circle.gnome.org/'><img width='240' alt='GNOME Circle' src='https://gitlab.gnome.org/Teams/Circle/-/raw/master/assets/button/circle-button-fullcolor.svg'/></a>
+</div>
