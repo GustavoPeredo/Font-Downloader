@@ -59,6 +59,8 @@
         }
     ],
     "build-options" : {
-        "env" : {        }
+        "env" : {
+            "GTK_DEBUG" : "interactive org.gustavoperedo.FontDownloader"
+        }
     }
 }
