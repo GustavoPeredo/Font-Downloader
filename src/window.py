@@ -24,6 +24,7 @@ from urllib.request import urlretrieve
 
 #Init Webkit and Handy libs
 Handy.init()
+WebKit2.WebView()
 
 locale.bindtextdomain('fontdownloader', path.join(path.dirname(__file__).split('fontdownloader')[0],'locale'))
 locale.textdomain('fontdownloader')
@@ -115,13 +116,13 @@ class FontdownloaderWindow(Handy.Window):
     any_alphabet_button = Gtk.Template.Child()
     reset_button = Gtk.Template.Child()
     header_group = Gtk.Template.Child()
+    header_leaflet = Gtk.Template.Child()
 
-    WebKit2.WebView()
     #On initalization do:
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         #Create a box for each font
-        for i in range(len(webfontsData['items'])):
+        for i in range(len(webfontsData['items'])): #len(webfontsData['items'])
             self.newBox = FontBox(webfontsData['items'][i]['family'],
                                   webfontsData['items'][i]['category'],
                                   i,webfontsData['items'][i]['variants'],
@@ -187,6 +188,7 @@ class FontdownloaderWindow(Handy.Window):
         'latin', 'latin-ext', 'malayalam', 'myanmar', 'oriya', 'sinhala',
         'tamil', 'telugu', 'thai', 'tibetan', 'vietnamese']
 
+        self.size_increase = 1
         self.current_alphabet_list = self.settings.get_string('current-alphabet').split(';')
         self.any_alphabet_button.set_active(self.settings.get_boolean('any-alphabet'))
         self.any_alphabet = self.any_alphabet_button.get_active()
@@ -204,19 +206,17 @@ class FontdownloaderWindow(Handy.Window):
             buttons.connect("toggled", self.updateAlphabet)
 
         #Calls fontChanged function to update first view
+
+
         self.fontChanged()
 
         self.dark_mode_button.set_active(self.settings.get_boolean('dark-mode'))
         self.changeTheme()
 
         #Sets up borders
-        self.setup_css();
+        self.setup_css()
 
         self.checkForInstalledFonts()
-
-    @property
-    def folded(self):
-        self.fontChanged()
 
     #About dialog, courtesy of GeorgesStavracas
     def on_about(self, *args, **kwargs):
@@ -297,6 +297,7 @@ class FontdownloaderWindow(Handy.Window):
 
     def updateFilter(self, *args, **kwargs):
         #Updates the fonts list's filter
+        self.private_counter = 0
         self.fonts_list.set_filter_func(self.filterFonts, None, True)
 
     def filterFonts(self, row, data, notifyDestroy):
@@ -312,13 +313,15 @@ class FontdownloaderWindow(Handy.Window):
 
         filtered = [filters for filters in self.CurrentFilters if self.CurrentFilters[filters]]
         searchBarText = self.search_entry.get_text().lower()
+
         if not self.any_alphabet:
             if any(i in self.current_alphabet_list for i in row.get_child().data[3]):
                 return ((searchBarText == row.get_child().data[0][:len(searchBarText)].lower()) and (row.get_child().data[1] in filtered))
             else:
                 return False
         else:
-            return ((searchBarText == row.get_child().data[0][:len(searchBarText)].lower()) and (row.get_child().data[1] in filtered))
+            return (searchBarText == row.get_child().data[0][:len(searchBarText)].lower()) and (row.get_child().data[1] in filtered)
+
 
     def fontChanged(self, *args, **kwargs):
         #Whenever the user does something that should change the font preview:
@@ -357,23 +360,15 @@ class FontdownloaderWindow(Handy.Window):
             </body>
         </html>
         """
-
         #Load the html, set title and subtitle
         self.font_preview.load_html(self.html)
         self.headerbar2.set_title(self.CurrentSelectedFont)
         self.headerbar2.set_subtitle(_('sans-serif') if self.temp_data[1]=='sans-serif' else (_('serif') if self.temp_data[1]=='serif' else (_('display') if self.temp_data[1]=='display' else (_('monospaced') if self.temp_data[1]=='monospace' else _('handwriting')))))
         self.leaflet.set_visible_child(self.box2)
-
+        self.header_leaflet.set_visible_child(self.headerbar2)
 
     def updateSize(self, *args, **kwargs):
-        #If the screen is too small, change to font preview pane and show
-        #the return button, otherwise, do the opposite
-        if self.leaflet.get_folded():
-            self.back_button.show()
-            self.main_download_button.set_label('')
-            #self.leaflet.set_visible_child(self.box2)
-        else:
-            self.bringListForward()
+        self.back_button.set_sensitive(self.header_leaflet.get_folded())
 
     #Turns search on or off
     def toggleSearch(self, *args, **kwargs):
@@ -382,8 +377,7 @@ class FontdownloaderWindow(Handy.Window):
     #If the user press back_button, return focus to list view
     def bringListForward(self, *args, **kwargs):
         self.leaflet.set_visible_child(self.box1)
-        self.main_download_button.set_label(_('Download'))
-        self.back_button.hide()
+        self.header_leaflet.set_visible_child(self.headerbar1)
 
     def changeTheme(self, *args, **kwargs):
         if self.dark_mode_button.get_active():
@@ -451,7 +445,8 @@ class FontdownloaderWindow(Handy.Window):
         for i in getrows:
             for j in onlyfiles:
                 if i in j[:len(j[:-4])]:
-                    self.fonts_list.get_row_at_index(getrows.index(i)).get_child().installed_box.show()
+                    if self.fonts_list.get_row_at_index(getrows.index(i)):
+                        self.fonts_list.get_row_at_index(getrows.index(i)).get_child().installed_box.show()
 
 
 
