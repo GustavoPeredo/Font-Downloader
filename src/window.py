@@ -117,23 +117,11 @@ class FontdownloaderWindow(Handy.Window):
     reset_button = Gtk.Template.Child()
     header_group = Gtk.Template.Child()
     header_leaflet = Gtk.Template.Child()
+    scroll_window = Gtk.Template.Child()
 
     #On initalization do:
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        #Create a box for each font
-        for i in range(len(webfontsData['items'])): #len(webfontsData['items'])
-            self.newBox = FontBox(webfontsData['items'][i]['family'],
-                                  webfontsData['items'][i]['category'],
-                                  i,webfontsData['items'][i]['variants'],
-                                  webfontsData['items'][i]['subsets'])
-            #Make it visible and append it to our fonts panel
-            self.newBox.set_visible(True)
-            self.fonts_list.add(self.newBox)
-        #Select the first row and show all rows
-        self.fonts_list.select_row(self.fonts_list.get_row_at_index(0))
-        self.fonts_list.show()
-
         #Creates temporary variables for our window
         self.CurrentSelectedFont = ''
         self.CurrentText = 'The quick brown fox jumps over the lazy dog.'
@@ -168,6 +156,7 @@ class FontdownloaderWindow(Handy.Window):
         self.any_alphabet_button.connect('clicked', self.anyAlphabet)
         self.reset_button.connect('clicked', self.reset)
         self.header_group.connect('update-decoration-layouts', self.updateSize)
+        self.scroll_window.connect('edge-reached', self.increaseSearch)
 
         self.alphabet_buttons = [self.arabic_button, self.bengali_button,
         self.chinese_hk_button, self.chinese_SIMP_button,
@@ -200,13 +189,16 @@ class FontdownloaderWindow(Handy.Window):
                 self.alphabet_buttons[i].set_active(False)
 
         self.anyAlphabet()
+
+        #Select the first row and show all rows
+        self.fonts_list.select_row(self.fonts_list.get_row_at_index(0))
+        self.fonts_list.show()
         self.folder_settings_button.set_label(_('Default') if self.settings.get_string('default-directory')=='Default' else self.settings.get_string('default-directory'))
 
         for buttons in self.alphabet_buttons:
             buttons.connect("toggled", self.updateAlphabet)
 
         #Calls fontChanged function to update first view
-
 
         self.fontChanged()
 
@@ -215,8 +207,6 @@ class FontdownloaderWindow(Handy.Window):
 
         #Sets up borders
         self.setup_css()
-
-        self.checkForInstalledFonts()
 
     #About dialog, courtesy of GeorgesStavracas
     def on_about(self, *args, **kwargs):
@@ -258,7 +248,7 @@ class FontdownloaderWindow(Handy.Window):
         for key in links:
            urlretrieve(links[key], path.join(absolutePath,
                         self.CurrentSelectedFont + " " + key + links[key][-4:]))
-        self.checkForInstalledFonts()
+        self.updateFilter()
 
     def downloadFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
@@ -298,6 +288,39 @@ class FontdownloaderWindow(Handy.Window):
     def updateFilter(self, *args, **kwargs):
         #Updates the fonts list's filter
         self.private_counter = 0
+        searchBarText = self.search_entry.get_text().lower()
+        defaultPath = path.join(path.expanduser('~'), '.local/share/fonts') if self.settings.get_string('default-directory') == 'Default' else self.settings.get_string('default-directory')
+        if not path.exists(defaultPath):
+            makedirs(defaultPath)
+        onlyfiles = [f for f in listdir(defaultPath) if path.isfile(path.join(defaultPath, f))]
+        for i in range(len(self.fonts_list)):
+                self.fonts_list.remove(self.fonts_list.get_row_at_index(0))
+        if searchBarText != "":
+            for i in range(len(webfontsData['items'])):
+                if searchBarText == webfontsData['items'][i]['family'][:len(searchBarText)].lower():
+                    self.newBox = FontBox(webfontsData['items'][i]['family'],
+                                          webfontsData['items'][i]['category'],
+                                          i,webfontsData['items'][i]['variants'],
+                                          webfontsData['items'][i]['subsets'],)
+                    #Make it visible and append it to our fonts panel
+                    for j in onlyfiles:
+                        if webfontsData['items'][i]['family'] in j[:len(j[:-4])]:
+                            self.newBox.installed_box.show()
+                    self.newBox.set_visible(True)
+                    self.fonts_list.add(self.newBox)
+        else:
+            for i in range(25*self.size_increase):
+                if i <= (len(webfontsData['items'])-1):
+                    self.newBox = FontBox(webfontsData['items'][i]['family'],
+                                          webfontsData['items'][i]['category'],
+                                          i,webfontsData['items'][i]['variants'],
+                                          webfontsData['items'][i]['subsets'])
+                    #Make it visible and append it to our fonts panel
+                    for j in onlyfiles:
+                        if webfontsData['items'][i]['family'] in j[:len(j[:-4])]:
+                            self.newBox.installed_box.show()
+                    self.newBox.set_visible(True)
+                    self.fonts_list.add(self.newBox)
         self.fonts_list.set_filter_func(self.filterFonts, None, True)
 
     def filterFonts(self, row, data, notifyDestroy):
@@ -310,9 +333,8 @@ class FontdownloaderWindow(Handy.Window):
             'handwriting': self.handwriting_check.get_active(),
             'monospace': self.mono_check.get_active()
         }
-
-        filtered = [filters for filters in self.CurrentFilters if self.CurrentFilters[filters]]
         searchBarText = self.search_entry.get_text().lower()
+        filtered = [filters for filters in self.CurrentFilters if self.CurrentFilters[filters]]
 
         if not self.any_alphabet:
             if any(i in self.current_alphabet_list for i in row.get_child().data[3]):
@@ -322,6 +344,10 @@ class FontdownloaderWindow(Handy.Window):
         else:
             return (searchBarText == row.get_child().data[0][:len(searchBarText)].lower()) and (row.get_child().data[1] in filtered)
 
+    def increaseSearch(self, *args, **kwargs):
+        if self.scroll_window.get_vadjustment().get_value() > 100:
+            self.updateFilter()
+            self.size_increase = self.size_increase + 1
 
     def fontChanged(self, *args, **kwargs):
         #Whenever the user does something that should change the font preview:
@@ -372,6 +398,7 @@ class FontdownloaderWindow(Handy.Window):
 
     #Turns search on or off
     def toggleSearch(self, *args, **kwargs):
+        self.updateFilter()
         self.search_bar.set_search_mode(not self.search_bar.get_search_mode())
 
     #If the user press back_button, return focus to list view
@@ -433,22 +460,6 @@ class FontdownloaderWindow(Handy.Window):
         self.folder_settings_button.set_label('Default')
         self.any_alphabet_button.set_active(True)
         self.updateAlphabet()
-
-    def checkForInstalledFonts(self, *args, **kwargs):
-        defaultPath = path.join(path.expanduser('~'), '.local/share/fonts') if self.settings.get_string('default-directory') == 'Default' else self.settings.get_string('default-directory')
-        if not path.exists(defaultPath):
-            makedirs(defaultPath)
-        onlyfiles = [f for f in listdir(defaultPath) if path.isfile(path.join(defaultPath, f))]
-        getrows = []
-        for i in webfontsData['items']:
-            getrows.append(i['family'])
-        for i in getrows:
-            for j in onlyfiles:
-                if i in j[:len(j[:-4])]:
-                    if self.fonts_list.get_row_at_index(getrows.index(i)):
-                        self.fonts_list.get_row_at_index(getrows.index(i)).get_child().installed_box.show()
-
-
 
 
 
