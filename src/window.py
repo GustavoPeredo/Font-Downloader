@@ -213,11 +213,14 @@ class FontdownloaderWindow(Handy.Window):
 
     #About dialog, courtesy of GeorgesStavracas
     def on_about(self, *args, **kwargs):
-        authors = ['Gustavo Machado Peredo', 'Georges Basile Stavracas Neto',
-                    'Martin Abente Lahaye']
-        translators = ['Gustavo Machado Peredo', 'Victor Ibragimov']
+        authors = ['Gustavo Machado Peredo']
+        contributers = ['Georges Basile Stavracas Neto',
+                        'Martin Abente Lahaye']
+        translators = ['Gustavo Machado Peredo', 'Victor Ibragimov',
+                       'Manuel Quiñones', 'Heimen Stoffels']
         dialog = Gtk.AboutDialog(transient_for=self, modal=True)
         dialog.props.authors = authors
+        dialog.add_credit_section(_("Contributers"), contributers)
         dialog.add_credit_section(_("Translators"), translators)
         dialog.props.copyright = 'Copyright \xa9 2020 Gustavo Peredo'
         dialog.props.license_type = Gtk.License.GPL_3_0

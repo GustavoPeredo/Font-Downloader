@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-05 16:12-0300\n"
+"POT-Creation-Date: 2020-12-05 16:18-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:5
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
-#: src/window.ui:319 src/window.py:225
+#: src/window.ui:319 src/window.py:228
 msgid "Font Downloader"
 msgstr ""
 
@@ -444,23 +444,23 @@ msgstr ""
 msgid "<b> EXPERIMENTAL </b>"
 msgstr ""
 
-#: src/window.py:50 src/window.py:396
+#: src/window.py:50 src/window.py:399
 msgid "sans-serif"
 msgstr ""
 
-#: src/window.py:50 src/window.py:396
+#: src/window.py:50 src/window.py:399
 msgid "serif"
 msgstr ""
 
-#: src/window.py:50 src/window.py:396
+#: src/window.py:50 src/window.py:399
 msgid "display"
 msgstr ""
 
-#: src/window.py:50 src/window.py:396
+#: src/window.py:50 src/window.py:399
 msgid "monospaced"
 msgstr ""
 
-#: src/window.py:50 src/window.py:396
+#: src/window.py:50 src/window.py:399
 msgid "handwriting"
 msgstr ""
 
@@ -468,10 +468,14 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: src/window.py:221
+#: src/window.py:223
+msgid "Contributers"
+msgstr ""
+
+#: src/window.py:224
 msgid "Translators"
 msgstr ""
 
-#: src/window.py:474
+#: src/window.py:477
 msgid "Please choose a folder"
 msgstr ""
