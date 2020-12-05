@@ -6,6 +6,11 @@
       <summary>Dark mode</summary>
       <description>Dark mode</description>
     </key>
+	  <key name="colorful-mode" type="b">
+	    <default>false</default>
+      <summary>Colorful mode</summary>
+      <description>Colorful mode</description>
+	  </key>
     <key name="any-alphabet" type="b">
       <default>true</default>
       <summary>Any alphabet</summary>

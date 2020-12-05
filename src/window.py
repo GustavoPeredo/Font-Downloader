@@ -81,6 +81,7 @@ class FontdownloaderWindow(Handy.Window):
     headerbar2 = Gtk.Template.Child()
     light_mode_button = Gtk.Template.Child()
     dark_mode_button = Gtk.Template.Child()
+    colorful_switch = Gtk.Template.Child()
     settings_button = Gtk.Template.Child()
     SettingsWindow = Gtk.Template.Child()
     close_settings_button = Gtk.Template.Child()
@@ -150,6 +151,7 @@ class FontdownloaderWindow(Handy.Window):
         self.about_button.connect("clicked", self.on_about)
         self.light_mode_button.connect('clicked', self.changeTheme)
         self.dark_mode_button.connect('clicked', self.changeTheme)
+        self.colorful_switch.connect('notify::active', self.flipSwitch)
         self.settings_button.connect('clicked', self.presentSettings)
         self.close_settings_button.connect('clicked', self.closeSettings)
         self.folder_settings_button.connect('clicked', self.on_open)
@@ -203,6 +205,7 @@ class FontdownloaderWindow(Handy.Window):
         self.fontChanged()
 
         self.dark_mode_button.set_active(self.settings.get_boolean('dark-mode'))
+        self.colorful_switch.set_active(self.settings.get_boolean('colorful-mode'))
         self.changeTheme()
 
         #Sets up borders
@@ -321,7 +324,9 @@ class FontdownloaderWindow(Handy.Window):
                             self.newBox.installed_box.show()
                     self.newBox.set_visible(True)
                     self.fonts_list.add(self.newBox)
+        self.changeColor(self.settings.get_boolean('colorful-mode'))
         self.fonts_list.set_filter_func(self.filterFonts, None, True)
+        self.fonts_list.select_row(self.fonts_list.get_row_at_index(0))
 
     def filterFonts(self, row, data, notifyDestroy):
         #Where the actual filter happens, if it returns True, the row appears
@@ -335,7 +340,6 @@ class FontdownloaderWindow(Handy.Window):
         }
         searchBarText = self.search_entry.get_text().lower()
         filtered = [filters for filters in self.CurrentFilters if self.CurrentFilters[filters]]
-
         if not self.any_alphabet:
             if any(i in self.current_alphabet_list for i in row.get_child().data[3]):
                 return ((searchBarText == row.get_child().data[0][:len(searchBarText)].lower()) and (row.get_child().data[1] in filtered))
@@ -413,6 +417,52 @@ class FontdownloaderWindow(Handy.Window):
         else:
             Gtk.Settings.get_default().set_property('gtk-application-prefer-dark-theme', False)
             self.settings.set_boolean('dark-mode', False)
+
+    def changeColor(self, toggle, *args, **kwargs):
+        if toggle:
+            self.main_install_button.get_style_context().add_class('green')
+            self.light_mode_button.get_style_context().add_class('color-green')
+            self.dark_mode_button.get_style_context().add_class('color-green')
+            self.all_check.get_style_context().add_class('green2')
+            self.serif_check.get_style_context().add_class('green2')
+            self.sans_check.get_style_context().add_class('green2')
+            self.display_check.get_style_context().add_class('green2')
+            self.handwriting_check.get_style_context().add_class('green2')
+            self.mono_check.get_style_context().add_class('green2')
+            self.search_entry.get_style_context().add_class('text-green')
+            self.text_entry.get_style_context().add_class('text-green')
+            self.colorful_switch.get_style_context().add_class('green')
+            for temp_buttons in self.alphabet_buttons:
+                temp_buttons.get_style_context().add_class('green2')
+            self.any_alphabet_button.get_style_context().add_class('green2')
+            for temp_boxes in self.fonts_list:
+                temp_boxes.get_style_context().add_class('green2')
+        else:
+            self.main_install_button.get_style_context().remove_class('green')
+            self.light_mode_button.get_style_context().remove_class('color-green')
+            self.dark_mode_button.get_style_context().remove_class('color-green')
+            self.all_check.get_style_context().remove_class('green2')
+            self.serif_check.get_style_context().remove_class('green2')
+            self.sans_check.get_style_context().remove_class('green2')
+            self.display_check.get_style_context().remove_class('green2')
+            self.handwriting_check.get_style_context().remove_class('green2')
+            self.mono_check.get_style_context().remove_class('green2')
+            self.search_entry.get_style_context().remove_class('text-green')
+            self.text_entry.get_style_context().remove_class('text-green')
+            self.colorful_switch.get_style_context().remove_class('green')
+            for temp_buttons in self.alphabet_buttons:
+                temp_buttons.get_style_context().remove_class('green2')
+            self.any_alphabet_button.get_style_context().remove_class('green2')
+            for temp_boxes in self.fonts_list:
+                temp_boxes.get_style_context().remove_class('green2')
+
+    def flipSwitch(self, button, *args, **kwargs):
+        if button.get_active():
+            self.changeColor(True)
+            self.settings.set_boolean('colorful-mode', True)
+        else:
+            self.changeColor(False)
+            self.settings.set_boolean('colorful-mode', False)
 
     def presentSettings(self, *args, **kwargs):
         self.SettingsWindow.show()
