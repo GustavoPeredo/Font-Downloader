@@ -420,3 +420,4 @@ msgstr "New, prettier icon!"
 msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
 msgstr "You can now swipe back to fonts catalog with you trackpad or screen!"
 
+

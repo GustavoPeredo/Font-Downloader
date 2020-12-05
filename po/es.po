@@ -11,11 +11,7 @@ msgstr ""
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:274
 #: src/window.ui:299 src/window.py:231
 msgid "Font Downloader"
-msgstr "Descargador de Fuentes"
-
-#: ../src/fontpreview.ui:37
-msgid "Type in here a custom text..."
-msgstr "Digite aquí un texto..."
+msgstr "Descargador de Tipografías"
 
 #: src/window.ui:100
 msgid "Font type"
@@ -47,33 +43,29 @@ msgstr "Monoespaciado"
 
 #: src/window.ui:245
 msgid "About Font Downloader"
-msgstr "Sobre Descarregador de Fuentes"
-
-#: src/window.ui:326
-msgid "  Install"
-msgstr "  Instalar"
+msgstr "Sobre Descarregador de Tipografías"
 
 #: src/window.ui:439 src/window.py:384
 msgid "Download"
-msgstr "Descarregar"
+msgstr "Descargar"
 
 #: src/window.ui:491
 msgid "Type here your text..."
-msgstr "Digite aquí un texto..."
+msgstr "Escriba texto aquí..."
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:8
+#: data/org.gustavoperedo.FontDownloader.desktop.in:7
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
-msgstr "Un simples descarregador de fuentes escrito en GTK que instala fuentes directamente de Google Fonts."
+msgstr "Un simple descargador de tipografías escrito en GTK que las instala directamente desde Google Fonts."
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
 msgid "A simple GTK font downloader."
-msgstr "Un sistema de descarga de fuentes topográficas en GTK."
+msgstr "Un simple descargador de tipografías en GTK."
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
-msgstr "¿Alguna vez has querido cambiar tu fuente de terminal, pero no quisiste pasar por el proceso de buscar, descargar e instalar una fuente? Este aplicativo simple y adaptativo en GTK permite que busques e instales fuentes directamente del website de Google Fonts"
+msgstr "¿Alguna vez has querido cambiar tu fuente de terminal, pero no quisiste pasar por el proceso de buscar, descargar e instalar una tipografía? Esta aplicación simple y adaptativa en GTK permite que busques e instales tipografías directamente desde el sitio web de Google Fonts."
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:108
 msgid "Gustavo Peredo"
 msgstr "Gustavo Peredo"
 
@@ -93,7 +85,7 @@ msgstr "Modo oscuro"
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:12
 msgid "Any alphabet"
-msgstr "cualquier alfabeto"
+msgstr "Cualquier alfabeto"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
@@ -103,7 +95,7 @@ msgstr "Directorio de instalación estándar"
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:21
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:22
 msgid "Which alphabets aren't filtered"
-msgstr "Cual alfabetos no son filtrados"
+msgstr "Qué alfabetos no son filtrados"
 
 #: src/window.ui:231 src/window.ui:557
 msgid "Settings"
@@ -119,7 +111,7 @@ msgstr "<b> Alfabetos </b>"
 
 #: src/window.ui:617
 msgid "Any"
-msgstr "Cualquier"
+msgstr "Cualquiera"
 
 #: src/window.ui:652
 msgid "Arabic"
@@ -247,11 +239,11 @@ msgstr "Japonés"
 
 #: src/window.ui:1051
 msgid "<b> File Settings </b>"
-msgstr "Configuraciones de archivo"
+msgstr "<b> Configuraciones de archivo </b>"
 
 #: src/window.ui:1088
 msgid "Default font installation folder:"
-msgstr "Carpeta de instalción de fuentes estándar"
+msgstr "Carpeta de instalción de tipografías estándar"
 
 #: src/window.ui:1098
 msgid "Choose directory"
@@ -259,11 +251,11 @@ msgstr "Elige un directorio"
 
 #: src/window.ui:1141
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
-msgstr "Advertencia: Si no encontraste la carpeta en la que deseas instalar tus fuentes, puede ser que no tengas acceso a esta. Para resolver esto, instale Flatseal y permita a esta aplicación el acceso a la carpeta."
+msgstr "Advertencia: Si no encontraste la carpeta en la que deseas instalar tus tipografías, puede ser que no tengas acceso a esta. Para resolver esto, instale Flatseal y permita a esta aplicación el acceso a la carpeta."
 
 #: src/window.ui:1163
 msgid "Reset"
-msgstr "Reajustar"
+msgstr "Restablecer"
 
 #: src/window.py:49 src/window.py:363
 msgid "sans-serif"
@@ -295,7 +287,7 @@ msgstr "familia"
 
 #: src/font-box.ui:38
 msgid "category"
-msgstr "categoria"
+msgstr "categoría"
 
 #: src/font-box.ui:76
 msgid "Installed"
@@ -304,4 +296,128 @@ msgstr "Instalado"
 #: src/window.py:201
 msgid "Default"
 msgstr "Estándar"
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
+msgid "org.gustavoperedo.FontDownloader"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:28
+msgid "Version 3.11.0"
+msgstr "Versión 3.11.0"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:29
+msgid "Improved russian translation"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:30
+msgid "Fixed portguese application name"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:31
+msgid "Updated font lins and versions to latest"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:32
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
+msgid "Version 3.0.0"
+msgstr "Versión 3.0.0"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:33
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:77
+msgid "This release aims to be the last feature release:"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:35
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:51
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:79
+msgid "Dark mode!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:36
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:52
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:80
+msgid "Option to filter by alphabets!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:37
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:53
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:81
+msgid "You can see installed fonts now!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:38
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:54
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:82
+msgid "Swipe back and forth easily!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:39
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:83
+msgid "Change default installation dialog!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:40
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:56
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:84
+msgid "Added a file chooser dialog for downloads!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
+msgid "Version 3.10.2"
+msgstr "Versión 3.10.2"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
+msgid "Updated translations"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:62
+msgid "Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:67
+msgid "Fixes:"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:69
+msgid "Russian translation should now work"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:70
+msgid "All texts are now translated"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:71
+msgid "Updated Translations"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:90
+msgid "Fixes Spanish translation"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:95
+msgid "This release brings major improvements:"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:97
+msgid "Better resource usage"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:98
+msgid "Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to Ibragimov for ru and tg translations)"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:99
+msgid "Added credits dialog!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:100
+msgid "New, prettier icon!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:101
+msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
+msgstr ""
+
 
