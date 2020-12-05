@@ -23,6 +23,19 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="3.12.1" date="2020-12-5">
+      <description>
+        <p> Version 3.12.1 </p>
+        <ul>
+          <li> Translation Updates </li>
+          <li> Added Dutch translation </li>
+          <li> Major performance improvements </li>
+          <li> New experimental color mode </li>
+          <li> Updated icon for holiday season </li>
+          <li> Bug fixes </li>
+        </ul>
+      </description>
+    </release>
     <release version="3.12.0" date="2020-11-25">
       <description>
         <p> Version 3.12.0 </p>
