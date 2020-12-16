@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #Import nescessary libraries and modules
 #from gettext import gettext as _
-from gi.repository import Gdk, Gio, Gtk, Handy, GObject, WebKit2
+from gi.repository import Gdk, Gio, Gtk, Handy, GObject, WebKit2, Pango
 from os import path, makedirs, listdir
 import locale
 import json
@@ -29,6 +29,8 @@ WebKit2.WebView()
 locale.bindtextdomain('fontdownloader', path.join(path.dirname(__file__).split('fontdownloader')[0],'locale'))
 locale.textdomain('fontdownloader')
 webfontsData = json.load(open(path.join(path.dirname(__file__).split('fontdownloader')[0],'fontdownloader/fontdownloader/webfonts.json'), 'r'))
+
+SAMPLE_STRING = Pango.language_get_default().get_sample_string()
 
 #Here we import the font-box template which is used for the fonts' boxes
 @Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/font-box.ui')
@@ -125,7 +127,7 @@ class FontdownloaderWindow(Handy.Window):
         super().__init__(**kwargs)
         #Creates temporary variables for our window
         self.CurrentSelectedFont = ''
-        self.CurrentText = 'The quick brown fox jumps over the lazy dog.'
+        self.CurrentText = SAMPLE_STRING
         self.CurrentFilters = {
             'serif': self.serif_check.get_active(),
             'sans-serif': self.sans_check.get_active(),
@@ -365,7 +367,7 @@ class FontdownloaderWindow(Handy.Window):
         #Get the text from the text entry
         self.CurrentText = self.text_entry.get_text()
         if self.CurrentText == "":
-            self.CurrentText = "The quick brown fox jumps over the lazy dog."
+            self.CurrentText = SAMPLE_STRING
         #Creates a html file with everything (font and text, basically) :P
         self.html ="""
         <!DOCTYPE html>
