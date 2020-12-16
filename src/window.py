@@ -217,7 +217,7 @@ class FontdownloaderWindow(Handy.Window):
     def on_about(self, *args, **kwargs):
         authors = ['Gustavo Machado Peredo']
         contributers = ['Georges Basile Stavracas Neto',
-                        'Martin Abente Lahaye']
+                        'Martin Abente Lahaye', 'Manuel Quiñones']
         translators = ['Gustavo Machado Peredo', 'Victor Ibragimov',
                        'Manuel Quiñones', 'Heimen Stoffels']
         dialog = Gtk.AboutDialog(transient_for=self, modal=True)
