@@ -10,7 +10,8 @@
         "--device=dri",
         "--socket=fallback-x11",
         "--socket=wayland",
-        "--filesystem=~/.local/share/fonts",
+        "--filesystem=~/.local/share/fonts:create",
+        "--filesystem=/usr/share/fonts",
         "--filesystem=xdg-download"
     ],
     "cleanup" : [
@@ -58,8 +59,5 @@
                 }
             ]
         }
-    ],
-    "build-options" : {
-        "env" : {        }
-    }
+    ]
 }

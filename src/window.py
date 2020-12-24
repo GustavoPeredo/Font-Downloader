@@ -412,6 +412,8 @@ class FontdownloaderWindow(Handy.Window):
         self.updateFilter()
         self.search_bar.set_search_mode(not self.search_bar.get_search_mode())
 
+    #Thanks udayantandon for this implementation :)
+    #https://udayantandon.wordpress.com/2015/07/29/a-custom-searchbar-in-gtk-and-python/
     def toggleSearchKeyboard(self, widget, event, *args):
         keyname = Gdk.keyval_name(event.keyval)
 
