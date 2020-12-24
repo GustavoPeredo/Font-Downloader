@@ -161,6 +161,8 @@ class FontdownloaderWindow(Handy.Window):
         self.reset_button.connect('clicked', self.reset)
         self.header_group.connect('update-decoration-layouts', self.updateSize)
         self.scroll_window.connect('edge-reached', self.increaseSearch)
+        self.connect("key-press-event", self.toggleSearchKeyboard)
+        self.connect_after("key-press-event", self.toggleSearchKeyboardAfter)
 
         self.alphabet_buttons = [self.arabic_button, self.bengali_button,
         self.chinese_hk_button, self.chinese_SIMP_button,
@@ -409,6 +411,37 @@ class FontdownloaderWindow(Handy.Window):
     def toggleSearch(self, *args, **kwargs):
         self.updateFilter()
         self.search_bar.set_search_mode(not self.search_bar.get_search_mode())
+
+    def toggleSearchKeyboard(self, widget, event, *args):
+        keyname = Gdk.keyval_name(event.keyval)
+
+        if keyname == 'Escape' and self.search_button.get_active():
+            if self.search_entry.is_focus():
+                self.search_button.set_active(False)
+            else:
+                self.search_entry.grab_focus()
+            return True
+
+        if event.state & Gdk.ModifierType.CONTROL_MASK:
+            if keyname == 'f':
+                self.search_button.set_active(True)
+                return True
+
+        return False
+
+    def toggleSearchKeyboardAfter(self, widget, event, *args):
+        if (not self.search_button.get_active() or not self.search_entry.is_focus()):
+            if self.search_entry.im_context_filter_keypress(event):
+                self.search_button.set_active(True)
+                self.search_entry.grab_focus()
+
+                # Text in entry is selected, deselect it
+                l = self.search_entry.get_text_length()
+                self.search_entry.select_region(l, l)
+
+                return True
+
+        return False
 
     #If the user press back_button, return focus to list view
     def bringListForward(self, *args, **kwargs):
