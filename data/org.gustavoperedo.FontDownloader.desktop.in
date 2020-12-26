@@ -9,3 +9,4 @@ Comment=Simple font downloader written in GTK that installs fonts directly from 
 Type=Application
 Categories=Utility;
 StartupNotify=true
+X-Purism-FormFactor=Workstation;Mobile;
