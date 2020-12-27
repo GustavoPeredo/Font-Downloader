@@ -4,8 +4,9 @@
 Name=Font Downloader
 Exec=fontdownloader
 Terminal=false
-Icon=org.gustavoperedo.FontDownloader.Holidays
+Icon=org.gustavoperedo.FontDownloader
 Comment=Simple font downloader written in GTK that installs fonts directly from Google Fonts.
 Type=Application
 Categories=Utility;
 StartupNotify=true
+X-Purism-FormFactor=Workstation;Mobile;

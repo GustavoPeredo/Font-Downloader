@@ -23,6 +23,13 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="4.1.0" date="2020-12-5">
+      <ul>
+        <li> Lot's of updated translations </li>
+        <li> Christmas icon only on about section </li>
+        <li> Update fonts catalog </li>
+      </ul>
+    </release>
     <release version="3.12.1" date="2020-12-5">
       <description>
         <p> Version 3.12.1 </p>
@@ -142,4 +149,8 @@
   <developer_name>Gustavo Peredo</developer_name>
   <launchable type="desktop-id">org.gustavoperedo.FontDownloader.desktop</launchable>
   <content_rating type="oars-1.1"/>
+  <custom>
+    <value key="Purism::form_factor">workstation</value>
+    <value key="Purism::form_factor">mobile</value>
+  </custom>
 </component>

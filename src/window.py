@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #Import nescessary libraries and modules
 #from gettext import gettext as _
-from gi.repository import Gdk, Gio, Gtk, Handy, GObject, WebKit2
+from gi.repository import Gdk, Gio, Gtk, Handy, GObject, WebKit2, Pango
 from os import path, makedirs, listdir
 import locale
 import json
@@ -29,6 +29,8 @@ WebKit2.WebView()
 locale.bindtextdomain('fontdownloader', path.join(path.dirname(__file__).split('fontdownloader')[0],'locale'))
 locale.textdomain('fontdownloader')
 webfontsData = json.load(open(path.join(path.dirname(__file__).split('fontdownloader')[0],'fontdownloader/fontdownloader/webfonts.json'), 'r'))
+
+SAMPLE_STRING = Pango.language_get_default().get_sample_string()
 
 #Here we import the font-box template which is used for the fonts' boxes
 @Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/font-box.ui')
@@ -125,7 +127,7 @@ class FontdownloaderWindow(Handy.Window):
         super().__init__(**kwargs)
         #Creates temporary variables for our window
         self.CurrentSelectedFont = ''
-        self.CurrentText = 'The quick brown fox jumps over the lazy dog.'
+        self.CurrentText = SAMPLE_STRING
         self.CurrentFilters = {
             'serif': self.serif_check.get_active(),
             'sans-serif': self.sans_check.get_active(),
@@ -159,6 +161,8 @@ class FontdownloaderWindow(Handy.Window):
         self.reset_button.connect('clicked', self.reset)
         self.header_group.connect('update-decoration-layouts', self.updateSize)
         self.scroll_window.connect('edge-reached', self.increaseSearch)
+        self.connect("key-press-event", self.toggleSearchKeyboard)
+        self.connect_after("key-press-event", self.toggleSearchKeyboardAfter)
 
         self.alphabet_buttons = [self.arabic_button, self.bengali_button,
         self.chinese_hk_button, self.chinese_SIMP_button,
@@ -215,7 +219,7 @@ class FontdownloaderWindow(Handy.Window):
     def on_about(self, *args, **kwargs):
         authors = ['Gustavo Machado Peredo']
         contributers = ['Georges Basile Stavracas Neto',
-                        'Martin Abente Lahaye']
+                        'Martin Abente Lahaye', 'Manuel Quiñones']
         translators = ['Gustavo Machado Peredo', 'Victor Ibragimov',
                        'Manuel Quiñones', 'Heimen Stoffels']
         dialog = Gtk.AboutDialog(transient_for=self, modal=True)
@@ -365,7 +369,7 @@ class FontdownloaderWindow(Handy.Window):
         #Get the text from the text entry
         self.CurrentText = self.text_entry.get_text()
         if self.CurrentText == "":
-            self.CurrentText = "The quick brown fox jumps over the lazy dog."
+            self.CurrentText = SAMPLE_STRING
         #Creates a html file with everything (font and text, basically) :P
         self.html ="""
         <!DOCTYPE html>
@@ -407,6 +411,39 @@ class FontdownloaderWindow(Handy.Window):
     def toggleSearch(self, *args, **kwargs):
         self.updateFilter()
         self.search_bar.set_search_mode(not self.search_bar.get_search_mode())
+
+    #Thanks udayantandon for this implementation :)
+    #https://udayantandon.wordpress.com/2015/07/29/a-custom-searchbar-in-gtk-and-python/
+    def toggleSearchKeyboard(self, widget, event, *args):
+        keyname = Gdk.keyval_name(event.keyval)
+
+        if keyname == 'Escape' and self.search_button.get_active():
+            if self.search_entry.is_focus():
+                self.search_button.set_active(False)
+            else:
+                self.search_entry.grab_focus()
+            return True
+
+        if event.state & Gdk.ModifierType.CONTROL_MASK:
+            if keyname == 'f':
+                self.search_button.set_active(True)
+                return True
+
+        return False
+
+    def toggleSearchKeyboardAfter(self, widget, event, *args):
+        if (not self.search_button.get_active() or not self.search_entry.is_focus()):
+            if self.search_entry.im_context_filter_keypress(event):
+                self.search_button.set_active(True)
+                self.search_entry.grab_focus()
+
+                # Text in entry is selected, deselect it
+                l = self.search_entry.get_text_length()
+                self.search_entry.select_region(l, l)
+
+                return True
+
+        return False
 
     #If the user press back_button, return focus to list view
     def bringListForward(self, *args, **kwargs):
