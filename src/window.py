@@ -28,6 +28,7 @@ WebKit2.WebView()
 
 locale.bindtextdomain('fontdownloader', path.join(path.dirname(__file__).split('fontdownloader')[0],'locale'))
 locale.textdomain('fontdownloader')
+
 webfontsData = json.load(open(path.join(path.dirname(__file__).split('fontdownloader')[0],'fontdownloader/fontdownloader/webfonts.json'), 'r'))
 
 SAMPLE_STRING = Pango.language_get_default().get_sample_string()
@@ -196,6 +197,15 @@ class FontdownloaderWindow(Handy.Window):
 
         self.anyAlphabet()
 
+        #Get list of fonts stored in gschema
+        #self.settings.set_string('installed-fonts', '{"kind": "webfonts#webfontList","items": []}')
+        self.jsonOfInstalledFonts = json.loads(self.settings.get_string('installed-fonts'))
+
+        #Get fonts on default-directory
+        self.defaultPath = path.join(path.expanduser('~'), '.local/share/fonts') if self.settings.get_string('default-directory') == 'Default' else self.settings.get_string('default-directory')
+
+        self.updateListOfInstalledFonts()
+
         #Select the first row and show all rows
         self.fonts_list.select_row(self.fonts_list.get_row_at_index(0))
         self.fonts_list.show()
@@ -247,6 +257,36 @@ class FontdownloaderWindow(Handy.Window):
             provider,
             Gtk.STYLE_PROVIDER_PRIORITY_USER
         )
+
+    def updateListOfInstalledFonts(self, *args, **kwargs):
+        #Check if path exists :P
+        if not path.exists(self.defaultPath):
+            makedirs(self.defaultPath)
+
+        #Get list of actual installed fonts in directory
+        listOfInstalledFonts = [f for f in listdir(self.defaultPath) if path.isfile(path.join(self.defaultPath, f))]
+
+        #Compare json with installed fonts and files on the default-directory
+        for j in listOfInstalledFonts:
+            for i in range(len(self.jsonOfInstalledFonts['items'])):
+                if not (self.jsonOfInstalledFonts['items'][i]['family'] in str(listOfInstalledFonts)):
+                    self.jsonOfInstalledFonts['items'].pop(i)
+            for i in range(len(webfontsData['items'])):
+                #Gather data from webfontsData
+                if webfontsData['items'][i]['family'] in j[:len(j[:-4])]:
+                    #Remove version since we don't know
+                    l = webfontsData['items'][i]
+                    l['version'] = "None"
+                    self.jsonOfInstalledFonts['items'].append(l)
+
+        #Remove duplicates
+        listOfInstalledFontsItems = self.jsonOfInstalledFonts['items']
+        self.jsonOfInstalledFonts['items'] = []
+        for i in listOfInstalledFontsItems:
+            if not(i in self.jsonOfInstalledFonts['items']):
+                self.jsonOfInstalledFonts['items'].append(i)
+        #Save new installed fonts string
+        self.settings.set_string('installed-fonts', json.dumps(self.jsonOfInstalledFonts))
 
     def installFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
