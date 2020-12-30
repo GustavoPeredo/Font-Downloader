@@ -126,6 +126,9 @@ class FontdownloaderWindow(Handy.Window):
     preview_box = Gtk.Template.Child()
     failed_box = Gtk.Template.Child()
     loading_box = Gtk.Template.Child()
+    revealer = Gtk.Template.Child()
+    notification_label = Gtk.Template.Child()
+    dismiss_notification = Gtk.Template.Child()
 
     #On initalization do:
     def __init__(self, **kwargs):
@@ -170,8 +173,9 @@ class FontdownloaderWindow(Handy.Window):
         self.scroll_window.connect('edge-reached', self.increaseSearch)
         self.connect("key-press-event", self.toggleSearchKeyboard)
         self.connect_after("key-press-event", self.toggleSearchKeyboardAfter)
-        self.font_preview.connect("load-changed", self.webviewLoading)
+        self.font_preview.connect("notify::is-loading", self.webviewLoading)
         self.font_preview.connect_after("notify::is-loading", self.webviewShow)
+        self.dismiss_notification.connect('clicked', self.removeNotification)
 
         self.alphabet_buttons = [self.arabic_button, self.bengali_button,
         self.chinese_hk_button, self.chinese_SIMP_button,
@@ -296,35 +300,54 @@ class FontdownloaderWindow(Handy.Window):
         absolutePath = path.join(path.expanduser('~'), '.local/share/fonts') if self.settings.get_string('default-directory') == 'Default' else self.settings.get_string('default-directory')
         if not path.exists(absolutePath):
             makedirs(absolutePath)
-        for key in links:
-           urlretrieve(links[key], path.join(absolutePath,
-                        self.CurrentSelectedFont + " " + key + links[key][-4:]))
-        self.updateFilter()
+        try:
+            for key in links:
+               urlretrieve(links[key], path.join(absolutePath,
+                            self.CurrentSelectedFont + " " + key + links[key][-4:]))
+            self.notification_label.set_label(_("Font installed succesfully!"))
+            self.revealer.set_reveal_child(True)
+            self.updateFilter()
+        except:
+            self.preview_stack.set_visible_child(self.failed_box)
+            self.notification_label.set_label(_("Failed to install font. Check your internet connection and folder permissions"))
+            self.revealer.set_reveal_child(True)
+
+
 
     def downloadFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
         #to the user's download directory
-        links = webfontsData['items'][self.fonts_list.get_selected_row().get_index()]['files']
-
         dialog = Gtk.FileChooserDialog("Please choose a folder", self,
-            Gtk.FileChooserAction.SELECT_FOLDER,
-            (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
-             Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
+                Gtk.FileChooserAction.SELECT_FOLDER,
+                (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                 Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
+        try:
+            links = webfontsData['items'][self.fonts_list.get_selected_row().get_index()]['files']
 
-        response = dialog.run()
+            response = dialog.run()
 
-        if response == Gtk.ResponseType.OK:
-            absolutePath = dialog.get_filename()
-            if not path.exists(absolutePath):
-                makedirs(absolutePath)
-            for key in links:
-               urlretrieve(links[key], path.join(absolutePath,
-                            self.CurrentSelectedFont + " " + key + links[key][-4:]))
+            if response == Gtk.ResponseType.OK:
+                absolutePath = dialog.get_filename()
+                if not path.exists(absolutePath):
+                    makedirs(absolutePath)
+                for key in links:
+                   urlretrieve(links[key], path.join(absolutePath,
+                                self.CurrentSelectedFont + " " + key + links[key][-4:]))
+                self.notification_label.set_label(_("Font downloaded succesfully!"))
+                self.revealer.set_reveal_child(True)
 
-        elif response == Gtk.ResponseType.CANCEL:
-            pass
+            elif response == Gtk.ResponseType.CANCEL:
+                pass
 
-        dialog.destroy()
+            dialog.destroy()
+        except:
+            dialog.destroy()
+            self.preview_stack.set_visible_child(self.failed_box)
+            self.notification_label.set_label(_("Failed to download font. Check your internet connection and folder permission"))
+            self.revealer.set_reveal_child(True)
+
+    def removeNotification(self, *args, **kwargs):
+        self.revealer.set_reveal_child(False)
 
     def checkAllFilters(self, *args, **kwargs):
         #If the user select "All" on filters, check all
@@ -383,6 +406,9 @@ class FontdownloaderWindow(Handy.Window):
             self.size_increase = self.size_increase + 1
 
     def fontChanged(self, *args, **kwargs):
+        if not self.main_install_button.get_sensitive():
+            self.main_install_button.set_sensitive(True)
+            self.main_download_button.set_sensitive(True)
         #Whenever the user does something that should change the font preview:
         #We colect the data from the selected font
         self.temp_data = self.fonts_list.get_selected_row().get_child().data
