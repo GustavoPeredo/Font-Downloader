@@ -308,11 +308,12 @@
           <object class="HdyLeaflet" id="header_leaflet">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="hhomogeneous-folded">False</property>
+            <property name="vhomogeneous-folded">False</property>
             <property name="visible-child">headerbar1</property>
             <property name="transition-type">slide</property>
             <child>
               <object class="HdyHeaderBar" id="headerbar1">
-                <property name="width-request">280</property>
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="hexpand">False</property>
@@ -412,11 +413,12 @@
           <object class="HdyLeaflet" id="leaflet">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="hhomogeneous-folded">False</property>
+            <property name="vhomogeneous-folded">False</property>
             <property name="visible-child">box1</property>
             <property name="transition-type">slide</property>
             <child>
               <object class="GtkBox" id="box1">
-                <property name="width-request">280</property>
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="hexpand">False</property>
@@ -483,11 +485,213 @@
                 <property name="hexpand">True</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="WebKitWebView" type-func="webkit_web_view_get_type" id="font_preview">
+                  <object class="GtkStack" id="preview_stack">
                     <property name="visible">True</property>
-                    <property name="can-focus">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="transition-type">slide-left</property>
                     <child>
-                      <placeholder/>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="margin-bottom">8</property>
+                            <property name="pixel-size">128</property>
+                            <property name="icon-name">org.gustavoperedo.FontDownloader-symbolic</property>
+                            <property name="icon_size">6</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="label" translatable="yes">Welcome to Font Downloader!</property>
+                            <property name="justify">center</property>
+                            <property name="single-line-mode">True</property>
+                            <attributes>
+                              <attribute name="weight" value="ultrabold"/>
+                              <attribute name="scale" value="1.5"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="margin-top">12</property>
+                            <property name="label" translatable="yes">Select a font from the left side panel or start typing to search for a font, then download or install it!</property>
+                            <property name="justify">center</property>
+                            <property name="wrap">True</property>
+                            <property name="width-chars">48</property>
+                            <property name="max-width-chars">48</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="name">page1</property>
+                        <property name="title" translatable="yes">page1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="preview_box">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="hexpand">True</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="WebKitWebView" type-func="webkit_web_view_get_type" id="font_preview">
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <child>
+                              <placeholder/>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="text_entry">
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="secondary-icon-name">face-smile-symbolic</property>
+                            <property name="secondary-icon-tooltip-text" translatable="yes">Insert Emoji</property>
+                            <property name="secondary-icon-tooltip-markup" translatable="yes">Insert Emoji</property>
+                            <property name="placeholder-text" translatable="yes">Type here your text...</property>
+                            <property name="show-emoji-icon">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="name">page0</property>
+                        <property name="title" translatable="yes">page0</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="loading_box">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkSpinner">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="active">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="margin-top">8</property>
+                            <property name="label" translatable="yes">Loading...</property>
+                            <property name="use-markup">True</property>
+                            <property name="justify">center</property>
+                            <property name="single-line-mode">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="name">page0</property>
+                        <property name="title" translatable="yes">page0</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="failed_box">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="pixel-size">64</property>
+                            <property name="icon-name">face-sad-symbolic</property>
+                            <property name="icon_size">6</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="margin-top">8</property>
+                            <property name="label" translatable="yes">Something went wrong, check your internet connection.</property>
+                            <property name="use-markup">True</property>
+                            <property name="justify">center</property>
+                            <property name="wrap">True</property>
+                            <property name="width-chars">32</property>
+                            <property name="max-width-chars">32</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="name">page2</property>
+                        <property name="title" translatable="yes">page2</property>
+                        <property name="position">3</property>
+                      </packing>
                     </child>
                   </object>
                   <packing>
@@ -496,26 +700,7 @@
                     <property name="position">0</property>
                   </packing>
                 </child>
-                <child>
-                  <object class="GtkEntry" id="text_entry">
-                    <property name="visible">True</property>
-                    <property name="can-focus">True</property>
-                    <property name="secondary-icon-name">face-smile-symbolic</property>
-                    <property name="secondary-icon-tooltip-text" translatable="yes">Insert Emoji</property>
-                    <property name="secondary-icon-tooltip-markup" translatable="yes">Insert Emoji</property>
-                    <property name="placeholder-text" translatable="yes">Type here your text...</property>
-                    <property name="show-emoji-icon">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
               </object>
-              <packing>
-                <property name="name">box2</property>
-              </packing>
             </child>
           </object>
           <packing>

@@ -20,7 +20,7 @@ from gi.repository import Gdk, Gio, Gtk, Handy, GObject, WebKit2, Pango
 from os import path, makedirs, listdir
 import locale
 import json
-from urllib.request import urlretrieve
+from urllib.request import urlretrieve, urlopen
 
 #Init Webkit and Handy libs
 Handy.init()
@@ -122,6 +122,10 @@ class FontdownloaderWindow(Handy.Window):
     header_group = Gtk.Template.Child()
     header_leaflet = Gtk.Template.Child()
     scroll_window = Gtk.Template.Child()
+    preview_stack = Gtk.Template.Child()
+    preview_box = Gtk.Template.Child()
+    failed_box = Gtk.Template.Child()
+    loading_box = Gtk.Template.Child()
 
     #On initalization do:
     def __init__(self, **kwargs):
@@ -166,6 +170,8 @@ class FontdownloaderWindow(Handy.Window):
         self.scroll_window.connect('edge-reached', self.increaseSearch)
         self.connect("key-press-event", self.toggleSearchKeyboard)
         self.connect_after("key-press-event", self.toggleSearchKeyboardAfter)
+        self.font_preview.connect("load-changed", self.webviewLoading)
+        self.font_preview.connect_after("notify::is-loading", self.webviewShow)
 
         self.alphabet_buttons = [self.arabic_button, self.bengali_button,
         self.chinese_hk_button, self.chinese_SIMP_button,
@@ -206,7 +212,7 @@ class FontdownloaderWindow(Handy.Window):
         self.updateListOfInstalledFonts()
 
         #Select the first row and show all rows
-        self.fonts_list.select_row(self.fonts_list.get_row_at_index(0))
+        #self.fonts_list.select_row(self.fonts_list.get_row_at_index(0))
         self.fonts_list.show()
         self.folder_settings_button.set_label(_('Default') if self.settings.get_string('default-directory')=='Default' else self.settings.get_string('default-directory'))
 
@@ -419,6 +425,16 @@ class FontdownloaderWindow(Handy.Window):
         self.headerbar2.set_subtitle(_('sans-serif') if self.temp_data[1]=='sans-serif' else (_('serif') if self.temp_data[1]=='serif' else (_('display') if self.temp_data[1]=='display' else (_('monospaced') if self.temp_data[1]=='monospace' else _('handwriting')))))
         self.leaflet.set_visible_child(self.box2)
         self.header_leaflet.set_visible_child(self.headerbar2)
+
+    def webviewLoading(self, *args, **kwargs):
+        self.preview_stack.set_visible_child(self.loading_box)
+
+    def webviewShow(self, *args, **kwargs):
+        try:
+            urlopen("https://fonts.googleapis.com/css2?family=" + self.CurrentSelectedFont.replace(' ','+') + "&display=swap")
+            self.preview_stack.set_visible_child(self.preview_box)
+        except:
+            self.preview_stack.set_visible_child(self.failed_box)
 
     def updateSize(self, *args, **kwargs):
         self.back_button.set_sensitive(self.header_leaflet.get_folded())
