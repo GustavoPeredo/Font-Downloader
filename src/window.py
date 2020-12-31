@@ -299,7 +299,7 @@ class FontdownloaderWindow(Handy.Window):
         #Save new installed fonts string
         self.settings.set_string('installed-fonts', json.dumps(self.jsonOfInstalledFonts))
         self.updateFilter()
-
+#AAAAAAAAAAAAAAAAAAA
     def updateProgressBar(self, chosen_path, links, is_download):
         percentile = round(1/len(links), 2)
         current_percentile = 0
