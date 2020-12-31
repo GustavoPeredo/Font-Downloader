@@ -16,10 +16,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #Import nescessary libraries and modules
 #from gettext import gettext as _
-from gi.repository import Gdk, Gio, Gtk, Handy, GObject, WebKit2, Pango
+from gi.repository import Gdk, Gio, Gtk, GLib, Handy, GObject, WebKit2, Pango
 from os import path, makedirs, listdir
 import locale
 import json
+import threading
+from time import sleep
 from urllib.request import urlretrieve, urlopen
 
 #Init Webkit and Handy libs
@@ -129,6 +131,7 @@ class FontdownloaderWindow(Handy.Window):
     revealer = Gtk.Template.Child()
     notification_label = Gtk.Template.Child()
     dismiss_notification = Gtk.Template.Child()
+    progress_bar = Gtk.Template.Child()
 
     #On initalization do:
     def __init__(self, **kwargs):
@@ -272,10 +275,13 @@ class FontdownloaderWindow(Handy.Window):
         listOfInstalledFonts = [f for f in listdir(self.defaultPath) if path.isfile(path.join(self.defaultPath, f))]
 
         #Compare json with installed fonts and files on the default-directory
-        for j in listOfInstalledFonts:
+        for useless in webfontsData['items']:
             for i in range(len(self.jsonOfInstalledFonts['items'])):
                 if not (self.jsonOfInstalledFonts['items'][i]['family'] in str(listOfInstalledFonts)):
                     self.jsonOfInstalledFonts['items'].pop(i)
+                    break
+
+        for j in listOfInstalledFonts:
             for i in range(len(webfontsData['items'])):
                 #Gather data from webfontsData
                 if webfontsData['items'][i]['family'] in j[:len(j[:-4])]:
@@ -292,6 +298,35 @@ class FontdownloaderWindow(Handy.Window):
                 self.jsonOfInstalledFonts['items'].append(i)
         #Save new installed fonts string
         self.settings.set_string('installed-fonts', json.dumps(self.jsonOfInstalledFonts))
+        self.updateFilter()
+
+    def updateProgressBar(self, chosen_path, links, is_download):
+        percentile = round(1/len(links), 2)
+        current_percentile = 0
+        self.progress_bar.set_visible(True)
+        self.main_download_button.set_sensitive(False)
+        self.main_install_button.set_sensitive(False)
+        try:
+            for key in links:
+                urlretrieve(links[key], path.join(chosen_path, self.CurrentSelectedFont + " " + key + links[key][-4:]))
+                current_percentile = current_percentile + percentile
+                print(current_percentile)
+                self.progress_bar.set_fraction(current_percentile)
+            if is_download:
+                self.notification_label.set_label(_("Font downloaded succesfully!"))
+            else:
+                self.notification_label.set_label(_("Font installed succesfully!"))
+        except:
+            self.preview_stack.set_visible_child(self.failed_box)
+            if is_download:
+                self.notification_label.set_label(_("Failed to download font. Check your internet connection and folder permissions"))
+            else:
+                self.notification_label.set_label(_("Failed to install font. Check your internet connection and folder permissions"))
+        self.revealer.set_reveal_child(True)
+        self.updateListOfInstalledFonts()
+        self.main_download_button.set_sensitive(True)
+        self.main_install_button.set_sensitive(True)
+        self.progress_bar.set_visible(False)
 
     def installFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
@@ -300,19 +335,9 @@ class FontdownloaderWindow(Handy.Window):
         absolutePath = path.join(path.expanduser('~'), '.local/share/fonts') if self.settings.get_string('default-directory') == 'Default' else self.settings.get_string('default-directory')
         if not path.exists(absolutePath):
             makedirs(absolutePath)
-        try:
-            for key in links:
-               urlretrieve(links[key], path.join(absolutePath,
-                            self.CurrentSelectedFont + " " + key + links[key][-4:]))
-            self.notification_label.set_label(_("Font installed succesfully!"))
-            self.revealer.set_reveal_child(True)
-            self.updateFilter()
-        except:
-            self.preview_stack.set_visible_child(self.failed_box)
-            self.notification_label.set_label(_("Failed to install font. Check your internet connection and folder permissions"))
-            self.revealer.set_reveal_child(True)
-
-
+        thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, self.defaultPath, links, False))
+        thread.daemon = True
+        thread.start()
 
     def downloadFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
@@ -321,30 +346,20 @@ class FontdownloaderWindow(Handy.Window):
                 Gtk.FileChooserAction.SELECT_FOLDER,
                 (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
                  Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
-        try:
-            links = webfontsData['items'][self.fonts_list.get_selected_row().get_index()]['files']
+        links = webfontsData['items'][self.fonts_list.get_selected_row().get_index()]['files']
 
-            response = dialog.run()
+        response = dialog.run()
 
-            if response == Gtk.ResponseType.OK:
-                absolutePath = dialog.get_filename()
-                if not path.exists(absolutePath):
-                    makedirs(absolutePath)
-                for key in links:
-                   urlretrieve(links[key], path.join(absolutePath,
-                                self.CurrentSelectedFont + " " + key + links[key][-4:]))
-                self.notification_label.set_label(_("Font downloaded succesfully!"))
-                self.revealer.set_reveal_child(True)
-
-            elif response == Gtk.ResponseType.CANCEL:
-                pass
-
+        if response == Gtk.ResponseType.OK:
+            absolutePath = dialog.get_filename()
+            if not path.exists(absolutePath):
+                makedirs(absolutePath)
             dialog.destroy()
-        except:
+            thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, absolutePath, links, True))
+            thread.daemon = True
+            thread.start()
+        elif response == Gtk.ResponseType.CANCEL:
             dialog.destroy()
-            self.preview_stack.set_visible_child(self.failed_box)
-            self.notification_label.set_label(_("Failed to download font. Check your internet connection and folder permission"))
-            self.revealer.set_reveal_child(True)
 
     def removeNotification(self, *args, **kwargs):
         self.revealer.set_reveal_child(False)
