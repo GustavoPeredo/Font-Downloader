@@ -21,6 +21,7 @@ from os import path, makedirs, listdir
 import locale
 import json
 import threading
+from .fsync import async_function
 from time import sleep
 from urllib.request import urlretrieve, urlopen
 
@@ -176,8 +177,7 @@ class FontdownloaderWindow(Handy.Window):
         self.scroll_window.connect('edge-reached', self.increaseSearch)
         self.connect("key-press-event", self.toggleSearchKeyboard)
         self.connect_after("key-press-event", self.toggleSearchKeyboardAfter)
-        self.font_preview.connect("notify::is-loading", self.webviewLoading)
-        self.font_preview.connect_after("notify::is-loading", self.webviewShow)
+        self.font_preview.connect("load-changed", self.webviewLoading)
         self.dismiss_notification.connect('clicked', self.removeNotification)
 
         self.alphabet_buttons = [self.arabic_button, self.bengali_button,
@@ -299,34 +299,39 @@ class FontdownloaderWindow(Handy.Window):
         #Save new installed fonts string
         self.settings.set_string('installed-fonts', json.dumps(self.jsonOfInstalledFonts))
         self.updateFilter()
-#AAAAAAAAAAAAAAAAAAA
+
     def updateProgressBar(self, chosen_path, links, is_download):
-        percentile = round(1/len(links), 2)
-        current_percentile = 0
-        self.progress_bar.set_visible(True)
-        self.main_download_button.set_sensitive(False)
-        self.main_install_button.set_sensitive(False)
-        try:
+        def on_done_updating(result, error):
+            if error:
+                print(error)
+                if is_download:
+                    self.notification_label.set_label(_("Failed to download font. Check your internet connection and folder permissions"))
+                else:
+                    self.notification_label.set_label(_("Failed to install font. Check your internet connection and folder permissions"))
+            else:
+                if is_download:
+                    self.notification_label.set_label(_("Font downloaded succesfully!"))
+                else:
+                    self.notification_label.set_label(_("Font installed succesfully!"))
+            self.revealer.set_reveal_child(True)
+            self.updateListOfInstalledFonts()
+            self.main_download_button.set_sensitive(True)
+            self.main_install_button.set_sensitive(True)
+            self.progress_bar.set_visible(False)
+
+        @async_function(on_done=on_done_updating)
+        def update_on_thread():
+            percentile = round(1/len(links), 2)
+            current_percentile = 0
+            self.progress_bar.set_visible(True)
+            self.main_download_button.set_sensitive(False)
+            self.main_install_button.set_sensitive(False)
             for key in links:
                 urlretrieve(links[key], path.join(chosen_path, self.CurrentSelectedFont + " " + key + links[key][-4:]))
                 current_percentile = current_percentile + percentile
                 print(current_percentile)
                 self.progress_bar.set_fraction(current_percentile)
-            if is_download:
-                self.notification_label.set_label(_("Font downloaded succesfully!"))
-            else:
-                self.notification_label.set_label(_("Font installed succesfully!"))
-        except:
-            self.preview_stack.set_visible_child(self.failed_box)
-            if is_download:
-                self.notification_label.set_label(_("Failed to download font. Check your internet connection and folder permissions"))
-            else:
-                self.notification_label.set_label(_("Failed to install font. Check your internet connection and folder permissions"))
-        self.revealer.set_reveal_child(True)
-        self.updateListOfInstalledFonts()
-        self.main_download_button.set_sensitive(True)
-        self.main_install_button.set_sensitive(True)
-        self.progress_bar.set_visible(False)
+        update_on_thread()
 
     def installFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
@@ -468,14 +473,20 @@ class FontdownloaderWindow(Handy.Window):
         self.header_leaflet.set_visible_child(self.headerbar2)
 
     def webviewLoading(self, *args, **kwargs):
-        self.preview_stack.set_visible_child(self.loading_box)
+        def webview_show(result, error):
+            if error:
+                self.preview_stack.set_visible_child(self.failed_box)
+                print(error)
+            else:
+                self.preview_stack.set_visible_child(self.preview_box)
 
-    def webviewShow(self, *args, **kwargs):
-        try:
+        @async_function(on_done=webview_show)
+        def webview_loading():
+            self.preview_stack.set_visible_child(self.loading_box)
             urlopen("https://fonts.googleapis.com/css2?family=" + self.CurrentSelectedFont.replace(' ','+') + "&display=swap")
-            self.preview_stack.set_visible_child(self.preview_box)
-        except:
-            self.preview_stack.set_visible_child(self.failed_box)
+
+        webview_loading()
+
 
     def updateSize(self, *args, **kwargs):
         self.back_button.set_sensitive(self.header_leaflet.get_folded())
@@ -545,6 +556,7 @@ class FontdownloaderWindow(Handy.Window):
             self.search_entry.get_style_context().add_class('text-green')
             self.text_entry.get_style_context().add_class('text-green')
             self.colorful_switch.get_style_context().add_class('green')
+            self.progress_bar.get_style_context().add_class('green')
             for temp_buttons in self.alphabet_buttons:
                 temp_buttons.get_style_context().add_class('green2')
             self.any_alphabet_button.get_style_context().add_class('green2')
@@ -563,6 +575,7 @@ class FontdownloaderWindow(Handy.Window):
             self.search_entry.get_style_context().remove_class('text-green')
             self.text_entry.get_style_context().remove_class('text-green')
             self.colorful_switch.get_style_context().remove_class('green')
+            self.progress_bar.get_style_context().remove_class('green')
             for temp_buttons in self.alphabet_buttons:
                 temp_buttons.get_style_context().remove_class('green2')
             self.any_alphabet_button.get_style_context().remove_class('green2')
