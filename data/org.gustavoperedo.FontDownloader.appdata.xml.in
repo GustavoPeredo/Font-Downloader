@@ -23,7 +23,14 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="4.1.0" date="2020-12-5">
+    <release version="4.1.1" date="2020-12-31">
+      <ul>
+        <li> Fixed many bugs </li>
+        <li> Added loading screens and bars </li>
+        <li> New developer mode! </li>
+      </ul>
+    </release>
+    <release version="4.1.0" date="2020-12-25">
       <ul>
         <li> Lot's of updated translations </li>
         <li> Christmas icon only on about section </li>

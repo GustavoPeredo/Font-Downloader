@@ -31,6 +31,7 @@ fontdownloader_sources = [
   '__init__.py',
   'main.py',
   'window.py',
+  'webfonts.json',
   'fsync.py',
 ]
 

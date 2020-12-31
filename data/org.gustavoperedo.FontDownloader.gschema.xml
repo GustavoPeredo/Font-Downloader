@@ -11,6 +11,11 @@
       <summary>Colorful mode</summary>
       <description>Colorful mode</description>
 	  </key>
+	  <key name="developer-window" type="b">
+	    <default>true</default>
+      <summary>Developer window</summary>
+      <description>Developer window</description>
+	  </key>
     <key name="any-alphabet" type="b">
       <default>true</default>
       <summary>Any alphabet</summary>

@@ -133,6 +133,10 @@ class FontdownloaderWindow(Handy.Window):
     notification_label = Gtk.Template.Child()
     dismiss_notification = Gtk.Template.Child()
     progress_bar = Gtk.Template.Child()
+    developer_switch = Gtk.Template.Child()
+    developer_box = Gtk.Template.Child()
+    style_textbox = Gtk.Template.Child()
+    text_buffer = Gtk.Template.Child()
 
     #On initalization do:
     def __init__(self, **kwargs):
@@ -152,7 +156,7 @@ class FontdownloaderWindow(Handy.Window):
 
         #Connect buttons, clicks, key presses to their functions
         self.fonts_list.connect('row-activated', self.fontChanged)
-        self.text_entry.connect('changed', self.fontChanged)
+        self.text_entry.connect('changed', self.updatedTextEntry)
         self.back_button.connect('clicked', self.bringListForward)
         self.main_download_button.connect('clicked', self.downloadFont)
         self.main_install_button.connect('clicked', self.installFont)
@@ -168,6 +172,7 @@ class FontdownloaderWindow(Handy.Window):
         self.light_mode_button.connect('clicked', self.changeTheme)
         self.dark_mode_button.connect('clicked', self.changeTheme)
         self.colorful_switch.connect('notify::active', self.flipSwitch)
+        self.developer_switch.connect('notify::active', self.flipDevSwitch)
         self.settings_button.connect('clicked', self.presentSettings)
         self.close_settings_button.connect('clicked', self.closeSettings)
         self.folder_settings_button.connect('clicked', self.on_open)
@@ -200,6 +205,7 @@ class FontdownloaderWindow(Handy.Window):
         'tamil', 'telugu', 'thai', 'tibetan', 'vietnamese']
 
         self.size_increase = 1
+        self.text_entry_active = False
         self.current_alphabet_list = self.settings.get_string('current-alphabet').split(';')
         self.any_alphabet_button.set_active(self.settings.get_boolean('any-alphabet'))
         self.any_alphabet = self.any_alphabet_button.get_active()
@@ -228,6 +234,7 @@ class FontdownloaderWindow(Handy.Window):
 
         self.dark_mode_button.set_active(self.settings.get_boolean('dark-mode'))
         self.colorful_switch.set_active(self.settings.get_boolean('colorful-mode'))
+        self.developer_switch.set_active(self.settings.get_boolean('developer-window'))
         self.changeTheme()
 
         #Sets up borders
@@ -329,7 +336,6 @@ class FontdownloaderWindow(Handy.Window):
             for key in links:
                 urlretrieve(links[key], path.join(chosen_path, self.CurrentSelectedFont + " " + key + links[key][-4:]))
                 current_percentile = current_percentile + percentile
-                print(current_percentile)
                 self.progress_bar.set_fraction(current_percentile)
         update_on_thread()
 
@@ -417,7 +423,6 @@ class FontdownloaderWindow(Handy.Window):
                             self.newBox.set_visible(True)
                             self.fonts_list.add(self.newBox)
                             self.private_counter = self.private_counter + 1
-
         self.changeColor(self.settings.get_boolean('colorful-mode'))
 
     def increaseSearch(self, *args, **kwargs):
@@ -425,15 +430,21 @@ class FontdownloaderWindow(Handy.Window):
             self.updateFilter()
             self.size_increase = self.size_increase + 1
 
+    def updatedTextEntry(self, *args, **kwargs):
+        self.text_entry_active = True
+        self.fontChanged()
+
     def fontChanged(self, *args, **kwargs):
-        if not self.main_install_button.get_sensitive():
-            self.main_install_button.set_sensitive(True)
-            self.main_download_button.set_sensitive(True)
         #Whenever the user does something that should change the font preview:
-        #We colect the data from the selected font
-        self.temp_data = self.fonts_list.get_selected_row().get_child().data
-        #The variable CurrentSelectedFont carries the font name
-        self.CurrentSelectedFont = self.temp_data[0]
+        if self.fonts_list.get_selected_row():
+            #We colect the data from the selected font
+            self.temp_data = self.fonts_list.get_selected_row().get_child().data
+            #The variable CurrentSelectedFont carries the font name
+            self.CurrentSelectedFont = self.temp_data[0]
+
+        self.main_install_button.set_sensitive(False)
+        self.main_download_button.set_sensitive(False)
+
         #Get the text from the text entry
         self.CurrentText = self.text_entry.get_text()
         if self.CurrentText == "":
@@ -478,13 +489,26 @@ class FontdownloaderWindow(Handy.Window):
                 self.preview_stack.set_visible_child(self.failed_box)
                 print(error)
             else:
-                self.preview_stack.set_visible_child(self.preview_box)
+                if not self.main_install_button.get_sensitive():
+                    self.main_install_button.set_sensitive(True)
+                    self.main_download_button.set_sensitive(True)
+                self.text_buffer.set_text(result.replace("\\n", "\n").replace(result[0:2], "\n").replace(result[-1], ""))
+                #for lines in result.split("\\n"):
+                #    print(result.split("\\n"))
+                #    temp = self.text_buffer.get_end_iter()
+                #    self.text_buffer.insert(temp, lines)
+                if not self.text_entry_active:
+                    self.preview_stack.set_visible_child(self.preview_box)
+                if not self.text_entry.is_focus():
+                    self.text_entry_active = False
 
         @async_function(on_done=webview_show)
         def webview_loading():
-            self.preview_stack.set_visible_child(self.loading_box)
-            urlopen("https://fonts.googleapis.com/css2?family=" + self.CurrentSelectedFont.replace(' ','+') + "&display=swap")
+            if not self.text_entry_active:
+                self.preview_stack.set_visible_child(self.loading_box)
+            return str(urlopen("https://fonts.googleapis.com/css2?family=" + self.CurrentSelectedFont.replace(' ','+') + "&display=swap").read())
 
+        text_to_set = ""
         webview_loading()
 
 
@@ -500,32 +524,33 @@ class FontdownloaderWindow(Handy.Window):
     #https://udayantandon.wordpress.com/2015/07/29/a-custom-searchbar-in-gtk-and-python/
     def toggleSearchKeyboard(self, widget, event, *args):
         keyname = Gdk.keyval_name(event.keyval)
-
-        if keyname == 'Escape' and self.search_button.get_active():
-            if self.search_entry.is_focus():
-                self.search_button.set_active(False)
-            else:
-                self.search_entry.grab_focus()
-            return True
-
-        if event.state & Gdk.ModifierType.CONTROL_MASK:
-            if keyname == 'f':
-                self.search_button.set_active(True)
+        if not self.text_entry_active:
+            if keyname == 'Escape' and self.search_button.get_active():
+                if self.search_entry.is_focus():
+                    self.search_button.set_active(False)
+                else:
+                    self.search_entry.grab_focus()
                 return True
+
+            if event.state & Gdk.ModifierType.CONTROL_MASK:
+                if keyname == 'f':
+                    self.search_button.set_active(True)
+                    return True
 
         return False
 
     def toggleSearchKeyboardAfter(self, widget, event, *args):
-        if (not self.search_button.get_active() or not self.search_entry.is_focus()):
-            if self.search_entry.im_context_filter_keypress(event):
-                self.search_button.set_active(True)
-                self.search_entry.grab_focus()
+        if not self.text_entry_active:
+            if (not self.search_button.get_active() or not self.search_entry.is_focus()):
+                if self.search_entry.im_context_filter_keypress(event):
+                    self.search_button.set_active(True)
+                    self.search_entry.grab_focus()
 
-                # Text in entry is selected, deselect it
-                l = self.search_entry.get_text_length()
-                self.search_entry.select_region(l, l)
+                    # Text in entry is selected, deselect it
+                    l = self.search_entry.get_text_length()
+                    self.search_entry.select_region(l, l)
 
-                return True
+                    return True
 
         return False
 
@@ -557,6 +582,8 @@ class FontdownloaderWindow(Handy.Window):
             self.text_entry.get_style_context().add_class('text-green')
             self.colorful_switch.get_style_context().add_class('green')
             self.progress_bar.get_style_context().add_class('green')
+            self.developer_switch.get_style_context().add_class('green')
+            self.style_textbox.get_style_context().add_class('green')
             for temp_buttons in self.alphabet_buttons:
                 temp_buttons.get_style_context().add_class('green2')
             self.any_alphabet_button.get_style_context().add_class('green2')
@@ -576,6 +603,8 @@ class FontdownloaderWindow(Handy.Window):
             self.text_entry.get_style_context().remove_class('text-green')
             self.colorful_switch.get_style_context().remove_class('green')
             self.progress_bar.get_style_context().remove_class('green')
+            self.developer_switch.get_style_context().remove_class('green')
+            self.style_textbox.get_style_context().remove_class('green')
             for temp_buttons in self.alphabet_buttons:
                 temp_buttons.get_style_context().remove_class('green2')
             self.any_alphabet_button.get_style_context().remove_class('green2')
@@ -589,6 +618,14 @@ class FontdownloaderWindow(Handy.Window):
         else:
             self.changeColor(False)
             self.settings.set_boolean('colorful-mode', False)
+
+    def flipDevSwitch(self, button, *args, **kwargs):
+        if button.get_active():
+            self.developer_box.set_visible(True)
+            self.settings.set_boolean('developer-window', True)
+        else:
+            self.developer_box.set_visible(False)
+            self.settings.set_boolean('developer-window', False)
 
     def presentSettings(self, *args, **kwargs):
         self.SettingsWindow.show()
