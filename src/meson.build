@@ -32,6 +32,7 @@ fontdownloader_sources = [
   'main.py',
   'window.py',
   'webfonts.json',
+  'fsync.py',
 ]
 
 install_data(fontdownloader_sources, install_dir: moduledir)

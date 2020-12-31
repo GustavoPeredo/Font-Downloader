@@ -11,6 +11,11 @@
       <summary>Colorful mode</summary>
       <description>Colorful mode</description>
 	  </key>
+	  <key name="developer-window" type="b">
+	    <default>true</default>
+      <summary>Developer window</summary>
+      <description>Developer window</description>
+	  </key>
     <key name="any-alphabet" type="b">
       <default>true</default>
       <summary>Any alphabet</summary>
@@ -26,10 +31,10 @@
       <summary>Which alphabets aren't filtered</summary>
       <description>Which alphabets aren't filtered</description>
     </key>
-	  <key name="store-versions" type="s">
-	    <default>''</default>
-	    <summary>Here installed fonts' versions are stored as (font-family):(version); </summary>
-	    <description>Here installed fonts' versions are stored as (font-family):(version); </description>
+	  <key name="installed-fonts" type="s">
+	    <default>'{"kind": "webfonts#webfontList","items": []}'</default>
+	    <summary>Copy of webfonts.json containing only installed fonts</summary>
+	    <description>Copy of webfonts.json containing only installed fonts </description>
 	  </key>
 	</schema>
 </schemalist>
