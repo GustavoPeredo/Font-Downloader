@@ -430,122 +430,122 @@ msgstr "Agora você pode deslizar de volta para o catálogo de fontes com seu tr
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
 msgid "Version 3.12.1"
-msgstr ""
+msgstr "Versão 3.12.1"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
 msgid "Translation Updates"
-msgstr ""
+msgstr "Atualização de Traduções"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
 msgid "Added Dutch translation"
-msgstr ""
+msgstr "Adicionada tradução de holandês"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
 msgid "Major performance improvements"
-msgstr ""
+msgstr "Grandes melhorias em performance"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
 msgid "New experimental color mode"
-msgstr ""
+msgstr "Novo modo experimental colorido"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
 msgid "Updated icon for holiday season"
-msgstr ""
+msgstr "Icone atualizado para as festas de fim de ano"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
 msgid "Bug fixes"
-msgstr ""
+msgstr "Correção de bugs"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
 msgid "Version 3.12.0"
-msgstr ""
+msgstr "Versão 3.12.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
 msgid "More touch friendly ui"
-msgstr ""
+msgstr "UI mais amigável ao toque"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
 msgid "Updated font links and versions to latest"
-msgstr ""
+msgstr "Atualizado linques e versões de fontes"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1420
 msgid "Colorful mode"
-msgstr ""
+msgstr "Modo colorido"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Developer window"
-msgstr ""
+msgstr "Janela para desenvolvedores"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:36
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:37
 msgid "Copy of webfonts.json containing only installed fonts"
-msgstr ""
+msgstr "Cópia de webfonts.json contendo somente fontes instaladas"
 
 #: src/window.ui:539
 msgid "Welcome to Font Downloader!"
-msgstr ""
+msgstr "Bem-vindo ao Instalador de Fontes!"
 
 #: src/window.ui:560
 msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
-msgstr ""
+msgstr "Selecione uma fonte do painel lateral ou comece a digitar para pesquisar, depois baixe ou instale a fonte!"
 
 #: src/window.ui:575
 msgid "page1"
-msgstr ""
+msgstr "page1"
 
 #: src/window.ui:603 src/window.ui:604
 msgid "Insert Emoji"
-msgstr ""
+msgstr "Inserir Emoji"
 
 #: src/window.ui:635
 msgid "<b> Developer Window </b>"
-msgstr ""
+msgstr "<b> Janela de Desenvolvedor </b>"
 
 #: src/window.ui:696 src/window.ui:740
 msgid "page0"
-msgstr ""
+msgstr "page0"
 
 #: src/window.ui:726
 msgid "Loading..."
-msgstr ""
+msgstr "Carregando..."
 
 #: src/window.ui:772
 msgid "Something went wrong, check your internet connection."
-msgstr ""
+msgstr "Algo deu errado, veja sua conexão com a internet."
 
 #: src/window.ui:788
 msgid "page2"
-msgstr ""
+msgstr "page2"
 
 #: src/window.ui:1383
 msgid "<b> Settings </b>"
-msgstr ""
+msgstr "<b> Preferências </b>"
 
 #: src/window.ui:1455
 msgid "Developer Window"
-msgstr ""
+msgstr "Janela de Desenvolvedor"
 
 #: src/window.py:252
 msgid "Contributers"
-msgstr ""
+msgstr "Contribuidores"
 
 #: src/window.py:315
 msgid "Failed to download font. Check your internet connection and folder permissions"
-msgstr ""
+msgstr "Erro ao baixar fonte. Veja sua conexão com a internet e suas permissões de pastas."
 
 #: src/window.py:317
 msgid "Failed to install font. Check your internet connection and folder permissions"
-msgstr ""
+msgstr "Erro ao instalar fonte. Veja sua conexão com a internet e suas permissões de pastas."
 
 #: src/window.py:320
 msgid "Font downloaded succesfully!"
-msgstr ""
+msgstr "Fonte baixada com sucesso!"
 
 #: src/window.py:322
 msgid "Font installed succesfully!"
-msgstr ""
+msgstr "Fonte instalada com sucesso!"
 
