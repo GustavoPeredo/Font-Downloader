@@ -430,122 +430,122 @@ msgstr "You can now swipe back to fonts catalog with you trackpad or screen!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
 msgid "Version 3.12.1"
-msgstr ""
+msgstr "Version 3.12.1"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
 msgid "Translation Updates"
-msgstr ""
+msgstr "Translation Updates"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
 msgid "Added Dutch translation"
-msgstr ""
+msgstr "Added Dutch translation"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
 msgid "Major performance improvements"
-msgstr ""
+msgstr "Major performance improvements"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
 msgid "New experimental color mode"
-msgstr ""
+msgstr "New experimental color mode"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
 msgid "Updated icon for holiday season"
-msgstr ""
+msgstr "Updated icon for holiday season"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
 msgid "Bug fixes"
-msgstr ""
+msgstr "Bug Fixes"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
 msgid "Version 3.12.0"
-msgstr ""
+msgstr "Version 3.12.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
 msgid "More touch friendly ui"
-msgstr ""
+msgstr "More touch friendly ui"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
 msgid "Updated font links and versions to latest"
-msgstr ""
+msgstr "Updated font links and versions to latest"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1420
 msgid "Colorful mode"
-msgstr ""
+msgstr "Colorful mode"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Developer window"
-msgstr ""
+msgstr "Developer window"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:36
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:37
 msgid "Copy of webfonts.json containing only installed fonts"
-msgstr ""
+msgstr "Copy of webfonts.json containing only installed fonts"
 
 #: src/window.ui:539
 msgid "Welcome to Font Downloader!"
-msgstr ""
+msgstr "Welcome to Font Downloader!"
 
 #: src/window.ui:560
 msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
-msgstr ""
+msgstr "Select a font from the left side panel or start typing to search for a font, then download or install it!"
 
 #: src/window.ui:575
 msgid "page1"
-msgstr ""
+msgstr "page1"
 
 #: src/window.ui:603 src/window.ui:604
 msgid "Insert Emoji"
-msgstr ""
+msgstr "Insert Emoji"
 
 #: src/window.ui:635
 msgid "<b> Developer Window </b>"
-msgstr ""
+msgstr "<b> Developer Window </b>"
 
 #: src/window.ui:696 src/window.ui:740
 msgid "page0"
-msgstr ""
+msgstr "page0"
 
 #: src/window.ui:726
 msgid "Loading..."
-msgstr ""
+msgstr "Loading,,,"
 
 #: src/window.ui:772
 msgid "Something went wrong, check your internet connection."
-msgstr ""
+msgstr "Something went wrong, check your internet connection."
 
 #: src/window.ui:788
 msgid "page2"
-msgstr ""
+msgstr "page2"
 
 #: src/window.ui:1383
 msgid "<b> Settings </b>"
-msgstr ""
+msgstr "<b> Settings </b>"
 
 #: src/window.ui:1455
 msgid "Developer Window"
-msgstr ""
+msgstr "Developer Window"
 
 #: src/window.py:252
 msgid "Contributers"
-msgstr ""
+msgstr "Contributers"
 
 #: src/window.py:315
 msgid "Failed to download font. Check your internet connection and folder permissions"
-msgstr ""
+msgstr "Failed to download font. Check your internet connection and folder permissions"
 
 #: src/window.py:317
 msgid "Failed to install font. Check your internet connection and folder permissions"
-msgstr ""
+msgstr "Failed to install font. Check your internet connection and folder permissions"
 
 #: src/window.py:320
 msgid "Font downloaded succesfully!"
-msgstr ""
+msgstr "Font downloaded succesfully!"
 
 #: src/window.py:322
 msgid "Font installed succesfully!"
-msgstr ""
+msgstr "Font installed succesfully!"
 
