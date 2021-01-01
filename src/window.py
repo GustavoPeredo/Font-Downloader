@@ -246,7 +246,8 @@ class FontdownloaderWindow(Handy.Window):
         contributers = ['Georges Basile Stavracas Neto',
                         'Martin Abente Lahaye', 'Manuel Quiñones']
         translators = ['Gustavo Machado Peredo', 'Victor Ibragimov',
-                       'Manuel Quiñones', 'Heimen Stoffels']
+                       'Manuel Quiñones', 'Heimen Stoffels', 'Jiri Grönroos',
+                       'Julian. hofer', 'Åke Engelbrektson']
         dialog = Gtk.AboutDialog(transient_for=self, modal=True)
         dialog.props.authors = authors
         dialog.add_credit_section(_("Contributers"), contributers)
