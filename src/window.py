@@ -438,6 +438,22 @@ class FontdownloaderWindow(Handy.Window):
                             self.newBox.set_visible(True)
                             self.fonts_list.add(self.newBox)
                             self.private_counter = self.private_counter + 1
+                elif searchBarText in "installed" or searchBarText in "update":
+                    if (all(k in webfontsData['items'][i]['subsets'] for k in self.current_alphabet_list)) or (self.any_alphabet):
+                        if self.private_counter <= (25*self.size_increase):
+                            for j in self.jsonOfInstalledFonts['items']:
+                                if webfontsData['items'][i]['family'] == j['family']:
+                                    self.newBox = FontBox(webfontsData['items'][i]['family'],
+                                                  webfontsData['items'][i]['category'],
+                                                  i,webfontsData['items'][i]['variants'],
+                                                  webfontsData['items'][i]['subsets'])
+                                    if j['version'] != webfontsData['items'][i]['version']:
+                                        self.newBox.update_box.show()
+                                    else:
+                                        self.newBox.installed_box.show()
+                                    self.newBox.set_visible(True)
+                                    self.fonts_list.add(self.newBox)
+                                    self.private_counter = self.private_counter + 1
         self.changeColor(self.settings.get_boolean('colorful-mode'))
 
     def increaseSearch(self, *args, **kwargs):
