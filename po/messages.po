@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-05 16:18-0300\n"
+"POT-Creation-Date: 2020-12-31 21:39-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:5
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
-#: src/window.ui:319 src/window.py:228
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:299
+#: src/window.ui:321 src/window.py:257
 msgid "Font Downloader"
 msgstr ""
 
@@ -41,158 +41,180 @@ msgid ""
 "and install fonts directly from Google Fonts' website!"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:28
-msgid "Version 3.12.0"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
+msgid "Version 3.12.1"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:30
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
 msgid "Translation Updates"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:31
-msgid "More touch friendly ui"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
+msgid "Added Dutch translation"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:32
-msgid "Bug fixes"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
+msgid "Major performance improvements"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:33
-msgid "Updated font links and versions to latest"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
+msgid "New experimental color mode"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:34
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:53
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:69
-msgid "Version 3.0.0"
-msgstr ""
-
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:35
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:54
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:70
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:98
-msgid "This release aims to be the last feature release:"
-msgstr ""
-
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:38
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:56
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:72
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:100
-msgid "Dark mode!"
-msgstr ""
-
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:39
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:73
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:101
-msgid "Option to filter by alphabets!"
-msgstr ""
-
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:40
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:74
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:102
-msgid "You can see installed fonts now!"
-msgstr ""
-
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:41
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:75
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:103
-msgid "Swipe back and forth easily!"
-msgstr ""
-
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:76
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:104
-msgid "Change default installation dialog!"
-msgstr ""
-
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:43
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:61
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:77
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:105
-msgid "Added a file chooser dialog for downloads!"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
+msgid "Updated icon for holiday season"
 msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
-msgid "Version 3.11.0"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
+msgid "Bug fixes"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:50
-msgid "Improved russian translation"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
+msgid "Version 3.12.0"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:51
-msgid "Fixed portguese application name"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
+msgid "More touch friendly ui"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:52
-msgid "Updated font lins and versions to latest"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
+msgid "Updated font links and versions to latest"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:61
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:80
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:96
+msgid "Version 3.0.0"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:62
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:81
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:97
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:125
+msgid "This release aims to be the last feature release:"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:65
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:83
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:99
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:127
+msgid "Dark mode!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:66
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:84
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:100
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:128
+msgid "Option to filter by alphabets!"
 msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:67
-msgid "Version 3.10.2"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:85
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:101
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:129
+msgid "You can see installed fonts now!"
 msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:68
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:86
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:102
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:130
+msgid "Swipe back and forth easily!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:69
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:87
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:103
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:131
+msgid "Change default installation dialog!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:70
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:88
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:104
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:132
+msgid "Added a file chooser dialog for downloads!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:76
+msgid "Version 3.11.0"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:77
+msgid "Improved russian translation"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:78
+msgid "Fixed portguese application name"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:79
+msgid "Updated font lins and versions to latest"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:94
+msgid "Version 3.10.2"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:95
 msgid "Updated translations"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:83
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:110
 msgid ""
 "Important bug fix, where if user didn't have .local/share/fonts folder, the "
 "app wouldn't start"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:88
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:115
 msgid "Fixes:"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:90
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:117
 msgid "Russian translation should now work"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:91
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:118
 msgid "All texts are now translated"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:92
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:119
 msgid "Updated Translations"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:111
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:138
 msgid "Fixes Spanish translation"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:116
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:143
 msgid "This release brings major improvements:"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:118
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:145
 msgid "Better resource usage"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:119
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:146
 msgid ""
 "Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to "
 "Ibragimov for ru and tg translations)"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:120
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:147
 msgid "Added credits dialog!"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:121
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:148
 msgid "New, prettier icon!"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:122
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:149
 msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
 msgstr ""
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:129
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:156
 msgid "Gustavo Peredo"
 msgstr ""
 
@@ -202,23 +224,33 @@ msgid "Dark mode"
 msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
-#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1223
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1420
 msgid "Colorful mode"
 msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
-msgid "Any alphabet"
+msgid "Developer window"
 msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:21
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:22
-msgid "Default installation directory"
+msgid "Any alphabet"
 msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:26
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:27
+msgid "Default installation directory"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:31
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:32
 msgid "Which alphabets aren't filtered"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:36
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:37
+msgid "Copy of webfonts.json containing only installed fonts"
 msgstr ""
 
 #: src/font-box.ui:18
@@ -261,7 +293,7 @@ msgstr ""
 msgid "Monospace"
 msgstr ""
 
-#: src/window.ui:231 src/window.ui:547
+#: src/window.ui:231 src/window.ui:887
 msgid "Settings"
 msgstr ""
 
@@ -269,213 +301,266 @@ msgstr ""
 msgid "About Font Downloader"
 msgstr ""
 
-#: src/window.ui:377
+#: src/window.ui:379
 msgid "Install"
 msgstr ""
 
-#: src/window.ui:504 src/window.ui:505
+#: src/window.ui:539
+msgid "Welcome to Font Downloader!"
+msgstr ""
+
+#: src/window.ui:560
+msgid ""
+"Select a font from the left side panel or start typing to search for a font, "
+"then download or install it!"
+msgstr ""
+
+#: src/window.ui:575
+msgid "page1"
+msgstr ""
+
+#: src/window.ui:603 src/window.ui:604
 msgid "Insert Emoji"
 msgstr ""
 
-#: src/window.ui:506
+#: src/window.ui:605
 msgid "Type here your text..."
 msgstr ""
 
-#: src/window.ui:550
+#: src/window.ui:635
+msgid "<b> Developer Window </b>"
+msgstr ""
+
+#: src/window.ui:696 src/window.ui:740
+msgid "page0"
+msgstr ""
+
+#: src/window.ui:726
+msgid "Loading..."
+msgstr ""
+
+#: src/window.ui:772
+msgid "Something went wrong, check your internet connection."
+msgstr ""
+
+#: src/window.ui:788
+msgid "page2"
+msgstr ""
+
+#: src/window.ui:890
 msgid "Close"
 msgstr ""
 
-#: src/window.ui:596
+#: src/window.ui:938
 msgid "<b> Alphabets </b>"
 msgstr ""
 
-#: src/window.ui:607
+#: src/window.ui:949
 msgid "Any"
 msgstr ""
 
-#: src/window.ui:642
+#: src/window.ui:984
 msgid "Arabic"
 msgstr ""
 
-#: src/window.ui:656
+#: src/window.ui:998
 msgid "Bengali"
 msgstr ""
 
-#: src/window.ui:669
+#: src/window.ui:1011
 msgid ""
 "Chinese \n"
 "Hong Kong"
 msgstr ""
 
-#: src/window.ui:683
+#: src/window.ui:1025
 msgid ""
 "Chinese\n"
 "Simplified"
 msgstr ""
 
-#: src/window.ui:697
+#: src/window.ui:1039
 msgid ""
 "Chinese\n"
 "Traditional"
 msgstr ""
 
-#: src/window.ui:711
+#: src/window.ui:1053
 msgid "Cyrillic"
 msgstr ""
 
-#: src/window.ui:724
+#: src/window.ui:1066
 msgid ""
 "Cyrillic\n"
 "Extended"
 msgstr ""
 
-#: src/window.ui:738
+#: src/window.ui:1080
 msgid "Kannada"
 msgstr ""
 
-#: src/window.ui:752
+#: src/window.ui:1094
 msgid "Khmer"
 msgstr ""
 
-#: src/window.ui:765
+#: src/window.ui:1107
 msgid "Korean"
 msgstr ""
 
-#: src/window.ui:778
+#: src/window.ui:1120
 msgid "Latin"
 msgstr ""
 
-#: src/window.ui:791
+#: src/window.ui:1133
 msgid ""
 "Latin\n"
 "Extended"
 msgstr ""
 
-#: src/window.ui:805
+#: src/window.ui:1147
 msgid "Malayalam"
 msgstr ""
 
-#: src/window.ui:818
+#: src/window.ui:1160
 msgid "Myanmar"
 msgstr ""
 
-#: src/window.ui:831
+#: src/window.ui:1173
 msgid "Oriya"
 msgstr ""
 
-#: src/window.ui:845
+#: src/window.ui:1187
 msgid "Sinhala"
 msgstr ""
 
-#: src/window.ui:858
+#: src/window.ui:1200
 msgid "Tamil"
 msgstr ""
 
-#: src/window.ui:871
+#: src/window.ui:1213
 msgid "Telugu"
 msgstr ""
 
-#: src/window.ui:884
+#: src/window.ui:1226
 msgid "Thai"
 msgstr ""
 
-#: src/window.ui:897
+#: src/window.ui:1239
 msgid "Tibetan"
 msgstr ""
 
-#: src/window.ui:910
+#: src/window.ui:1252
 msgid "Vietnamese"
 msgstr ""
 
-#: src/window.ui:923
+#: src/window.ui:1265
 msgid "Devanagari"
 msgstr ""
 
-#: src/window.ui:937
+#: src/window.ui:1279
 msgid "Greek"
 msgstr ""
 
-#: src/window.ui:950
+#: src/window.ui:1292
 msgid ""
 "Greek\n"
 "Extended"
 msgstr ""
 
-#: src/window.ui:964
+#: src/window.ui:1306
 msgid "Gujarati"
 msgstr ""
 
-#: src/window.ui:977
+#: src/window.ui:1319
 msgid "Gurmukhi"
 msgstr ""
 
-#: src/window.ui:990
+#: src/window.ui:1332
 msgid "Hebrew"
 msgstr ""
 
-#: src/window.ui:1003
+#: src/window.ui:1345
 msgid "Japanese"
 msgstr ""
 
-#: src/window.ui:1041
-msgid "<b> File Settings </b>"
+#: src/window.ui:1383
+msgid "<b> Settings </b>"
 msgstr ""
 
-#: src/window.ui:1078
+#: src/window.ui:1455
+msgid "Developer Window"
+msgstr ""
+
+#: src/window.ui:1490
 msgid "Default font installation folder:"
 msgstr ""
 
-#: src/window.ui:1088
+#: src/window.ui:1500
 msgid "Choose directory"
 msgstr ""
 
-#: src/window.ui:1131
+#: src/window.ui:1543
 msgid ""
 "Warning: If you can't find the folder you are wishing to install fonts to, "
 "it might be because this application doesn't have access to it, to correct "
 "this, install Flatseal and give this application access to the folder."
 msgstr ""
 
-#: src/window.ui:1153
+#: src/window.ui:1565
 msgid "Reset"
 msgstr ""
 
-#: src/window.ui:1192
-msgid "<b> EXPERIMENTAL </b>"
-msgstr ""
-
-#: src/window.py:50 src/window.py:399
+#: src/window.py:56 src/window.py:482
 msgid "sans-serif"
 msgstr ""
 
-#: src/window.py:50 src/window.py:399
+#: src/window.py:56 src/window.py:482
 msgid "serif"
 msgstr ""
 
-#: src/window.py:50 src/window.py:399
+#: src/window.py:56 src/window.py:482
 msgid "display"
 msgstr ""
 
-#: src/window.py:50 src/window.py:399
+#: src/window.py:56 src/window.py:482
 msgid "monospaced"
 msgstr ""
 
-#: src/window.py:50 src/window.py:399
+#: src/window.py:56 src/window.py:482
 msgid "handwriting"
 msgstr ""
 
-#: src/window.py:198
+#: src/window.py:230
 msgid "Default"
 msgstr ""
 
-#: src/window.py:223
+#: src/window.py:252
 msgid "Contributers"
 msgstr ""
 
-#: src/window.py:224
+#: src/window.py:253
 msgid "Translators"
 msgstr ""
 
-#: src/window.py:477
+#: src/window.py:315
+msgid ""
+"Failed to download font. Check your internet connection and folder "
+"permissions"
+msgstr ""
+
+#: src/window.py:317
+msgid ""
+"Failed to install font. Check your internet connection and folder permissions"
+msgstr ""
+
+#: src/window.py:320
+msgid "Font downloaded succesfully!"
+msgstr ""
+
+#: src/window.py:322
+msgid "Font installed succesfully!"
+msgstr ""
+
+#: src/window.py:637
 msgid "Please choose a folder"
 msgstr ""
