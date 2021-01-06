@@ -21,6 +21,7 @@ from os import path, makedirs, listdir
 import locale
 import json
 import threading
+from copy import deepcopy
 from .fsync import async_function
 from time import sleep
 from urllib.request import urlretrieve, urlopen
@@ -44,6 +45,7 @@ class FontBox(Gtk.Box):
     fontFamily = Gtk.Template.Child()
     fontCategory = Gtk.Template.Child()
     installed_box = Gtk.Template.Child()
+    update_box = Gtk.Template.Child()
 
     def __init__(self, familyName, category, index, variants, subset, **kwargs):
         super().__init__(**kwargs)
@@ -293,22 +295,23 @@ class FontdownloaderWindow(Handy.Window):
             for i in range(len(webfontsData['items'])):
                 #Gather data from webfontsData
                 if webfontsData['items'][i]['family'] in j[:len(j[:-4])]:
-                    #Remove version since we don't know
-                    l = webfontsData['items'][i]
-                    l['version'] = "None"
-                    self.jsonOfInstalledFonts['items'].append(l)
+                    if not (webfontsData['items'][i]['family'] in str(self.jsonOfInstalledFonts['items'])):
+                        #Remove version since we don't know
+                        l = deepcopy(webfontsData)
+                        l['items'][i]['version'] = "None"
+                        self.jsonOfInstalledFonts['items'].append(l['items'][i])
 
         #Remove duplicates
         listOfInstalledFontsItems = self.jsonOfInstalledFonts['items']
         self.jsonOfInstalledFonts['items'] = []
         for i in listOfInstalledFontsItems:
-            if not(i in self.jsonOfInstalledFonts['items']):
+            if not(i['family'] in str(self.jsonOfInstalledFonts['items'])):
                 self.jsonOfInstalledFonts['items'].append(i)
         #Save new installed fonts string
         self.settings.set_string('installed-fonts', json.dumps(self.jsonOfInstalledFonts))
         self.updateFilter()
 
-    def updateProgressBar(self, chosen_path, links, is_download):
+    def updateProgressBar(self, chosen_path, links, is_download, data=None):
         def on_done_updating(result, error):
             if error:
                 print(error)
@@ -321,6 +324,14 @@ class FontdownloaderWindow(Handy.Window):
                     self.notification_label.set_label(_("Font downloaded succesfully!"))
                 else:
                     self.notification_label.set_label(_("Font installed succesfully!"))
+                    if data['family'] in str(self.jsonOfInstalledFonts['items']):
+                        for i in range(len(self.jsonOfInstalledFonts['items'])):
+                            if (self.jsonOfInstalledFonts['items'][i]['family'] == data['family']):
+                                self.jsonOfInstalledFonts['items'].pop(i)
+                                self.jsonOfInstalledFonts['items'].append(data)
+                                break
+                    else:
+                        self.jsonOfInstalledFonts['items'].append(data)
             self.revealer.set_reveal_child(True)
             self.updateListOfInstalledFonts()
             self.main_download_button.set_sensitive(True)
@@ -343,11 +354,11 @@ class FontdownloaderWindow(Handy.Window):
     def installFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
         #to the '.local/share/fonts' directory
-        links = webfontsData['items'][self.fonts_list.get_selected_row().get_index()]['files']
+        data = webfontsData['items'][self.fonts_list.get_selected_row().get_index()]
         absolutePath = path.join(path.expanduser('~'), '.local/share/fonts') if self.settings.get_string('default-directory') == 'Default' else self.settings.get_string('default-directory')
         if not path.exists(absolutePath):
             makedirs(absolutePath)
-        thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, self.defaultPath, links, False))
+        thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, self.defaultPath, data['files'], False, data))
         thread.daemon = True
         thread.start()
 
@@ -420,7 +431,10 @@ class FontdownloaderWindow(Handy.Window):
                             #Make it visible and append it to our fonts panel
                             for j in self.jsonOfInstalledFonts['items']:
                                 if webfontsData['items'][i]['family'] == j['family']:
-                                    self.newBox.installed_box.show()
+                                    if j['version'] != webfontsData['items'][i]['version']:
+                                        self.newBox.update_box.show()
+                                    else:
+                                        self.newBox.installed_box.show()
                             self.newBox.set_visible(True)
                             self.fonts_list.add(self.newBox)
                             self.private_counter = self.private_counter + 1
@@ -494,10 +508,6 @@ class FontdownloaderWindow(Handy.Window):
                     self.main_install_button.set_sensitive(True)
                     self.main_download_button.set_sensitive(True)
                 self.text_buffer.set_text(result.replace("\\n", "\n").replace(result[0:2], "\n").replace(result[-1], ""))
-                #for lines in result.split("\\n"):
-                #    print(result.split("\\n"))
-                #    temp = self.text_buffer.get_end_iter()
-                #    self.text_buffer.insert(temp, lines)
                 if not self.text_entry_active:
                     self.preview_stack.set_visible_child(self.preview_box)
                 if not self.text_entry.is_focus():
