@@ -46,13 +46,15 @@ class FontBox(Gtk.Box):
     fontCategory = Gtk.Template.Child()
     installed_box = Gtk.Template.Child()
     update_box = Gtk.Template.Child()
+    system_installed_box = Gtk.Template.Child()
 
-    def __init__(self, familyName, category, index, variants, subset, **kwargs):
+    def __init__(self, data, **kwargs):
         super().__init__(**kwargs)
         #When creating, add all information on a data variable
-        self.data = [familyName, category, variants, subset]
+        self.data = data
         #Set labels' texts
-        self.fontFamily.set_text(familyName)
+        self.fontFamily.set_text(data['family'])
+        category = data['category']
         #Change category to it's translation
 
         self.fontCategory.set_text(_('sans-serif') if category=='sans-serif' else (_('serif') if category=='serif' else (_('display') if category=='display' else (_('monospaced') if category=='monospace' else _('handwriting')))))
@@ -283,13 +285,27 @@ class FontdownloaderWindow(Handy.Window):
 
         #Get list of actual installed fonts in directory
         listOfInstalledFonts = [f for f in listdir(self.defaultPath) if path.isfile(path.join(self.defaultPath, f))]
+        listOfSystemInstalledFonts = [f for f in listdir("/usr/share/fonts")]
 
         #Compare json with installed fonts and files on the default-directory
         for useless in webfontsData['items']:
             for i in range(len(self.jsonOfInstalledFonts['items'])):
                 if not (self.jsonOfInstalledFonts['items'][i]['family'] in str(listOfInstalledFonts)):
+                    if not (self.jsonOfInstalledFonts['items'][i]['family'].lower() in str(listOfSystemInstalledFonts)):
+                        self.jsonOfInstalledFonts['items'].pop(i)
+                        break
                     self.jsonOfInstalledFonts['items'].pop(i)
                     break
+
+        for j in listOfSystemInstalledFonts:
+            for i in range(len(webfontsData['items'])):
+                #Gather data from webfontsData
+                if webfontsData['items'][i]['family'].lower() in j:
+                    if not (webfontsData['items'][i]['family'] in str(self.jsonOfInstalledFonts['items'])):
+                        #Add "System" as version since it's system installed
+                        l = deepcopy(webfontsData)
+                        l['items'][i]['version'] = "System"
+                        self.jsonOfInstalledFonts['items'].append(l['items'][i])
 
         for j in listOfInstalledFonts:
             for i in range(len(webfontsData['items'])):
@@ -300,7 +316,6 @@ class FontdownloaderWindow(Handy.Window):
                         l = deepcopy(webfontsData)
                         l['items'][i]['version'] = "None"
                         self.jsonOfInstalledFonts['items'].append(l['items'][i])
-
         #Remove duplicates
         listOfInstalledFontsItems = self.jsonOfInstalledFonts['items']
         self.jsonOfInstalledFonts['items'] = []
@@ -332,6 +347,7 @@ class FontdownloaderWindow(Handy.Window):
                                 break
                     else:
                         self.jsonOfInstalledFonts['items'].append(data)
+
             self.revealer.set_reveal_child(True)
             self.updateListOfInstalledFonts()
             self.main_download_button.set_sensitive(True)
@@ -354,10 +370,7 @@ class FontdownloaderWindow(Handy.Window):
     def installFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
         #to the '.local/share/fonts' directory
-        data = webfontsData['items'][self.fonts_list.get_selected_row().get_index()]
-        absolutePath = path.join(path.expanduser('~'), '.local/share/fonts') if self.settings.get_string('default-directory') == 'Default' else self.settings.get_string('default-directory')
-        if not path.exists(absolutePath):
-            makedirs(absolutePath)
+        data = self.fonts_list.get_selected_row().get_child().data
         thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, self.defaultPath, data['files'], False, data))
         thread.daemon = True
         thread.start()
@@ -369,7 +382,7 @@ class FontdownloaderWindow(Handy.Window):
                 Gtk.FileChooserAction.SELECT_FOLDER,
                 (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
                  Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
-        links = webfontsData['items'][self.fonts_list.get_selected_row().get_index()]['files']
+        links = self.fonts_list.get_selected_row().get_child().data['files']
 
         response = dialog.run()
 
@@ -424,14 +437,13 @@ class FontdownloaderWindow(Handy.Window):
                 if searchBarText in webfontsData['items'][i]['family'].lower():
                     if (all(k in webfontsData['items'][i]['subsets'] for k in self.current_alphabet_list)) or (self.any_alphabet):
                         if self.private_counter <= (25*self.size_increase):
-                            self.newBox = FontBox(webfontsData['items'][i]['family'],
-                                                  webfontsData['items'][i]['category'],
-                                                  i,webfontsData['items'][i]['variants'],
-                                                  webfontsData['items'][i]['subsets'])
+                            self.newBox = FontBox(webfontsData['items'][i])
                             #Make it visible and append it to our fonts panel
                             for j in self.jsonOfInstalledFonts['items']:
                                 if webfontsData['items'][i]['family'] == j['family']:
-                                    if j['version'] != webfontsData['items'][i]['version']:
+                                    if j['version'] == "System":
+                                        self.newBox.system_installed_box.show()
+                                    elif j['version'] != webfontsData['items'][i]['version']:
                                         self.newBox.update_box.show()
                                     else:
                                         self.newBox.installed_box.show()
@@ -443,11 +455,10 @@ class FontdownloaderWindow(Handy.Window):
                         if self.private_counter <= (25*self.size_increase):
                             for j in self.jsonOfInstalledFonts['items']:
                                 if webfontsData['items'][i]['family'] == j['family']:
-                                    self.newBox = FontBox(webfontsData['items'][i]['family'],
-                                                  webfontsData['items'][i]['category'],
-                                                  i,webfontsData['items'][i]['variants'],
-                                                  webfontsData['items'][i]['subsets'])
-                                    if j['version'] != webfontsData['items'][i]['version']:
+                                    self.newBox = FontBox(webfontsData['items'][i])
+                                    if j['version'] == "System":
+                                        self.newBox.system_installed_box.show()
+                                    elif j['version'] != webfontsData['items'][i]['version']:
                                         self.newBox.update_box.show()
                                     else:
                                         self.newBox.installed_box.show()
@@ -469,9 +480,8 @@ class FontdownloaderWindow(Handy.Window):
         #Whenever the user does something that should change the font preview:
         if self.fonts_list.get_selected_row():
             #We colect the data from the selected font
-            self.temp_data = self.fonts_list.get_selected_row().get_child().data
             #The variable CurrentSelectedFont carries the font name
-            self.CurrentSelectedFont = self.temp_data[0]
+            self.CurrentSelectedFont = self.fonts_list.get_selected_row().get_child().data['family']
 
         self.main_install_button.set_sensitive(False)
         self.main_download_button.set_sensitive(False)
@@ -510,7 +520,12 @@ class FontdownloaderWindow(Handy.Window):
         #Load the html, set title and subtitle
         self.font_preview.load_html(self.html)
         self.headerbar2.set_title(self.CurrentSelectedFont)
-        self.headerbar2.set_subtitle(_('sans-serif') if self.temp_data[1]=='sans-serif' else (_('serif') if self.temp_data[1]=='serif' else (_('display') if self.temp_data[1]=='display' else (_('monospaced') if self.temp_data[1]=='monospace' else _('handwriting')))))
+        font_category = self.fonts_list.get_selected_row().get_child().data['category']
+        self.headerbar2.set_subtitle(_('sans-serif')
+            if font_category=='sans-serif'
+            else (_('serif') if font_category=='serif' else (_('display')
+            if font_category=='display' else (_('monospaced')
+            if font_category=='monospace' else _('handwriting')))))
         self.leaflet.set_visible_child(self.box2)
         self.header_leaflet.set_visible_child(self.headerbar2)
 

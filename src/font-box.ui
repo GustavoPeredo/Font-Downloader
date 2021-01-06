@@ -95,6 +95,46 @@
               </packing>
             </child>
             <child>
+              <object class="GtkBox" id="system_installed_box">
+                <property name="can-focus">False</property>
+                <property name="valign">center</property>
+                <property name="spacing">4</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="valign">center</property>
+                    <property name="icon-name">emblem-default-symbolic</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="valign">center</property>
+                    <property name="label" translatable="yes">Installed systemwide</property>
+                    <property name="use-markup">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="pack-type">end</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
               <object class="GtkBox" id="update_box">
                 <property name="can-focus">False</property>
                 <property name="valign">center</property>

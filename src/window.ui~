@@ -648,6 +648,7 @@
                                     <property name="can-focus">True</property>
                                     <property name="margin-start">8</property>
                                     <property name="margin-end">8</property>
+                                    <property name="margin-bottom">8</property>
                                     <child>
                                       <object class="GtkViewport">
                                         <property name="visible">True</property>
