@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import sys
+import sys, os
 import gi
 
 gi.require_version('Gtk', '3.0')
@@ -24,8 +24,10 @@ gi.require_version('WebKit2', '4.0')
 gi.require_version('Pango', '1.0')
 
 from gi.repository import Gtk, Gio, Handy
-
-from .window import FontdownloaderWindow
+if os.environ['XDG_SESSION_TYPE'].lower() == "wayland":
+    from .window import FontdownloaderWindow
+else:
+    from .windowX11 import FontdownloaderWindow
 
 
 class Application(Gtk.Application):
