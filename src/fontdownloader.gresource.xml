@@ -4,6 +4,7 @@
     <file>window.ui</file>
     <file>font-box.ui</file>
     <file>style.css</file>
+    <file>green.css</file>
     <file>webfonts.json</file>
   </gresource>
 </gresources>

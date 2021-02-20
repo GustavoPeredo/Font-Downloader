@@ -12,7 +12,7 @@
       <description>Colorful mode</description>
 	  </key>
 	  <key name="developer-window" type="b">
-	    <default>true</default>
+	    <default>false</default>
       <summary>Developer window</summary>
       <description>Developer window</description>
 	  </key>

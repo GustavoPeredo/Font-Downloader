@@ -34,44 +34,7 @@ list.sidebar {
   box-shadow: inset 0 0 0 2px @theme_selected_bg_color;
 }
 
-.color-green:checked {
-  box-shadow: inset 0 0 0 2px #2ec27e;
-}
 
-.green2:selected {
-  background-color: #2ec27e;
-}
-
-.green2 check:checked {
-  background-image: linear-gradient(to top, #26a269 2px, #2ec27e);
-  border-color: #239963;
-}
-
-.text-green:focus {
-  border-color: #239963;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.719216);
-  -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.719216);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 1px 2px rgba(0, 0, 0, 0.07);
-}
-
-.green {
-  color: white;
-  outline-color: rgba(255, 255, 255, 0.3);
-  border-color: #239963;
-  border-bottom-color: #1a7d50;
-  background-image: linear-gradient(to top, #26a269 2px, #2ec27e);
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.719216);
-  -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.719216);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.02), 0 1px 2px rgba(0, 0, 0, 0.07);
-}
-
-.green text selection {
-  background-color: #239963;
-}
-
-progressbar.green > trough > progress {
-  background-image: linear-gradient(to top, #26a269 2px, #2ec27e);
-}
 /* Menu */
 
 popover > box {
