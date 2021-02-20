@@ -268,6 +268,7 @@ class FontdownloaderWindow(Handy.Window):
         #Setup the CSS and load it.
         uri = 'resource:///org/gustavoperedo/FontDownloader/'
         provider = Gtk.CssProvider()
+
         if self.settings.get_boolean('colorful-mode'):
             provider_file = Gio.File.new_for_uri(uri + "green.css")
         else:
@@ -357,20 +358,23 @@ class FontdownloaderWindow(Handy.Window):
             self.main_install_button.set_sensitive(True)
             self.progress_bar.set_visible(False)
 
-        @async_function(on_done=on_done_updating)
         def update_on_thread():
             percentile = round(1/len(links), 2)
             current_percentile = 0
             self.progress_bar.set_visible(True)
             self.main_download_button.set_sensitive(False)
             self.main_install_button.set_sensitive(False)
-            for key in links:
-                urlretrieve(links[key], path.join(chosen_path, self.CurrentSelectedFont + " " + key + links[key][-4:]))
-                current_percentile = current_percentile + percentile
-                self.progress_bar.set_fraction(current_percentile)
+            try:
+                for key in links:
+                    urlretrieve(links[key], path.join(chosen_path, self.CurrentSelectedFont + " " + key + links[key][-4:]))
+                    current_percentile = current_percentile + percentile
+                    self.progress_bar.set_fraction(current_percentile)
+                on_done_updating("", "")
+            except Exception as e:
+                on_done_updating("", e)
         update_on_thread()
 
-    def installFont(self, *args, **kwargs):
+    def installFont(self, button):
         #This function gets the selected font's link and downloads
         #to the '.local/share/fonts' directory
         data = self.fonts_list.get_selected_row().get_child().data
@@ -378,7 +382,7 @@ class FontdownloaderWindow(Handy.Window):
         thread.daemon = True
         thread.start()
 
-    def downloadFont(self, *args, **kwargs):
+    def downloadFont(self, button):
         #This function gets the selected font's link and downloads
         #to the user's download directory
         dialog = Gtk.FileChooserDialog("Please choose a folder", self,
@@ -670,7 +674,3 @@ class FontdownloaderWindow(Handy.Window):
         self.developer_switch.set_active(False)
         self.light_mode_button.set_active(True)
         self.updateAlphabet()
-
-
-
-        
