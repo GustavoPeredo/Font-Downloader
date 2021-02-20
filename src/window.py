@@ -667,6 +667,9 @@ class FontdownloaderWindow(Handy.Window):
         self.settings.set_string('default-directory', 'Default')
         self.folder_settings_button.set_label('Default')
         self.any_alphabet_button.set_active(True)
+        self.colorful_switch.set_active(False)
+        self.developer_switch.set_active(False)
+        self.light_mode_button.set_active(True)
         self.updateAlphabet()
 
 
