@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: Font Downloader\n"
 "Language: nl\n"
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:5
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:299
-#: src/window.ui:321 src/window.py:257
+#: data/org.gustavoperedo.FontDownloader.desktop.in:4
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
+#: src/window.ui:320 src/window.py:262
 msgid "Font Downloader"
 msgstr "Lettertypedownloader"
 
@@ -41,7 +41,7 @@ msgstr "Handschrift"
 msgid "Monospace"
 msgstr "Vaste breedte"
 
-#: src/window.ui:245
+#: src/window.ui:244
 msgid "About Font Downloader"
 msgstr "Over Lettertypedownloader"
 
@@ -49,11 +49,11 @@ msgstr "Over Lettertypedownloader"
 msgid "Download"
 msgstr "Downloaden"
 
-#: src/window.ui:605
+#: src/window.ui:604
 msgid "Type here your text..."
 msgstr "Typ hier wat tekst..."
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:9
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
 msgstr "Een eenvoudige lettertypedownloader, geschreven in GTK, die lettertypen van Google Fonts ophaalt en installeert."
 
@@ -65,15 +65,15 @@ msgstr "Een eenvoudige GTK-lettertypedownloader."
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
 msgstr "Wilde je altijd al het terminallettertype aanpassen, maar zag je op tegen het gedoe van zoeken, downloaden en installeren? Met deze GTK-toepassing is het een fluitje van een cent: je kunt de hele Google Fonts-catalogus doorzoeken en de lettertypen met één klik installeren."
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:156
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:179
 msgid "Gustavo Peredo"
 msgstr "Gustavo Peredo"
 
-#: src/window.ui:379
+#: src/window.ui:378
 msgid "Install"
 msgstr "Installeren"
 
-#: src/window.py:253
+#: src/window.py:258
 msgid "Translators"
 msgstr "Vertalers"
 
@@ -97,137 +97,137 @@ msgstr "Standaard installatiemap"
 msgid "Which alphabets aren't filtered"
 msgstr "Welke alfabetten er niet worden gefilterd"
 
-#: src/window.ui:231 src/window.ui:887
+#: src/window.ui:231 src/window.ui:885
 msgid "Settings"
 msgstr "Instellingen"
 
-#: src/window.ui:890
+#: src/window.ui:888
 msgid "Close"
 msgstr "Sluiten"
 
-#: src/window.ui:938
+#: src/window.ui:936
 msgid "<b> Alphabets </b>"
 msgstr "<b>Alfabetten</b>"
 
-#: src/window.ui:949
+#: src/window.ui:947
 msgid "Any"
 msgstr "Ieder"
 
-#: src/window.ui:984
+#: src/window.ui:982
 msgid "Arabic"
 msgstr "Arabisch"
 
-#: src/window.ui:998
+#: src/window.ui:996
 msgid "Bengali"
 msgstr "Bengaals"
 
-#: src/window.ui:1011
+#: src/window.ui:1009
 msgid "Chinese \n"
 "Hong Kong"
 msgstr "Kantonees (Hongkong)"
 
-#: src/window.ui:1025
+#: src/window.ui:1023
 msgid "Chinese\n"
 "Simplified"
 msgstr "Chinees (Vereenvoudigd)"
 
-#: src/window.ui:1039
+#: src/window.ui:1037
 msgid "Chinese\n"
 "Traditional"
 msgstr "Chinees (Traditioneel)"
 
-#: src/window.ui:1053
+#: src/window.ui:1051
 msgid "Cyrillic"
 msgstr "Cyrillisch"
 
-#: src/window.ui:1066
+#: src/window.ui:1064
 msgid "Cyrillic\n"
 "Extended"
 msgstr "Cyrillisch (Uitgebreid)"
 
-#: src/window.ui:1080
+#: src/window.ui:1078
 msgid "Kannada"
 msgstr "Kannada"
 
-#: src/window.ui:1094
+#: src/window.ui:1092
 msgid "Khmer"
 msgstr "Khmer"
 
-#: src/window.ui:1107
+#: src/window.ui:1105
 msgid "Korean"
 msgstr "Koreaans"
 
-#: src/window.ui:1120
+#: src/window.ui:1118
 msgid "Latin"
 msgstr "Latijn"
 
-#: src/window.ui:1133
+#: src/window.ui:1131
 msgid "Latin\n"
 "Extended"
 msgstr "Latijn (Uitgebreid)"
 
-#: src/window.ui:1147
+#: src/window.ui:1145
 msgid "Malayalam"
 msgstr "Malayalam"
 
-#: src/window.ui:1160
+#: src/window.ui:1158
 msgid "Myanmar"
 msgstr "Birmees"
 
-#: src/window.ui:1173
+#: src/window.ui:1171
 msgid "Oriya"
 msgstr "Odia"
 
-#: src/window.ui:1187
+#: src/window.ui:1185
 msgid "Sinhala"
 msgstr "Singalees"
 
-#: src/window.ui:1200
+#: src/window.ui:1198
 msgid "Tamil"
 msgstr "Tamil"
 
-#: src/window.ui:1213
+#: src/window.ui:1211
 msgid "Telugu"
 msgstr "Telugu"
 
-#: src/window.ui:1226
+#: src/window.ui:1224
 msgid "Thai"
 msgstr "Thais"
 
-#: src/window.ui:1239
+#: src/window.ui:1237
 msgid "Tibetan"
 msgstr "Tibetaans"
 
-#: src/window.ui:1252
+#: src/window.ui:1250
 msgid "Vietnamese"
 msgstr "Vietnamees"
 
-#: src/window.ui:1265
+#: src/window.ui:1263
 msgid "Devanagari"
 msgstr "Devanagari"
 
-#: src/window.ui:1279
+#: src/window.ui:1277
 msgid "Greek"
 msgstr "Grieks"
 
-#: src/window.ui:1292
+#: src/window.ui:1290
 msgid "Greek\n"
 "Extended"
 msgstr "Grieks (Uitgebreid)"
 
-#: src/window.ui:1306
+#: src/window.ui:1304
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: src/window.ui:1319
+#: src/window.ui:1317
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: src/window.ui:1332
+#: src/window.ui:1330
 msgid "Hebrew"
 msgstr "Hebreeuws"
 
-#: src/window.ui:1345
+#: src/window.ui:1343
 msgid "Japanese"
 msgstr "Japans"
 
@@ -235,15 +235,15 @@ msgstr "Japans"
 msgid "<b> File Settings </b>"
 msgstr "<b>Bestandsinstellingen</b>"
 
-#: src/window.ui:1490
+#: src/window.ui:1518
 msgid "Default font installation folder:"
 msgstr "Standaard lettertypemap:"
 
-#: src/window.ui:1500
+#: src/window.ui:1528
 msgid "Choose directory"
 msgstr "Map kiezen"
 
-#: src/window.ui:1543
+#: src/window.ui:1571
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
 msgstr "Let op: als je de map waarin je de lettertypen wilt installeren niet kunt vinden, dan heeft deze toepassing mogelijk geen toegang tot de map. Oplossing: installeer Flatseal en geef deze toepassing toegang tot de map."
 
@@ -251,27 +251,27 @@ msgstr "Let op: als je de map waarin je de lettertypen wilt installeren niet kun
 msgid "Reset"
 msgstr "Standaardwaarden"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:526
 msgid "sans-serif"
 msgstr "schreefloos"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:528
 msgid "serif"
 msgstr "met schreef"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:528
 msgid "display"
 msgstr "weergave"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:529
 msgid "monospaced"
 msgstr "vaste breedte"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:530
 msgid "handwriting"
 msgstr "handschrift"
 
-#: src/window.py:637
+#: src/window.py:632
 msgid "Please choose a folder"
 msgstr "Kies een map"
 
@@ -283,11 +283,11 @@ msgstr "familie"
 msgid "category"
 msgstr "categorie"
 
-#: src/font-box.ui:76
+#: src/font-box.ui:81
 msgid "Installed"
 msgstr "Geïnstalleerd"
 
-#: src/window.py:230
+#: src/window.py:234
 msgid "Default"
 msgstr "Standaard"
 
@@ -424,122 +424,150 @@ msgstr "Je kunt voortaan de catalogus doorbladeren door te vegen op je scherm of
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
 msgid "Version 3.12.1"
-msgstr ""
+msgstr "Versie 3.12.1"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
 msgid "Translation Updates"
-msgstr ""
+msgstr "Vertaalupdates"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
 msgid "Added Dutch translation"
-msgstr ""
+msgstr "Nieuw: Nederlandse vertaling"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
 msgid "Major performance improvements"
-msgstr ""
+msgstr "Verbeterd: prestaties zijn nu veel beter"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
 msgid "New experimental color mode"
-msgstr ""
+msgstr "Nieuw: experimentele kleurmodus"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
 msgid "Updated icon for holiday season"
-msgstr ""
+msgstr "Nieuw: feestdagenpictogram"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
 msgid "Bug fixes"
-msgstr ""
+msgstr "Fouten opgelost"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
 msgid "Version 3.12.0"
-msgstr ""
+msgstr "Versie 3.12.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
 msgid "More touch friendly ui"
-msgstr ""
+msgstr "Alles werkt nu beter op touchscreens"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
 msgid "Updated font links and versions to latest"
-msgstr ""
+msgstr "Lettertypelinks bijgewerkt"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
-#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1420
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1423
 msgid "Colorful mode"
-msgstr ""
+msgstr "Kleurmodus"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Developer window"
-msgstr ""
+msgstr "Ontwikkelaarsvenster"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:36
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:37
 msgid "Copy of webfonts.json containing only installed fonts"
-msgstr ""
+msgstr "Kopie van webfonts.json met alleen geïnstalleerde lettertypen"
 
 #: src/window.ui:539
 msgid "Welcome to Font Downloader!"
-msgstr ""
+msgstr "Welkom bij Lettertypedownloader!"
 
 #: src/window.ui:560
 msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
-msgstr ""
+msgstr "Kies links een lettertype of typ om te zoeken om lettertypen te downloaden of installeren."
 
-#: src/window.ui:575
+#: src/window.ui:574
 msgid "page1"
-msgstr ""
+msgstr "pagina1"
 
-#: src/window.ui:603 src/window.ui:604
+#: src/window.ui:602 src/window.ui:603
 msgid "Insert Emoji"
-msgstr ""
+msgstr "Emoji invoegen"
 
-#: src/window.ui:635
+#: src/window.ui:634
 msgid "<b> Developer Window </b>"
-msgstr ""
+msgstr "<b>Ontwikkelaarsvenster</b>"
 
-#: src/window.ui:696 src/window.ui:740
+#: src/window.ui:695 src/window.ui:739
 msgid "page0"
-msgstr ""
+msgstr "pagina0"
 
-#: src/window.ui:726
+#: src/window.ui:725
 msgid "Loading..."
-msgstr ""
+msgstr "Bezig met laden..."
 
-#: src/window.ui:772
+#: src/window.ui:771
 msgid "Something went wrong, check your internet connection."
-msgstr ""
+msgstr "Er is iets misgegaan - controleer je internetverbinding."
 
-#: src/window.ui:788
+#: src/window.ui:786
 msgid "page2"
-msgstr ""
+msgstr "pagina2"
 
-#: src/window.ui:1383
+#: src/window.ui:1381
 msgid "<b> Settings </b>"
-msgstr ""
+msgstr "<b>Instellingen</b>"
 
-#: src/window.ui:1455
+#: src/window.ui:1483
 msgid "Developer Window"
-msgstr ""
+msgstr "Ontwikkelaarsvenster"
 
-#: src/window.py:252
+#: src/window.py:257
 msgid "Contributers"
-msgstr ""
+msgstr "Bijdragers"
 
-#: src/window.py:315
+#: src/window.py:337
 msgid "Failed to download font. Check your internet connection and folder permissions"
-msgstr ""
+msgstr "Het lettertype kan niet worden gedownload. Controleer je internetverbinding en toegangsrechten op de map."
 
-#: src/window.py:317
+#: src/window.py:339
 msgid "Failed to install font. Check your internet connection and folder permissions"
-msgstr ""
+msgstr "Het lettertype kan niet worden geïnstalleerd. Controleer je internetverbinding en toegangsrechten op de map."
 
-#: src/window.py:320
+#: src/window.py:342
 msgid "Font downloaded succesfully!"
+msgstr "Het lettertype is gedownload!"
+
+#: src/window.py:344
+msgid "Font installed succesfully!"
+msgstr "Het lettertype is geïnstalleerd!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
+msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
 msgstr ""
 
-#: src/window.py:322
-msgid "Font installed succesfully!"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
+msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
+msgstr ""
+
+#: src/font-box.ui:120
+msgid "Installed systemwide"
+msgstr ""
+
+#: src/font-box.ui:160
+msgid "Update available"
+msgstr ""
+
+#: src/window.ui:439
+msgid "Search..."
+msgstr ""
+
+#: src/window.ui:1436
+msgid "Requires restart"
+msgstr ""
+
+#: src/window.ui:1593
+msgid "Reset all settings"
 msgstr ""
 
