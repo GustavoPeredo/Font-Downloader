@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: Font Downloader\n"
 "Language: pt-br\n"
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:5
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:299
-#: src/window.ui:321 src/window.py:257
+#: data/org.gustavoperedo.FontDownloader.desktop.in:4
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
+#: src/window.ui:320 src/window.py:262
 msgid "Font Downloader"
 msgstr "Instalador de Fontes"
 
@@ -41,7 +41,7 @@ msgstr "Manuscrita"
 msgid "Monospace"
 msgstr "Mono-espaçada"
 
-#: src/window.ui:245
+#: src/window.ui:244
 msgid "About Font Downloader"
 msgstr "Sobre o Instalador de Fontes"
 
@@ -49,11 +49,11 @@ msgstr "Sobre o Instalador de Fontes"
 msgid "Download"
 msgstr "Descarregar"
 
-#: src/window.ui:605
+#: src/window.ui:604
 msgid "Type here your text..."
 msgstr "Digite aqui um texto..."
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:9
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
 msgstr "Um simples instalador de fontes escrito em GTK, que instala fontes diretamente do Google Fonts"
 
@@ -65,15 +65,15 @@ msgstr "Um simples instalador de fontes em GTK"
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
 msgstr "Você já quis alguma vez mudar a fonte de seu terminal, mas não queria passar por todo o processo de procurar, baixar e instalar uma fonte? Essa aplicação simples e adaptativo em GTK permite que você busque e instale fontes diretamente do Google Fonts!"
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:156
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:179
 msgid "Gustavo Peredo"
 msgstr "Gustavo Peredo"
 
-#: src/window.ui:379
+#: src/window.ui:378
 msgid "Install"
 msgstr "Instalar"
 
-#: src/window.py:253
+#: src/window.py:258
 msgid "Translators"
 msgstr "Tradutores"
 
@@ -97,143 +97,143 @@ msgstr "Diretório padrão de instalação"
 msgid "Which alphabets aren't filtered"
 msgstr "Quais alfabetos não estão filtrados"
 
-#: src/window.ui:231 src/window.ui:887
+#: src/window.ui:231 src/window.ui:885
 msgid "Settings"
 msgstr "Preferências"
 
-#: src/window.ui:890
+#: src/window.ui:888
 msgid "Close"
 msgstr "Fechar"
 
-#: src/window.ui:938
+#: src/window.ui:936
 msgid "<b> Alphabets </b>"
 msgstr "<b> Alfabetos </b>"
 
-#: src/window.ui:949
+#: src/window.ui:947
 msgid "Any"
 msgstr "Qualquer"
 
-#: src/window.ui:984
+#: src/window.ui:982
 msgid "Arabic"
 msgstr "Arábico"
 
-#: src/window.ui:998
+#: src/window.ui:996
 msgid "Bengali"
 msgstr "Bengalese"
 
-#: src/window.ui:1011
+#: src/window.ui:1009
 msgid "Chinese \n"
 "Hong Kong"
 msgstr "Chinês\n"
 "Hong Kong"
 
-#: src/window.ui:1025
+#: src/window.ui:1023
 msgid "Chinese\n"
 "Simplified"
 msgstr "Chinês\n"
 "Simplificado"
 
-#: src/window.ui:1039
+#: src/window.ui:1037
 msgid "Chinese\n"
 "Traditional"
 msgstr "Chinês\n"
 "Tradicional"
 
-#: src/window.ui:1053
+#: src/window.ui:1051
 msgid "Cyrillic"
 msgstr "Cirílico"
 
-#: src/window.ui:1066
+#: src/window.ui:1064
 msgid "Cyrillic\n"
 "Extended"
 msgstr "Cirílico\n"
 "Extendido"
 
-#: src/window.ui:1080
+#: src/window.ui:1078
 msgid "Kannada"
 msgstr "Canarês"
 
-#: src/window.ui:1094
+#: src/window.ui:1092
 msgid "Khmer"
 msgstr "Khmer"
 
-#: src/window.ui:1107
+#: src/window.ui:1105
 msgid "Korean"
 msgstr "Coreano"
 
-#: src/window.ui:1120
+#: src/window.ui:1118
 msgid "Latin"
 msgstr "Latino"
 
-#: src/window.ui:1133
+#: src/window.ui:1131
 msgid "Latin\n"
 "Extended"
 msgstr "Latino\n"
 "Extendido"
 
-#: src/window.ui:1147
+#: src/window.ui:1145
 msgid "Malayalam"
 msgstr "Malayo"
 
-#: src/window.ui:1160
+#: src/window.ui:1158
 msgid "Myanmar"
 msgstr "Birmanês"
 
-#: src/window.ui:1173
+#: src/window.ui:1171
 msgid "Oriya"
 msgstr "Oriá"
 
-#: src/window.ui:1187
+#: src/window.ui:1185
 msgid "Sinhala"
 msgstr "Sinhala"
 
-#: src/window.ui:1200
+#: src/window.ui:1198
 msgid "Tamil"
 msgstr "Tamil"
 
-#: src/window.ui:1213
+#: src/window.ui:1211
 msgid "Telugu"
 msgstr "Telugu"
 
-#: src/window.ui:1226
+#: src/window.ui:1224
 msgid "Thai"
 msgstr "Thai"
 
-#: src/window.ui:1239
+#: src/window.ui:1237
 msgid "Tibetan"
 msgstr "Tibetano"
 
-#: src/window.ui:1252
+#: src/window.ui:1250
 msgid "Vietnamese"
 msgstr "Vietinamita"
 
-#: src/window.ui:1265
+#: src/window.ui:1263
 msgid "Devanagari"
 msgstr "Devanagari"
 
-#: src/window.ui:1279
+#: src/window.ui:1277
 msgid "Greek"
 msgstr "Grego"
 
-#: src/window.ui:1292
+#: src/window.ui:1290
 msgid "Greek\n"
 "Extended"
 msgstr "Grego\n"
 "Extendido"
 
-#: src/window.ui:1306
+#: src/window.ui:1304
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: src/window.ui:1319
+#: src/window.ui:1317
 msgid "Gurmukhi"
 msgstr "Punjabi"
 
-#: src/window.ui:1332
+#: src/window.ui:1330
 msgid "Hebrew"
 msgstr "Hebraíco"
 
-#: src/window.ui:1345
+#: src/window.ui:1343
 msgid "Japanese"
 msgstr "Japonês"
 
@@ -241,15 +241,15 @@ msgstr "Japonês"
 msgid "<b> File Settings </b>"
 msgstr "<b> Preferências de arquivos </b>"
 
-#: src/window.ui:1490
+#: src/window.ui:1518
 msgid "Default font installation folder:"
 msgstr "Arquivo de instalação padrão:"
 
-#: src/window.ui:1500
+#: src/window.ui:1528
 msgid "Choose directory"
 msgstr "Selecione o diretório"
 
-#: src/window.ui:1543
+#: src/window.ui:1571
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
 msgstr "Aviso: Se você não encontrar o arquivo que deseja instalar fontes para, pode ser que seja que essa aplicação não tenha acesso a tal diretório, para corrigir isso, instale o Flatseal e d permissão para essa aplicação para acessar o diretório desejado."
 
@@ -257,27 +257,27 @@ msgstr "Aviso: Se você não encontrar o arquivo que deseja instalar fontes para
 msgid "Reset"
 msgstr "Restaurar padrões"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:526
 msgid "sans-serif"
 msgstr "sem serifa"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:528
 msgid "serif"
 msgstr "serifada"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:528
 msgid "display"
 msgstr "exibição"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:529
 msgid "monospaced"
 msgstr "mono-espaçada"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:530
 msgid "handwriting"
 msgstr "manuscrita"
 
-#: src/window.py:637
+#: src/window.py:632
 msgid "Please choose a folder"
 msgstr "Por favor, escolha um arquivo"
 
@@ -289,11 +289,11 @@ msgstr "família"
 msgid "category"
 msgstr "categoria"
 
-#: src/font-box.ui:76
+#: src/font-box.ui:81
 msgid "Installed"
 msgstr "Instalado"
 
-#: src/window.py:230
+#: src/window.py:234
 msgid "Default"
 msgstr "Padrão"
 
@@ -471,7 +471,7 @@ msgid "Updated font links and versions to latest"
 msgstr "Atualizado linques e versões de fontes"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
-#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1420
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1423
 msgid "Colorful mode"
 msgstr "Modo colorido"
 
@@ -493,59 +493,87 @@ msgstr "Bem-vindo ao Instalador de Fontes!"
 msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
 msgstr "Selecione uma fonte do painel lateral ou comece a digitar para pesquisar, depois baixe ou instale a fonte!"
 
-#: src/window.ui:575
+#: src/window.ui:574
 msgid "page1"
 msgstr "page1"
 
-#: src/window.ui:603 src/window.ui:604
+#: src/window.ui:602 src/window.ui:603
 msgid "Insert Emoji"
 msgstr "Inserir Emoji"
 
-#: src/window.ui:635
+#: src/window.ui:634
 msgid "<b> Developer Window </b>"
 msgstr "<b> Janela de Desenvolvedor </b>"
 
-#: src/window.ui:696 src/window.ui:740
+#: src/window.ui:695 src/window.ui:739
 msgid "page0"
 msgstr "page0"
 
-#: src/window.ui:726
+#: src/window.ui:725
 msgid "Loading..."
 msgstr "Carregando..."
 
-#: src/window.ui:772
+#: src/window.ui:771
 msgid "Something went wrong, check your internet connection."
 msgstr "Algo deu errado, veja sua conexão com a internet."
 
-#: src/window.ui:788
+#: src/window.ui:786
 msgid "page2"
 msgstr "page2"
 
-#: src/window.ui:1383
+#: src/window.ui:1381
 msgid "<b> Settings </b>"
 msgstr "<b> Preferências </b>"
 
-#: src/window.ui:1455
+#: src/window.ui:1483
 msgid "Developer Window"
 msgstr "Janela de Desenvolvedor"
 
-#: src/window.py:252
+#: src/window.py:257
 msgid "Contributers"
 msgstr "Contribuidores"
 
-#: src/window.py:315
+#: src/window.py:337
 msgid "Failed to download font. Check your internet connection and folder permissions"
 msgstr "Erro ao baixar fonte. Veja sua conexão com a internet e suas permissões de pastas."
 
-#: src/window.py:317
+#: src/window.py:339
 msgid "Failed to install font. Check your internet connection and folder permissions"
 msgstr "Erro ao instalar fonte. Veja sua conexão com a internet e suas permissões de pastas."
 
-#: src/window.py:320
+#: src/window.py:342
 msgid "Font downloaded succesfully!"
 msgstr "Fonte baixada com sucesso!"
 
-#: src/window.py:322
+#: src/window.py:344
 msgid "Font installed succesfully!"
 msgstr "Fonte instalada com sucesso!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
+msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
+msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
+msgstr ""
+
+#: src/font-box.ui:120
+msgid "Installed systemwide"
+msgstr ""
+
+#: src/font-box.ui:160
+msgid "Update available"
+msgstr ""
+
+#: src/window.ui:439
+msgid "Search..."
+msgstr ""
+
+#: src/window.ui:1436
+msgid "Requires restart"
+msgstr ""
+
+#: src/window.ui:1593
+msgid "Reset all settings"
+msgstr ""
 
