@@ -25,6 +25,12 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="4.3.0" date="2021-3-22">
+      <ul>
+        <li> Update all translations </li>
+        <li> Updated fonts </li>
+       </ul>
+    </release>
     <release version="4.2.1" date="2021-2-20">
       <ul>
         <li> Created a workaround for the following error: [xcb] Unknown sequence number while processing queue </li>
