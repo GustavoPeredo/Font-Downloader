@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: Font Downloader\n"
 "Language: sv\n"
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:5
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:299
-#: src/window.ui:321 src/window.py:257
+#: data/org.gustavoperedo.FontDownloader.desktop.in:4
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
+#: src/window.ui:320 src/window.py:262
 msgid "Font Downloader"
 msgstr "Font Downloader"
 
@@ -41,7 +41,7 @@ msgstr "Handskrift"
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/window.ui:245
+#: src/window.ui:244
 msgid "About Font Downloader"
 msgstr "Om Font Downloader"
 
@@ -49,11 +49,11 @@ msgstr "Om Font Downloader"
 msgid "Download"
 msgstr "Ladda ner"
 
-#: src/window.ui:605
+#: src/window.ui:604
 msgid "Type here your text..."
 msgstr "Skriv din text här..."
 
-#: data/org.gustavoperedo.FontDownloader.desktop.in:9
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
 msgstr "Enkel teckensnittshämtare skriven i GTK som installerar teckensnitt direkt från Google Fonts."
 
@@ -65,15 +65,15 @@ msgstr "En enkel GTK teckensnittshämtare."
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
 msgstr "Har du någon gång önskat byta teckensnitt i din terminal, men inte velat gå igenom hela processen med sökning, nerladdning och installation? Detta enkla och adaptiva GTK-program låter dig söka och installera teckensnitt direkt ifrån Google Fonts webbplats!"
 
-#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:156
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:179
 msgid "Gustavo Peredo"
 msgstr "Gustavo Peredo"
 
-#: src/window.ui:379
+#: src/window.ui:378
 msgid "Install"
 msgstr "Installera"
 
-#: src/window.py:253
+#: src/window.py:258
 msgid "Translators"
 msgstr "Översättare"
 
@@ -97,143 +97,143 @@ msgstr "Standard installationsmapp"
 msgid "Which alphabets aren't filtered"
 msgstr "Vilka alfabet filtreras inte"
 
-#: src/window.ui:231 src/window.ui:887
+#: src/window.ui:231 src/window.ui:885
 msgid "Settings"
 msgstr "Inställningar"
 
-#: src/window.ui:890
+#: src/window.ui:888
 msgid "Close"
 msgstr "Stäng"
 
-#: src/window.ui:938
+#: src/window.ui:936
 msgid "<b> Alphabets </b>"
 msgstr "<b> Alfabet </b>"
 
-#: src/window.ui:949
+#: src/window.ui:947
 msgid "Any"
 msgstr "Alla"
 
-#: src/window.ui:984
+#: src/window.ui:982
 msgid "Arabic"
 msgstr "Arabiska"
 
-#: src/window.ui:998
+#: src/window.ui:996
 msgid "Bengali"
 msgstr "Bengali"
 
-#: src/window.ui:1011
+#: src/window.ui:1009
 msgid "Chinese \n"
 "Hong Kong"
 msgstr "Kinesiska \n"
 "Hong Kong"
 
-#: src/window.ui:1025
+#: src/window.ui:1023
 msgid "Chinese\n"
 "Simplified"
 msgstr "Kinesiska\n"
 "Förenklad"
 
-#: src/window.ui:1039
+#: src/window.ui:1037
 msgid "Chinese\n"
 "Traditional"
 msgstr "Kinesiska\n"
 "Traditionell"
 
-#: src/window.ui:1053
+#: src/window.ui:1051
 msgid "Cyrillic"
 msgstr "Kyrilliska"
 
-#: src/window.ui:1066
+#: src/window.ui:1064
 msgid "Cyrillic\n"
 "Extended"
 msgstr "Kyrilliska\n"
 "Utökad"
 
-#: src/window.ui:1080
+#: src/window.ui:1078
 msgid "Kannada"
 msgstr "Kannada"
 
-#: src/window.ui:1094
+#: src/window.ui:1092
 msgid "Khmer"
 msgstr "Khmer"
 
-#: src/window.ui:1107
+#: src/window.ui:1105
 msgid "Korean"
 msgstr "Koreanska"
 
-#: src/window.ui:1120
+#: src/window.ui:1118
 msgid "Latin"
 msgstr "Latin"
 
-#: src/window.ui:1133
+#: src/window.ui:1131
 msgid "Latin\n"
 "Extended"
 msgstr "Latin\n"
 "Utökad"
 
-#: src/window.ui:1147
+#: src/window.ui:1145
 msgid "Malayalam"
 msgstr "Malayalam"
 
-#: src/window.ui:1160
+#: src/window.ui:1158
 msgid "Myanmar"
 msgstr "Myanmar"
 
-#: src/window.ui:1173
+#: src/window.ui:1171
 msgid "Oriya"
 msgstr "Oriya"
 
-#: src/window.ui:1187
+#: src/window.ui:1185
 msgid "Sinhala"
 msgstr "Sinhala"
 
-#: src/window.ui:1200
+#: src/window.ui:1198
 msgid "Tamil"
 msgstr "Tamil"
 
-#: src/window.ui:1213
+#: src/window.ui:1211
 msgid "Telugu"
 msgstr "Telugu"
 
-#: src/window.ui:1226
+#: src/window.ui:1224
 msgid "Thai"
 msgstr "Thai"
 
-#: src/window.ui:1239
+#: src/window.ui:1237
 msgid "Tibetan"
 msgstr "Tibetanska"
 
-#: src/window.ui:1252
+#: src/window.ui:1250
 msgid "Vietnamese"
 msgstr "Vietnamesiska"
 
-#: src/window.ui:1265
+#: src/window.ui:1263
 msgid "Devanagari"
 msgstr "Devanagari"
 
-#: src/window.ui:1279
+#: src/window.ui:1277
 msgid "Greek"
 msgstr "Grekiska"
 
-#: src/window.ui:1292
+#: src/window.ui:1290
 msgid "Greek\n"
 "Extended"
 msgstr "Grekiska\n"
 "Utökad"
 
-#: src/window.ui:1306
+#: src/window.ui:1304
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: src/window.ui:1319
+#: src/window.ui:1317
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: src/window.ui:1332
+#: src/window.ui:1330
 msgid "Hebrew"
 msgstr "Hebreiska"
 
-#: src/window.ui:1345
+#: src/window.ui:1343
 msgid "Japanese"
 msgstr "Japanska"
 
@@ -241,15 +241,15 @@ msgstr "Japanska"
 msgid "<b> File Settings </b>"
 msgstr "<b> Filinställningar </b>"
 
-#: src/window.ui:1490
+#: src/window.ui:1518
 msgid "Default font installation folder:"
 msgstr "Standardmapp för teckensnittsinstallation:"
 
-#: src/window.ui:1500
+#: src/window.ui:1528
 msgid "Choose directory"
 msgstr "Välj mapp"
 
-#: src/window.ui:1543
+#: src/window.ui:1571
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
 msgstr "Varning! Om du inte kan hitta den mapp du vill installera teckensnitt i, kan det bero på att detta program inte har tillgång till den, för att korrigera detta kan du installera Flatseal och däri ge detta program tillgång till mappen."
 
@@ -257,27 +257,27 @@ msgstr "Varning! Om du inte kan hitta den mapp du vill installera teckensnitt i,
 msgid "Reset"
 msgstr "Återställ"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:526
 msgid "sans-serif"
 msgstr "sans-serif"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:528
 msgid "serif"
 msgstr "serif"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:528
 msgid "display"
 msgstr "skärm"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:529
 msgid "monospaced"
 msgstr "monospaced"
 
-#: src/window.py:56 src/window.py:482
+#: src/window.py:60 src/window.py:530
 msgid "handwriting"
 msgstr "handskrift"
 
-#: src/window.py:637
+#: src/window.py:632
 msgid "Please choose a folder"
 msgstr "Välj en mapp"
 
@@ -289,11 +289,11 @@ msgstr "familj"
 msgid "category"
 msgstr "kategori"
 
-#: src/font-box.ui:76
+#: src/font-box.ui:81
 msgid "Installed"
 msgstr "Installerat"
 
-#: src/window.py:230
+#: src/window.py:234
 msgid "Default"
 msgstr "Standard"
 
@@ -430,122 +430,152 @@ msgstr "Du kan nu svepa tillbaka till teckensnittskatalogen med styrplatta eller
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
 msgid "Version 3.12.1"
-msgstr ""
+msgstr "Version 3.12.1"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
 msgid "Translation Updates"
-msgstr ""
+msgstr "Uppdaterade översättningar"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
 msgid "Added Dutch translation"
-msgstr ""
+msgstr "Lade till Nederländsk översättning"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
 msgid "Major performance improvements"
-msgstr ""
+msgstr "Stora prestandaförbättringar"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
 msgid "New experimental color mode"
-msgstr ""
+msgstr "Nytt experimentellt färgläge"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
 msgid "Updated icon for holiday season"
-msgstr ""
+msgstr "Uppdaterad ikon för helgdagar"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
 msgid "Bug fixes"
-msgstr ""
+msgstr "Buggfixar"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
 msgid "Version 3.12.0"
-msgstr ""
+msgstr "\n"
+"Version 3.12.0\n"
+""
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
 msgid "More touch friendly ui"
-msgstr ""
+msgstr "Mer beröringsvänligt användargränssnitt"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
 msgid "Updated font links and versions to latest"
-msgstr ""
+msgstr "Uppdaterade teckensnittslänkar och versioner till senaste"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
-#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1420
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1423
 msgid "Colorful mode"
-msgstr ""
+msgstr "Färggrant läge"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Developer window"
-msgstr ""
+msgstr "Utvecklarfönster"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:36
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:37
 msgid "Copy of webfonts.json containing only installed fonts"
-msgstr ""
+msgstr "Kopia av webfonts.json innehållande endast installerade teckensnitt"
 
 #: src/window.ui:539
 msgid "Welcome to Font Downloader!"
-msgstr ""
+msgstr "Välkommen till Font Downloader"
 
 #: src/window.ui:560
 msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
-msgstr ""
+msgstr "Välj ett teckensnitt från vänster sidpanel eller börja skriv för att söka ett teckensnitt, ladda sedan ner och installera det!"
 
-#: src/window.ui:575
+#: src/window.ui:574
 msgid "page1"
-msgstr ""
+msgstr "sida1"
 
-#: src/window.ui:603 src/window.ui:604
+#: src/window.ui:602 src/window.ui:603
 msgid "Insert Emoji"
-msgstr ""
+msgstr "Infoga emoji"
 
-#: src/window.ui:635
+#: src/window.ui:634
 msgid "<b> Developer Window </b>"
-msgstr ""
+msgstr "<b> Utvecklarfönster </b>"
 
-#: src/window.ui:696 src/window.ui:740
+#: src/window.ui:695 src/window.ui:739
 msgid "page0"
-msgstr ""
+msgstr "sida0"
 
-#: src/window.ui:726
+#: src/window.ui:725
 msgid "Loading..."
-msgstr ""
+msgstr "Läser in..."
 
-#: src/window.ui:772
+#: src/window.ui:771
 msgid "Something went wrong, check your internet connection."
-msgstr ""
+msgstr "Något gick fel, kontrollera din internetuppkoppling."
 
-#: src/window.ui:788
+#: src/window.ui:786
 msgid "page2"
-msgstr ""
+msgstr "sida2"
 
-#: src/window.ui:1383
+#: src/window.ui:1381
 msgid "<b> Settings </b>"
-msgstr ""
+msgstr "<b> Inställningar </b>"
 
-#: src/window.ui:1455
+#: src/window.ui:1483
 msgid "Developer Window"
-msgstr ""
+msgstr "Utvecklarfönster"
 
-#: src/window.py:252
+#: src/window.py:257
 msgid "Contributers"
-msgstr ""
+msgstr "Bidragsgivare"
 
-#: src/window.py:315
+#: src/window.py:337
 msgid "Failed to download font. Check your internet connection and folder permissions"
-msgstr ""
+msgstr "Kunde inte ladda ner teckensnitt. Kontrollera din internetuppkoppling och mappbehörigheter"
 
-#: src/window.py:317
+#: src/window.py:339
 msgid "Failed to install font. Check your internet connection and folder permissions"
-msgstr ""
+msgstr "Kunde inte installera teckensnitt. Kontrollera din internetuppkoppling och mappbehörigheter"
 
-#: src/window.py:320
+#: src/window.py:342
 msgid "Font downloaded succesfully!"
+msgstr "Teckensnitt nerladdat!"
+
+#: src/window.py:344
+msgid "Font installed succesfully!"
+msgstr "Teckensnitt installerat!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
+msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
 msgstr ""
 
-#: src/window.py:322
-msgid "Font installed succesfully!"
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
+msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
+msgstr ""
+
+#: src/font-box.ui:120
+msgid "Installed systemwide"
+msgstr ""
+
+#: src/font-box.ui:160
+msgid "Update available"
+msgstr ""
+
+#: src/window.ui:439
+msgid "Search..."
+msgstr ""
+
+#: src/window.ui:1436
+msgid "Requires restart"
+msgstr ""
+
+#: src/window.ui:1593
+msgid "Reset all settings"
 msgstr ""
 

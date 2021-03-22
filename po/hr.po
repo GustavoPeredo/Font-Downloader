@@ -5,65 +5,65 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 "Project-Id-Version: Font Downloader\n"
-"Language: pt-br\n"
+"Language: hr\n"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
 #: src/window.ui:320 src/window.py:262
 msgid "Font Downloader"
-msgstr "Instalador de Fontes"
+msgstr "Preuzimanje fontova"
 
 #: src/window.ui:100
 msgid "Font type"
-msgstr "Tipo da fonte"
+msgstr "Vrsta fonta"
 
 #: src/window.ui:118
 msgid "All"
-msgstr "Todas"
+msgstr "Svi"
 
 #: src/window.ui:133
 msgid "Serif"
-msgstr "Serifada"
+msgstr "Serifni"
 
 #: src/window.ui:148
 msgid "Sans Serif"
-msgstr "Sem serifa"
+msgstr "Bezserifni"
 
 #: src/window.ui:163
 msgid "Display"
-msgstr "Exibição"
+msgstr "Naslovni"
 
 #: src/window.ui:178
 msgid "Handwriting"
-msgstr "Manuscrita"
+msgstr "Rukopisni"
 
 #: src/window.ui:193
 msgid "Monospace"
-msgstr "Mono-espaçada"
+msgstr "Jednometrični"
 
 #: src/window.ui:244
 msgid "About Font Downloader"
-msgstr "Sobre o Instalador de Fontes"
+msgstr "O Preuzimanje fontova"
 
 #: src/window.ui:439 src/window.py:384
 msgid "Download"
-msgstr "Descarregar"
+msgstr "Preuzmi"
 
 #: src/window.ui:604
 msgid "Type here your text..."
-msgstr "Digite aqui um texto..."
+msgstr "Ovdje upiši tekst …"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
-msgstr "Um simples instalador de fontes escrito em GTK, que instala fontes diretamente do Google Fonts"
+msgstr "Jednostavan GTK program za preuzimanje i instaliranje fontova izravno s web-stranice Google Fonts."
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
 msgid "A simple GTK font downloader."
-msgstr "Um simples instalador de fontes em GTK"
+msgstr "Jednostavan GTK program za preuzimanje fontova."
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
-msgstr "Você já quis alguma vez mudar a fonte de seu terminal, mas não queria passar por todo o processo de procurar, baixar e instalar uma fonte? Essa aplicação simples e adaptativo em GTK permite que você busque e instale fontes diretamente do Google Fonts!"
+msgstr "Želiš promijeniti font u terminalu, ali ne želiš proći kroz cijeli postupak pretraživanja, preuzimanja i instaliranja fontova? Ovaj jednostavan i prilagodljiv GTK program omogućuje pretraživanje i instaliranje fontova izravno s web-stranice Google Fonts!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:179
 msgid "Gustavo Peredo"
@@ -71,231 +71,231 @@ msgstr "Gustavo Peredo"
 
 #: src/window.ui:378
 msgid "Install"
-msgstr "Instalar"
+msgstr "Instaliraj"
 
 #: src/window.py:258
 msgid "Translators"
-msgstr "Tradutores"
+msgstr "Prevodioci"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:6
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:7
 msgid "Dark mode"
-msgstr "Modo escuro"
+msgstr "Tamni modus"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:21
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:22
 msgid "Any alphabet"
-msgstr "Qualquer alfabeto"
+msgstr "Bilo koje pismo"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:26
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:27
 msgid "Default installation directory"
-msgstr "Diretório padrão de instalação"
+msgstr "Standardna mapa za instaliranje"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:31
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:32
 msgid "Which alphabets aren't filtered"
-msgstr "Quais alfabetos não estão filtrados"
+msgstr "Koja pisma nisu filtrirana"
 
 #: src/window.ui:231 src/window.ui:885
 msgid "Settings"
-msgstr "Preferências"
+msgstr "Postavke"
 
 #: src/window.ui:888
 msgid "Close"
-msgstr "Fechar"
+msgstr "Zatvori"
 
 #: src/window.ui:936
 msgid "<b> Alphabets </b>"
-msgstr "<b> Alfabetos </b>"
+msgstr "<b> Pisma </b>"
 
 #: src/window.ui:947
 msgid "Any"
-msgstr "Qualquer"
+msgstr "Bilo koje"
 
 #: src/window.ui:982
 msgid "Arabic"
-msgstr "Arábico"
+msgstr "Arapsko"
 
 #: src/window.ui:996
 msgid "Bengali"
-msgstr "Bengalese"
+msgstr "Bengalsko"
 
 #: src/window.ui:1009
 msgid "Chinese \n"
 "Hong Kong"
-msgstr "Chinês\n"
+msgstr "Kinesko\n"
 "Hong Kong"
 
 #: src/window.ui:1023
 msgid "Chinese\n"
 "Simplified"
-msgstr "Chinês\n"
-"Simplificado"
+msgstr "Kinesko\n"
+"pojednostavljeno"
 
 #: src/window.ui:1037
 msgid "Chinese\n"
 "Traditional"
-msgstr "Chinês\n"
-"Tradicional"
+msgstr "Kinesko\n"
+"tradicionalno"
 
 #: src/window.ui:1051
 msgid "Cyrillic"
-msgstr "Cirílico"
+msgstr "Ćirilica"
 
 #: src/window.ui:1064
 msgid "Cyrillic\n"
 "Extended"
-msgstr "Cirílico\n"
-"Extendido"
+msgstr "Ćirilica\n"
+"prošireno"
 
 #: src/window.ui:1078
 msgid "Kannada"
-msgstr "Canarês"
+msgstr "Kannadsko"
 
 #: src/window.ui:1092
 msgid "Khmer"
-msgstr "Khmer"
+msgstr "Kmersko"
 
 #: src/window.ui:1105
 msgid "Korean"
-msgstr "Coreano"
+msgstr "Korejsko"
 
 #: src/window.ui:1118
 msgid "Latin"
-msgstr "Latino"
+msgstr "Latinica"
 
 #: src/window.ui:1131
 msgid "Latin\n"
 "Extended"
-msgstr "Latino\n"
-"Extendido"
+msgstr "Latinica\n"
+"prošireno"
 
 #: src/window.ui:1145
 msgid "Malayalam"
-msgstr "Malayo"
+msgstr "Malajalamsko"
 
 #: src/window.ui:1158
 msgid "Myanmar"
-msgstr "Birmanês"
+msgstr "Mianmarsko"
 
 #: src/window.ui:1171
 msgid "Oriya"
-msgstr "Oriá"
+msgstr "Orijsko"
 
 #: src/window.ui:1185
 msgid "Sinhala"
-msgstr "Sinhala"
+msgstr "Singalsko"
 
 #: src/window.ui:1198
 msgid "Tamil"
-msgstr "Tamil"
+msgstr "Tamilsko"
 
 #: src/window.ui:1211
 msgid "Telugu"
-msgstr "Telugu"
+msgstr "Teluško"
 
 #: src/window.ui:1224
 msgid "Thai"
-msgstr "Thai"
+msgstr "Tajlandsko"
 
 #: src/window.ui:1237
 msgid "Tibetan"
-msgstr "Tibetano"
+msgstr "Tibetsko"
 
 #: src/window.ui:1250
 msgid "Vietnamese"
-msgstr "Vietinamita"
+msgstr "Vijetnamsko"
 
 #: src/window.ui:1263
 msgid "Devanagari"
-msgstr "Devanagari"
+msgstr "Devanagarsko"
 
 #: src/window.ui:1277
 msgid "Greek"
-msgstr "Grego"
+msgstr "Grčko"
 
 #: src/window.ui:1290
 msgid "Greek\n"
 "Extended"
-msgstr "Grego\n"
-"Extendido"
+msgstr "Grčko\n"
+"prošireno"
 
 #: src/window.ui:1304
 msgid "Gujarati"
-msgstr "Gujarati"
+msgstr "Gudžaratsko"
 
 #: src/window.ui:1317
 msgid "Gurmukhi"
-msgstr "Punjabi"
+msgstr "Gurmukijsko"
 
 #: src/window.ui:1330
 msgid "Hebrew"
-msgstr "Hebraíco"
+msgstr "Hebrejsko"
 
 #: src/window.ui:1343
 msgid "Japanese"
-msgstr "Japonês"
+msgstr "Japansko"
 
 #: src/window.ui:1051
 msgid "<b> File Settings </b>"
-msgstr "<b> Preferências de arquivos </b>"
+msgstr "<b> Postavke datoteka </b>"
 
 #: src/window.ui:1518
 msgid "Default font installation folder:"
-msgstr "Arquivo de instalação padrão:"
+msgstr "Standardna mapa za instaliranje fontova:"
 
 #: src/window.ui:1528
 msgid "Choose directory"
-msgstr "Selecione o diretório"
+msgstr "Odaberi mapu"
 
 #: src/window.ui:1571
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
-msgstr "Aviso: Se você não encontrar o arquivo que deseja instalar fontes para, pode ser que seja que essa aplicação não tenha acesso a tal diretório, para corrigir isso, instale o Flatseal e d permissão para essa aplicação para acessar o diretório desejado."
+msgstr "Upozorenje: Ako ne možeš pronaći mapu u koju želiš instalirati fontove, to je možda zato što ovaj program nema prava pristupa mapi. Ispravi na sljedeći način: instaliraj Flatseal i omogući ovom programu pristup mapi."
 
 #: src/window.ui:1565
 msgid "Reset"
-msgstr "Restaurar padrões"
+msgstr "Vrati zadano"
 
 #: src/window.py:60 src/window.py:526
 msgid "sans-serif"
-msgstr "sem serifa"
+msgstr "bezserifni"
 
 #: src/window.py:60 src/window.py:528
 msgid "serif"
-msgstr "serifada"
+msgstr "serifni"
 
 #: src/window.py:60 src/window.py:528
 msgid "display"
-msgstr "exibição"
+msgstr "naslovni"
 
 #: src/window.py:60 src/window.py:529
 msgid "monospaced"
-msgstr "mono-espaçada"
+msgstr "jednometrični"
 
 #: src/window.py:60 src/window.py:530
 msgid "handwriting"
-msgstr "manuscrita"
+msgstr "rukopisni"
 
 #: src/window.py:632
 msgid "Please choose a folder"
-msgstr "Por favor, escolha um arquivo"
+msgstr "Odaberi mapu"
 
 #: src/font-box.ui:18
 msgid "family"
-msgstr "família"
+msgstr "obitelj"
 
 #: src/font-box.ui:38
 msgid "category"
-msgstr "categoria"
+msgstr "kategorija"
 
 #: src/font-box.ui:81
 msgid "Installed"
-msgstr "Instalado"
+msgstr "Instalirano"
 
 #: src/window.py:234
 msgid "Default"
-msgstr "Padrão"
+msgstr "Standardno"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "org.gustavoperedo.FontDownloader"
@@ -303,251 +303,251 @@ msgstr "org.gustavoperedo.FontDownloader"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:76
 msgid "Version 3.11.0"
-msgstr "Versão 3.11.0"
+msgstr " Verzija 3.11.0 "
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:77
 msgid "Improved russian translation"
-msgstr "Tradução de russo aprimorada"
+msgstr "Ispravljen ruski prijevod"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:78
 msgid "Fixed portguese application name"
-msgstr "Nome do aplicativo em português corrigido"
+msgstr "Ispravljeno portugalsko ime programa"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:79
 msgid "Updated font lins and versions to latest"
-msgstr "Links e versões de fontes atualizadas para as mais recentes"
+msgstr "Aktualizirane poveznice za fontove i verzije"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:61
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:80
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:96
 msgid "Version 3.0.0"
-msgstr "Versão 3.0.0"
+msgstr "Verzija 3.0.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:62
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:81
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:97
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:125
 msgid "This release aims to be the last feature release:"
-msgstr "Esta versão pretende ser a última versão de recurso:"
+msgstr "Ovo izdanje je smišljeno kao izdanje najnovijih značajki:"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:65
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:83
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:99
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:127
 msgid "Dark mode!"
-msgstr "Modo escuro!"
+msgstr "Tamni modus!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:66
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:84
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:100
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:128
 msgid "Option to filter by alphabets!"
-msgstr "Opção de filtrar por alfabetos!"
+msgstr "Opcija za filtriranje pisma!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:67
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:85
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:101
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:129
 msgid "You can see installed fonts now!"
-msgstr "Você pode ver as fontes instaladas agora!"
+msgstr "Sada je moguće vidjeti instalirane fontove!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:68
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:86
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:102
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:130
 msgid "Swipe back and forth easily!"
-msgstr "Deslize para frente e para trás facilmente!"
+msgstr "Povlači natrag i naprijed s lakoćom!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:69
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:87
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:103
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:131
 msgid "Change default installation dialog!"
-msgstr "Alterar a caixa de diálogo de instalação padrão!"
+msgstr "Promijeni standardni prozor instalacije!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:70
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:88
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:104
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:132
 msgid "Added a file chooser dialog for downloads!"
-msgstr "Adicionada uma caixa de diálogo de seleção de arquivos para downloads!"
+msgstr "Dodan je prozor za biranje preuzimanja!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:94
 msgid "Version 3.10.2"
-msgstr "Versão 3.10.2"
+msgstr "Verzija 3.10.2"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:95
 msgid "Updated translations"
-msgstr "Traduções atualizadas"
+msgstr "Aktualizirani prijevodi"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:110
 msgid "Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start"
-msgstr "Correção de bug importante, onde se o usuário não tivesse a pasta .local / share / fonts, o aplicativo não iniciaria"
+msgstr "Važan ispravak programske greške, u slučaju da korisnik nije imao mapu .local/share/fonts"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:115
 msgid "Fixes:"
-msgstr "Conserta:"
+msgstr "Ispravci:"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:117
 msgid "Russian translation should now work"
-msgstr "A tradução russa agora deve funcionar"
+msgstr "Ruski prijevod bi sada trebao biti ispravan"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:118
 msgid "All texts are now translated"
-msgstr "Todos os textos estão agora traduzidos"
+msgstr "Svi tekstovi su prevedeni"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:119
 msgid "Updated Translations"
-msgstr "Traduções atualizadas"
+msgstr "Aktualizirani prijevodi"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:138
 msgid "Fixes Spanish translation"
-msgstr "Corrige tradução para espanhol"
+msgstr "Ispravljen španjolski prijevod"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:143
 msgid "This release brings major improvements:"
-msgstr "Esta versão traz grandes melhorias:"
+msgstr "Ovo izdanje sadrži značajne ispravke:"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:145
 msgid "Better resource usage"
-msgstr "Melhor uso de recursos"
+msgstr "Bolja upotreba resursa"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:146
 msgid "Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to Ibragimov for ru and tg translations)"
-msgstr "Adicionado suporte a idiomas para de, es, fr, pt_BR, ru e tg (agradecimentos especiais a Ibragimov pelas traduções ru e tg)"
+msgstr "Dodana jezična podrška za de, es, fr, pt_BR, ru i tg (posebna zahvala Ibragimovu za ru i tg prijevode)"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:147
 msgid "Added credits dialog!"
-msgstr "Adicionada caixa de diálogo de créditos!"
+msgstr "Dodan je prozor zasluga!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:148
 msgid "New, prettier icon!"
-msgstr "Ícone novo e mais bonito!"
+msgstr "Nova, ljepša ikona!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:149
 msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
-msgstr "Agora você pode deslizar de volta para o catálogo de fontes com seu trackpad ou tela!"
+msgstr "Sada se može koristiti povlačenje prstima do kataloga fontova pomoću dodirne ploče ili ekrana!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
 msgid "Version 3.12.1"
-msgstr "Versão 3.12.1"
+msgstr "Verzija 3.12.1"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
 msgid "Translation Updates"
-msgstr "Atualização de Traduções"
+msgstr "Aktualizirani prijevodi"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
 msgid "Added Dutch translation"
-msgstr "Adicionada tradução de holandês"
+msgstr "Dodan je nizozemski prijevod"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
 msgid "Major performance improvements"
-msgstr "Grandes melhorias em performance"
+msgstr "Značajna poboljšanja performanse"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
 msgid "New experimental color mode"
-msgstr "Novo modo experimental colorido"
+msgstr "Nov eksperimentalni modus boja"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
 msgid "Updated icon for holiday season"
-msgstr "Icone atualizado para as festas de fim de ano"
+msgstr "Aktualizirana ikona za praznike"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
 msgid "Bug fixes"
-msgstr "Correção de bugs"
+msgstr "Ispravci grešaka"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
 msgid "Version 3.12.0"
-msgstr "Versão 3.12.0"
+msgstr "Verzija 3.12.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
 msgid "More touch friendly ui"
-msgstr "UI mais amigável ao toque"
+msgstr "Poboljšano sučelje za dodir"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
 msgid "Updated font links and versions to latest"
-msgstr "Atualizado linques e versões de fontes"
+msgstr "Aktualizirane su poveznice i najnovije verzije fontova"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1423
 msgid "Colorful mode"
-msgstr "Modo colorido"
+msgstr "Šareni modus"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Developer window"
-msgstr "Janela para desenvolvedores"
+msgstr "Prozor za programere"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:36
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:37
 msgid "Copy of webfonts.json containing only installed fonts"
-msgstr "Cópia de webfonts.json contendo somente fontes instaladas"
+msgstr "Kopija od webfonts.json koja sadrži samo instalirane fontove"
 
 #: src/window.ui:539
 msgid "Welcome to Font Downloader!"
-msgstr "Bem-vindo ao Instalador de Fontes!"
+msgstr "Dobro došao, dobro došla u Preuzimanje fontova!"
 
 #: src/window.ui:560
 msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
-msgstr "Selecione uma fonte do painel lateral ou comece a digitar para pesquisar, depois baixe ou instale a fonte!"
+msgstr "Odaberi font u lijevoj traci ili počni tipkati ime traženog fonta, a zatim ga preuzmi ili instaliraj!"
 
 #: src/window.ui:574
 msgid "page1"
-msgstr "page1"
+msgstr "stranica1"
 
 #: src/window.ui:602 src/window.ui:603
 msgid "Insert Emoji"
-msgstr "Inserir Emoji"
+msgstr "Umetni emoji"
 
 #: src/window.ui:634
 msgid "<b> Developer Window </b>"
-msgstr "<b> Janela de Desenvolvedor </b>"
+msgstr "<b> Prozor programera </b>"
 
 #: src/window.ui:695 src/window.ui:739
 msgid "page0"
-msgstr "page0"
+msgstr "stranica0"
 
 #: src/window.ui:725
 msgid "Loading..."
-msgstr "Carregando..."
+msgstr "Učitavanje u tijeku …"
 
 #: src/window.ui:771
 msgid "Something went wrong, check your internet connection."
-msgstr "Algo deu errado, veja sua conexão com a internet."
+msgstr "Došlo je do greške. Provjeri vezu s internetom."
 
 #: src/window.ui:786
 msgid "page2"
-msgstr "page2"
+msgstr "stranica2"
 
 #: src/window.ui:1381
 msgid "<b> Settings </b>"
-msgstr "<b> Preferências </b>"
+msgstr "<b> Postavke </b>"
 
 #: src/window.ui:1483
 msgid "Developer Window"
-msgstr "Janela de Desenvolvedor"
+msgstr "Prozor programera"
 
 #: src/window.py:257
 msgid "Contributers"
-msgstr "Contribuidores"
+msgstr "Doprinositelji"
 
 #: src/window.py:337
 msgid "Failed to download font. Check your internet connection and folder permissions"
-msgstr "Erro ao baixar fonte. Veja sua conexão com a internet e suas permissões de pastas."
+msgstr "Neuspjelo preuzimanje fonta. Provjeri internetsku vezu i dozvole za mapu"
 
 #: src/window.py:339
 msgid "Failed to install font. Check your internet connection and folder permissions"
-msgstr "Erro ao instalar fonte. Veja sua conexão com a internet e suas permissões de pastas."
+msgstr "Neuspjelo instaliranje fonta. Provjeri internetsku vezu i dozvole za mapu"
 
 #: src/window.py:342
 msgid "Font downloaded succesfully!"
-msgstr "Fonte baixada com sucesso!"
+msgstr "Font je uspješno preuzet!"
 
 #: src/window.py:344
 msgid "Font installed succesfully!"
-msgstr "Fonte instalada com sucesso!"
+msgstr "Font je uspješno instaliran!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
 msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
