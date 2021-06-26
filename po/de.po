@@ -451,8 +451,7 @@ msgstr "Neuer experimenteller Farbmodus"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
 msgid "Updated icon for holiday season"
-msgstr "Aktualisiertes Symbol für die Urlaubssaison\n"
-""
+msgstr "Aktualisiertes Symbol für die Urlaubssaison"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
