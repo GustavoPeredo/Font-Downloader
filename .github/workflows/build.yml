@@ -15,5 +15,5 @@ jobs:
     - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v3
       with:
         bundle: org.gustavoperedo.FontDownloader
-        manifest-path: org.gustavoperedo.FontDownloader.json
+        manifest-path: org.gustavoperedo.FontDownloader.Master.json
         cache-key: flatpak-builder-${{ github.sha }}
