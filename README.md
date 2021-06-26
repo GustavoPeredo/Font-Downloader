@@ -1,5 +1,7 @@
 <h1><img src="./data/icons/hicolor/scalable/apps/org.gustavoperedo.FontDownloader.svg"> Font Downloader</h1>
 
+![master](https://github.com/GustavoPeredo/Font-Downloader/actions/workflows/build.yml/badge.svg)
+
 ## About
 
 One day I was bored of my terminal font and wanted to switch, unfortunately going through the entire process of searching Google Fonts for a font, then downloading, then copying and pasting it into my .fonts folder to only then test a font was a pain. So I decided to create this app!

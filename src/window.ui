@@ -505,7 +505,7 @@
                       <object class="GtkStack" id="preview_stack">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="transition-type">slide-left</property>
+                        <property name="transition-type">crossfade</property>
                         <child>
                           <object class="GtkBox">
                             <property name="visible">True</property>

@@ -551,29 +551,29 @@ msgstr "Fonte instalada com sucesso!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
 msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
-msgstr ""
+msgstr "Quer contribuir para o projeto como tradutor? Junte-se ao meu projecto aqui: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
 msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
-msgstr ""
+msgstr "Para sugestões e correções de bugs, abra um problema em https://github.com/GustavoPeredo/Font-Downloader/ ou envie-me um e-mail para gustavomperedo@protonmail.com."
 
 #: src/font-box.ui:120
 msgid "Installed systemwide"
-msgstr ""
+msgstr "Instalado em todo o sistema"
 
 #: src/font-box.ui:160
 msgid "Update available"
-msgstr ""
+msgstr "Atualização disponível"
 
 #: src/window.ui:439
 msgid "Search..."
-msgstr ""
+msgstr "Procurar..."
 
 #: src/window.ui:1436
 msgid "Requires restart"
-msgstr ""
+msgstr "Reinício necessário"
 
 #: src/window.ui:1593
 msgid "Reset all settings"
-msgstr ""
+msgstr "Redefinir todas as configurações"
 
