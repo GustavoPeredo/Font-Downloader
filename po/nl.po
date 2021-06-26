@@ -545,29 +545,29 @@ msgstr "Het lettertype is geïnstalleerd!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
 msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
-msgstr ""
+msgstr "Wil je meehelpen met vertalen? Open dan de volgende link: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
 msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
-msgstr ""
+msgstr "Heb je suggesties of ben je een bug/probleem tegengekomen? Open dan een 'issue' op https://github.com/GustavoPeredo/Font-Downloader/ of stuur me een e-mail: gustavomperedo@protonmail.com."
 
 #: src/font-box.ui:120
 msgid "Installed systemwide"
-msgstr ""
+msgstr "Systeemlettertypen"
 
 #: src/font-box.ui:160
 msgid "Update available"
-msgstr ""
+msgstr "Update beschikbaar"
 
 #: src/window.ui:439
 msgid "Search..."
-msgstr ""
+msgstr "Zoeken…"
 
 #: src/window.ui:1436
 msgid "Requires restart"
-msgstr ""
+msgstr "Herstart vereist"
 
 #: src/window.ui:1593
 msgid "Reset all settings"
-msgstr ""
+msgstr "Standaardwaarden terugzetten"
 
