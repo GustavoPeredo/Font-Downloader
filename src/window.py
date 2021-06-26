@@ -257,7 +257,7 @@ class FontdownloaderWindow(Handy.Window):
         dialog.props.authors = authors
         dialog.add_credit_section(_("Contributers"), contributers)
         dialog.add_credit_section(_("Translators"), translators)
-        dialog.props.copyright = 'Copyright \xa9 2020 Gustavo Peredo'
+        dialog.props.copyright = 'Copyright \xa9 2021 Gustavo Peredo'
         dialog.props.license_type = Gtk.License.GPL_3_0
         dialog.props.logo_icon_name = 'org.gustavoperedo.FontDownloader'
         dialog.props.program_name = _('Font Downloader')
