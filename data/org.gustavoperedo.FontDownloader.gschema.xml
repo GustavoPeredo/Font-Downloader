@@ -7,7 +7,7 @@
       <description>Dark mode</description>
     </key>
 	  <key name="colorful-mode" type="b">
-	    <default>false</default>
+	    <default>true</default>
       <summary>Colorful mode</summary>
       <description>Colorful mode</description>
 	  </key>
