@@ -25,6 +25,11 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="6.0.0" date="2021-6-26">
+      <ul>
+        <li> Translations, fonts and code updated!</li>
+       </ul>
+    </release>
     <release version="4.5.0" date="2021-5-5">
       <ul>
         <li> Updated fonts </li>
