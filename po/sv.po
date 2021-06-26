@@ -553,29 +553,29 @@ msgstr "Teckensnitt installerat!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
 msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
-msgstr ""
+msgstr "Vill du bidra till projektet, som översättare? Anslut dig här: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
 msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
-msgstr ""
+msgstr "Förslag och fel rapporteras på https://github.com/GustavoPeredo/Font-Downloader/ eller via e-post till gustavomperedo@protonmail.com."
 
 #: src/font-box.ui:120
 msgid "Installed systemwide"
-msgstr ""
+msgstr "Installerat systemövergripande"
 
 #: src/font-box.ui:160
 msgid "Update available"
-msgstr ""
+msgstr "Uppdatering tillgänglig"
 
 #: src/window.ui:439
 msgid "Search..."
-msgstr ""
+msgstr "Sök..."
 
 #: src/window.ui:1436
 msgid "Requires restart"
-msgstr ""
+msgstr "Kräver omstart"
 
 #: src/window.ui:1593
 msgid "Reset all settings"
-msgstr ""
+msgstr "Återställ alla inställningar"
 
