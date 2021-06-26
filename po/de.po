@@ -426,8 +426,7 @@ msgstr "Neues, hübscheres Symbol!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:149
 msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
-msgstr "Sie können jetzt mit dem Trackpad oder dem Bildschirm zurück zum Schriftartenkatalog wischen!\n"
-""
+msgstr "Sie können jetzt mit dem Trackpad oder dem Bildschirm zurück zum Schriftartenkatalog wischen!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
 msgid "Version 3.12.1"
