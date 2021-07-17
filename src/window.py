@@ -17,7 +17,7 @@
 #Import nescessary libraries and modules
 #from gettext import gettext as _
 from gi.repository import Gdk, Gio, Gtk, GLib, Handy, GObject, WebKit2, Pango
-from os import path, makedirs, listdir
+from os import path, makedirs, listdir, environ
 import locale
 import json
 import threading
@@ -371,13 +371,63 @@ class FontdownloaderWindow(Handy.Window):
                 self.progress_bar.set_fraction(current_percentile)
         update_on_thread()
 
+    def updateProgressBarX11(self, chosen_path, links, is_download, data=None):
+        def on_done_updating(result, error):
+            if error:
+                print(error)
+                if is_download:
+                    self.notification_label.set_label(_("Failed to download font. Check your internet connection and folder permissions"))
+                else:
+                    self.notification_label.set_label(_("Failed to install font. Check your internet connection and folder permissions"))
+            else:
+                if is_download:
+                    self.notification_label.set_label(_("Font downloaded succesfully!"))
+                else:
+                    self.notification_label.set_label(_("Font installed succesfully!"))
+                    if data['family'] in str(self.jsonOfInstalledFonts['items']):
+                        for i in range(len(self.jsonOfInstalledFonts['items'])):
+                            if (self.jsonOfInstalledFonts['items'][i]['family'] == data['family']):
+                                self.jsonOfInstalledFonts['items'].pop(i)
+                                self.jsonOfInstalledFonts['items'].append(data)
+                                break
+                    else:
+                        self.jsonOfInstalledFonts['items'].append(data)
+
+            self.revealer.set_reveal_child(True)
+            self.updateListOfInstalledFonts()
+            self.main_download_button.set_sensitive(True)
+            self.main_install_button.set_sensitive(True)
+            self.progress_bar.set_visible(False)
+
+        def update_on_thread():
+            percentile = round(1/len(links), 2)
+            current_percentile = 0
+            self.progress_bar.set_visible(True)
+            self.main_download_button.set_sensitive(False)
+            self.main_install_button.set_sensitive(False)
+            try:
+                for key in links:
+                    urlretrieve(links[key], path.join(chosen_path, self.CurrentSelectedFont + " " + key + links[key][-4:]))
+                    current_percentile = current_percentile + percentile
+                    self.progress_bar.set_fraction(current_percentile)
+                on_done_updating("", "")
+            except Exception as e:
+                on_done_updating("", e)
+        update_on_thread()
+
     def installFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
         #to the '.local/share/fonts' directory
-        data = self.fonts_list.get_selected_row().get_child().data
-        thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, self.defaultPath, data['files'], False, data))
-        thread.daemon = True
-        thread.start()
+        if environ['XDG_SESSION_TYPE'].lower() == "wayland":
+            data = self.fonts_list.get_selected_row().get_child().data
+            thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, self.defaultPath, data['files'], False, data))
+            thread.daemon = True
+            thread.start()
+        else:
+            data = self.fonts_list.get_selected_row().get_child().data
+            thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBarX11, self.defaultPath, data['files'], False, data))
+            thread.daemon = True
+            thread.start()
 
     def downloadFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
