@@ -4,7 +4,7 @@
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
   <name>Font Downloader</name>
-  <summary>A simple GTK font downloader.</summary>
+  <summary>Install fonts from online sources</summary>
   <description>
     <p>
 	  Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!
@@ -27,61 +27,90 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="8.0.0" date="2021-8-29">
+      <description>
+        <p>New on version 8.0.0:</p>
+        <ul>
+          <li>Updated app description</li>
+          <li>Updated translations!</li>
+          <li>Fixed old versions descriptions</li>
+          <li>Updated fonts</li>
+        </ul>
+      </description>
+    </release>
     <release version="7.0.0" date="2021-7-17">
-      <ul>
-        <li> X11 fixes</li>
-      </ul>
+      <description>
+        <ul>
+          <li> X11 fixes</li>
+        </ul>
+      </description>
     </release>
     <release version="6.0.0" date="2021-6-26">
-      <ul>
-        <li> Translations, fonts and code updated!</li>
-       </ul>
+      <description>
+        <ul>
+          <li> Translations, fonts and code updated!</li>
+        </ul>
+      </description>
     </release>
     <release version="4.5.0" date="2021-5-5">
-      <ul>
-        <li> Updated fonts </li>
-       </ul>
+      <description>
+        <ul>
+          <li> Updated fonts </li>
+        </ul>
+      </description>
     </release>
     <release version="4.3.0" date="2021-3-22">
-      <ul>
-        <li> Update all translations </li>
-        <li> Updated fonts </li>
-       </ul>
+      <description>
+        <ul>
+          <li> Update all translations </li>
+          <li> Updated fonts </li>
+        </ul>
+      </description>
     </release>
     <release version="4.2.1" date="2021-2-20">
-      <ul>
-        <li> Created a workaround for the following error: [xcb] Unknown sequence number while processing queue </li>
-        <li> Updated fonts </li>
-        <li> Improved settings panel and colorful mode </li>
-       </ul>
+      <description>
+        <ul>
+          <li> Created a workaround for the following error: [xcb] Unknown sequence number while processing queue </li>
+          <li> Updated fonts </li>
+          <li> Improved settings panel and colorful mode </li>
+         </ul>
+      </description>
     </release>
     <release version="4.2.0" date="2021-2-20">
-      <ul>
-        <li> Bug fixes </li>
-        <li> Updated fonts </li>
-        <li> Improved settings panel and colorful mode </li>
-      </ul>
+      <description>
+        <ul>
+          <li> Bug fixes </li>
+          <li> Updated fonts </li>
+          <li> Improved settings panel and colorful mode </li>
+        </ul>
+      </description>
     </release>
     <release version="4.1.2" date="2021-1-6">
-      <ul>
-        <li> Bug fixes </li>
-        <li> Implemented version control </li>
-        <li> Shows fonts installed systemdwide </li>
-      </ul>
+      <description>
+        <ul>
+          <li> Bug fixes </li>
+          <li> Implemented version control </li>
+          <li> Shows fonts installed systemdwide </li>
+        </ul>
+      </description>
     </release>
     <release version="4.1.1" date="2020-12-31">
-      <ul>
-        <li> Fixed many bugs </li>
-        <li> Added loading screens and bars </li>
-        <li> New developer mode! </li>
-      </ul>
+      <description>
+        <ul>
+          <li> Fixed many bugs </li>
+          <li> Added loading screens and bars </li>
+          <li> New developer mode! </li>
+        </ul>
+      </description>
     </release>
     <release version="4.1.0" date="2020-12-25">
-      <ul>
-        <li> Lot's of updated translations </li>
-        <li> Christmas icon only on about section </li>
-        <li> Update fonts catalog </li>
-      </ul>
+      <description>
+        <ul>
+          <li> Lot's of updated translations </li>
+          <li> Christmas icon only on about section </li>
+          <li> Update fonts catalog </li>
+        </ul>
+      </description>
     </release>
     <release version="3.12.1" date="2020-12-5">
       <description>
