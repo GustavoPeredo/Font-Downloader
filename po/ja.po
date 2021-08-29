@@ -5,65 +5,65 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 "Project-Id-Version: Font Downloader\n"
-"Language: de\n"
+"Language: ja\n"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
 #: src/window.ui:320 src/window.py:262
 msgid "Font Downloader"
-msgstr "Schriftarten Downloader"
+msgstr "Font Downloader"
 
 #: src/window.ui:100
 msgid "Font type"
-msgstr "Schriftart Typ"
+msgstr "フォントタイプ"
 
 #: src/window.ui:118
 msgid "All"
-msgstr "Alle"
+msgstr "すべて"
 
 #: src/window.ui:133
 msgid "Serif"
-msgstr "Serif"
+msgstr "セリフ"
 
 #: src/window.ui:148
 msgid "Sans Serif"
-msgstr "Sans Serif"
+msgstr "サンセリフ"
 
 #: src/window.ui:163
 msgid "Display"
-msgstr "Anzeige"
+msgstr "ディスプレイ"
 
 #: src/window.ui:178
 msgid "Handwriting"
-msgstr "Handschrift"
+msgstr "手書き"
 
 #: src/window.ui:193
 msgid "Monospace"
-msgstr "Monospace"
+msgstr "モノスペース"
 
 #: src/window.ui:244
 msgid "About Font Downloader"
-msgstr "Über Schriftart Downloader"
+msgstr "Font Downloader について"
 
 #: src/window.ui:439 src/window.py:384
 msgid "Download"
-msgstr "Download"
+msgstr "ダウンロード"
 
 #: src/window.ui:604
 msgid "Type here your text..."
-msgstr "Schreibe hier..."
+msgstr "ここにテキストを入力してください..."
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
-msgstr "Ein simpler GTK Schriftarten Downloader, welcher Schriftarten direkt von Google Fonts installiert"
+msgstr "GTKで書かれたシンプルなフォントダウンローダで、Google Fontsから直接フォントをインストールします。"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
 msgid "A simple GTK font downloader."
-msgstr "Ein simpler GTK Schriftarten Downloader"
+msgstr "シンプルなGTKフォントダウンローダです。"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
-msgstr "Wollten Sie schon immer die Schriftart in Ihrem Terminal ändern ohne den ganzen Prozess mit Suchen, Downloaden und Installieren zu durchlaufen? Dieses simple und adaptive GTK Programm erlaubt Ihnen Schriftarten direkt von Google Fonts zu Suchen und zu installieren."
+msgstr "端末のフォントを変更したいと思っても、フォントの検索、ダウンロード、インストールといった一連の作業をしたくないと思ったことはありませんか？このシンプルで適応性の高いGTKアプリケーションを使えば、Google Fontsのウェブサイトから直接フォントを検索してインストールすることができます!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:179
 msgid "Gustavo Peredo"
@@ -71,231 +71,231 @@ msgstr "Gustavo Peredo"
 
 #: src/window.ui:378
 msgid "Install"
-msgstr "Installieren"
+msgstr "インストール"
 
 #: src/window.py:258
 msgid "Translators"
-msgstr "Übersetzer"
+msgstr "翻訳者"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:6
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:7
 msgid "Dark mode"
-msgstr "Dunkler Modus"
+msgstr "ダークモード"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:21
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:22
 msgid "Any alphabet"
-msgstr "Beliebiges Alphabet"
+msgstr "任意のアルファベット"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:26
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:27
 msgid "Default installation directory"
-msgstr "Standardinstallationsverzeichnis"
+msgstr "デフォルトのインストールディレクトリ"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:31
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:32
 msgid "Which alphabets aren't filtered"
-msgstr "Welche Alphabete nicht gefiltert sind"
+msgstr "フィルタリングされていないアルファベット"
 
 #: src/window.ui:231 src/window.ui:885
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "設定"
 
 #: src/window.ui:888
 msgid "Close"
-msgstr "Schließen"
+msgstr "閉じる"
 
 #: src/window.ui:936
 msgid "<b> Alphabets </b>"
-msgstr "<b> Alphabete </b>"
+msgstr "<b>アルファベット</b>"
 
 #: src/window.ui:947
 msgid "Any"
-msgstr "Beliebige"
+msgstr "任意の"
 
 #: src/window.ui:982
 msgid "Arabic"
-msgstr "Arabisch"
+msgstr "アラビア語"
 
 #: src/window.ui:996
 msgid "Bengali"
-msgstr "Bengali"
+msgstr "ベンガル語"
 
 #: src/window.ui:1009
 msgid "Chinese \n"
 "Hong Kong"
-msgstr "Chinesisch\n"
-"Hongkong"
+msgstr "中国語\n"
+"香港"
 
 #: src/window.ui:1023
 msgid "Chinese\n"
 "Simplified"
-msgstr "Chinesisch\n"
-"Vereinfacht"
+msgstr "中国語\n"
+"簡体字"
 
 #: src/window.ui:1037
 msgid "Chinese\n"
 "Traditional"
-msgstr "Chinesisch\n"
-"Traditionell"
+msgstr "中国語\n"
+"中国語"
 
 #: src/window.ui:1051
 msgid "Cyrillic"
-msgstr "Kyrillisch"
+msgstr "キリル語"
 
 #: src/window.ui:1064
 msgid "Cyrillic\n"
 "Extended"
-msgstr "Kyrillisch\n"
-"Erweitert"
+msgstr "キリル語\n"
+"拡張"
 
 #: src/window.ui:1078
 msgid "Kannada"
-msgstr "Kannada"
+msgstr "カンナダ語"
 
 #: src/window.ui:1092
 msgid "Khmer"
-msgstr "Khmer"
+msgstr "クメール語"
 
 #: src/window.ui:1105
 msgid "Korean"
-msgstr "Koreanisch"
+msgstr "韓国語"
 
 #: src/window.ui:1118
 msgid "Latin"
-msgstr "Latein"
+msgstr "ラテン語"
 
 #: src/window.ui:1131
 msgid "Latin\n"
 "Extended"
-msgstr "Latein\n"
-"Erweitert"
+msgstr "ラテン語\n"
+"拡張"
 
 #: src/window.ui:1145
 msgid "Malayalam"
-msgstr "Malayalam"
+msgstr "マラヤラム語"
 
 #: src/window.ui:1158
 msgid "Myanmar"
-msgstr "Myanmar"
+msgstr "ミャンマー語"
 
 #: src/window.ui:1171
 msgid "Oriya"
-msgstr "Oriya"
+msgstr "オリャー語"
 
 #: src/window.ui:1185
 msgid "Sinhala"
-msgstr "Singhalesisch"
+msgstr "シンハラ語"
 
 #: src/window.ui:1198
 msgid "Tamil"
-msgstr "Tamil"
+msgstr "タミル語"
 
 #: src/window.ui:1211
 msgid "Telugu"
-msgstr "Telugu"
+msgstr "テルグ語"
 
 #: src/window.ui:1224
 msgid "Thai"
-msgstr "Thai"
+msgstr "タイ語"
 
 #: src/window.ui:1237
 msgid "Tibetan"
-msgstr "Tibetisch"
+msgstr "チベット語"
 
 #: src/window.ui:1250
 msgid "Vietnamese"
-msgstr "Vietnamesisch"
+msgstr "ベトナム語"
 
 #: src/window.ui:1263
 msgid "Devanagari"
-msgstr "Devanagari"
+msgstr "デーヴァナーガリー語"
 
 #: src/window.ui:1277
 msgid "Greek"
-msgstr "Griechisch"
+msgstr "ギリシャ語"
 
 #: src/window.ui:1290
 msgid "Greek\n"
 "Extended"
-msgstr "Griechisch\n"
-"Verlängert"
+msgstr "ギリシャ語\n"
+"拡張"
 
 #: src/window.ui:1304
 msgid "Gujarati"
-msgstr "Gujarati"
+msgstr "グジャラート語"
 
 #: src/window.ui:1317
 msgid "Gurmukhi"
-msgstr "Gurmukhi"
+msgstr "グルムキー語"
 
 #: src/window.ui:1330
 msgid "Hebrew"
-msgstr "Hebräisch"
+msgstr "ヘブライ語"
 
 #: src/window.ui:1343
 msgid "Japanese"
-msgstr "Japanisch"
+msgstr "日本語"
 
 #: src/window.ui:1051
 msgid "<b> File Settings </b>"
-msgstr "<b> Dateieinstellungen </b>"
+msgstr "<b>ファイルの設定</b>"
 
 #: src/window.ui:1518
 msgid "Default font installation folder:"
-msgstr "Standard-Schriftinstallationsverzeichnis"
+msgstr "デフォルトのフォントインストールフォルダ:"
 
 #: src/window.ui:1528
 msgid "Choose directory"
-msgstr "Ordner auswählen"
+msgstr "ディレクトリを選択"
 
 #: src/window.ui:1571
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
-msgstr "Warnung: Wenn Sie den Ordner, in dem Sie Schriftarten installieren möchten, nicht finden können, liegt dies möglicherweise daran, dass diese Anwendung keinen Zugriff darauf hat. Um dies zu korrigieren, installieren Sie Flatseal und gewähren Sie dieser Anwendung Zugriff auf den Ordner."
+msgstr "警告: フォントをインストールしたいフォルダが見つからない場合、このアプリケーションがそのフォルダにアクセスできないことが原因である可能性があります。この問題を解決するには、Flatsealをインストールし、このアプリケーションにそのフォルダへのアクセス権を与えます。"
 
 #: src/window.ui:1565
 msgid "Reset"
-msgstr "Zurücksetzen"
+msgstr "リセット"
 
 #: src/window.py:60 src/window.py:526
 msgid "sans-serif"
-msgstr "sans-serif"
+msgstr "サンセリフ"
 
 #: src/window.py:60 src/window.py:528
 msgid "serif"
-msgstr "serif"
+msgstr "セリフ"
 
 #: src/window.py:60 src/window.py:528
 msgid "display"
-msgstr "Anzeige"
+msgstr "ディスプレイ"
 
 #: src/window.py:60 src/window.py:529
 msgid "monospaced"
-msgstr "monospace"
+msgstr "モノスペース"
 
 #: src/window.py:60 src/window.py:530
 msgid "handwriting"
-msgstr "Handschrift"
+msgstr "手書き"
 
 #: src/window.py:632
 msgid "Please choose a folder"
-msgstr "Bitte wählen Sie eine Verzeichnis"
+msgstr "フォルダを選択"
 
 #: src/font-box.ui:18
 msgid "family"
-msgstr "Familie"
+msgstr "ファミリー"
 
 #: src/font-box.ui:38
 msgid "category"
-msgstr "Typ"
+msgstr "カテゴリ"
 
 #: src/font-box.ui:81
 msgid "Installed"
-msgstr "Eingerichtet"
+msgstr "インストール済み"
 
 #: src/window.py:234
 msgid "Default"
-msgstr "Standard"
+msgstr "デフォルト"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "org.gustavoperedo.FontDownloader"
@@ -307,15 +307,15 @@ msgstr "Version 3.11.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:77
 msgid "Improved russian translation"
-msgstr "Verbesserte russische Übersetzung"
+msgstr "ロシア語の翻訳を改善"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:78
 msgid "Fixed portguese application name"
-msgstr "Portugisischer Anwendungsname verbessert"
+msgstr "ポルトガル語のアプリケーション名の修正"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:79
 msgid "Updated font lins and versions to latest"
-msgstr "Schriftarten und Versionen auf den neuesten Stand gebracht"
+msgstr "フォントの種類とバージョンを最新のものに更新"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:61
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:80
@@ -328,49 +328,49 @@ msgstr "Version 3.0.0"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:97
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:125
 msgid "This release aims to be the last feature release:"
-msgstr "Dieses Release soll das letzte Feature-Release sein"
+msgstr "今回のリリースは、最後の機能リリースを目指しています:"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:65
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:83
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:99
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:127
 msgid "Dark mode!"
-msgstr "Dunkler Modus!"
+msgstr "ダークモード!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:66
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:84
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:100
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:128
 msgid "Option to filter by alphabets!"
-msgstr "Option zum Filtern nach Buchstaben!"
+msgstr "アルファベットでフィルターをかけることかできるようになりました!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:67
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:85
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:101
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:129
 msgid "You can see installed fonts now!"
-msgstr "Sie können die installierten Fonts jetzt sehen!"
+msgstr "インストールされたフォントが表示されるようになりました!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:68
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:86
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:102
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:130
 msgid "Swipe back and forth easily!"
-msgstr "Wischen Sie einfach hin und her!"
+msgstr "スワイプで簡単に前後に移動できるようになりました!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:69
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:87
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:103
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:131
 msgid "Change default installation dialog!"
-msgstr "Standard-Installationsdialog ändern!"
+msgstr "デフォルトのインストールダイアログの変更！"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:70
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:88
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:104
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:132
 msgid "Added a file chooser dialog for downloads!"
-msgstr "Ein Dateiauswahldialog für Downloads wurde hinzugefügt!"
+msgstr "ダウンロード用のファイルピッカーダイアログを追加しました！"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:94
 msgid "Version 3.10.2"
@@ -378,55 +378,55 @@ msgstr "Version 3.10.2"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:95
 msgid "Updated translations"
-msgstr "Übersetzungen aktualisiert"
+msgstr "翻訳の更新"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:110
 msgid "Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start"
-msgstr "Wichtige Fehlerbehebung, bei der die App nicht startete, wenn der Benutzer nicht über den Ordner .local/share/fonts verfügte"
+msgstr "ユーザーのホームディレクトリに .local/share/fonts フォルダがない場合、アプリが起動しないというバグを修正しました。"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:115
 msgid "Fixes:"
-msgstr "Verbesserungen:"
+msgstr "修正点:"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:117
 msgid "Russian translation should now work"
-msgstr "Russische Übersetzung sollte jetzt funktionieren"
+msgstr "ロシア語版が動作するようになりました"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:118
 msgid "All texts are now translated"
-msgstr "Alle Texte sind jetzt übersetzt"
+msgstr "すべてのテキストが翻訳されました"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:119
 msgid "Updated Translations"
-msgstr "Übersetzungen aktualisiert"
+msgstr "翻訳の更新"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:138
 msgid "Fixes Spanish translation"
-msgstr "Korrigiert spanische Übersetzung"
+msgstr "スペイン語の翻訳を修正"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:143
 msgid "This release brings major improvements:"
-msgstr "Diese Version bringt signifikante Verbesserungen:"
+msgstr "今回のリリースでは、大きな改善が行われました:"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:145
 msgid "Better resource usage"
-msgstr "Bessere Ressourcennutzung"
+msgstr "リソースの有効活用"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:146
 msgid "Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to Ibragimov for ru and tg translations)"
-msgstr "Sprachunterstützung für de, es, fr, pt_BR, ru und tg hinzugefügt (Besonderer Dank an Ibragimov für ru und tg Übersetzungen)"
+msgstr "de, es, fr, pt_BR, ru, tg の言語サポートを追加 (Ibragimovさんの ru と tg の翻訳に感謝します)"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:147
 msgid "Added credits dialog!"
-msgstr "Danksagung Dialog hinzugefügt!"
+msgstr "クレジットダイアログを追加しました！"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:148
 msgid "New, prettier icon!"
-msgstr "Neues, hübscheres Symbol!"
+msgstr "アイコンが新しくなりました！"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:149
 msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
-msgstr "Sie können jetzt mit dem Trackpad oder dem Bildschirm zurück zum Schriftartenkatalog wischen!"
+msgstr "トラックパッドやスクリーンを使って、スワイプでフォントカタログに戻ることができるようになりました！"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
 msgid "Version 3.12.1"
@@ -435,28 +435,28 @@ msgstr "Version 3.12.1"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
 msgid "Translation Updates"
-msgstr "Aktualisierung der Übersetzungen"
+msgstr "翻訳アップデート"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
 msgid "Added Dutch translation"
-msgstr "Niederländische Übersetzung hinzugefügt"
+msgstr "オランダ語の翻訳を追加"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
 msgid "Major performance improvements"
-msgstr "Signifikante Performance-Verbesserungen"
+msgstr "パフォーマンスの大幅な向上"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
 msgid "New experimental color mode"
-msgstr "Neuer experimenteller Farbmodus"
+msgstr "新しい実験的なカラーモード"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
 msgid "Updated icon for holiday season"
-msgstr "Aktualisiertes Symbol für die Urlaubssaison"
+msgstr "ホリデーシーズンに合わせてアイコンを更新"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
 msgid "Bug fixes"
-msgstr "Fehlerbehebungen"
+msgstr "バグ修正"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
 msgid "Version 3.12.0"
@@ -464,116 +464,116 @@ msgstr "Version 3.12.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
 msgid "More touch friendly ui"
-msgstr "Berührungsfreundlichere Benutzeroberfläche"
+msgstr "よりタッチフレンドリーなUI"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
 msgid "Updated font links and versions to latest"
-msgstr "Links und Versionen der Schriften auf den neuesten Stand gebracht"
+msgstr "フォントのリンクとバージョンを最新のものに更新"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1423
 msgid "Colorful mode"
-msgstr "Farbmodus"
+msgstr "カラフルモード"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Developer window"
-msgstr "Entwicklerfenster"
+msgstr "開発者ウィンドウ"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:36
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:37
 msgid "Copy of webfonts.json containing only installed fonts"
-msgstr "Kopie von webfonts.json, die nur installierte Schriftarten enthält"
+msgstr "インストールされたフォントのみを含む webfonts.json のコピー"
 
 #: src/window.ui:539
 msgid "Welcome to Font Downloader!"
-msgstr "Willkommen bei Font Downloader!"
+msgstr "Font Downloaderへようこそ！"
 
 #: src/window.ui:560
 msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
-msgstr "Wählen Sie eine Schriftart im linken Seitenbereich aus oder beginnen Sie mit der Eingabe, um nach einer Schriftart zu suchen, und laden Sie sie dann herunter oder installieren Sie sie!"
+msgstr "左側のパネルからフォントを選択するか、入力を開始してフォントを検索し、ダウンロードまたはインストールすることができます。"
 
 #: src/window.ui:574
 msgid "page1"
-msgstr "Seite1"
+msgstr "ページ 1"
 
 #: src/window.ui:602 src/window.ui:603
 msgid "Insert Emoji"
-msgstr "Emoji einfügen"
+msgstr "絵文字を挿入"
 
 #: src/window.ui:634
 msgid "<b> Developer Window </b>"
-msgstr "<b>Entwicklerfenster</b>"
+msgstr "<b>開発者ウィンドウ</b>"
 
 #: src/window.ui:695 src/window.ui:739
 msgid "page0"
-msgstr "Seite0"
+msgstr "ページ 0"
 
 #: src/window.ui:725
 msgid "Loading..."
-msgstr "Wird geladen..."
+msgstr "読込中..."
 
 #: src/window.ui:771
 msgid "Something went wrong, check your internet connection."
-msgstr "Etwas ist schief gelaufen, überprüfen Sie Ihre Internetverbindung."
+msgstr "問題が発生しました、インターネット接続を確認してください。"
 
 #: src/window.ui:786
 msgid "page2"
-msgstr "Seite2"
+msgstr "ページ 2"
 
 #: src/window.ui:1381
 msgid "<b> Settings </b>"
-msgstr "<b>Einstellungen</b>"
+msgstr "<b>設定</b>"
 
 #: src/window.ui:1483
 msgid "Developer Window"
-msgstr "Entwicklerfenster"
+msgstr "開発者ウィンドウ"
 
 #: src/window.py:257
 msgid "Contributers"
-msgstr "Mitwirkende"
+msgstr "貢献者"
 
 #: src/window.py:337
 msgid "Failed to download font. Check your internet connection and folder permissions"
-msgstr "Der Download der Schriftart ist fehlgeschlagen. Überprüfen Sie Ihre Internetverbindung und die Berechtigungen für den Ordner"
+msgstr "フォントのダウンロードに失敗しました。インターネットの接続環境やフォルダの権限を確認してください"
 
 #: src/window.py:339
 msgid "Failed to install font. Check your internet connection and folder permissions"
-msgstr "Die Installation der Schriftart ist fehlgeschlagen. Überprüfen Sie Ihre Internetverbindung und die Berechtigungen für den Ordner"
+msgstr "フォントのインストールに失敗しました。インターネットの接続環境やフォルダの権限を確認してください"
 
 #: src/window.py:342
 msgid "Font downloaded succesfully!"
-msgstr "Schriftart erfolgreich heruntergeladen!"
+msgstr "フォントのダウンロードが成功しました!"
 
 #: src/window.py:344
 msgid "Font installed succesfully!"
-msgstr "Schriftart erfolgreich installiert!"
+msgstr "フォントのインストールが成功しました!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
 msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
-msgstr "Möchten Sie dieses Projekt als Übersetzer unterstützen? Beteiligen Sie sich hier: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
+msgstr "翻訳者としてプロジェクトに貢献してみませんか？私のプロジェクトに参加したいなら、ここにアクセス: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
 msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
-msgstr "Für Vorschläge und Fehlerbehebungen öffnen Sie ein Issue unter https://github.com/GustavoPeredo/Font-Downloader/ oder schreiben Sie eine Email an gustavomperedo@protonmail.com."
+msgstr "提案やバグ報告については、 https://github.com/GustavoPeredo/Font-Downloader/ でissueを開くか、 gustavomperedo@protonmail.com にメールを送ってください。"
 
 #: src/font-box.ui:120
 msgid "Installed systemwide"
-msgstr "Systemweit installiert"
+msgstr "システム全体へインストール"
 
 #: src/font-box.ui:160
 msgid "Update available"
-msgstr "Update verfügbar"
+msgstr "更新可能"
 
 #: src/window.ui:439
 msgid "Search..."
-msgstr "Suche..."
+msgstr "検索..."
 
 #: src/window.ui:1436
 msgid "Requires restart"
-msgstr "Neustart benötigt"
+msgstr "再起動が必要"
 
 #: src/window.ui:1593
 msgid "Reset all settings"
-msgstr "Alle Einstellungen zurücksetzen"
+msgstr "すべての設定をリセット"
 

@@ -472,20 +472,20 @@ msgstr ""
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Developer window"
-msgstr ""
+msgstr "Kehittäjän ikkuna"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:36
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:37
 msgid "Copy of webfonts.json containing only installed fonts"
-msgstr ""
+msgstr "Kopioi webfonts.json sisältäen vain asennetut fontit"
 
 #: src/window.ui:539
 msgid "Welcome to Font Downloader!"
-msgstr ""
+msgstr "Tervetuloa, tämä Fonttien lataaja!"
 
 #: src/window.ui:560
 msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
-msgstr ""
+msgstr "Valitse fontti vasemmasta laidasta tai aloita kirjoittaminen etsiäksesi fonttia, sen jälkeen lataa ja asenna haluamasi fontti!"
 
 #: src/window.ui:574
 msgid "page1"
@@ -493,11 +493,11 @@ msgstr ""
 
 #: src/window.ui:602 src/window.ui:603
 msgid "Insert Emoji"
-msgstr ""
+msgstr "Syötä emoji"
 
 #: src/window.ui:634
 msgid "<b> Developer Window </b>"
-msgstr ""
+msgstr "<b> Kehittäjän ikkuna </b>"
 
 #: src/window.ui:695 src/window.ui:739
 msgid "page0"
@@ -505,11 +505,11 @@ msgstr ""
 
 #: src/window.ui:725
 msgid "Loading..."
-msgstr ""
+msgstr "Ladataan..."
 
 #: src/window.ui:771
 msgid "Something went wrong, check your internet connection."
-msgstr ""
+msgstr "Jokin meni pieleen, tarkista internetyhteys"
 
 #: src/window.ui:786
 msgid "page2"
@@ -517,35 +517,35 @@ msgstr ""
 
 #: src/window.ui:1381
 msgid "<b> Settings </b>"
-msgstr ""
+msgstr "<b> Asetukset </b>"
 
 #: src/window.ui:1483
 msgid "Developer Window"
-msgstr ""
+msgstr "Kehittäjän ikkuna"
 
 #: src/window.py:257
 msgid "Contributers"
-msgstr ""
+msgstr "Avustajat"
 
 #: src/window.py:337
 msgid "Failed to download font. Check your internet connection and folder permissions"
-msgstr ""
+msgstr "Fontin lataaminen epäonnistui. Tarkista internetyhteyden tila ja kansion käyttöoikeudet"
 
 #: src/window.py:339
 msgid "Failed to install font. Check your internet connection and folder permissions"
-msgstr ""
+msgstr "Fontin asentaminen epäonnistui. Tarkista internetyhteyden tila ja kansion käyttöoikeudet"
 
 #: src/window.py:342
 msgid "Font downloaded succesfully!"
-msgstr ""
+msgstr "Fontti ladattu onnistuneesti!"
 
 #: src/window.py:344
 msgid "Font installed succesfully!"
-msgstr ""
+msgstr "Fontti asennettu onnistuneesti!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
 msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
-msgstr ""
+msgstr "Haluatko osallistua projektiin kääntäjänä? Liity täällä: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
 msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
@@ -553,21 +553,21 @@ msgstr ""
 
 #: src/font-box.ui:120
 msgid "Installed systemwide"
-msgstr ""
+msgstr "Asenna järjestelmänlaajuisesti"
 
 #: src/font-box.ui:160
 msgid "Update available"
-msgstr ""
+msgstr "Päivitys saatavilla"
 
 #: src/window.ui:439
 msgid "Search..."
-msgstr ""
+msgstr "Etsi..."
 
 #: src/window.ui:1436
 msgid "Requires restart"
-msgstr ""
+msgstr "Vaatii uudelleenkäynnistyksen"
 
 #: src/window.ui:1593
 msgid "Reset all settings"
-msgstr ""
+msgstr "Nollaa kaikki asetukset"
 

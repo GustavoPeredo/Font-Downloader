@@ -5,297 +5,297 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 "Project-Id-Version: Font Downloader\n"
-"Language: de\n"
+"Language: hi\n"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
 #: src/window.ui:320 src/window.py:262
 msgid "Font Downloader"
-msgstr "Schriftarten Downloader"
+msgstr "फॉण्ट डाउनलोडर"
 
 #: src/window.ui:100
 msgid "Font type"
-msgstr "Schriftart Typ"
+msgstr "फ़ॉन्ट"
 
 #: src/window.ui:118
 msgid "All"
-msgstr "Alle"
+msgstr "सभी"
 
 #: src/window.ui:133
 msgid "Serif"
-msgstr "Serif"
+msgstr "सेरिफ"
 
 #: src/window.ui:148
 msgid "Sans Serif"
-msgstr "Sans Serif"
+msgstr "सेंस सेरिफ़"
 
 #: src/window.ui:163
 msgid "Display"
-msgstr "Anzeige"
+msgstr "डिस्प्ले"
 
 #: src/window.ui:178
 msgid "Handwriting"
-msgstr "Handschrift"
+msgstr "लिखावट"
 
 #: src/window.ui:193
 msgid "Monospace"
-msgstr "Monospace"
+msgstr "मोनोस्पेस"
 
 #: src/window.ui:244
 msgid "About Font Downloader"
-msgstr "Über Schriftart Downloader"
+msgstr "फॉण्ट डाउनलोडर बारे"
 
 #: src/window.ui:439 src/window.py:384
 msgid "Download"
-msgstr "Download"
+msgstr "डाउनलोड"
 
 #: src/window.ui:604
 msgid "Type here your text..."
-msgstr "Schreibe hier..."
+msgstr "यहाँ पर लिखें..."
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
-msgstr "Ein simpler GTK Schriftarten Downloader, welcher Schriftarten direkt von Google Fonts installiert"
+msgstr "GTK में लिखा गया सरल फॉण्ट डाउनलोडर जो सीधा Google Fonts से फोंट्स स्थापित करता है।"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
 msgid "A simple GTK font downloader."
-msgstr "Ein simpler GTK Schriftarten Downloader"
+msgstr "एक सरल GTK फॉण्ट डाउनलोडर."
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
-msgstr "Wollten Sie schon immer die Schriftart in Ihrem Terminal ändern ohne den ganzen Prozess mit Suchen, Downloaden und Installieren zu durchlaufen? Dieses simple und adaptive GTK Programm erlaubt Ihnen Schriftarten direkt von Google Fonts zu Suchen und zu installieren."
+msgstr "क्या आप कभी अपने टर्मिनल में फ़ॉन्ट बदलना चाहते हैं, लेकिन फ़ॉन्ट को खोजने, डाउनलोड और इंस्टॉल करने की पूरी प्रक्रिया से नहीं गुजरना चाहते? यह प्रयोग करने में आसान GTK एप्लिकेशन आपको सीधे Google Fonts की वेबसाइट से फोंट खोजने और स्थापित करने में मदद करता है!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:179
 msgid "Gustavo Peredo"
-msgstr "Gustavo Peredo"
+msgstr "गुस्तावो पेरेडो"
 
 #: src/window.ui:378
 msgid "Install"
-msgstr "Installieren"
+msgstr "स्थापित करें"
 
 #: src/window.py:258
 msgid "Translators"
-msgstr "Übersetzer"
+msgstr "अनुवादक"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:6
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:7
 msgid "Dark mode"
-msgstr "Dunkler Modus"
+msgstr "डार्क मोड"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:21
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:22
 msgid "Any alphabet"
-msgstr "Beliebiges Alphabet"
+msgstr "कोई भी वर्णाक्षर"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:26
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:27
 msgid "Default installation directory"
-msgstr "Standardinstallationsverzeichnis"
+msgstr "स्वयंचयनित स्थापना का फ़ोल्डर"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:31
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:32
 msgid "Which alphabets aren't filtered"
-msgstr "Welche Alphabete nicht gefiltert sind"
+msgstr "कौन से अक्षर फ़िल्टर नहीं किए जाएँगे"
 
 #: src/window.ui:231 src/window.ui:885
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "सेटिंग्स"
 
 #: src/window.ui:888
 msgid "Close"
-msgstr "Schließen"
+msgstr "बंद करें"
 
 #: src/window.ui:936
 msgid "<b> Alphabets </b>"
-msgstr "<b> Alphabete </b>"
+msgstr "<b> वर्णाक्षर </b>"
 
 #: src/window.ui:947
 msgid "Any"
-msgstr "Beliebige"
+msgstr "कोई भी"
 
 #: src/window.ui:982
 msgid "Arabic"
-msgstr "Arabisch"
+msgstr "अरबी"
 
 #: src/window.ui:996
 msgid "Bengali"
-msgstr "Bengali"
+msgstr "बंगाली"
 
 #: src/window.ui:1009
 msgid "Chinese \n"
 "Hong Kong"
-msgstr "Chinesisch\n"
-"Hongkong"
+msgstr "चीनी\n"
+"हांगकांग"
 
 #: src/window.ui:1023
 msgid "Chinese\n"
 "Simplified"
-msgstr "Chinesisch\n"
-"Vereinfacht"
+msgstr "चीनी\n"
+"सरलीकृत"
 
 #: src/window.ui:1037
 msgid "Chinese\n"
 "Traditional"
-msgstr "Chinesisch\n"
-"Traditionell"
+msgstr "चीनी\n"
+"पारंपरिक"
 
 #: src/window.ui:1051
 msgid "Cyrillic"
-msgstr "Kyrillisch"
+msgstr "Cyrillic"
 
 #: src/window.ui:1064
 msgid "Cyrillic\n"
 "Extended"
-msgstr "Kyrillisch\n"
-"Erweitert"
+msgstr "Cyrillic\n"
+"विस्तारित"
 
 #: src/window.ui:1078
 msgid "Kannada"
-msgstr "Kannada"
+msgstr "कन्नड़"
 
 #: src/window.ui:1092
 msgid "Khmer"
-msgstr "Khmer"
+msgstr "खमेर"
 
 #: src/window.ui:1105
 msgid "Korean"
-msgstr "Koreanisch"
+msgstr "कोरियाई"
 
 #: src/window.ui:1118
 msgid "Latin"
-msgstr "Latein"
+msgstr "लैटिन"
 
 #: src/window.ui:1131
 msgid "Latin\n"
 "Extended"
-msgstr "Latein\n"
-"Erweitert"
+msgstr "लैटिन\n"
+"विस्तारित"
 
 #: src/window.ui:1145
 msgid "Malayalam"
-msgstr "Malayalam"
+msgstr "मलयालम"
 
 #: src/window.ui:1158
 msgid "Myanmar"
-msgstr "Myanmar"
+msgstr "म्यांमार"
 
 #: src/window.ui:1171
 msgid "Oriya"
-msgstr "Oriya"
+msgstr "ओरिया"
 
 #: src/window.ui:1185
 msgid "Sinhala"
-msgstr "Singhalesisch"
+msgstr "सिंहली"
 
 #: src/window.ui:1198
 msgid "Tamil"
-msgstr "Tamil"
+msgstr "तामिल"
 
 #: src/window.ui:1211
 msgid "Telugu"
-msgstr "Telugu"
+msgstr "तेलुगू"
 
 #: src/window.ui:1224
 msgid "Thai"
-msgstr "Thai"
+msgstr "थाई"
 
 #: src/window.ui:1237
 msgid "Tibetan"
-msgstr "Tibetisch"
+msgstr "तिब्बती"
 
 #: src/window.ui:1250
 msgid "Vietnamese"
-msgstr "Vietnamesisch"
+msgstr "वियतनामी"
 
 #: src/window.ui:1263
 msgid "Devanagari"
-msgstr "Devanagari"
+msgstr "देवनागरी"
 
 #: src/window.ui:1277
 msgid "Greek"
-msgstr "Griechisch"
+msgstr "यूनानी"
 
 #: src/window.ui:1290
 msgid "Greek\n"
 "Extended"
-msgstr "Griechisch\n"
-"Verlängert"
+msgstr "ग्रीक\n"
+"विस्तारित"
 
 #: src/window.ui:1304
 msgid "Gujarati"
-msgstr "Gujarati"
+msgstr "गुजराती"
 
 #: src/window.ui:1317
 msgid "Gurmukhi"
-msgstr "Gurmukhi"
+msgstr "गुरमुखी"
 
 #: src/window.ui:1330
 msgid "Hebrew"
-msgstr "Hebräisch"
+msgstr "यहूदी"
 
 #: src/window.ui:1343
 msgid "Japanese"
-msgstr "Japanisch"
+msgstr "जापानी"
 
 #: src/window.ui:1051
 msgid "<b> File Settings </b>"
-msgstr "<b> Dateieinstellungen </b>"
+msgstr "<b> फ़ाइल सेटिंग्स </b>"
 
 #: src/window.ui:1518
 msgid "Default font installation folder:"
-msgstr "Standard-Schriftinstallationsverzeichnis"
+msgstr "स्वयंचयनित स्थापना का फ़ोल्डर:"
 
 #: src/window.ui:1528
 msgid "Choose directory"
-msgstr "Ordner auswählen"
+msgstr "फ़ोल्डर का चयन करें"
 
 #: src/window.ui:1571
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
-msgstr "Warnung: Wenn Sie den Ordner, in dem Sie Schriftarten installieren möchten, nicht finden können, liegt dies möglicherweise daran, dass diese Anwendung keinen Zugriff darauf hat. Um dies zu korrigieren, installieren Sie Flatseal und gewähren Sie dieser Anwendung Zugriff auf den Ordner."
+msgstr "चेतावनी: यदि आपको वह फ़ोल्डर नहीं मिल रहा है जिसमें आप फोंट स्थापित करना चाहते हैं, तो ऐसा इसलिए हो सकता है क्योंकि इस एप्लिकेशन की उस तक पहुंच नहीं है, इसे ठीक करने के लिए, फ़्लैटसील स्थापित करें और इस एप्लिकेशन को फ़ोल्डर तक पहुंच प्रदान करें।"
 
 #: src/window.ui:1565
 msgid "Reset"
-msgstr "Zurücksetzen"
+msgstr "रीसेट"
 
 #: src/window.py:60 src/window.py:526
 msgid "sans-serif"
-msgstr "sans-serif"
+msgstr "सेंस सेरिफ"
 
 #: src/window.py:60 src/window.py:528
 msgid "serif"
-msgstr "serif"
+msgstr "सेरिफ"
 
 #: src/window.py:60 src/window.py:528
 msgid "display"
-msgstr "Anzeige"
+msgstr "डिस्प्ले"
 
 #: src/window.py:60 src/window.py:529
 msgid "monospaced"
-msgstr "monospace"
+msgstr "एकलस्पेस"
 
 #: src/window.py:60 src/window.py:530
 msgid "handwriting"
-msgstr "Handschrift"
+msgstr "लिखावट"
 
 #: src/window.py:632
 msgid "Please choose a folder"
-msgstr "Bitte wählen Sie eine Verzeichnis"
+msgstr "कृपया फोल्डर का चयन करें"
 
 #: src/font-box.ui:18
 msgid "family"
-msgstr "Familie"
+msgstr "फ़ॉन्ट परिवार"
 
 #: src/font-box.ui:38
 msgid "category"
-msgstr "Typ"
+msgstr "श्रेणी"
 
 #: src/font-box.ui:81
 msgid "Installed"
-msgstr "Eingerichtet"
+msgstr "स्थापित"
 
 #: src/window.py:234
 msgid "Default"
-msgstr "Standard"
+msgstr "स्वयंचयनित"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "org.gustavoperedo.FontDownloader"
@@ -303,277 +303,277 @@ msgstr "org.gustavoperedo.FontDownloader"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:76
 msgid "Version 3.11.0"
-msgstr "Version 3.11.0"
+msgstr "संस्करण 3.11.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:77
 msgid "Improved russian translation"
-msgstr "Verbesserte russische Übersetzung"
+msgstr "बेहतर रूसी अनुवाद"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:78
 msgid "Fixed portguese application name"
-msgstr "Portugisischer Anwendungsname verbessert"
+msgstr "सही पुर्तगाली नाम"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:79
 msgid "Updated font lins and versions to latest"
-msgstr "Schriftarten und Versionen auf den neuesten Stand gebracht"
+msgstr "फोंट्स नवीनतम संस्करण में अपडेट किए"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:61
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:80
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:96
 msgid "Version 3.0.0"
-msgstr "Version 3.0.0"
+msgstr "संस्करण 3.0.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:62
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:81
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:97
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:125
 msgid "This release aims to be the last feature release:"
-msgstr "Dieses Release soll das letzte Feature-Release sein"
+msgstr "इस रिलीज़ का लक्ष्य अंतिम फ़ीचर रिलीज़ होना है:"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:65
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:83
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:99
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:127
 msgid "Dark mode!"
-msgstr "Dunkler Modus!"
+msgstr "डार्क मोड!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:66
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:84
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:100
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:128
 msgid "Option to filter by alphabets!"
-msgstr "Option zum Filtern nach Buchstaben!"
+msgstr "अक्षर द्वारा फ़िल्टर करने का विकल्प!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:67
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:85
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:101
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:129
 msgid "You can see installed fonts now!"
-msgstr "Sie können die installierten Fonts jetzt sehen!"
+msgstr "अब आप इंस्टॉल किए गए फोंट देख सकते हैं!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:68
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:86
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:102
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:130
 msgid "Swipe back and forth easily!"
-msgstr "Wischen Sie einfach hin und her!"
+msgstr "आसानी से आगे और पीछे स्वाइप करें!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:69
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:87
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:103
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:131
 msgid "Change default installation dialog!"
-msgstr "Standard-Installationsdialog ändern!"
+msgstr "डिफ़ॉल्ट स्थापना बॉक्स बदल गया!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:70
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:88
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:104
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:132
 msgid "Added a file chooser dialog for downloads!"
-msgstr "Ein Dateiauswahldialog für Downloads wurde hinzugefügt!"
+msgstr "डाउनलोड के लिए फ़ाइल चयनकर्ता डिब्बा जोड़ा गया!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:94
 msgid "Version 3.10.2"
-msgstr "Version 3.10.2"
+msgstr "संस्करण 3.10.2"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:95
 msgid "Updated translations"
-msgstr "Übersetzungen aktualisiert"
+msgstr "अनुवाद अपडेट किए गए"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:110
 msgid "Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start"
-msgstr "Wichtige Fehlerbehebung, bei der die App nicht startete, wenn der Benutzer nicht über den Ordner .local/share/fonts verfügte"
+msgstr "महत्वपूर्ण बग फिक्स, जहां यदि उपयोगकर्ता के पास .local/share/fonts फ़ोल्डर नहीं है, तो ऐप शुरू नहीं होता"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:115
 msgid "Fixes:"
-msgstr "Verbesserungen:"
+msgstr "ठीक किया:"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:117
 msgid "Russian translation should now work"
-msgstr "Russische Übersetzung sollte jetzt funktionieren"
+msgstr "रूसी अनुवाद अब काम करेगा"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:118
 msgid "All texts are now translated"
-msgstr "Alle Texte sind jetzt übersetzt"
+msgstr "सभी  का अब अनुवाद किया गया है"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:119
 msgid "Updated Translations"
-msgstr "Übersetzungen aktualisiert"
+msgstr "अनुवाद अपडेट किए गए"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:138
 msgid "Fixes Spanish translation"
-msgstr "Korrigiert spanische Übersetzung"
+msgstr "स्पेनिश अनुवाद सही किया"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:143
 msgid "This release brings major improvements:"
-msgstr "Diese Version bringt signifikante Verbesserungen:"
+msgstr "यह रिलीज़ प्रमुख सुधार लाता है:"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:145
 msgid "Better resource usage"
-msgstr "Bessere Ressourcennutzung"
+msgstr "बेहतर संसाधन उपयोग"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:146
 msgid "Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to Ibragimov for ru and tg translations)"
-msgstr "Sprachunterstützung für de, es, fr, pt_BR, ru und tg hinzugefügt (Besonderer Dank an Ibragimov für ru und tg Übersetzungen)"
+msgstr "de, es, fr, pt_BR, ru और tg के लिए अनुवाद डाला गया (ru और tg अनुवाद के लिए Ibragimov को विशेष धन्यवाद)"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:147
 msgid "Added credits dialog!"
-msgstr "Danksagung Dialog hinzugefügt!"
+msgstr "आभार सूची डाली गई!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:148
 msgid "New, prettier icon!"
-msgstr "Neues, hübscheres Symbol!"
+msgstr "नया, सुंदर आइकन!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:149
 msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
-msgstr "Sie können jetzt mit dem Trackpad oder dem Bildschirm zurück zum Schriftartenkatalog wischen!"
+msgstr "अब आप अपने ट्रैकपैड या स्क्रीन से फोंट कैटलॉग पर वापस स्वाइप कर सकते हैं!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
 msgid "Version 3.12.1"
-msgstr "Version 3.12.1"
+msgstr "संस्करण 3.12.1"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
 msgid "Translation Updates"
-msgstr "Aktualisierung der Übersetzungen"
+msgstr "अनुवाद अपडेट किए गए"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
 msgid "Added Dutch translation"
-msgstr "Niederländische Übersetzung hinzugefügt"
+msgstr "डच अनुवाद डाला गया"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
 msgid "Major performance improvements"
-msgstr "Signifikante Performance-Verbesserungen"
+msgstr "प्रमुख निपुणता सुधार"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
 msgid "New experimental color mode"
-msgstr "Neuer experimenteller Farbmodus"
+msgstr "नया प्रयोगात्मक रंगीन मोड"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
 msgid "Updated icon for holiday season"
-msgstr "Aktualisiertes Symbol für die Urlaubssaison"
+msgstr "छुट्टियों के मौसम के लिए आइकन अपडेट किया गया"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
 msgid "Bug fixes"
-msgstr "Fehlerbehebungen"
+msgstr "बग ठीक किए गए"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
 msgid "Version 3.12.0"
-msgstr "Version 3.12.0"
+msgstr "संस्करण 3.12.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
 msgid "More touch friendly ui"
-msgstr "Berührungsfreundlichere Benutzeroberfläche"
+msgstr "अधिक स्पर्श अनुकूल यूजर इंटरफेस"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
 msgid "Updated font links and versions to latest"
-msgstr "Links und Versionen der Schriften auf den neuesten Stand gebracht"
+msgstr "फोंट्स के लिंक और संस्करण न्यूनतम पर अपडेट किए गए"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:11
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1423
 msgid "Colorful mode"
-msgstr "Farbmodus"
+msgstr "रंगीन मोड"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:16
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:17
 msgid "Developer window"
-msgstr "Entwicklerfenster"
+msgstr "डेवलपर विंडो"
 
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:36
 #: data/org.gustavoperedo.FontDownloader.gschema.xml:37
 msgid "Copy of webfonts.json containing only installed fonts"
-msgstr "Kopie von webfonts.json, die nur installierte Schriftarten enthält"
+msgstr "webfonts.json की प्रतिलिपि जिसमें केवल स्थापित फ़ॉन्ट हैं"
 
 #: src/window.ui:539
 msgid "Welcome to Font Downloader!"
-msgstr "Willkommen bei Font Downloader!"
+msgstr "फ़ॉन्ट डाउनलोडर में आपका स्वागत है!"
 
 #: src/window.ui:560
 msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
-msgstr "Wählen Sie eine Schriftart im linken Seitenbereich aus oder beginnen Sie mit der Eingabe, um nach einer Schriftart zu suchen, und laden Sie sie dann herunter oder installieren Sie sie!"
+msgstr "बाईं ओर के पैनल से एक फ़ॉन्ट चुनें या फ़ॉन्ट खोजने के लिए टाइप करना शुरू करें, फिर उसे डाउनलोड या इंस्टॉल करें!"
 
 #: src/window.ui:574
 msgid "page1"
-msgstr "Seite1"
+msgstr "पृष्ठ 1"
 
 #: src/window.ui:602 src/window.ui:603
 msgid "Insert Emoji"
-msgstr "Emoji einfügen"
+msgstr "इमोजी डालें"
 
 #: src/window.ui:634
 msgid "<b> Developer Window </b>"
-msgstr "<b>Entwicklerfenster</b>"
+msgstr "<b> डेवलपर विंडो </b>"
 
 #: src/window.ui:695 src/window.ui:739
 msgid "page0"
-msgstr "Seite0"
+msgstr "पृष्ठ 0"
 
 #: src/window.ui:725
 msgid "Loading..."
-msgstr "Wird geladen..."
+msgstr "लोड हो रहा है..."
 
 #: src/window.ui:771
 msgid "Something went wrong, check your internet connection."
-msgstr "Etwas ist schief gelaufen, überprüfen Sie Ihre Internetverbindung."
+msgstr "कुछ गलत हुआ, अपना इंटरनेट कनेक्शन की जाँच करें।"
 
 #: src/window.ui:786
 msgid "page2"
-msgstr "Seite2"
+msgstr "पृष्ठ 2"
 
 #: src/window.ui:1381
 msgid "<b> Settings </b>"
-msgstr "<b>Einstellungen</b>"
+msgstr "<b> सेटिंग्स </b>"
 
 #: src/window.ui:1483
 msgid "Developer Window"
-msgstr "Entwicklerfenster"
+msgstr "डेवलपर विंडो"
 
 #: src/window.py:257
 msgid "Contributers"
-msgstr "Mitwirkende"
+msgstr "योगदानकर्ता"
 
 #: src/window.py:337
 msgid "Failed to download font. Check your internet connection and folder permissions"
-msgstr "Der Download der Schriftart ist fehlgeschlagen. Überprüfen Sie Ihre Internetverbindung und die Berechtigungen für den Ordner"
+msgstr "फ़ॉन्ट डाउनलोड करने में विफल। अपने इंटरनेट कनेक्शन और फ़ोल्डर अनुमतियों की जाँच करें।"
 
 #: src/window.py:339
 msgid "Failed to install font. Check your internet connection and folder permissions"
-msgstr "Die Installation der Schriftart ist fehlgeschlagen. Überprüfen Sie Ihre Internetverbindung und die Berechtigungen für den Ordner"
+msgstr "फ़ॉन्ट स्थापित करने में विफल। अपने इंटरनेट कनेक्शन और फ़ोल्डर अनुमतियों की जाँच करें।"
 
 #: src/window.py:342
 msgid "Font downloaded succesfully!"
-msgstr "Schriftart erfolgreich heruntergeladen!"
+msgstr "फ़ॉन्ट सफलतापूर्वक डाउनलोड हो गया!"
 
 #: src/window.py:344
 msgid "Font installed succesfully!"
-msgstr "Schriftart erfolgreich installiert!"
+msgstr "फ़ॉन्ट सफलतापूर्वक स्थापित!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
 msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
-msgstr "Möchten Sie dieses Projekt als Übersetzer unterstützen? Beteiligen Sie sich hier: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
+msgstr "क्या आप अनुवादक के रूप में परियोजना में योगदान देना चाहते हैं? मेरे प्रोजेक्ट में यहां शामिल हों: https://poeditor.com/join/project?hfnXv8Iw4o"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
 msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
-msgstr "Für Vorschläge und Fehlerbehebungen öffnen Sie ein Issue unter https://github.com/GustavoPeredo/Font-Downloader/ oder schreiben Sie eine Email an gustavomperedo@protonmail.com."
+msgstr "सुझावों और बग फिक्स के लिए https://github.com/GustavoPeredo/Font-Downloader पर एक issue खोलें या मुझे gustavomperedo@protonmail.com पर ई-मेल करें।"
 
 #: src/font-box.ui:120
 msgid "Installed systemwide"
-msgstr "Systemweit installiert"
+msgstr "पूरे सिस्टम के लिए स्थापित"
 
 #: src/font-box.ui:160
 msgid "Update available"
-msgstr "Update verfügbar"
+msgstr "अपडेट उपलब्ध है"
 
 #: src/window.ui:439
 msgid "Search..."
-msgstr "Suche..."
+msgstr "खोजें"
 
 #: src/window.ui:1436
 msgid "Requires restart"
-msgstr "Neustart benötigt"
+msgstr "दोबारा शुरू करने की आवश्यकता है"
 
 #: src/window.ui:1593
 msgid "Reset all settings"
-msgstr "Alle Einstellungen zurücksetzen"
+msgstr "सभी सेटिंग्स को रीसेट करें"
 

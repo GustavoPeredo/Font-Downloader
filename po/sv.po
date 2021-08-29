@@ -460,9 +460,7 @@ msgstr "Buggfixar"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
 msgid "Version 3.12.0"
-msgstr "\n"
-"Version 3.12.0\n"
-""
+msgstr "Version 3.12.0"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
 msgid "More touch friendly ui"
