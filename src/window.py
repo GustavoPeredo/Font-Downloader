@@ -30,10 +30,13 @@ from urllib.request import urlretrieve, urlopen
 Handy.init()
 WebKit2.WebView()
 
-locale.bindtextdomain('fontdownloader', path.join(path.dirname(__file__).split('fontdownloader')[0],'locale'))
+locale.bindtextdomain('fontdownloader',
+        path.join(path.dirname(__file__).split('fontdownloader')[0],'locale'))
 locale.textdomain('fontdownloader')
 
-webfontsData = json.load(open(path.join(path.dirname(__file__).split('fontdownloader')[0],'fontdownloader/fontdownloader/webfonts.json'), 'r'))
+webfontsData = json.load(
+        open(path.join(path.dirname(__file__).split('fontdownloader')[0],
+            'fontdownloader/fontdownloader/webfonts.json'), 'r'))
 
 SAMPLE_STRING = Pango.language_get_default().get_sample_string()
 
@@ -57,7 +60,13 @@ class FontBox(Gtk.Box):
         category = data['category']
         #Change category to it's translation
 
-        self.fontCategory.set_text(_('sans-serif') if category=='sans-serif' else (_('serif') if category=='serif' else (_('display') if category=='display' else (_('monospaced') if category=='monospace' else _('handwriting')))))
+        self.fontCategory.set_text(
+                _('sans-serif') if category=='sans-serif' 
+                else (_('serif') if category=='serif'
+                else (_('display') if category=='display'
+                else (_('monospaced') if category=='monospace'
+                else _('handwriting'))))
+                )
 
 
 #Here we import the main window template
@@ -146,8 +155,14 @@ class FontdownloaderWindow(Handy.Window):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         #Creates temporary variables for our window
-        self.defaultPath = path.join(path.expanduser('~'), '.local/share/fonts') if self.settings.get_string('default-directory') == 'Default' else self.settings.get_string('default-directory')
-        self.jsonOfInstalledFonts = json.loads(self.settings.get_string('installed-fonts'))
+        self.defaultPath = (path.join(path.expanduser('~'),'.local/share/fonts')
+            if self.settings.get_string('default-directory') == 'Default'
+            else self.settings.get_string('default-directory')
+            )
+
+        self.jsonOfInstalledFonts = json.loads(
+                self.settings.get_string('installed-fonts')
+                )
         self.CurrentSelectedFont = ''
         self.CurrentText = SAMPLE_STRING
         self.CurrentFilters = {
@@ -157,6 +172,10 @@ class FontdownloaderWindow(Handy.Window):
             'handwriting': self.handwriting_check.get_active(),
             'monospace': self.mono_check.get_active()
         }
+
+        self.main_install_button.set_visible(False)
+        self.main_download_button.set_visible(False)
+        self.back_button.set_visible(False)
 
         #Connect buttons, clicks, key presses to their functions
         self.fonts_list.connect('row-activated', self.fontChanged)
@@ -210,8 +229,11 @@ class FontdownloaderWindow(Handy.Window):
 
         self.size_increase = 1
         self.text_entry_active = False
-        self.current_alphabet_list = self.settings.get_string('current-alphabet').split(';')
-        self.any_alphabet_button.set_active(self.settings.get_boolean('any-alphabet'))
+        self.current_alphabet_list = self.settings.get_string(
+                'current-alphabet').split(';')
+        self.any_alphabet_button.set_active(
+                self.settings.get_boolean('any-alphabet')
+                )
         self.any_alphabet = self.any_alphabet_button.get_active()
 
         for i in range(len(self.alphabet_list)):
@@ -222,23 +244,24 @@ class FontdownloaderWindow(Handy.Window):
 
         self.anyAlphabet()
 
-        #Get list of fonts stored in gschema
-        #self.settings.set_string('installed-fonts', '{"kind": "webfonts#webfontList","items": []}')
-
         #Get fonts on default-directory
         self.updateListOfInstalledFonts()
 
         #Select the first row and show all rows
-        #self.fonts_list.select_row(self.fonts_list.get_row_at_index(0))
         self.fonts_list.show()
-        self.folder_settings_button.set_label(_('Default') if self.settings.get_string('default-directory')=='Default' else self.settings.get_string('default-directory'))
+        self.folder_settings_button.set_label(_('Default')
+                if self.settings.get_string('default-directory')=='Default'
+                else self.settings.get_string('default-directory')
+                )
 
         for buttons in self.alphabet_buttons:
             buttons.connect("toggled", self.updateAlphabet)
 
         self.dark_mode_button.set_active(self.settings.get_boolean('dark-mode'))
         self.colorful_switch.set_active(self.settings.get_boolean('colorful-mode'))
-        self.developer_switch.set_active(self.settings.get_boolean('developer-window'))
+        self.developer_switch.set_active(
+                self.settings.get_boolean('developer-window')
+                )
         self.changeTheme()
 
         #Sets up borders
@@ -292,7 +315,10 @@ class FontdownloaderWindow(Handy.Window):
             makedirs(self.defaultPath)
 
         #Get list of actual installed fonts in directory
-        listOfInstalledFonts = [f for f in listdir(self.defaultPath) if path.isfile(path.join(self.defaultPath, f))]
+        listOfInstalledFonts = [
+                f for f in listdir(self.defaultPath)
+                if path.isfile(path.join(self.defaultPath, f))
+                ]
         listOfSystemInstalledFonts = [f for f in listdir("/usr/share/fonts")]
 
         #Compare json with installed fonts and files on the default-directory
@@ -331,7 +357,9 @@ class FontdownloaderWindow(Handy.Window):
             if not(i['family'] in str(self.jsonOfInstalledFonts['items'])):
                 self.jsonOfInstalledFonts['items'].append(i)
         #Save new installed fonts string
-        self.settings.set_string('installed-fonts', json.dumps(self.jsonOfInstalledFonts))
+        self.settings.set_string('installed-fonts', json.dumps(
+            self.jsonOfInstalledFonts)
+            )
         self.updateFilter()
 
     def updateProgressBar(self, chosen_path, links, is_download, data=None):
@@ -344,9 +372,13 @@ class FontdownloaderWindow(Handy.Window):
                     self.notification_label.set_label(_("Failed to install font. Check your internet connection and folder permissions"))
             else:
                 if is_download:
-                    self.notification_label.set_label(_("Font downloaded succesfully!"))
+                    self.notification_label.set_label(
+                            _("Font downloaded succesfully!")
+                            )
                 else:
-                    self.notification_label.set_label(_("Font installed succesfully!"))
+                    self.notification_label.set_label(
+                            _("Font installed succesfully!")
+                            )
                     if data['family'] in str(self.jsonOfInstalledFonts['items']):
                         for i in range(len(self.jsonOfInstalledFonts['items'])):
                             if (self.jsonOfInstalledFonts['items'][i]['family'] == data['family']):
@@ -370,7 +402,10 @@ class FontdownloaderWindow(Handy.Window):
             self.main_download_button.set_sensitive(False)
             self.main_install_button.set_sensitive(False)
             for key in links:
-                urlretrieve(links[key], path.join(chosen_path, self.CurrentSelectedFont + " " + key + links[key][-4:]))
+                urlretrieve(links[key], path.join(
+                    chosen_path,
+                    self.CurrentSelectedFont + " " + key + links[key][-4:])
+                    )
                 current_percentile = current_percentile + percentile
                 self.progress_bar.set_fraction(current_percentile)
         update_on_thread()
@@ -385,9 +420,13 @@ class FontdownloaderWindow(Handy.Window):
                     self.notification_label.set_label(_("Failed to install font. Check your internet connection and folder permissions"))
             else:
                 if is_download:
-                    self.notification_label.set_label(_("Font downloaded succesfully!"))
+                    self.notification_label.set_label(
+                            _("Font downloaded succesfully!")
+                            )
                 else:
-                    self.notification_label.set_label(_("Font installed succesfully!"))
+                    self.notification_label.set_label(
+                            _("Font installed succesfully!")
+                            )
                     if data['family'] in str(self.jsonOfInstalledFonts['items']):
                         for i in range(len(self.jsonOfInstalledFonts['items'])):
                             if (self.jsonOfInstalledFonts['items'][i]['family'] == data['family']):
@@ -411,7 +450,12 @@ class FontdownloaderWindow(Handy.Window):
             self.main_install_button.set_sensitive(False)
             try:
                 for key in links:
-                    urlretrieve(links[key], path.join(chosen_path, self.CurrentSelectedFont + " " + key + links[key][-4:]))
+                    urlretrieve(
+                            links[key], 
+                            path.join(chosen_path, 
+                            self.CurrentSelectedFont +
+                                " " + key + links[key][-4:])
+                            )
                     current_percentile = current_percentile + percentile
                     self.progress_bar.set_fraction(current_percentile)
                 on_done_updating("", "")
@@ -422,16 +466,31 @@ class FontdownloaderWindow(Handy.Window):
     def installFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
         #to the '.local/share/fonts' directory
+        data = self.fonts_list.get_selected_row().get_child().data
         if environ['XDG_SESSION_TYPE'].lower() == "wayland":
-            data = self.fonts_list.get_selected_row().get_child().data
-            thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, self.defaultPath, data['files'], False, data))
-            thread.daemon = True
-            thread.start()
+            thread = threading.Thread(
+                    target=GLib.idle_add, 
+                    args=(
+                        self.updateProgressBar,
+                        self.defaultPath,
+                        data['files'],
+                        False, 
+                        data
+                        )
+                    )
         else:
-            data = self.fonts_list.get_selected_row().get_child().data
-            thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBarX11, self.defaultPath, data['files'], False, data))
-            thread.daemon = True
-            thread.start()
+            thread = threading.Thread(
+                    target=GLib.idle_add,
+                    args=(
+                        self.updateProgressBarX11,
+                        self.defaultPath,
+                        data['files'],
+                        False,
+                        data
+                        )
+                    )
+        thread.daemon = True
+        thread.start()
 
     def downloadFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
@@ -449,7 +508,27 @@ class FontdownloaderWindow(Handy.Window):
             if not path.exists(absolutePath):
                 makedirs(absolutePath)
             dialog.destroy()
-            thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, absolutePath, links, True))
+            if environ['XDG_SESSION_TYPE'].lower() == "wayland":
+                thread = threading.Thread(
+                    target=GLib.idle_add,
+                    args=(
+                        self.updateProgressBar,
+                        absolutePath,
+                        links,
+                        True
+                        )
+                    )
+            else:
+                thread = threading.Thread(
+                    target=GLib.idle_add,
+                    args=(
+                        self.updateProgressBarX11,
+                        absolutePath,
+                        links,
+                        True
+                        )
+                    )
+
             thread.daemon = True
             thread.start()
         elif response == Gtk.ResponseType.CANCEL:
@@ -477,7 +556,9 @@ class FontdownloaderWindow(Handy.Window):
             'handwriting': self.handwriting_check.get_active(),
             'monospace': self.mono_check.get_active()
         }
-        filtered = [filters for filters in self.CurrentFilters if self.CurrentFilters[filters]]
+        filtered = [filters for filters in self.CurrentFilters
+                if self.CurrentFilters[filters]
+                ]
 
         #Creates a counters so limited amount of results appear
         self.private_counter = 0
@@ -534,6 +615,9 @@ class FontdownloaderWindow(Handy.Window):
         self.fontChanged()
 
     def fontChanged(self, *args, **kwargs):
+        if not self.main_install_button.get_visible():
+            self.main_install_button.set_visible(True)
+            self.main_download_button.set_visible(True)
         #Whenever the user does something that should change the font preview:
         if self.fonts_list.get_selected_row():
             #We colect the data from the selected font
@@ -612,7 +696,7 @@ class FontdownloaderWindow(Handy.Window):
 
 
     def updateSize(self, *args, **kwargs):
-        self.back_button.set_sensitive(self.header_leaflet.get_folded())
+        self.back_button.set_visible(self.header_leaflet.get_folded())
 
     #Turns search on or off
     def toggleSearch(self, *args, **kwargs):
@@ -660,10 +744,16 @@ class FontdownloaderWindow(Handy.Window):
 
     def changeTheme(self, *args, **kwargs):
         if self.dark_mode_button.get_active():
-            Gtk.Settings.get_default().set_property('gtk-application-prefer-dark-theme', True)
+            Gtk.Settings.get_default().set_property(
+                    'gtk-application-prefer-dark-theme',
+                    True
+                    )
             self.settings.set_boolean('dark-mode', True)
         else:
-            Gtk.Settings.get_default().set_property('gtk-application-prefer-dark-theme', False)
+            Gtk.Settings.get_default().set_property(
+                    'gtk-application-prefer-dark-theme',
+                    False
+                    )
             self.settings.set_boolean('dark-mode', False)
 
     def flipSwitch(self, button, *args, **kwargs):
@@ -707,7 +797,10 @@ class FontdownloaderWindow(Handy.Window):
                 self.alphabet_buttons[i].set_active(not self.any_alphabet)
             elif self.alphabet_buttons[i].get_active():
                 self.current_alphabet_list.append(self.alphabet_list[i])
-        self.settings.set_string('current-alphabet', ';'.join(self.current_alphabet_list))
+        self.settings.set_string(
+                'current-alphabet',
+                ';'.join(self.current_alphabet_list)
+                )
         self.updateFilter()
 
     def anyAlphabet(self, *args, **kwargs):

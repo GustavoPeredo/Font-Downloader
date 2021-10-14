@@ -24,7 +24,7 @@ gi.require_version('WebKit2', '4.0')
 gi.require_version('Pango', '1.0')
 
 from gi.repository import Gtk, Gio, Handy
-if True: #os.environ['XDG_SESSION_TYPE'].lower() == "wayland"
+if True: #
     from .window import FontdownloaderWindow
 else:
     from .windowX11 import FontdownloaderWindow

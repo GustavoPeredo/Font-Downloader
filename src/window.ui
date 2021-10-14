@@ -356,7 +356,7 @@
                 <property name="can-focus">False</property>
               </object>
             </child>
-            <child>
+	    <child>
               <object class="HdyHeaderBar" id="headerbar2">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>

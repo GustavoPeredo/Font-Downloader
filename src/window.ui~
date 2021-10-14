@@ -356,8 +356,9 @@
                 <property name="can-focus">False</property>
               </object>
             </child>
-            <child>
-              <object class="HdyHeaderBar" id="headerbar2">
+	    <child>
+	      <object class="GtkRevealer" id="headerbar2">
+              <object class="HdyHeaderBar" id="headerbar2-real">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <property name="hexpand">True</property>
@@ -403,6 +404,7 @@
                   </packing>
                 </child>
               </object>
+	      </object>
             </child>
           </object>
           <packing>
@@ -505,7 +507,7 @@
                       <object class="GtkStack" id="preview_stack">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="transition-type">slide-left</property>
+                        <property name="transition-type">crossfade</property>
                         <child>
                           <object class="GtkBox">
                             <property name="visible">True</property>
@@ -1594,7 +1596,7 @@ Extended</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">True</property>
-                                <property name="halign">center</property>
+                                <property name="halign">end</property>
                                 <style>
                                   <class name="destructive-action"/>
                                 </style>
