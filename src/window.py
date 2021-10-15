@@ -617,6 +617,7 @@ class FontdownloaderWindow(Handy.Window):
     def fontChanged(self, *args, **kwargs):
         if not self.main_install_button.get_visible():
             self.main_install_button.set_visible(True)
+            self.main_install_button.set_sensitive(False)
             self.main_download_button.set_visible(True)
         #Whenever the user does something that should change the font preview:
         if self.fonts_list.get_selected_row():
