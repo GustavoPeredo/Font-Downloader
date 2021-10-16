@@ -1,13 +1,3 @@
-/*
-PERSONALIZE GNOME EXTENSION MODIFIED GTK-3 THEME
-================================================
-
-This file is automatically moodified by prefs.js to when theme options are modified.
-
-This file is based on Adwaita theme from gtk Project https://www.gtk.org/ .
-
-*/
-
 
 * { -gtk-secondary-caret-color: #2EC27E; }
 .gtkstyle-fallback:selected { background-color: #2EC27E; }
@@ -27,6 +17,7 @@ treeview entry.flat:focus, treeview entry:focus { border-color: #2EC27E; }
 @keyframes needs_attention { from { background-image: -gtk-gradient(radial, center center, 0, center center, 0.01, to(#2EC27E), to(transparent)); }
   to { background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#2EC27E), to(transparent)); } }
 button.suggested-action { background-image: linear-gradient(to top, #1CB77C 2px, #2EC27E); }
+button.suggested-action:disabled { background-image: image(#93c2ad); box-shadow: none; border-color: #93c2ad;}
 button.suggested-action.flat { color: #2EC27E; }
 button.suggested-action:hover { background-image: linear-gradient(to top, #2EC27E, #32C57F 1px); }
 button.suggested-action:backdrop, button.suggested-action.flat:backdrop { border-color: #2EC27E; background-image: image(#2EC27E); }
@@ -34,7 +25,7 @@ button.suggested-action:backdrop, button.suggested-action.flat:backdrop { border
 stacksidebar row.needs-attention > label, .stack-switcher > button.needs-attention > label, .stack-switcher > button.needs-attention > image { background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#2EC27E), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(rgba(255, 255, 255, 0.769231)), to(transparent)); }
 button:link > label:hover, button:visited > label:hover, button:hover:link, button:hover:visited, *:link:hover { color: #2EC27E; }
 .selection-mode .titlebar:not(headerbar), .selection-mode.titlebar:not(headerbar), .selection-mode headerbar, headerbar.selection-mode { background: #2EC27E linear-gradient(to top, #25BDA3, #32C57F); }
-.selection-mode .titlebar:backdrop:not(headerbar), .selection-mode.titlebar:backdrop:not(headerbar), .selection-mode headerbar:backdrop, headerbar.selection-mode:backdrop { background-color: #2EC27E; }
+.selection-mode .titlebar:backdrop:not(headerbar), .selection-mode.titlebar:backdrop:not(headerbar), .selction-mode headerbar:backdrop, headerbar.selection-mode:backdrop { background-color: #2EC27E; }
 .selection-mode .titlebar:not(headerbar) button, .selection-mode.titlebar:not(headerbar) button, .selection-mode headerbar button, headerbar.selection-mode button { background-image: linear-gradient(to top, #1CB77C 2px, #2EC27E); }
 .selection-mode .titlebar:not(headerbar) button:hover, .selection-mode.titlebar:not(headerbar) button:hover, .selection-mode headerbar button:hover, headerbar.selection-mode button:hover { background-image: linear-gradient(to top, #2EC27E, #32C57F 1px); }
 .selection-mode .titlebar:not(headerbar) button:backdrop, .selection-mode.titlebar:not(headerbar) button:backdrop, .selection-mode headerbar button.flat:backdrop, .selection-mode headerbar button:backdrop, headerbar.selection-mode button.flat:backdrop, headerbar.selection-mode button:backdrop { border-color: #2EC27E; background-image: image(#2EC27E); }
@@ -122,7 +113,7 @@ row:selected switch { box-shadow: none; border-color: #0E9138; }
 row:selected switch:backdrop { border-color: #0E9138; }
 row:selected switch > slider:checked, row:selected switch > slider { border-color: #0E9138; }
 row:selected check, row:selected radio { border-color: #0E9138; }
-levelbar block.high, levelbar block:not(.empty) { border-color: #0E9138; background-color: #3584e4; }
+levelbar block.high, levelbar block:not(.empty) { border-color: #0E9138; background-color: #2EC27E; }
 separator.sidebar.selection-mode, .selection-mode separator.sidebar { background-color: #0E9138; }
 
 check:checked:hover, radio:checked:hover { background-image: linear-gradient(to bottom, #56DB83 10%, #40BF80 90%); }
@@ -132,64 +123,110 @@ check:indeterminate:hover, radio:indeterminate:hover { background-image: linear-
 
 row.activatable.has-open-popup:selected, row.activatable:selected:hover { background-color: #2DBA8B; }
 
-
-/* Nautilus
-   ========
+/*
+Libhandy Widgets
+================
 */
 
-.disk-space-display {
-    border-style: solid;
-    border-width: 2px;
-}
-
-.disk-space-display.unknown {
-    background-color: #888a85;
-    border-color: shade(#888a85, 0.7);
-    color: #888a85;
-}
-.disk-space-display.unknown.border {
-    color: shade(#888a85, 0.7);
-}
-
-.disk-space-display.used {
-    background-color: #6BDD8F;
-    border-color: shade(#6BDD8F, 0.7);
-    color: #6BDD8F;
-}
-.disk-space-display.used.border {
-    color: shade(#6BDD8F, 0.7);
-}
-
-.disk-space-display.free {
-    background-color: #eeeeec;
-    border-color: shade(#eeeeec, 0.7);
-    color: #eeeeec;
-}
-.disk-space-display.free.border {
-    color: shade(#eeeeec, 0.7);
-}
-
-/* Gedit
-   =====
-*/
-
-.gedit-search-slider {
-    background-color: @theme_base_color;
-    padding: 6px;
-    border-color: @borders;
-    border-radius: 0 0 3px 3px;
-    border-width: 0 1px 1px 1px;
-    border-style: solid;
-}
-
-.gedit-search-entry-occurrences-tag {
-    background-color: @theme_base_color;
-    background-image: none;
-    color: shade (@theme_unfocused_fg_color, 0.8);
-    border: 0px;
-    margin: 2px;
-    padding: 2px;
-}
+avatar { border-radius: 9999px; -gtk-outline-radius: 9999px; font-weight: bold; }
+avatar.color10 { background-image: linear-gradient(#cb78d4, #9945b5); color: #e7c2e8; }
+avatar.color11 { background-image: linear-gradient(#9e91e8, #7a59ca); color: #d5d2f5; }
+avatar.color12 { background-image: linear-gradient(#e3cf9c, #b08952); color: #f2eade; }
+avatar.color13 { background-image: linear-gradient(#be916d, #785336); color: #e5d6ca; }
+avatar.color14 { background-image: linear-gradient(#c0bfbc, #6e6d71); color: #d8d7d3; }
+avatar.color1 { background-image: linear-gradient(#83b6ec, #337fdc); color: #cfe1f5; }
+avatar.color2 { background-image: linear-gradient(#7ad9f1, #0f9ac8); color: #caeaf2; }
+avatar.color3 { background-image: linear-gradient(#8de6b1, #29ae74); color: #cef8d8; }
+avatar.color4 { background-image: linear-gradient(#b5e98a, #6ab85b); color: #e6f9d7; }
+avatar.color5 { background-image: linear-gradient(#f8e359, #d29d09); color: #f9f4e1; }
+avatar.color6 { background-image: linear-gradient(#ffcb62, #d68400); color: #ffead1; }
+avatar.color7 { background-image: linear-gradient(#ffa95a, #ed5b00); color: #ffe5c5; }
+avatar.color8 { background-image: linear-gradient(#f78773, #e62d42); color: #f8d2ce; }
+avatar.color9 { background-image: linear-gradient(#e973ab, #e33b6a); color: #fac7de; }
+avatar.contrasted { color: #fff; }
+avatar.image { background: none; }
+deck > shadow, leaflet > shadow { min-width: 56px; min-height: 56px; }
+keypad .digit { font-size: 200%; font-weight: bold; }
+keypad .letters { font-size: 70%; }
+keypad .symbol { font-size: 160%; }
+list.content, list.content list { background-color: transparent; }
+list.content > row.expander:checked:not(:first-child), list.content > row.expander:checked + row { margin-top: 6px; }
+list.content > row:first-child, list.content > row.expander:first-child row.header, list.content > row.expander:checked, list.content > row.expander:checked row.header, list.content > row.expander:checked + row, list.content > row.expander:checked + row.expander row.header { border-top-left-radius: 8px; -gtk-outline-top-left-radius: 7px; border-top-right-radius: 8px; -gtk-outline-top-right-radius: 7px; }
+list.content > row:last-child, list.content > row.checked-expander-row-previous-sibling, list.content > row.expander:checked { border-width: 1px; }
+list.content > row:last-child, list.content > row.checked-expander-row-previous-sibling, list.content > row.expander:checked, list.content > row.expander:not(:checked):last-child row.header, list.content > row.expander.checked-expander-row-previous-sibling:not(:checked) row.header, list.content > row.expander.empty:checked row.header, list.content > row.expander list.nested > row:last-child { border-bottom-left-radius: 8px; -gtk-outline-bottom-left-radius: 7px; border-bottom-right-radius: 8px; -gtk-outline-bottom-right-radius: 7px; }
+list.content > row:not(:last-child) { border-width: 1px 1px 0px 1px; }
+popover.combo list { border-style: none; background-color: transparent; }
+popover.combo list { min-width: 200px; }
+popover.combo list > row:first-child { border-top-left-radius: 8px; -gtk-outline-top-left-radius: 7px; border-top-right-radius: 8px; -gtk-outline-top-right-radius: 7px; }
+popover.combo list > row:last-child { border-bottom-left-radius: 8px; -gtk-outline-bottom-left-radius: 7px; border-bottom-right-radius: 8px; -gtk-outline-bottom-right-radius: 7px; }
+popover.combo list > row { padding: 0px 12px 0px 12px; min-height: 50px; }
+popover.combo overshoot.bottom { border-bottom-left-radius: 8px; -gtk-outline-bottom-left-radius: 7px; border-bottom-right-radius: 8px; -gtk-outline-bottom-right-radius: 7px; }
+popover.combo overshoot.top { border-top-left-radius: 8px; -gtk-outline-top-left-radius: 7px; border-top-right-radius: 8px; -gtk-outline-top-right-radius: 7px; }
+popover.combo { padding: 0px; }
+popover.combo scrollbar.vertical:dir(ltr) { border-top-right-radius: 8px; -gtk-outline-top-right-radius: 7px; border-bottom-right-radius: 8px; -gtk-outline-bottom-right-radius: 7px; }
+popover.combo scrollbar.vertical:dir(rtl) { border-top-left-radius: 8px; -gtk-outline-top-left-radius: 7px; border-bottom-left-radius: 8px; -gtk-outline-bottom-left-radius: 7px; }
+popover.combo scrollbar.vertical { padding-top: 2px; padding-bottom: 2px; }
+row > box.header > box.title { margin-top: 8px; margin-bottom: 8px; }
+row > box.header { margin-left: 12px; margin-right: 12px; min-height: 50px; }
+row.expander { background-color: transparent; }
+row.expander:checked image.expander-row-arrow { -gtk-icon-transform: rotate(0turn); }
+row.expander image.expander-row-arrow:dir(ltr) { margin-left: 6px; }
+row.expander image.expander-row-arrow:dir(rtl) { margin-right: 6px; }
+row.expander image.expander-row-arrow { transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+row.expander:not(:checked) image.expander-row-arrow:dir(ltr) { -gtk-icon-transform: rotate(-0.25turn); }
+row.expander:not(:checked) image.expander-row-arrow:dir(rtl) { -gtk-icon-transform: rotate(0.25turn); }
+row.expander:not(:checked) image.expander-row-arrow { opacity: 0.55; text-shadow: none; }
+row.expander { padding: 0px; }
+row label.subtitle { font-size: smaller; opacity: 0.55; text-shadow: none; }
+viewswitcherbar actionbar > revealer > box { padding: 0; }
+viewswitcher button { border-radius: 0; border-top: 0; border-bottom: 0; box-shadow: none; font-size: 1rem; }
+viewswitcher button.needs-attention:active > stack > box label, viewswitcher button.needs-attention:checked > stack > box label { animation: none; background-image: none; }
+viewswitcher button.needs-attention > stack > box label { animation: needs_attention 150ms ease-in; background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#2EC27E), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(rgba(255, 255, 255, 0.769231)), to(transparent)); background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; background-position: right 0px, right 1px; }
+viewswitcher button.needs-attention > stack > box label:backdrop { background-size: 6px 6px, 0 0; }
+viewswitcher button.needs-attention > stack > box label:dir(rtl) { background-position: left 0px, left 1px; }
+viewswitcher button:not(:checked):not(:hover) { background: transparent; }
+viewswitcher button:not(only-child):first-child:not(:checked):not(:hover), viewswitcher button:not(:checked):not(:hover) + button:not(:checked):not(:hover) { border-left-color: transparent; }
+viewswitcher button:not(only-child):last-child:not(:checked):not(:hover) { border-right-color: transparent; }
+viewswitcher button:not(:only-child):not(:last-child) { border-right-width: 0px; }
+viewswitcher button > stack > box label.active { font-weight: bold; }
+viewswitcher button > stack > box.narrow { font-size: 0.75rem; padding-top: 7px; padding-bottom: 5px; }
+viewswitcher button > stack > box.narrow image, viewswitcher button > stack > box.narrow label { padding-left: 8px; padding-right: 8px; }
+viewswitcher button > stack > box.wide label:dir(ltr) { padding-right: 7px; }
+viewswitcher button > stack > box.wide label:dir(rtl) { padding-left: 7px; }
+viewswitcher button > stack > box.wide { padding: 8px 12px; }
+viewswitchertitle viewswitcher { margin-left: 12px; margin-right: 12px; }
+viewswitcher, viewswitcher button { margin: 0; padding: 0; }
+window.csd.unified:not(.solid-csd) headerbar { border-radius: 0; }
+window.csd.unified:not(.solid-csd):not(.fullscreen) headerbar.selection-mode { box-shadow: none; }
+window.csd.unified:not(.solid-csd):not(.fullscreen):not(.tiled):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right):not(.maximized), window.csd.unified:not(.solid-csd):not(.fullscreen):not(.tiled):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right):not(.maximized) > decoration, window.csd.unified:not(.solid-csd):not(.fullscreen):not(.tiled):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right):not(.maximized) > decoration-overlay { border-radius: 8px; }
+.windowhandle, .windowhandle * { -GtkWidget-window-dragging: true; }
+button.list-button:not(:active):not(:checked):not(:hover) { background: none; border: 1px solid alpha(#1b1b1b, 0.5); box-shadow: none; }
+deck > border, leaflet > border { min-width: 1px; min-height: 1px; background: rgba(0, 0, 0, 0.2); }
+deck > dimming, leaflet > dimming { background: rgba(0, 0, 0, 0.24); }
+deck > outline, leaflet > outline { min-width: 1px; min-height: 1px; background: rgba(255, 255, 255, 0.05); }
+deck > shadow.down, leaflet > shadow.down { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.02) 40px, rgba(0, 0, 0, 0) 56px), linear-gradient(to top, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02) 7px, rgba(0, 0, 0, 0) 24px); }
+deck > shadow.left, leaflet > shadow.left { background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.02) 40px, rgba(0, 0, 0, 0) 56px), linear-gradient(to right, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02) 7px, rgba(0, 0, 0, 0) 24px); }
+deck > shadow.right, leaflet > shadow.right { background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.02) 40px, rgba(0, 0, 0, 0) 56px), linear-gradient(to left, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02) 7px, rgba(0, 0, 0, 0) 24px); }
+deck > shadow.up, leaflet > shadow.up { background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.02) 40px, rgba(0, 0, 0, 0) 56px), linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02) 7px, rgba(0, 0, 0, 0) 24px); }
+headerbar viewswitcher button:not(:checked):hover:backdrop { background-image: image(#353535); }
+headerbar viewswitcher button:not(:checked):hover:not(:backdrop) { background-image: linear-gradient(to top, shade(alpha(#353535, 0.7), 0.99) 2px, alpha(#353535, 0.7)); }
+headerbar viewswitcher button:not(:checked):not(only-child):first-child:hover, headerbar viewswitcher button:not(:checked):hover + button:not(:checked):not(:hover), headerbar viewswitcher button:not(:checked):not(:hover) + button:not(:checked):hover { border-left-color: #1b1b1b; }
+headerbar viewswitcher button:not(:checked):not(only-child):last-child:hover { border-right-color: #1b1b1b; }
+list.content list.nested > row.activatable:not(:active):hover:not(:selected) { background-color: mix(#eeeeec, #2d2d2d, 0.95); }
+list.content list.nested > row:not(:active):not(:hover):not(:selected), list.content list.nested > row:not(:active):hover:not(.activatable):not(:selected) { background-color: mix(#353535, #2d2d2d, 0.5); }
+list.content > row.activatable:not(.expander):not(:active):hover:not(:selected), list.content > row.expander row.header.activatable:not(:active):hover:not(:selected) { background-color: mix(#eeeeec, #2d2d2d, 0.95); }
+list.content > row, list.content > row list > row { border-color: alpha(#1b1b1b, 0.7); border-style: solid; transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+list.content > row:not(.expander):not(:active):not(:hover):not(:selected), list.content > row:not(.expander):not(:active):hover:not(.activatable):not(:selected), list.content > row.expander row.header:not(:active):not(:hover):not(:selected), list.content > row.expander row.header:not(:active):hover:not(.activatable):not(:selected) { background-color: #2d2d2d; }
+popover.combo list > row:not(:last-child) { border-bottom: 1px solid alpha(#1b1b1b, 0.5); }
+row.expander:checked image.expander-row-arrow:not(:disabled) { color: #0E9138; }
+row.expander image.expander-row-arrow:disabled { color: #919190; }
+row.expander list.nested > row { background-color: alpha(#353535, 0.5); border-color: alpha(#1b1b1b, 0.7); border-style: solid; border-width: 1px 0px 0px 0px; }
+viewswitcher button:not(:checked):hover:backdrop { background-image: image(#353535); }
+viewswitcher button:not(:checked):hover:not(:backdrop) { background-image: image(lighter(#353535)); }
+viewswitcher button:not(only-child):first-child:not(:checked):hover, viewswitcher button:not(:checked):hover + button:not(:checked):not(:hover), viewswitcher button:not(:checked):not(:hover) + button:not(:checked):hover { border-left-color: shade(#1b1b1b, 1.15); }
+viewswitcher button:not(only-child):last-child:not(:checked):hover { border-right-color: shade(#1b1b1b, 1.15); }
+window.csd.unified:not(.solid-csd):not(.fullscreen) > decoration-overlay { box-shadow: inset 0 1px rgba(255, 255, 255, 0.065); }
+window.csd.unified:not(.solid-csd):not(.fullscreen) headerbar { box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
 
 .background .titlebar:backdrop, .background .titlebar { border-top-left-radius: 8px; border-top-right-radius: 8px; }
 scrollbar slider { border-radius: 8px; }
@@ -253,3 +290,5 @@ popover modelbutton {
 popover modelbutton:nth-last-child(1) {
    margin-bottom: 5px;
 }
+
+

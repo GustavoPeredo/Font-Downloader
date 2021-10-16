@@ -49,23 +49,8 @@ fontdownloader
 
 They are here and need your help! Don't be afraid to open an issue or contribute to the translations here: [https://poeditor.com/join/project?hash=hfnXv8Iw4o](https://poeditor.com/join/project?hash=hfnXv8Iw4o)
 
-## To-Dos
-
-* ~~Learn how po works~~
-* ~~Do some translations~~
-* ~~See if it is ready for flatpak~~
-* ~~Add GtkFileChooser dialog for user to choose where to download fonts to~~
-* ~~Create settings panel (default installation directory and dark mode)~~
-* ~~Create about window~~
-* ~~Visual feedback for when fonts are done installing/downloading~~
-* ~~Show a little check for when a font is already installed~~
-* ~~Add new filters (depending on alphabet, will probably require a redesign of the app)~~
-* ~~Optimize code~~
-* ~~Update to libhandy 1.0 and update glade files acordingly~~
-* ~~Find a way to remove the "back_button" without check-resize~~
-* ~~Fix fonts names~~
-* ~~Translate new strings~~
-* ~~Migrate to gitlab~~
+## Special thanks
+For all the contributers, translators, atareao (fsync) and Selenium.H (theme) 
 
 <div align="center">
     <p><b> Proudly part of the GNOME Circle </b></p>

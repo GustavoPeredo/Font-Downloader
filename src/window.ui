@@ -350,7 +350,7 @@
                 </child>
               </object>
             </child>
-            <child>
+	    <child>
               <object class="GtkSeparator">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
@@ -479,7 +479,7 @@
               <object class="GtkSeparator">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-              </object>
+	      </object>
             </child>
             <child>
               <object class="GtkBox" id="box2">
@@ -598,6 +598,10 @@
                               <object class="GtkEntry" id="text_entry">
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
+                                <property name="margin-start">6</property>
+                                <property name="margin-end">6</property>
+                                <property name="margin-top">6</property>
+                                <property name="margin-bottom">6</property>
                                 <property name="secondary-icon-name">face-smile-symbolic</property>
                                 <property name="secondary-icon-tooltip-text" translatable="yes">Insert Emoji</property>
                                 <property name="secondary-icon-tooltip-markup" translatable="yes">Insert Emoji</property>
