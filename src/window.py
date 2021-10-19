@@ -176,6 +176,7 @@ class FontdownloaderWindow(Handy.Window):
         self.main_install_button.set_visible(False)
         self.main_download_button.set_visible(False)
         self.back_button.set_visible(False)
+        self.back_button.set_sensitive(True)
 
         #Connect buttons, clicks, key presses to their functions
         self.fonts_list.connect('row-activated', self.fontChanged)
