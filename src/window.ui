@@ -85,12 +85,15 @@
             <property name="can-focus">False</property>
             <property name="margin-top">6</property>
             <property name="margin-bottom">6</property>
+	  <style>
+            <class name="separator"/>
+          </style>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">1</property>
-          </packing>
+	  </packing>
         </child>
         <child>
           <object class="GtkLabel">
@@ -113,6 +116,9 @@
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <property name="orientation">vertical</property>
+<style>
+            <class name="separator"/>
+          </style>
             <child>
               <object class="GtkCheckButton" id="all_check">
                 <property name="label" translatable="yes">All</property>
@@ -216,6 +222,9 @@
             <property name="can-focus">False</property>
             <property name="margin-top">6</property>
             <property name="margin-bottom">6</property>
+	  <style>
+            <class name="separator"/>
+          </style>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -354,6 +363,9 @@
               <object class="GtkSeparator">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
+<style>
+            <class name="separator"/>
+          </style>
               </object>
             </child>
             <child>
@@ -479,6 +491,9 @@
               <object class="GtkSeparator">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
+	  <style>
+            <class name="separator"/>
+          </style>
 	      </object>
             </child>
             <child>
@@ -624,6 +639,9 @@
                                     <property name="can-focus">False</property>
                                     <property name="margin-top">8</property>
                                     <property name="margin-bottom">8</property>
+	  <style>
+            <class name="separator"/>
+          </style>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -981,6 +999,9 @@
                             <property name="column-spacing">4</property>
                             <property name="row-homogeneous">True</property>
                             <property name="column-homogeneous">True</property>
+<style>
+            <class name="separator"/>
+          </style>
                             <child>
                               <object class="GtkCheckButton" id="arabic_button">
                                 <property name="label" translatable="yes">Arabic</property>
