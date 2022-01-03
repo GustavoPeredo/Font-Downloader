@@ -1,7 +1,6 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2022 
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Fran Diéguez <frandieguez@gnome.org>, 2022.
 #
 msgid ""
 msgstr ""
@@ -9,15 +8,15 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-22 13:22-0300\n"
 "PO-Revision-Date: 2022-01-03 13:37+0100\n"
-"Last-Translator: \n"
-"Language-Team: Galician translators <gnome-gl-list@gnome.org>\n"
-"Language: gl_ES\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Gtranslator 3.38.0\n"
+"X-Project-Style: gnome\n"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
