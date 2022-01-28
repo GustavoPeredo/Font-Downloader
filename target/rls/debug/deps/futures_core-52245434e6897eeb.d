@@ -1,0 +1,11 @@
+/home/gustavo/Projekte/Font-Downloader/target/rls/debug/deps/futures_core-52245434e6897eeb.rmeta: /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/lib.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/future.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/stream.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/mod.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/poll.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/__internal/mod.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/__internal/atomic_waker.rs
+
+/home/gustavo/Projekte/Font-Downloader/target/rls/debug/deps/futures_core-52245434e6897eeb.d: /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/lib.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/future.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/stream.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/mod.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/poll.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/__internal/mod.rs /home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/__internal/atomic_waker.rs
+
+/home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/lib.rs:
+/home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/future.rs:
+/home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/stream.rs:
+/home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/mod.rs:
+/home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/poll.rs:
+/home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/__internal/mod.rs:
+/home/gustavo/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.18/src/task/__internal/atomic_waker.rs:

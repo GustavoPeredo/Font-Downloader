@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="font-downloader">
+	<schema id="org.gustavoperedo.FontDownloader" path="/org/gustavoperedo/FontDownloader/">
+	</schema>
+</schemalist>

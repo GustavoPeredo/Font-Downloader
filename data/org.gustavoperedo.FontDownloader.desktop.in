@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=font-downloader
+Exec=font-downloader
+Icon=org.gustavoperedo.FontDownloader
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

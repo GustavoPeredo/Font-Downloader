@@ -1,0 +1,4 @@
+data/org.gustavoperedo.FontDownloader.desktop.in
+data/org.gustavoperedo.FontDownloader.appdata.xml.in
+data/org.gustavoperedo.FontDownloader.gschema.xml
+src/window.ui
