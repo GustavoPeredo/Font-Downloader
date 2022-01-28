@@ -1,4 +1,4 @@
-use gtk::prelude::*;
+use adw::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::{gio, glib, CompositeTemplate};
 

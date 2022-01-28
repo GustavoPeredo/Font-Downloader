@@ -5,5 +5,12 @@ edition = "2018"
 
 [dependencies]
 gettext-rs = { version = "0.7", features = ["gettext-system"] }
-gtk = { version = "0.3", package = "gtk4" }
 font-catcher = "2.1.1"
+
+[dependencies.adw]
+package = "libadwaita"
+version = "0.1.0"
+
+[dependencies.gtk]
+package = "gtk4"
+version = "^0.4"

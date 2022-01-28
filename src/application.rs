@@ -1,5 +1,5 @@
+use adw::prelude::*;
 use glib::clone;
-use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::{gio, glib};
 
@@ -90,6 +90,9 @@ impl FontDownloaderApplication {
     }
 
     fn setup_gactions(&self) {
+        self.connect_startup(|_| {
+            adw::init();
+        });    
         let quit_action = gio::SimpleAction::new("quit", None);
         quit_action.connect_activate(clone!(@weak self as app => move |_, _| {
             app.quit();
@@ -105,7 +108,7 @@ impl FontDownloaderApplication {
 
     fn show_about(&self) {
         let window = self.active_window().unwrap();
-        let dialog = gtk::AboutDialogBuilder::new()
+        let dialog = gtk::builders::AboutDialogBuilder::new()
             .transient_for(&window)
             .modal(true)
             .program_name("font-downloader")

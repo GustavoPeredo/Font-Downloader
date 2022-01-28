@@ -5,10 +5,11 @@ mod window;
 use self::application::FontDownloaderApplication;
 use self::window::FontDownloaderWindow;
 
+use adw::prelude::*;
+
 use config::{GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR};
 use gettextrs::{bind_textdomain_codeset, bindtextdomain, textdomain};
 use gtk::gio;
-use gtk::prelude::*;
 
 fn main() {
     // Set up gettext translations
