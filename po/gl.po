@@ -1,0 +1,443 @@
+# Copyright (C) 2022 
+# This file is distributed under the same license as the PACKAGE package.
+# Fran Diéguez <frandieguez@gnome.org>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME Galician translators\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-22 13:22-0300\n"
+"PO-Revision-Date: 2022-01-03 13:37+0100\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 3.38.0\n"
+"X-Project-Style: gnome\n"
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:4
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
+#: src/window.ui:320 src/window.py:262
+msgid "Font Downloader"
+msgstr "Descargador de tipos de fonte"
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
+msgid ""
+"Simple font downloader written in GTK that installs fonts directly from "
+"Google Fonts."
+msgstr ""
+"Un descargador de tipos de fonte sinxelo escrito en GTK que instala tipos de "
+"letra directamente desde Google Fonts."
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
+msgid "A simple GTK font downloader."
+msgstr "Un descargador de tipos de letra doado de GTK."
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
+msgid ""
+"Have you ever wanted to change the font in your terminal, but didn't want to "
+"go through the entire process of searching, downloading and installing a "
+"font? This simple to use and adaptive GTK application allows you to search "
+"and install fonts directly from Google Fonts' website!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
+msgid ""
+"Want to contribute to the project as a translator? Join my project here: "
+"https://poeditor.com/join/project?hash=hfnXv8Iw4o"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
+msgid ""
+"For suggestions and bug fixes open an issue at https://github.com/"
+"GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:179
+msgid "Gustavo Peredo"
+msgstr "Gustavo Peredo"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:6
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:7
+msgid "Dark mode"
+msgstr "Modo escuro"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:11
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1423
+msgid "Colorful mode"
+msgstr "Modo coloreado"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:16
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:17
+msgid "Developer window"
+msgstr "Xanela de desenvolvedor"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:21
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:22
+msgid "Any alphabet"
+msgstr "Calquera alfabeto"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:26
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:27
+msgid "Default installation directory"
+msgstr "Cartafol de instalacíon predeterminado"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:31
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:32
+msgid "Which alphabets aren't filtered"
+msgstr "Que alfabetos se filtran"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:36
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:37
+msgid "Copy of webfonts.json containing only installed fonts"
+msgstr ""
+
+#: src/font-box.ui:18
+msgid "family"
+msgstr "familia"
+
+#: src/font-box.ui:38
+msgid "category"
+msgstr "categoría"
+
+#: src/font-box.ui:81
+msgid "Installed"
+msgstr "Instalado"
+
+#: src/font-box.ui:120
+msgid "Installed systemwide"
+msgstr "Instalado a nivel sistema"
+
+#: src/font-box.ui:160
+msgid "Update available"
+msgstr "Actualización dispoñíbel"
+
+#: src/window.ui:100
+msgid "Font type"
+msgstr "Tipo de tipo de letra"
+
+#: src/window.ui:118
+msgid "All"
+msgstr "Todos"
+
+#: src/window.ui:133
+msgid "Serif"
+msgstr "Serifa"
+
+#: src/window.ui:148
+msgid "Sans Serif"
+msgstr "Sans Serifa"
+
+#: src/window.ui:163
+msgid "Display"
+msgstr "Pantalla"
+
+#: src/window.ui:178
+msgid "Handwriting"
+msgstr "Escrito a man"
+
+#: src/window.ui:193
+msgid "Monospace"
+msgstr "Monoespaciada"
+
+#: src/window.ui:231 src/window.ui:885
+msgid "Settings"
+msgstr "Preferencias"
+
+#: src/window.ui:244
+msgid "About Font Downloader"
+msgstr "Sobre Descargador de tipos de letra"
+
+#: src/window.ui:378
+msgid "Install"
+msgstr "Instalar"
+
+#: src/window.ui:439
+msgid "Search..."
+msgstr "Buscar..."
+
+#: src/window.ui:539
+msgid "Welcome to Font Downloader!"
+msgstr "Benvida a Descargador de tipos de letra!"
+
+#: src/window.ui:560
+msgid ""
+"Select a font from the left side panel or start typing to search for a font, "
+"then download or install it!"
+msgstr ""
+"Seleccione un tipo de letra desde o panel lateral esquerdo e comece a "
+"escribir para buscar un tipo de letra, logo descárgueo e instáleo!"
+
+#: src/window.ui:574
+msgid "page1"
+msgstr "páxina1"
+
+#: src/window.ui:602 src/window.ui:603
+msgid "Insert Emoji"
+msgstr "Inserir emoticona"
+
+#: src/window.ui:604
+msgid "Type here your text..."
+msgstr "Escriba aquí o seu texto..."
+
+#: src/window.ui:634
+msgid "<b> Developer Window </b>"
+msgstr "<b> Xanela de desenvolvedor </b>"
+
+#: src/window.ui:695 src/window.ui:739
+msgid "page0"
+msgstr "páxina0"
+
+#: src/window.ui:725
+msgid "Loading..."
+msgstr "Cargando..."
+
+#: src/window.ui:771
+msgid "Something went wrong, check your internet connection."
+msgstr "Algo malo pasou, comprobé a súa conexión a internet."
+
+#: src/window.ui:786
+msgid "page2"
+msgstr "páxina2"
+
+#: src/window.ui:888
+msgid "Close"
+msgstr "Pechar"
+
+#: src/window.ui:936
+msgid "<b> Alphabets </b>"
+msgstr "<b> Alfabetos </b>"
+
+#: src/window.ui:947
+msgid "Any"
+msgstr "Calquera"
+
+#: src/window.ui:982
+msgid "Arabic"
+msgstr "Árabe"
+
+#: src/window.ui:996
+msgid "Bengali"
+msgstr "Bengali"
+
+#: src/window.ui:1009
+msgid ""
+"Chinese \n"
+"Hong Kong"
+msgstr ""
+"Chinés \n"
+"Hong Kong"
+
+#: src/window.ui:1023
+msgid ""
+"Chinese\n"
+"Simplified"
+msgstr ""
+"Chinés\n"
+"Simplificado"
+
+#: src/window.ui:1037
+msgid ""
+"Chinese\n"
+"Traditional"
+msgstr ""
+"Chinés\n"
+"Traditional"
+
+#: src/window.ui:1051
+msgid "Cyrillic"
+msgstr "Cirílico"
+
+#: src/window.ui:1064
+msgid ""
+"Cyrillic\n"
+"Extended"
+msgstr "Cirílico estendido"
+
+#: src/window.ui:1078
+msgid "Kannada"
+msgstr "Kannada"
+
+#: src/window.ui:1092
+msgid "Khmer"
+msgstr "Khmer"
+
+#: src/window.ui:1105
+msgid "Korean"
+msgstr "Coreano"
+
+#: src/window.ui:1118
+msgid "Latin"
+msgstr "Latino"
+
+#: src/window.ui:1131
+msgid ""
+"Latin\n"
+"Extended"
+msgstr ""
+"Latino\n"
+"Estendido"
+
+#: src/window.ui:1145
+msgid "Malayalam"
+msgstr "Malaio"
+
+#: src/window.ui:1158
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: src/window.ui:1171
+msgid "Oriya"
+msgstr "Orixa"
+
+#: src/window.ui:1185
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: src/window.ui:1198
+msgid "Tamil"
+msgstr "Tamil"
+
+#: src/window.ui:1211
+msgid "Telugu"
+msgstr "Telugu"
+
+#: src/window.ui:1224
+msgid "Thai"
+msgstr "Thai"
+
+#: src/window.ui:1237
+msgid "Tibetan"
+msgstr "Tibetán"
+
+#: src/window.ui:1250
+msgid "Vietnamese"
+msgstr "Vietnamita"
+
+#: src/window.ui:1263
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: src/window.ui:1277
+msgid "Greek"
+msgstr "Grego"
+
+#: src/window.ui:1290
+msgid ""
+"Greek\n"
+"Extended"
+msgstr ""
+"Grego\n"
+"Estendido"
+
+#: src/window.ui:1304
+msgid "Gujarati"
+msgstr "Guxarati"
+
+#: src/window.ui:1317
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: src/window.ui:1330
+msgid "Hebrew"
+msgstr "Hebreo"
+
+#: src/window.ui:1343
+msgid "Japanese"
+msgstr "Xaponés"
+
+#: src/window.ui:1381
+msgid "<b> Settings </b>"
+msgstr "<b> Preferencias </b>"
+
+#: src/window.ui:1436
+msgid "Requires restart"
+msgstr "Require reiniciar"
+
+#: src/window.ui:1483
+msgid "Developer Window"
+msgstr "Xanela de desenvolvedor"
+
+#: src/window.ui:1518
+msgid "Default font installation folder:"
+msgstr "Cartafol de instalación de tipos de letra predeterminado:"
+
+#: src/window.ui:1528
+msgid "Choose directory"
+msgstr "Escolla un cartafol"
+
+#: src/window.ui:1571
+msgid ""
+"Warning: If you can't find the folder you are wishing to install fonts to, "
+"it might be because this application doesn't have access to it, to correct "
+"this, install Flatseal and give this application access to the folder."
+msgstr ""
+"Aviso: Se non pode atopar o cartafol onde desexa instalar os tipos de letra, "
+"pode que a apliación non teña acceso a el, para correxir isto instale "
+"Flatseal e fornézalle a esta aplicación acceso ao cartafol."
+
+#: src/window.ui:1593
+msgid "Reset all settings"
+msgstr "Restabelecer todas as preferencias"
+
+#: src/window.py:60 src/window.py:526
+msgid "sans-serif"
+msgstr "sans-serifa"
+
+#: src/window.py:60 src/window.py:528
+msgid "serif"
+msgstr "serifa"
+
+#: src/window.py:60 src/window.py:528
+msgid "display"
+msgstr "pantalla"
+
+#: src/window.py:60 src/window.py:529
+msgid "monospaced"
+msgstr "monoespaciada"
+
+#: src/window.py:60 src/window.py:530
+msgid "handwriting"
+msgstr "escrita a man"
+
+#: src/window.py:234
+msgid "Default"
+msgstr "Predeterminado"
+
+#: src/window.py:257
+msgid "Contributers"
+msgstr "Contribuidores"
+
+#: src/window.py:258
+msgid "Translators"
+msgstr "Tradutores"
+
+#: src/window.py:337
+msgid ""
+"Failed to download font. Check your internet connection and folder "
+"permissions"
+msgstr ""
+"Produciuse un fallo ao descargar o tipo de letra. Comprobe a súa conexión a "
+"internet e permisos no cartafol"
+
+#: src/window.py:339
+msgid ""
+"Failed to install font. Check your internet connection and folder permissions"
+msgstr ""
+"Produciuse un fallo ao instalar o tipo de letra. Comprobe a súa conexión a "
+"internet e permisos no cartafol."
+
+#: src/window.py:342
+msgid "Font downloaded succesfully!"
+msgstr "Tipo de letra descargado con éxito!"
+
+#: src/window.py:344
+msgid "Font installed succesfully!"
+msgstr "Tipo de letra instalado con éxito!"
+
+#: src/window.py:632
+msgid "Please choose a folder"
+msgstr "Escolla un cartafol"
