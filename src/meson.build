@@ -33,6 +33,7 @@ rust_sources = files(
   'config.rs',
   'main.rs',
   'window.rs',
+  'custom_expander_row.rs'
 )
 
 sources = [cargo_sources, rust_sources]

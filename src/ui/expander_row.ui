@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="CustomExpanderRow" parent="GtkListBoxRow">
+    <property name="visible">1</property>
+    <property name="child">
+      <object class="GtkBox">
+        <property name="visible">1</property>
+        <property name="margin-start">8</property>
+        <property name="margin-end">8</property>
+        <property name="margin-top">8</property>
+        <property name="margin-bottom">8</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox">
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel" id="font_name_label">
+                    <property name="halign">start</property>
+                    <property name="label" translatable="yes">font_name</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"></attribute>
+                      <attribute name="scale" value="1.5"></attribute>
+                    </attributes>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="font_alphabets_label">
+                    <property name="halign">start</property>
+                    <property name="label" translatable="yes">font_alphabets</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="font_categories_label">
+                <property name="label" translatable="yes">font_categories</property>
+                <property name="hexpand">1</property>
+                <property name="halign">end</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <child>
+              <object class="GtkButton" id="download_button">
+                <property name="focusable">1</property>
+                <property name="receives-default">1</property>
+                <property name="halign">end</property>
+                <property name="valign">center</property>
+                <property name="hexpand">1</property>
+    		<property name="icon-name">document-save</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <child>
+                  <object class="GtkButton" id="uninstall_button">
+                    <property name="label" translatable="yes">Uninstall</property>
+                    <property name="focusable">1</property>
+                    <property name="receives-default">1</property>
+                    <style>
+                      <class name="destructive-action"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="install_button">
+                    <property name="halign">center</property>
+                    <property name="label" translatable="yes">Install</property>
+                    <property name="focusable">1</property>
+                    <property name="receives-default">1</property>
+                    <property name="valign">center</property>
+                    <style>
+                      <class name="suggested-action"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkRevealer">
+            <property name="transition-type">slide-up</property>
+            <property name="child">
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">8</property>
+                <child>
+                  <object class="GtkGLArea">
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">8</property>
+                    <child>
+                      <object class="GtkEntry">
+                        <property name="focusable">1</property>
+                        <property name="hexpand">1</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="focusable">1</property>
+                        <property name="receives-default">1</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </property>
+          </object>
+        </child>
+      </object>
+    </property>
+  </template>
+</interface>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkListBoxRow">
+    <property name="visible">0</property>
+    <property name="child">
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <property name="spacing">8</property>
+        <child>
+          <object class="GtkGLArea">
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="spacing">8</property>
+            <child>
+              <object class="GtkEntry">
+                <property name="focusable">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="focusable">1</property>
+                <property name="receives-default">1</property>
+                <property name="icon-name">format-text-bold</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </property>
+  </object>
+</interface>

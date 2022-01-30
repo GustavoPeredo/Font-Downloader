@@ -7,6 +7,7 @@ use std::path::PathBuf;
 
 use crate::config::VERSION;
 use crate::FontDownloaderWindow;
+use crate::CustomExpanderRow;
 
 use font_catcher;
 
@@ -47,7 +48,30 @@ mod imp {
                 window.upcast()
             };
             let list_box = gtk::ListBox::new();
+            let custom_label = gtk::Button::with_label("Hello");
+            let test = CustomExpanderRow::new();
+
+            //test.add_row(&another_row.clone());
+            /*test.uninstall_button.connect_clicked(move |_| {
+                        eprintln!(
+                            "{:?}", "test1" 
+                        );
+                    });
+test.install_button.connect_clicked(move |_| {
+                        eprintln!(
+                            "{:?}", "test2" 
+                        );
+                    });
+test.download_button.connect_clicked(move |_| {
+                        eprintln!(
+                            "{:?}", "test3" 
+                        );
+                    });*/
+            list_box.append(&test);
+            //list_box.append(&an_another_row);
             window.set_child(Some(&list_box));
+            /*let list_box = gtk::ListBox::new();
+            window.set_child(Some(&));
             let fonts_hashmap = font_catcher::init().expect("Failed to init \
                 font_catcher");
             for (font_name,font) in fonts_hashmap.iter() {
@@ -68,6 +92,7 @@ mod imp {
                     list_box.append(&download_button);
                 }
             }
+            */
             
             // Ask the window manager/compositor to present the window
             window.present();

@@ -1,9 +1,11 @@
 mod application;
 mod config;
 mod window;
+mod custom_expander_row;
 
 use self::application::FontDownloaderApplication;
 use self::window::FontDownloaderWindow;
+use self::custom_expander_row::CustomExpanderRow;
 
 use adw::prelude::*;
 

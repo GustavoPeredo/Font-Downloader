@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/org/gustavoperedo/FontDownloader">
-    <file>window.ui</file>
+    <file>ui/window.ui</file>
+    <file>ui/expander_row.ui</file>
+    <file>ui/preview_row.ui</file>
     <file>gtk/help-overlay.ui</file>
   </gresource>
 </gresources>

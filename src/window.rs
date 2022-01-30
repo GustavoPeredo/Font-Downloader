@@ -6,7 +6,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/org/gustavoperedo/FontDownloader/window.ui")]
+    #[template(resource = "/org/gustavoperedo/FontDownloader/ui/window.ui")]
     pub struct FontDownloaderWindow {
         // Template widgets
         #[template_child]
