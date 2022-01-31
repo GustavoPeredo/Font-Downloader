@@ -1,6 +1,6 @@
 use adw::prelude::*;
 use gtk::subclass::prelude::*;
-use gtk::{gio, glib, CompositeTemplate};
+use gtk::{gio, glib, Widget, CompositeTemplate};
 
 mod imp {
     use super::*;
@@ -12,7 +12,7 @@ mod imp {
         #[template_child]
         pub header_bar: TemplateChild<gtk::HeaderBar>,
         #[template_child]
-        pub label: TemplateChild<gtk::Label>,
+        pub list_box: TemplateChild<gtk::ListBox>,
     }
 
     #[glib::object_subclass]
@@ -47,4 +47,10 @@ impl FontDownloaderWindow {
         glib::Object::new(&[("application", application)])
             .expect("Failed to create FontDownloaderWindow")
     }
+
+    pub fn list_append(&self, child: &impl IsA<Widget>) {
+        let imp = self.imp();
+        imp.list_box.append(child);
+    }
+
 }

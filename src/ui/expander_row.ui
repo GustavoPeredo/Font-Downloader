@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <template class="CustomExpanderRow" parent="GtkListBoxRow">
+  <template class="CustomExpanderRow" parent="GtkBox">
+    <property name="layout-manager">
+      <object class="GtkBinLayout"/>
+    </property>
     <property name="visible">1</property>
-    <property name="child">
+    <child>
       <object class="GtkBox">
         <property name="visible">1</property>
         <property name="margin-start">8</property>
@@ -52,7 +55,7 @@
                 <property name="halign">end</property>
                 <property name="valign">center</property>
                 <property name="hexpand">1</property>
-    		<property name="icon-name">document-save</property>
+    		        <property name="icon-name">document-save</property>
               </object>
             </child>
             <child>
@@ -84,7 +87,7 @@
           </object>
         </child>
         <child>
-          <object class="GtkRevealer">
+          <object class="GtkRevealer" id="revealer">
             <property name="transition-type">slide-up</property>
             <property name="child">
               <object class="GtkBox">
@@ -116,6 +119,6 @@
           </object>
         </child>
       </object>
-    </property>
+    </child>
   </template>
 </interface>

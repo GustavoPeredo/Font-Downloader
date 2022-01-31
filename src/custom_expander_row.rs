@@ -22,17 +22,20 @@ mod imp {
         pub font_name_label: TemplateChild<gtk::Label>,
         #[template_child]
         pub font_alphabets_label: TemplateChild<gtk::Label>,
- 
+
+        #[template_child]
+        pub revealer: TemplateChild<gtk::Revealer>,
     }
 
     #[glib::object_subclass]
     impl ObjectSubclass for CustomExpanderRow {
         const NAME: &'static str = "CustomExpanderRow";
         type Type = super::CustomExpanderRow;
-        type ParentType = gtk::ListBoxRow;
+        type ParentType = gtk::Box;
 
         fn class_init(klass: &mut Self::Class) {
             Self::bind_template(klass);
+            Self::bind_template_callbacks(klass);
         }
 
         fn instance_init(obj: &glib::subclass::InitializingObject<Self>) {
@@ -40,14 +43,23 @@ mod imp {
         }
     }
 
+    #[gtk::template_callbacks]
+    impl CustomExpanderRow {
+        #[template_callback]
+        fn on_activation(&self) -> bool {
+            self.revealer.is_child_revealed()
+            //self.revealer.set_reveal_child(true);
+        }
+    }
+
     impl ObjectImpl for CustomExpanderRow {}
     impl WidgetImpl for CustomExpanderRow {}
-    impl ListBoxRowImpl for CustomExpanderRow {}
+    impl BoxImpl for CustomExpanderRow {}
 }
 
 glib::wrapper! {
     pub struct CustomExpanderRow(ObjectSubclass<imp::CustomExpanderRow>)
-        @extends gtk::Widget, gtk::ListBoxRow,
+        @extends gtk::Widget, gtk::Box,
         @implements gio::ActionGroup, gio::ActionMap;
 }
 
@@ -55,5 +67,14 @@ impl CustomExpanderRow {
     pub fn new() -> CustomExpanderRow {
         glib::Object::new(&[])
             .expect("Failed to create FontDownloaderWindow")
+    }
+    pub fn get_revealer(&self) -> bool {
+        let imp = self.imp();
+        imp.revealer.is_child_revealed()
+        //self.inner.revealer.is_child_revealed()
+    }
+    pub fn set_revealer(&self, reveal: bool) {
+        let imp = self.imp();
+        imp.revealer.set_reveal_child(reveal);
     }
 }

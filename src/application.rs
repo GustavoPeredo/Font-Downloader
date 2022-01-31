@@ -45,11 +45,21 @@ mod imp {
             } else {
                 let window = FontDownloaderWindow::new(application);
                 window.set_default_size(600, 300);
+                let test = CustomExpanderRow::new();
+                let test2 = CustomExpanderRow::new();
+                let imp = window.imp();
+                imp.list_box.append(&test);
+                imp.list_box.append(&test2);
+                imp.list_box.connect_row_activated(move |_,row| {
+                    let expander_row = row.child().expect("").downcast::<CustomExpanderRow>().expect("");
+                    let status = expander_row.get_revealer();
+                    expander_row.set_revealer(!status);
+                });
                 window.upcast()
             };
-            let list_box = gtk::ListBox::new();
+            
+            /*let list_box = gtk::ListBox::new();
             let custom_label = gtk::Button::with_label("Hello");
-            let test = CustomExpanderRow::new();
 
             //test.add_row(&another_row.clone());
             /*test.uninstall_button.connect_clicked(move |_| {
@@ -68,6 +78,12 @@ test.download_button.connect_clicked(move |_| {
                         );
                     });*/
             list_box.append(&test);
+            list_box.append(&test2);
+            //let a = list_box.selected_row();
+            list_box.connect_selected_rows_changed(move |a| {
+                let b = a.selected_row().unwrap().child().expect("").downcast::<CustomExpanderRow>().expect("");
+                b.set_revealer(true);
+            });
             //list_box.append(&an_another_row);
             window.set_child(Some(&list_box));
             /*let list_box = gtk::ListBox::new();
@@ -92,7 +108,7 @@ test.download_button.connect_clicked(move |_| {
                     list_box.append(&download_button);
                 }
             }
-            */
+            */*/
             
             // Ask the window manager/compositor to present the window
             window.present();
