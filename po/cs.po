@@ -3,8 +3,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
 "Project-Id-Version: Font Downloader\n"
-"Last-Translator: vikdevelop\n"
 "Language: cs\n"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
@@ -59,7 +59,7 @@ msgstr "Jednodzchý stahovač fonrů napsaní v GTK, který instaluje písma př
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
 msgid "A simple GTK font downloader."
-msgstr "Jednoduchý stahovač fontů"
+msgstr "Jednoduchý stahovač fontů."
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
@@ -243,11 +243,11 @@ msgstr "<b> Nastavení souboru </b>"
 
 #: src/window.ui:1518
 msgid "Default font installation folder:"
-msgstr "Výchozí složka pro instalaci fontů
+msgstr "Výchozí složka pro instalaci fontů:"
 
 #: src/window.ui:1528
 msgid "Choose directory"
-msgstr "Vybrat adresář
+msgstr "Vybrat adresář"
 
 #: src/window.ui:1571
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
@@ -267,7 +267,7 @@ msgstr "serif"
 
 #: src/window.py:60 src/window.py:528
 msgid "display"
-msgstr "Zobrazit
+msgstr "Zobrazit"
 
 #: src/window.py:60 src/window.py:529
 msgid "monospaced"
@@ -275,7 +275,7 @@ msgstr "monospace"
 
 #: src/window.py:60 src/window.py:530
 msgid "handwriting"
-msgstr "Rukpis
+msgstr "Rukpis"
 
 #: src/window.py:632
 msgid "Please choose a folder"
@@ -327,7 +327,7 @@ msgstr "Version 3.0.0"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:81
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:97
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:125
-msgid "Tato verze má být poslední funkční verzí:"
+msgid "This release aims to be the last feature release:"
 msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:65
@@ -382,7 +382,7 @@ msgstr "Aktualzovány překlady"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:110
 msgid "Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start"
-msgstr "Důležitá oprava chyby, kdy pokud uživatel neměl složku .local/share/fonts, aplikace se nespustila."
+msgstr "Důležitá oprava chyby, kdy pokud uživatel neměl složku .local/share/fonts, aplikace se nespustila"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:115
 msgid "Fixes:"
@@ -416,9 +416,79 @@ msgstr "Lepší využizí prostředků"
 msgid "Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to Ibragimov for ru and tg translations)"
 msgstr "Přidána podpora překladů pro de, es, fr, pt_BR, ru and tg (Speciálně děkuji Ibragimov pro ru a tg překlady)"
 
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:147
+msgid "Added credits dialog!"
+msgstr "Přidán dialog s kredity!\n"
+""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:148
+msgid "New, prettier icon!"
+msgstr "Nové hezčí ikony!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:149
+msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
+msgid "Version 3.12.1"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
+msgid "Translation Updates"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
+msgid "Added Dutch translation"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
+msgid "Major performance improvements"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
+msgid "New experimental color mode"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
+msgid "Updated icon for holiday season"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
+msgid "Bug fixes"
+msgstr "Opravy bugů"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
+msgid "Version 3.12.0"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
+msgid "More touch friendly ui"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
+msgid "Updated font links and versions to latest"
+msgstr ""
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:11
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1423
+msgid "Colorful mode"
+msgstr "Barevný režim"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:16
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:17
+msgid "Developer window"
+msgstr "Vývojářské okno"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:36
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:37
+msgid "Copy of webfonts.json containing only installed fonts"
+msgstr "Kopie souboru webfonts.json obsahujícího pouze nainstalovaná písma"
+
 #: src/window.ui:539
 msgid "Welcome to Font Downloader!"
-msgstr "Vítejte ve Stahovači fontů"
+msgstr "Vítejte ve Stahovači fontů!"
 
 #: src/window.ui:560
 msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
@@ -458,7 +528,7 @@ msgstr "<b> Nastavení </b>"
 
 #: src/window.ui:1483
 msgid "Developer Window"
-msgstr "Vyvojářské oknp"
+msgstr "Vyvojářské okno"
 
 #: src/window.py:257
 msgid "Contributers"
