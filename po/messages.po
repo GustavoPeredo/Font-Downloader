@@ -13,9 +13,9 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>"
 "Language-Team: LANGUAGE <LL@li.org>"
 "Language: "
-"MIME-Version: 1.0"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298

@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"MIME-Version: 1.0"
-"Content-Type: text/plain; charset=UTF-8"
-"Content-Transfer-Encoding: 8bit"
-"X-Generator: POEditor.com"
-"Project-Id-Version: Font Downloader"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Font Downloader\n"
 "Language: pl"
 
 #. Polish translation would be something like "Pobieracz Czcionek" but it sounds kind of unnatural / cheap :) I'd argue that sticking with the original app name is preferred. Most Poles are familiar with the word "download", and "font" – although less common – is a corresponding word in Polish as well.

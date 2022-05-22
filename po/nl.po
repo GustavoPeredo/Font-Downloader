@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"MIME-Version: 1.0"
-"Content-Type: text/plain; charset=UTF-8"
-"Content-Transfer-Encoding: 8bit"
-"X-Generator: POEditor.com"
-"Project-Id-Version: Font Downloader"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Font Downloader\n"
 "Language: nl"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
