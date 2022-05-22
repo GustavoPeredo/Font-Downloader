@@ -1,1 +1,636 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Font Downloader\n"
+"Language: bn\n"
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:4
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
+#: src/window.ui:320 src/window.py:262
+#, fuzzy
+msgid "Font Downloader"
+msgstr "ফন্ট ডাউনলোডার"
+
+#: src/window.ui:100
+#, fuzzy
+msgid "Font type"
+msgstr "ফন্ট টাইপ"
+
+#: src/window.ui:118
+#, fuzzy
+msgid "All"
+msgstr "সব"
+
+#: src/window.ui:133
+#, fuzzy
+msgid "Serif"
+msgstr "সেরিফ"
+
+#: src/window.ui:148
+#, fuzzy
+msgid "Sans Serif"
+msgstr "স্যান্স সেরিফ"
+
+#: src/window.ui:163
+#, fuzzy
+msgid "Display"
+msgstr "ডিসপ্লে"
+
+#: src/window.ui:178
+#, fuzzy
+msgid "Handwriting"
+msgstr "হাতের লেখা"
+
+#: src/window.ui:193
+#, fuzzy
+msgid "Monospace"
+msgstr "মনোস্পেস"
+
+#: src/window.ui:244
+#, fuzzy
+msgid "About Font Downloader"
+msgstr "ফন্ট ডাউনলোডার সম্পর্কে"
+
+#: src/window.ui:439 src/window.py:384
+#, fuzzy
+msgid "Download"
+msgstr "ডাউনলোড"
+
+#: src/window.ui:604
+#, fuzzy
+msgid "Type here your text..."
+msgstr "আপনার টেক্সট এখানে টাইপ করুন..."
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
+#, fuzzy
+msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
+msgstr "GTK তে লেখা একটি সরল ফন্ট ডাউনলোডার যেটি গুগল ফন্ট থেকে সরাসরি ফন্ট ইন্সটল করে।"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
+#, fuzzy
+msgid "A simple GTK font downloader."
+msgstr "একটি সরল GTK ফন্ট ডাউনলোডার।"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
+#, fuzzy
+msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
+msgstr "আপনি কি কখনও আপনার টার্মিনালে ফন্ট পাল্টাতে চেয়েছেন, কিন্তু ফন্ট সার্চ করা, ডাউনলোড করা আবার ইনস্টল করার ঝামেলার মধ্য দিয়ে যেতে চাননি? এই সহজ এবং অ্যাডাপটিভ GTK অ্যাপ্লিকেশনটি আপনাকে সরাসরি গুগল ফন্টের ওয়েবসাইট থেকে ফন্ট ইনস্টল করতে দেয়!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:179
+#, fuzzy
+msgid "Gustavo Peredo"
+msgstr "গুস্তাভো পারদো"
+
+#: src/window.ui:378
+#, fuzzy
+msgid "Install"
+msgstr "ইনস্টল"
+
+#: src/window.py:258
+#, fuzzy
+msgid "Translators"
+msgstr "ট্রান্সলেটর"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:6
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:7
+#, fuzzy
+msgid "Dark mode"
+msgstr "ডার্ক মোড"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:21
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:22
+#, fuzzy
+msgid "Any alphabet"
+msgstr "যেকোনো অ্যালফাবেট"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:26
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:27
+#, fuzzy
+msgid "Default installation directory"
+msgstr "ডিফল্ট ইনস্টলেশন ডিরেক্টরি"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:31
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:32
+#, fuzzy
+msgid "Which alphabets aren't filtered"
+msgstr "যে অ্যালফাবেটগুলি ফিল্টার হয়নি"
+
+#: src/window.ui:231 src/window.ui:885
+#, fuzzy
+msgid "Settings"
+msgstr "সেটিংস"
+
+#: src/window.ui:888
+#, fuzzy
+msgid "Close"
+msgstr "বন্ধ"
+
+#: src/window.ui:936
+#, fuzzy
+msgid "<b> Alphabets </b>"
+msgstr "<b> অ্যালফাবেটগুলি </b>"
+
+#: src/window.ui:947
+#, fuzzy
+msgid "Any"
+msgstr "যেকোনো"
+
+#: src/window.ui:982
+#, fuzzy
+msgid "Arabic"
+msgstr "আরবি"
+
+#: src/window.ui:996
+#, fuzzy
+msgid "Bengali"
+msgstr "বাংলা"
+
+#: src/window.ui:1009
+#, fuzzy
+msgid "Chinese \n"
+"Hong Kong"
+msgstr "চাইনিজ\n"
+"হংকং"
+
+#: src/window.ui:1023
+#, fuzzy
+msgid "Chinese\n"
+"Simplified"
+msgstr "চাইনিজ\n"
+"সরলীকৃত"
+
+#: src/window.ui:1037
+#, fuzzy
+msgid "Chinese\n"
+"Traditional"
+msgstr "চাইনিজ\n"
+"প্রথাগত"
+
+#: src/window.ui:1051
+#, fuzzy
+msgid "Cyrillic"
+msgstr "সিরিলিক"
+
+#: src/window.ui:1064
+#, fuzzy
+msgid "Cyrillic\n"
+"Extended"
+msgstr "সিরিলিক\n"
+"সম্প্রসারিত"
+
+#: src/window.ui:1078
+#, fuzzy
+msgid "Kannada"
+msgstr "কন্নড়"
+
+#: src/window.ui:1092
+#, fuzzy
+msgid "Khmer"
+msgstr "খমের"
+
+#: src/window.ui:1105
+#, fuzzy
+msgid "Korean"
+msgstr "কোরিয়ান"
+
+#: src/window.ui:1118
+#, fuzzy
+msgid "Latin"
+msgstr "ল্যাটিন"
+
+#: src/window.ui:1131
+#, fuzzy
+msgid "Latin\n"
+"Extended"
+msgstr "ল্যাটিন\n"
+"সম্প্রসারিত"
+
+#: src/window.ui:1145
+#, fuzzy
+msgid "Malayalam"
+msgstr "মালায়লাম"
+
+#: src/window.ui:1158
+#, fuzzy
+msgid "Myanmar"
+msgstr "মায়ানমার"
+
+#: src/window.ui:1171
+#, fuzzy
+msgid "Oriya"
+msgstr "ওড়িয়া"
+
+#: src/window.ui:1185
+#, fuzzy
+msgid "Sinhala"
+msgstr "সিংহল"
+
+#: src/window.ui:1198
+#, fuzzy
+msgid "Tamil"
+msgstr "তামিল"
+
+#: src/window.ui:1211
+#, fuzzy
+msgid "Telugu"
+msgstr "তেলেগু"
+
+#: src/window.ui:1224
+#, fuzzy
+msgid "Thai"
+msgstr "থাই"
+
+#: src/window.ui:1237
+#, fuzzy
+msgid "Tibetan"
+msgstr "তিব্বতি"
+
+#: src/window.ui:1250
+#, fuzzy
+msgid "Vietnamese"
+msgstr "ভিয়েতনামী"
+
+#: src/window.ui:1263
+#, fuzzy
+msgid "Devanagari"
+msgstr "দেবনাগরী"
+
+#: src/window.ui:1277
+#, fuzzy
+msgid "Greek"
+msgstr "গ্রীক"
+
+#: src/window.ui:1290
+#, fuzzy
+msgid "Greek\n"
+"Extended"
+msgstr "গ্রীক\n"
+"সম্প্রসারিত"
+
+#: src/window.ui:1304
+#, fuzzy
+msgid "Gujarati"
+msgstr "গুজরাটি"
+
+#: src/window.ui:1317
+#, fuzzy
+msgid "Gurmukhi"
+msgstr "গুরুমুখী"
+
+#: src/window.ui:1330
+#, fuzzy
+msgid "Hebrew"
+msgstr "হিব্রু"
+
+#: src/window.ui:1343
+#, fuzzy
+msgid "Japanese"
+msgstr "জাপানিজ"
+
+#: src/window.ui:1051
+#, fuzzy
+msgid "<b> File Settings </b>"
+msgstr "<b> ফাইল সেটিংস </b>"
+
+#: src/window.ui:1518
+#, fuzzy
+msgid "Default font installation folder:"
+msgstr "ডিফল্ট ফন্ট ইনস্টলেশন ফোল্ডার"
+
+#: src/window.ui:1528
+#, fuzzy
+msgid "Choose directory"
+msgstr "ডিরেক্টরি নির্বাচন করুন"
+
+#: src/window.ui:1571
+#, fuzzy
+msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
+msgstr "সতর্কতা: আপনি যে ফোল্ডারে ফন্ট ইনস্টল করতে চান সেটি যদি খুঁজে না পান, হতে পারে অ্যাপ্লিকেশনটির সেই ফোল্ডারে অ্যাক্সেস নেই, এটি সংশোধন করতে, Flatseal ইনস্টল করুন এবং এই অ্যাপ্লিকেশনটিকে সেই ফোল্ডারে অ্যাক্সেস দিন"
+
+#: src/window.ui:1565
+msgid "Reset"
+msgstr "রিসেট"
+
+#: src/window.py:60 src/window.py:526
+msgid "sans-serif"
+msgstr "স্যান্স-সেরিফ"
+
+#: src/window.py:60 src/window.py:528
+msgid "serif"
+msgstr "সেরিফ"
+
+#: src/window.py:60 src/window.py:528
+msgid "display"
+msgstr "ডিসপ্লে"
+
+#: src/window.py:60 src/window.py:529
+msgid "monospaced"
+msgstr "মনোস্পেস"
+
+#: src/window.py:60 src/window.py:530
+msgid "handwriting"
+msgstr "হাতের লেখা"
+
+#: src/window.py:632
+msgid "Please choose a folder"
+msgstr "একটি ফোল্ডার নির্বাচন করুন"
+
+#: src/font-box.ui:18
+msgid "family"
+msgstr "ফ্যামিলি"
+
+#: src/font-box.ui:38
+msgid "category"
+msgstr "ক্যাটাগরি"
+
+#: src/font-box.ui:81
+msgid "Installed"
+msgstr "ইনস্টলড"
+
+#: src/window.py:234
+msgid "Default"
+msgstr "ডিফল্ট"
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
+msgid "org.gustavoperedo.FontDownloader"
+msgstr "org.gustavoperedo.FontDownloader"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:76
+msgid "Version 3.11.0"
+msgstr "ভার্সন ৩.১১.০"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:77
+msgid "Improved russian translation"
+msgstr "রাশিয়ান অনুবাদ উন্নত করুন"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:78
+msgid "Fixed portguese application name"
+msgstr "পর্তুগিজে অ্যাপ্লিকেশনের নাম ফিক্স করা হয়েছে"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:79
+msgid "Updated font lins and versions to latest"
+msgstr "ফন্ট লিন্স এবং ভার্সন লেটেস্ট ভার্সনে আপডেট করা হয়েছে"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:61
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:80
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:96
+msgid "Version 3.0.0"
+msgstr "ভার্সন ৩.০.০"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:62
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:81
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:97
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:125
+msgid "This release aims to be the last feature release:"
+msgstr "এই রিলিজের লক্ষ্য হল শেষ ফিচার রিলিজ:"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:65
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:83
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:99
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:127
+msgid "Dark mode!"
+msgstr "ডার্ক মোড!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:66
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:84
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:100
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:128
+msgid "Option to filter by alphabets!"
+msgstr "আলফাবেট দিয়ে ফিল্টার করার অপশন!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:67
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:85
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:101
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:129
+msgid "You can see installed fonts now!"
+msgstr "আপনি এখন ইনস্টলড ফন্ট গুলি দেখতে পাবেন!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:68
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:86
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:102
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:130
+msgid "Swipe back and forth easily!"
+msgstr "সহজে আগে-পিছে সোয়াইপ করুন!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:69
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:87
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:103
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:131
+msgid "Change default installation dialog!"
+msgstr "ডিফল্ট ইনস্টলেশন ডায়ালগ চেঞ্জ করুন!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:70
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:88
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:104
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:132
+msgid "Added a file chooser dialog for downloads!"
+msgstr "ডাউনলোডের জন্য একটি ফাইল নির্বাচন ডায়ালগ যোগ করা হয়েছে!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:94
+msgid "Version 3.10.2"
+msgstr "ভার্সন ৩.১০.২"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:95
+msgid "Updated translations"
+msgstr "ট্রানসলেশন আপডেট করা হয়েছে"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:110
+msgid "Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start"
+msgstr "গুরুত্বপূর্ণ বাগ ফিক্স, যেখানে যদি কোনো ইউজারের .local/share/fonts ফোল্ডার থাকত না, অ্যাপটি স্টার্ট হতো না"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:115
+msgid "Fixes:"
+msgstr "ফিক্স:"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:117
+msgid "Russian translation should now work"
+msgstr "রাশিয়ান অনুবাদ এখন কাজ করবে"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:118
+msgid "All texts are now translated"
+msgstr "সমস্ত টেক্সট এখন অনুবাদিত"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:119
+msgid "Updated Translations"
+msgstr "আপডেটেড অনুবাদ"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:138
+msgid "Fixes Spanish translation"
+msgstr "স্প্যানিশ অনুবাদ ফিক্স হয়েছে"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:143
+msgid "This release brings major improvements:"
+msgstr "এই রিলিজ কিছু বৃহৎ উন্নতি নিয়ে এসেছে:"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:145
+msgid "Better resource usage"
+msgstr "আরো ভালো রিসোর্স ব্যবহার"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:146
+msgid "Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to Ibragimov for ru and tg translations)"
+msgstr "de, es, fr, pt_BR, ru এবং tg ভাষার সাপোর্ট যোগ করা হয়েছে (Ibragimov কে বিশেষ ধন্যবাদ ru ও tg অনুবাদের জন্য)"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:147
+msgid "Added credits dialog!"
+msgstr "ক্রেডিটস ডায়ালগ যোগ করা হয়েছে!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:148
+msgid "New, prettier icon!"
+msgstr "নতুন, আরও সুন্দর আইকন!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:149
+msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
+msgstr "এখন আপনি আপনার ট্র্যাকপ্যাড বা স্ক্রীনে সোয়াইপ ব্যাক করে ফন্টস ক্যাটালগে ফিরে যেতে পারেন!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
+msgid "Version 3.12.1"
+msgstr "ভার্সন ৩.১২.১"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
+msgid "Translation Updates"
+msgstr "অনুবাদের আপডেটগুলি"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
+msgid "Added Dutch translation"
+msgstr "ডাচ অনুবাদ যোগ করা হয়েছে"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
+msgid "Major performance improvements"
+msgstr "বিরাট পারফরম্যান্স উন্নতি"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
+msgid "New experimental color mode"
+msgstr "নতুন পরীক্ষামূলক কালার মোড"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
+msgid "Updated icon for holiday season"
+msgstr "ছুটির সিজনের জন্য আইকন আপডেট করা হয়েছে"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
+msgid "Bug fixes"
+msgstr "বাগ ফিক্স"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
+msgid "Version 3.12.0"
+msgstr "ভার্সন ৩.১২.০"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
+msgid "More touch friendly ui"
+msgstr "আরও টাচ সহায়ক ইউআই"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
+msgid "Updated font links and versions to latest"
+msgstr "ফন্ট লিংক এবং ভার্সন সাম্প্রতিক সংস্করণে আপডেট করা হয়েছে"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:11
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1423
+msgid "Colorful mode"
+msgstr "রঙিন মোড"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:16
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:17
+msgid "Developer window"
+msgstr "ডেভেলপার উইন্ডো"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:36
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:37
+msgid "Copy of webfonts.json containing only installed fonts"
+msgstr "webfonts.json এর কপিতে শুধুমাত্র ইনস্টল হওয়া ফন্টগুলি আছে"
+
+#: src/window.ui:539
+msgid "Welcome to Font Downloader!"
+msgstr "ফন্ট ডাউনলোডারে আপনাকে স্বাগত!"
+
+#: src/window.ui:560
+msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
+msgstr "বাঁদিকের সাইড প্যানেল থেকে একটি ফন্ট সিলেক্ট করুন অথবা টাইপ করুন সার্চ করার জন্য, তারপর ডাউনলোড অথবা ইনস্টল করে নিন!"
+
+#: src/window.ui:574
+msgid "page1"
+msgstr "পেজ 1"
+
+#: src/window.ui:602 src/window.ui:603
+msgid "Insert Emoji"
+msgstr "ইমোজি দিন"
+
+#: src/window.ui:634
+msgid "<b> Developer Window </b>"
+msgstr "<b> ডেভেলপার উইন্ডো </b>"
+
+#: src/window.ui:695 src/window.ui:739
+msgid "page0"
+msgstr "পেজ 0"
+
+#: src/window.ui:725
+msgid "Loading..."
+msgstr "লোডিং..."
+
+#: src/window.ui:771
+msgid "Something went wrong, check your internet connection."
+msgstr "কিছু সমস্যা হয়েছে, আপনার ইন্টারনেট কানেকশন চেক করুন"
+
+#: src/window.ui:786
+msgid "page2"
+msgstr "পেজ 2"
+
+#: src/window.ui:1381
+msgid "<b> Settings </b>"
+msgstr "<b> সেটিংস </b>"
+
+#: src/window.ui:1483
+msgid "Developer Window"
+msgstr "ডেভেলপার উইন্ডো"
+
+#: src/window.py:257
+msgid "Contributers"
+msgstr "অবদানকারী"
+
+#: src/window.py:337
+msgid "Failed to download font. Check your internet connection and folder permissions"
+msgstr "ফন্ট ডাউনলোড হয়নি। ইন্টারনেট কানেকশন ও ফোল্ডার পারমিশন চেক করুন"
+
+#: src/window.py:339
+msgid "Failed to install font. Check your internet connection and folder permissions"
+msgstr "ফন্ট ইনস্টল হয়নি। ইন্টারনেট কানেকশন ও ফোল্ডার পারমিশন চেক করুন"
+
+#: src/window.py:342
+msgid "Font downloaded succesfully!"
+msgstr "ফন্টটি সফলভাবে ডাউনলোড হয়েছে!"
+
+#: src/window.py:344
+msgid "Font installed succesfully!"
+msgstr "ফন্টটি সফলভাবে ইনস্টল হয়েছে!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
+msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
+msgstr "এই প্রজেক্টে ট্রান্সলেটর হিসেবে কন্ট্রিবিউট করতে চান? এইখানে যোগ দিন: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
+msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
+msgstr "সাজেশন ও বাগ ফিক্সের জন্য https://github.com/GustavoPeredo/Font-Downloader/ তে ইস্যু ওপেন করুন অথবা আমাকে gustavomperedo@protonmail.com তে ইমেল করুন"
+
+#: src/font-box.ui:120
+msgid "Installed systemwide"
+msgstr "সিস্টেম ওয়াইড ইনস্টল হয়েছে"
+
+#: src/font-box.ui:160
+msgid "Update available"
+msgstr "আপডেট উপলব্ধ"
+
+#: src/window.ui:439
+msgid "Search..."
+msgstr "সার্চ..."
+
+#: src/window.ui:1436
+msgid "Requires restart"
+msgstr "রিস্টার্ট প্রয়োজন"
+
+#: src/window.ui:1593
+msgid "Reset all settings"
+msgstr "সমস্ত সেটিংস রিসেট করুন"
 
