@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: Font Downloader\n"
-"Language: pl\n"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"X-Generator: POEditor.com"
+"Project-Id-Version: Font Downloader"
+"Language: pl"
 
 #. Polish translation would be something like "Pobieracz Czcionek" but it sounds kind of unnatural / cheap :) I'd argue that sticking with the original app name is preferred. Most Poles are familiar with the word "download", and "font" – although less common – is a corresponding word in Polish as well.
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
@@ -124,21 +124,21 @@ msgid "Bengali"
 msgstr "Bengali"
 
 #: src/window.ui:1009
-msgid "Chinese \n"
+msgid "Chinese "
 "Hong Kong"
-msgstr "Chiński\n"
+msgstr "Chiński"
 "Hong Kong"
 
 #: src/window.ui:1023
-msgid "Chinese\n"
+msgid "Chinese"
 "Simplified"
-msgstr "Chiński\n"
+msgstr "Chiński"
 "Uproszczony"
 
 #: src/window.ui:1037
-msgid "Chinese\n"
+msgid "Chinese"
 "Traditional"
-msgstr "Chiński\n"
+msgstr "Chiński"
 "Tradycyjny"
 
 #: src/window.ui:1051
@@ -146,9 +146,9 @@ msgid "Cyrillic"
 msgstr "Cyrylica"
 
 #: src/window.ui:1064
-msgid "Cyrillic\n"
+msgid "Cyrillic"
 "Extended"
-msgstr "Cyrylica\n"
+msgstr "Cyrylica"
 "Rozszerzony"
 
 #: src/window.ui:1078
@@ -168,9 +168,9 @@ msgid "Latin"
 msgstr "Łacina"
 
 #: src/window.ui:1131
-msgid "Latin\n"
+msgid "Latin"
 "Extended"
-msgstr "Łacina\n"
+msgstr "Łacina"
 "Rozszerzony"
 
 #: src/window.ui:1145
@@ -218,9 +218,9 @@ msgid "Greek"
 msgstr "Grecki"
 
 #: src/window.ui:1290
-msgid "Greek\n"
+msgid "Greek"
 "Extended"
-msgstr "Grecki\n"
+msgstr "Grecki"
 "Rozszerzony"
 
 #: src/window.ui:1304

@@ -4,19 +4,19 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: GNOME Galician translators\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 13:22-0300\n"
-"PO-Revision-Date: 2022-01-03 13:37+0100\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
-"Language: gl\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 3.38.0\n"
-"X-Project-Style: gnome\n"
+"Project-Id-Version: GNOME Galician translators"
+"Report-Msgid-Bugs-To: "
+"POT-Creation-Date: 2021-03-22 13:22-0300"
+"PO-Revision-Date: 2022-01-03 13:37+0100"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>"
+"Language-Team: Proxecto Trasno <proxecto@trasno.gal>"
+"Language: gl"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=2; plural=(n != 1);"
+"X-Generator: Gtranslator 3.38.0"
+"X-Project-Style: gnome"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
@@ -225,26 +225,26 @@ msgstr "Bengali"
 
 #: src/window.ui:1009
 msgid ""
-"Chinese \n"
+"Chinese "
 "Hong Kong"
 msgstr ""
-"Chinés \n"
+"Chinés "
 "Hong Kong"
 
 #: src/window.ui:1023
 msgid ""
-"Chinese\n"
+"Chinese"
 "Simplified"
 msgstr ""
-"Chinés\n"
+"Chinés"
 "Simplificado"
 
 #: src/window.ui:1037
 msgid ""
-"Chinese\n"
+"Chinese"
 "Traditional"
 msgstr ""
-"Chinés\n"
+"Chinés"
 "Traditional"
 
 #: src/window.ui:1051
@@ -253,7 +253,7 @@ msgstr "Cirílico"
 
 #: src/window.ui:1064
 msgid ""
-"Cyrillic\n"
+"Cyrillic"
 "Extended"
 msgstr "Cirílico estendido"
 
@@ -275,10 +275,10 @@ msgstr "Latino"
 
 #: src/window.ui:1131
 msgid ""
-"Latin\n"
+"Latin"
 "Extended"
 msgstr ""
-"Latino\n"
+"Latino"
 "Estendido"
 
 #: src/window.ui:1145
@@ -327,10 +327,10 @@ msgstr "Grego"
 
 #: src/window.ui:1290
 msgid ""
-"Greek\n"
+"Greek"
 "Extended"
 msgstr ""
-"Grego\n"
+"Grego"
 "Estendido"
 
 #: src/window.ui:1304

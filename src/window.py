@@ -256,7 +256,10 @@ class FontdownloaderWindow(Handy.Window):
                        'Mauricemeysel', 'Hemish04082005', 'TA',
                        '小山田 純', 'Efraín Epifanio',
                        "usnotv", "Xemafuentes", "Lumingzh",
-                       ]
+                       "ikdevelop", "Saptarshi Mondal", "Heimen Stoffels",
+                       "Kblaesi", "Mauricemeysel", "Yaron",
+                       "Albano_battistella", "TA", "Eshagh", "mostafadashti",
+                       "drLaba", "Hugo"]
         dialog = Gtk.AboutDialog(transient_for=self, modal=True)
         dialog.props.authors = authors
         dialog.add_credit_section(_("Contributers"), contributers)

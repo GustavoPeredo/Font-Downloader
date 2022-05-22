@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: Font Downloader\n"
-"Language: hr\n"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"X-Generator: POEditor.com"
+"Project-Id-Version: Font Downloader"
+"Language: hr"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
@@ -122,21 +122,21 @@ msgid "Bengali"
 msgstr "Bengalsko"
 
 #: src/window.ui:1009
-msgid "Chinese \n"
+msgid "Chinese "
 "Hong Kong"
-msgstr "Kinesko\n"
+msgstr "Kinesko"
 "Hong Kong"
 
 #: src/window.ui:1023
-msgid "Chinese\n"
+msgid "Chinese"
 "Simplified"
-msgstr "Kinesko\n"
+msgstr "Kinesko"
 "pojednostavljeno"
 
 #: src/window.ui:1037
-msgid "Chinese\n"
+msgid "Chinese"
 "Traditional"
-msgstr "Kinesko\n"
+msgstr "Kinesko"
 "tradicionalno"
 
 #: src/window.ui:1051
@@ -144,9 +144,9 @@ msgid "Cyrillic"
 msgstr "Ćirilica"
 
 #: src/window.ui:1064
-msgid "Cyrillic\n"
+msgid "Cyrillic"
 "Extended"
-msgstr "Ćirilica\n"
+msgstr "Ćirilica"
 "prošireno"
 
 #: src/window.ui:1078
@@ -166,9 +166,9 @@ msgid "Latin"
 msgstr "Latinica"
 
 #: src/window.ui:1131
-msgid "Latin\n"
+msgid "Latin"
 "Extended"
-msgstr "Latinica\n"
+msgstr "Latinica"
 "prošireno"
 
 #: src/window.ui:1145
@@ -216,9 +216,9 @@ msgid "Greek"
 msgstr "Grčko"
 
 #: src/window.ui:1290
-msgid "Greek\n"
+msgid "Greek"
 "Extended"
-msgstr "Grčko\n"
+msgstr "Grčko"
 "prošireno"
 
 #: src/window.ui:1304

@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: Font Downloader\n"
-"Language: bn\n"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"X-Generator: POEditor.com"
+"Project-Id-Version: Font Downloader"
+"Language: bn"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
@@ -150,23 +150,23 @@ msgstr "বাংলা"
 
 #: src/window.ui:1009
 #, fuzzy
-msgid "Chinese \n"
+msgid "Chinese "
 "Hong Kong"
-msgstr "চাইনিজ\n"
+msgstr "চাইনিজ"
 "হংকং"
 
 #: src/window.ui:1023
 #, fuzzy
-msgid "Chinese\n"
+msgid "Chinese"
 "Simplified"
-msgstr "চাইনিজ\n"
+msgstr "চাইনিজ"
 "সরলীকৃত"
 
 #: src/window.ui:1037
 #, fuzzy
-msgid "Chinese\n"
+msgid "Chinese"
 "Traditional"
-msgstr "চাইনিজ\n"
+msgstr "চাইনিজ"
 "প্রথাগত"
 
 #: src/window.ui:1051
@@ -176,9 +176,9 @@ msgstr "সিরিলিক"
 
 #: src/window.ui:1064
 #, fuzzy
-msgid "Cyrillic\n"
+msgid "Cyrillic"
 "Extended"
-msgstr "সিরিলিক\n"
+msgstr "সিরিলিক"
 "সম্প্রসারিত"
 
 #: src/window.ui:1078
@@ -203,9 +203,9 @@ msgstr "ল্যাটিন"
 
 #: src/window.ui:1131
 #, fuzzy
-msgid "Latin\n"
+msgid "Latin"
 "Extended"
-msgstr "ল্যাটিন\n"
+msgstr "ল্যাটিন"
 "সম্প্রসারিত"
 
 #: src/window.ui:1145
@@ -265,9 +265,9 @@ msgstr "গ্রীক"
 
 #: src/window.ui:1290
 #, fuzzy
-msgid "Greek\n"
+msgid "Greek"
 "Extended"
-msgstr "গ্রীক\n"
+msgstr "গ্রীক"
 "সম্প্রসারিত"
 
 #: src/window.ui:1304

@@ -6,16 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 13:22-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: PACKAGE VERSION"
+"Report-Msgid-Bugs-To: "
+"POT-Creation-Date: 2021-03-22 13:22-0300"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>"
+"Language-Team: LANGUAGE <LL@li.org>"
+"Language: "
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=CHARSET"
+"Content-Transfer-Encoding: 8bit"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:4
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
@@ -220,19 +220,19 @@ msgstr ""
 
 #: src/window.ui:1009
 msgid ""
-"Chinese \n"
+"Chinese "
 "Hong Kong"
 msgstr ""
 
 #: src/window.ui:1023
 msgid ""
-"Chinese\n"
+"Chinese"
 "Simplified"
 msgstr ""
 
 #: src/window.ui:1037
 msgid ""
-"Chinese\n"
+"Chinese"
 "Traditional"
 msgstr ""
 
@@ -242,7 +242,7 @@ msgstr ""
 
 #: src/window.ui:1064
 msgid ""
-"Cyrillic\n"
+"Cyrillic"
 "Extended"
 msgstr ""
 
@@ -264,7 +264,7 @@ msgstr ""
 
 #: src/window.ui:1131
 msgid ""
-"Latin\n"
+"Latin"
 "Extended"
 msgstr ""
 
@@ -314,7 +314,7 @@ msgstr ""
 
 #: src/window.ui:1290
 msgid ""
-"Greek\n"
+"Greek"
 "Extended"
 msgstr ""
 
