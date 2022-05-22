@@ -53,14 +53,17 @@ msgstr "Descarregar"
 msgid "Type here your text..."
 msgstr "Digite aqui um texto..."
 
+#. "Um instalador de fonte simples"... A ordem dessas palavras em português, ainda que relativamente livre, muda sutilmente o sentido. Normalmente, se dá preferência a colocar o advérbio depois do substantivo, exceto quando queremos especificar (dar outra nuança) ao sentido.
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
 msgstr "Um simples instalador de fontes escrito em GTK, que instala fontes diretamente do Google Fonts"
 
+#. O mesmo quanto à ordem dos termos.
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
 msgid "A simple GTK font downloader."
 msgstr "Um simples instalador de fontes em GTK"
 
+#. "Esse aplicativo adaptável e simples de usar..."
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
 msgstr "Você já quis alguma vez mudar a fonte de seu terminal, mas não queria passar por todo o processo de procurar, baixar e instalar uma fonte? Essa aplicação simples e adaptativo em GTK permite que você busque e instale fontes diretamente do Google Fonts!"
@@ -117,6 +120,7 @@ msgstr "Qualquer"
 msgid "Arabic"
 msgstr "Arábico"
 
+#. Bengalês
 #: src/window.ui:996
 msgid "Bengali"
 msgstr "Bengalese"
@@ -195,6 +199,7 @@ msgstr "Tamil"
 msgid "Telugu"
 msgstr "Telugu"
 
+#. Tailandês
 #: src/window.ui:1224
 msgid "Thai"
 msgstr "Thai"
@@ -205,7 +210,7 @@ msgstr "Tibetano"
 
 #: src/window.ui:1250
 msgid "Vietnamese"
-msgstr "Vietinamita"
+msgstr "Vietnamita"
 
 #: src/window.ui:1263
 msgid "Devanagari"
@@ -231,12 +236,13 @@ msgstr "Punjabi"
 
 #: src/window.ui:1330
 msgid "Hebrew"
-msgstr "Hebraíco"
+msgstr "Hebraico"
 
 #: src/window.ui:1343
 msgid "Japanese"
 msgstr "Japonês"
 
+#. Opções / Configurações de Arquivo
 #: src/window.ui:1051
 msgid "<b> File Settings </b>"
 msgstr "<b> Preferências de arquivos </b>"
@@ -249,6 +255,7 @@ msgstr "Arquivo de instalação padrão:"
 msgid "Choose directory"
 msgstr "Selecione o diretório"
 
+#. "Aviso: Se não encontrar a pasta em que deseja instalar as fontes, pode ser porque o aplicativo não tem acesso a ela. Para corrigir o problema, instale o Flatseal e dê acesso ao arquivo."
 #: src/window.ui:1571
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
 msgstr "Aviso: Se você não encontrar o arquivo que deseja instalar fontes para, pode ser que seja que essa aplicação não tenha acesso a tal diretório, para corrigir isso, instale o Flatseal e d permissão para essa aplicação para acessar o diretório desejado."
@@ -277,6 +284,7 @@ msgstr "mono-espaçada"
 msgid "handwriting"
 msgstr "manuscrita"
 
+#. Ou "Favor escolher um artigo", por concisão.
 #: src/window.py:632
 msgid "Please choose a folder"
 msgstr "Por favor, escolha um arquivo"
@@ -305,6 +313,7 @@ msgstr "org.gustavoperedo.FontDownloader"
 msgid "Version 3.11.0"
 msgstr "Versão 3.11.0"
 
+#. "Tradução aprimorada do russo"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:77
 msgid "Improved russian translation"
 msgstr "Tradução de russo aprimorada"
@@ -323,6 +332,7 @@ msgstr "Links e versões de fontes atualizadas para as mais recentes"
 msgid "Version 3.0.0"
 msgstr "Versão 3.0.0"
 
+#. "Esta deve ser a última versão de recursos:" para evitar a repetição desnecessária de termos e não atribuir intenção à versão.
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:62
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:81
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:97
@@ -344,6 +354,7 @@ msgstr "Modo escuro!"
 msgid "Option to filter by alphabets!"
 msgstr "Opção de filtrar por alfabetos!"
 
+#. "Agora as fontes instaladas podem ser visualizadas"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:67
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:85
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:101
@@ -358,6 +369,7 @@ msgstr "Você pode ver as fontes instaladas agora!"
 msgid "Swipe back and forth easily!"
 msgstr "Deslize para frente e para trás facilmente!"
 
+#. "Altere a caixa de diálogo da instalação padrão"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:69
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:87
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:103
@@ -365,6 +377,7 @@ msgstr "Deslize para frente e para trás facilmente!"
 msgid "Change default installation dialog!"
 msgstr "Alterar a caixa de diálogo de instalação padrão!"
 
+#. "Adicionada seleção de arquivos para baixar!", por concisão e clareza.
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:70
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:88
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:104
@@ -380,18 +393,23 @@ msgstr "Versão 3.10.2"
 msgid "Updated translations"
 msgstr "Traduções atualizadas"
 
+#. "Correção de erro importante: se a pasta .local/share/fonts não existir, o aplicativo não vai iniciar"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:110
 msgid "Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start"
 msgstr "Correção de bug importante, onde se o usuário não tivesse a pasta .local / share / fonts, o aplicativo não iniciaria"
 
+#. Correções:
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:115
 msgid "Fixes:"
 msgstr "Conserta:"
 
+#. "A tradução do russo deve funcionar agora"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:117
 msgid "Russian translation should now work"
 msgstr "A tradução russa agora deve funcionar"
 
+#. "Os textos foram traduzidos"
+#. "Todos os textos foram traduzidos"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:118
 msgid "All texts are now translated"
 msgstr "Todos os textos estão agora traduzidos"
@@ -400,6 +418,7 @@ msgstr "Todos os textos estão agora traduzidos"
 msgid "Updated Translations"
 msgstr "Traduções atualizadas"
 
+#. "Corrige a tradução para o espanhol"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:138
 msgid "Fixes Spanish translation"
 msgstr "Corrige tradução para espanhol"
@@ -412,6 +431,7 @@ msgstr "Esta versão traz grandes melhorias:"
 msgid "Better resource usage"
 msgstr "Melhor uso de recursos"
 
+#. "... para ru e tg"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:146
 msgid "Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to Ibragimov for ru and tg translations)"
 msgstr "Adicionado suporte a idiomas para de, es, fr, pt_BR, ru e tg (agradecimentos especiais a Ibragimov pelas traduções ru e tg)"
@@ -453,6 +473,7 @@ msgstr "Novo modo experimental colorido"
 msgid "Updated icon for holiday season"
 msgstr "Icone atualizado para as festas de fim de ano"
 
+#. "Correção de erros"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
 msgid "Bug fixes"
@@ -462,10 +483,12 @@ msgstr "Correção de bugs"
 msgid "Version 3.12.0"
 msgstr "Versão 3.12.0"
 
+#. "Interface de toque mais amigável"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
 msgid "More touch friendly ui"
 msgstr "UI mais amigável ao toque"
 
+#. "Linques e versões atualizadas"
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
 msgid "Updated font links and versions to latest"
 msgstr "Atualizado linques e versões de fontes"
@@ -513,6 +536,7 @@ msgstr "page0"
 msgid "Loading..."
 msgstr "Carregando..."
 
+#. Algo deu errado. Cheque sua conexão.
 #: src/window.ui:771
 msgid "Something went wrong, check your internet connection."
 msgstr "Algo deu errado, veja sua conexão com a internet."
