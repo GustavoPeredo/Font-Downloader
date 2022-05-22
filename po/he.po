@@ -1,1 +1,579 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Font Downloader\n"
+"Language: he\n"
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:4
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
+#: src/window.ui:320 src/window.py:262
+msgid "Font Downloader"
+msgstr "מושך הגופנים"
+
+#: src/window.ui:100
+msgid "Font type"
+msgstr "סוג הגופן"
+
+#: src/window.ui:118
+msgid "All"
+msgstr "הכול"
+
+#: src/window.ui:133
+msgid "Serif"
+msgstr "מעוטר"
+
+#: src/window.ui:148
+msgid "Sans Serif"
+msgstr "ללא עיטורים"
+
+#: src/window.ui:163
+msgid "Display"
+msgstr "תצוגה"
+
+#: src/window.ui:178
+msgid "Handwriting"
+msgstr "כתב־יד"
+
+#: src/window.ui:193
+msgid "Monospace"
+msgstr "רוחב אחיד"
+
+#: src/window.ui:244
+msgid "About Font Downloader"
+msgstr "על מושך הגופנים"
+
+#: src/window.ui:439 src/window.py:384
+msgid "Download"
+msgstr "הורדה"
+
+#: src/window.ui:604
+msgid "Type here your text..."
+msgstr "נא להקליד כאן טקסט…"
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
+msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
+msgstr "מושך גופנים פשוט שנכתב ב־GTK ומתקין גופנים מ־Google Fonts ישירות."
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
+msgid "A simple GTK font downloader."
+msgstr "מושך גופנים פשוט ב־GTK."
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
+msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
+msgstr "אי פעם עניין אותך להחליף את גופן המסוף שלך אבל כל תהליך החיפוש ההורדה וההתקנה של הגופן לא קרץ לך? יישום ה־GTK הפשוט והמסתגל הזה מאפשר לך לחפש ולהתקין גופנים ישירות מאתר Google Fonts!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:179
+msgid "Gustavo Peredo"
+msgstr "גוסטבו פרדו"
+
+#: src/window.ui:378
+msgid "Install"
+msgstr "התקנה"
+
+#: src/window.py:258
+msgid "Translators"
+msgstr "מתרגמים"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:6
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:7
+msgid "Dark mode"
+msgstr "מצב כהה"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:21
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:22
+msgid "Any alphabet"
+msgstr "כל סוג כתב שהוא"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:26
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:27
+msgid "Default installation directory"
+msgstr "תיקיית ההתקנה כברירת מחדל"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:31
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:32
+msgid "Which alphabets aren't filtered"
+msgstr "אילו סוגי כתב לא מסוננים"
+
+#: src/window.ui:231 src/window.ui:885
+msgid "Settings"
+msgstr "הגדרות"
+
+#: src/window.ui:888
+msgid "Close"
+msgstr "סגירה"
+
+#: src/window.ui:936
+msgid "<b> Alphabets </b>"
+msgstr "<b> סוגי כתב </b>"
+
+#: src/window.ui:947
+msgid "Any"
+msgstr "כלשהו"
+
+#: src/window.ui:982
+msgid "Arabic"
+msgstr "ערבי"
+
+#: src/window.ui:996
+msgid "Bengali"
+msgstr "בנגלי"
+
+#: src/window.ui:1009
+msgid "Chinese \n"
+"Hong Kong"
+msgstr "סיני\n"
+"הונג קונג"
+
+#: src/window.ui:1023
+msgid "Chinese\n"
+"Simplified"
+msgstr "סיני\n"
+"מפושט"
+
+#: src/window.ui:1037
+msgid "Chinese\n"
+"Traditional"
+msgstr "סיני\n"
+"מסורתי"
+
+#: src/window.ui:1051
+msgid "Cyrillic"
+msgstr "קירילי"
+
+#: src/window.ui:1064
+msgid "Cyrillic\n"
+"Extended"
+msgstr "קירילי\n"
+"מורחב"
+
+#: src/window.ui:1078
+msgid "Kannada"
+msgstr "קאנדה"
+
+#: src/window.ui:1092
+msgid "Khmer"
+msgstr "חמרי"
+
+#: src/window.ui:1105
+msgid "Korean"
+msgstr "קוריאני"
+
+#: src/window.ui:1118
+msgid "Latin"
+msgstr "לטיני"
+
+#: src/window.ui:1131
+msgid "Latin\n"
+"Extended"
+msgstr "לטיני\n"
+"מורחב"
+
+#: src/window.ui:1145
+msgid "Malayalam"
+msgstr "מלאיאלאם"
+
+#: src/window.ui:1158
+msgid "Myanmar"
+msgstr "מיאנמרי"
+
+#: src/window.ui:1171
+msgid "Oriya"
+msgstr "אורייה"
+
+#: src/window.ui:1185
+msgid "Sinhala"
+msgstr "סינהלה"
+
+#: src/window.ui:1198
+msgid "Tamil"
+msgstr "טמילי"
+
+#: src/window.ui:1211
+msgid "Telugu"
+msgstr "טלוגו"
+
+#: src/window.ui:1224
+msgid "Thai"
+msgstr "תאי"
+
+#: src/window.ui:1237
+msgid "Tibetan"
+msgstr "טיבטי"
+
+#: src/window.ui:1250
+msgid "Vietnamese"
+msgstr "וייטנאמי"
+
+#: src/window.ui:1263
+msgid "Devanagari"
+msgstr "דוונאגרי"
+
+#: src/window.ui:1277
+msgid "Greek"
+msgstr "יווני"
+
+#: src/window.ui:1290
+msgid "Greek\n"
+"Extended"
+msgstr "יווני\n"
+"מורחב"
+
+#: src/window.ui:1304
+msgid "Gujarati"
+msgstr "גוג׳ראטי"
+
+#: src/window.ui:1317
+msgid "Gurmukhi"
+msgstr "גורמוקי"
+
+#: src/window.ui:1330
+msgid "Hebrew"
+msgstr "עברי"
+
+#: src/window.ui:1343
+msgid "Japanese"
+msgstr "יפני"
+
+#: src/window.ui:1051
+msgid "<b> File Settings </b>"
+msgstr "<b> הגדרות קבצים </b>"
+
+#: src/window.ui:1518
+msgid "Default font installation folder:"
+msgstr "תיקיית התקנת הגופנים כברירת מחדל:"
+
+#: src/window.ui:1528
+msgid "Choose directory"
+msgstr "בחירת תיקייה"
+
+#: src/window.ui:1571
+msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
+msgstr "אזהרה: אם לא הצלחת למצוא את התיקייה אליה ברצונך להתקין גופנים, זה כנראה כיוון שליישום אין גישה אליה, כדי לתקן זאת יש להתקין את Flatseal ולאפשר ליישום לגשת לתיקייה הזאת."
+
+#: src/window.ui:1565
+msgid "Reset"
+msgstr "איפוס"
+
+#: src/window.py:60 src/window.py:526
+msgid "sans-serif"
+msgstr "ללא עיטורים"
+
+#: src/window.py:60 src/window.py:528
+msgid "serif"
+msgstr "מעוטר"
+
+#: src/window.py:60 src/window.py:528
+msgid "display"
+msgstr "תצוגה"
+
+#: src/window.py:60 src/window.py:529
+msgid "monospaced"
+msgstr "רוחב אחיד"
+
+#: src/window.py:60 src/window.py:530
+msgid "handwriting"
+msgstr "כתב־יד"
+
+#: src/window.py:632
+msgid "Please choose a folder"
+msgstr "נא לבחור תיקייה"
+
+#: src/font-box.ui:18
+msgid "family"
+msgstr "משפחה"
+
+#: src/font-box.ui:38
+msgid "category"
+msgstr "קטגוריה"
+
+#: src/font-box.ui:81
+msgid "Installed"
+msgstr "מותקן"
+
+#: src/window.py:234
+msgid "Default"
+msgstr "ברירת מחדל"
+
+#: data/org.gustavoperedo.FontDownloader.desktop.in:8
+msgid "org.gustavoperedo.FontDownloader"
+msgstr "org.gustavoperedo.FontDownloader"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:76
+msgid "Version 3.11.0"
+msgstr "גרסה 3.11.0"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:77
+msgid "Improved russian translation"
+msgstr "שיפורים לתרגום הרוסי"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:78
+msgid "Fixed portguese application name"
+msgstr "שם היישום בפורטוגלית תוקן"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:79
+msgid "Updated font lins and versions to latest"
+msgstr "קישורי הגופנים והגרסאות עודכנו"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:61
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:80
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:96
+msgid "Version 3.0.0"
+msgstr "גרסה 3.0.0"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:62
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:81
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:97
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:125
+msgid "This release aims to be the last feature release:"
+msgstr "מהדורה זו מיועדת להיות האחרונה בסדרת היכולות הזאת:"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:65
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:83
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:99
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:127
+msgid "Dark mode!"
+msgstr "מצב כהה!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:66
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:84
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:100
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:128
+msgid "Option to filter by alphabets!"
+msgstr "אפשרות לסדר לפי סוגי כתב!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:67
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:85
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:101
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:129
+msgid "You can see installed fonts now!"
+msgstr "כעת ניתן לראות את הגופנים המותקנים!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:68
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:86
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:102
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:130
+msgid "Swipe back and forth easily!"
+msgstr "החלקה אחורה וקדימה בקלות!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:69
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:87
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:103
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:131
+msgid "Change default installation dialog!"
+msgstr "חלונית להחלפת התקנת ברירת המחדל!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:70
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:88
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:104
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:132
+msgid "Added a file chooser dialog for downloads!"
+msgstr "נוספה חלונית בחירת קבצים להורדות!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:94
+msgid "Version 3.10.2"
+msgstr "גרסה 3.10.2"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:95
+msgid "Updated translations"
+msgstr "התרגומים עודכנו"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:110
+msgid "Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start"
+msgstr "תוקנה תקלה חשובה, אם למשתמש לא הייתה תיקיית ‎.local/share/fonts, היישום לא נפתח"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:115
+msgid "Fixes:"
+msgstr "תיקונים:"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:117
+msgid "Russian translation should now work"
+msgstr "התרגום לרוסית אמור לעבוד מעכשיו"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:118
+msgid "All texts are now translated"
+msgstr "כל הטקסים מתורגמים מעכשיו"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:119
+msgid "Updated Translations"
+msgstr "התרגומים עודכנו"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:138
+msgid "Fixes Spanish translation"
+msgstr "התרגום לספרדית תוקן"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:143
+msgid "This release brings major improvements:"
+msgstr "המהדורה הזאת מביאה שיפורים משמעותיים:"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:145
+msgid "Better resource usage"
+msgstr "ניצול משאבים משופר"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:146
+msgid "Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to Ibragimov for ru and tg translations)"
+msgstr "נוספה תמיכה בשפות: de,‏ es,‏ fr,‏ pt_BR,‏ ru ו־tg (תודה מיוחדת ל־Ibragimov על התרגומים ל־ru ול־tg)"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:147
+msgid "Added credits dialog!"
+msgstr "נוספה חלונית תודות!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:148
+msgid "New, prettier icon!"
+msgstr "סמל חדש ויפה יותר!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:149
+msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
+msgstr "מעתה ניתן להחליק בחזרה לקטלוג הגופנים עם משטח המגע או מסך המגע שלך!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
+msgid "Version 3.12.1"
+msgstr "גרסה 3.12.1"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
+msgid "Translation Updates"
+msgstr "תרגומים עודכנו"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
+msgid "Added Dutch translation"
+msgstr "נוסף תרגום להולנדית"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
+msgid "Major performance improvements"
+msgstr "שיפורי ביצועים מהותיים"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
+msgid "New experimental color mode"
+msgstr "מצב צבע ניסיוני חדש"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
+msgid "Updated icon for holiday season"
+msgstr "הסמל עודכן לרגל עונת החגים"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
+msgid "Bug fixes"
+msgstr "תוקנו תקלות"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:55
+msgid "Version 3.12.0"
+msgstr "גרסה 3.12.0"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:58
+msgid "More touch friendly ui"
+msgstr "מנשק המשתמש יותר ידידותי למגע"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:60
+msgid "Updated font links and versions to latest"
+msgstr "הקישורים והגרסות של הגופנים עודכנו"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:11
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:12 src/window.ui:1423
+msgid "Colorful mode"
+msgstr "מצב צבעוני"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:16
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:17
+msgid "Developer window"
+msgstr "חלון למפתחים"
+
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:36
+#: data/org.gustavoperedo.FontDownloader.gschema.xml:37
+msgid "Copy of webfonts.json containing only installed fonts"
+msgstr "עותק של webfonts.json המכיל רק את הגופנים המותקנים"
+
+#: src/window.ui:539
+msgid "Welcome to Font Downloader!"
+msgstr "ברוך בואך למושך הגופנים!"
+
+#: src/window.ui:560
+msgid "Select a font from the left side panel or start typing to search for a font, then download or install it!"
+msgstr "נא לבחור גופן מהלוח שמימין או להתחיל להקליד כדי לחפש גופן, לאחר מכן ניתן להוריד או להתקין אותו!"
+
+#: src/window.ui:574
+msgid "page1"
+msgstr "עמוד1"
+
+#: src/window.ui:602 src/window.ui:603
+msgid "Insert Emoji"
+msgstr "הוספת אמוג׳י"
+
+#: src/window.ui:634
+msgid "<b> Developer Window </b>"
+msgstr "<b> חלון למפתחים </b>"
+
+#: src/window.ui:695 src/window.ui:739
+msgid "page0"
+msgstr "עמוד0"
+
+#: src/window.ui:725
+msgid "Loading..."
+msgstr "בטעינה…"
+
+#: src/window.ui:771
+msgid "Something went wrong, check your internet connection."
+msgstr "משהו השתבש, אולי תקלה בחיבור לאינטרנט."
+
+#: src/window.ui:786
+msgid "page2"
+msgstr "עמוד2"
+
+#: src/window.ui:1381
+msgid "<b> Settings </b>"
+msgstr "<b> הגדרות </b>"
+
+#: src/window.ui:1483
+msgid "Developer Window"
+msgstr "חלון למפתחים"
+
+#: src/window.py:257
+msgid "Contributers"
+msgstr "מתנדבים"
+
+#: src/window.py:337
+msgid "Failed to download font. Check your internet connection and folder permissions"
+msgstr "הורדת הגופן נכשלה. נא לבדוק את החיבור לאינטרנט ואת ההרשאות על התיקייה"
+
+#: src/window.py:339
+msgid "Failed to install font. Check your internet connection and folder permissions"
+msgstr "התקנת הגופן נכשלה. נא לבדוק את החיבור לאינטרנט ואת ההרשאות על התיקייה"
+
+#: src/window.py:342
+msgid "Font downloaded succesfully!"
+msgstr "הגופן התקבל בהצלחה!"
+
+#: src/window.py:344
+msgid "Font installed succesfully!"
+msgstr "הגופן הותקן בהצלחה!"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
+msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
+msgstr "מעניין אותך להתנדב למיזם כדי לסייע בתרגום? אפשר להצטרף למיזם שלי כאן: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
+
+#: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
+msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
+msgstr "להצעות ותיקוני תקלות אפשר לפתוח בקשה תחת https://github.com/GustavoPeredo/Font-Downloader/ או לכתוב לכתובת הדוא״ל שלי gustavomperedo@protonmail.com (באנגלית)."
+
+#: src/font-box.ui:120
+msgid "Installed systemwide"
+msgstr "מותקן לכלל המערכת"
+
+#: src/font-box.ui:160
+msgid "Update available"
+msgstr "יש עדכון"
+
+#: src/window.ui:439
+msgid "Search..."
+msgstr "חיפוש…"
+
+#: src/window.ui:1436
+msgid "Requires restart"
+msgstr "דורש הפעלה מחדש"
+
+#: src/window.ui:1593
+msgid "Reset all settings"
+msgstr "איפוס כל ההגדרות"
 
