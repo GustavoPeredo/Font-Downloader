@@ -11,11 +11,11 @@ msgstr ""
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:6 src/window.ui:298
 #: src/window.ui:320 src/window.py:262
 msgid "Font Downloader"
-msgstr "Pengunduh Font"
+msgstr "Pengunduh Fon"
 
 #: src/window.ui:100
 msgid "Font type"
-msgstr "Jenis font"
+msgstr "Jenis fon"
 
 #: src/window.ui:118
 msgid "All"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/window.ui:178
 msgid "Handwriting"
-msgstr ""
+msgstr "Tulisan tangan"
 
 #: src/window.ui:193
 msgid "Monospace"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: src/window.ui:244
 msgid "About Font Downloader"
-msgstr "Tentang Pengunduh Font"
+msgstr "Tentang Pengunduh Fon"
 
 #: src/window.ui:439 src/window.py:384
 msgid "Download"
@@ -55,15 +55,15 @@ msgstr "Ketik teks Anda disini..."
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."
-msgstr ""
+msgstr "Pengunduh fon sederhana yang ditulis dalam GTK yang memasang fon langsung dari Google Fonts."
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:7
 msgid "A simple GTK font downloader."
-msgstr "Pengunduh font GTK sederhana"
+msgstr "Pengunduh fon GTK sederhana"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:9
 msgid "Have you ever wanted to change the font in your terminal, but didn't want to go through the entire process of searching, downloading and installing a font? This simple to use and adaptive GTK application allows you to search and install fonts directly from Google Fonts' website!"
-msgstr ""
+msgstr "Ingin mengubah font terminal Anda, namun Anda tidak mau melakukan proses pencarian, pengunduhan dan pemasangan fon sendiri? Aplikasi GTK yang sederhana dan adaptif ini memungkinkan Anda untuk mencari dan memasang langsung dari situs web Google Fonts!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:179
 msgid "Gustavo Peredo"
@@ -119,22 +119,25 @@ msgstr "Arab"
 
 #: src/window.ui:996
 msgid "Bengali"
-msgstr ""
+msgstr "Benggala"
 
 #: src/window.ui:1009
 msgid "Chinese \n"
 "Hong Kong"
-msgstr ""
+msgstr "Cina\n"
+"Hong Kong"
 
 #: src/window.ui:1023
 msgid "Chinese\n"
 "Simplified"
-msgstr ""
+msgstr "Cina\n"
+"Sederhana"
 
 #: src/window.ui:1037
 msgid "Chinese\n"
 "Traditional"
-msgstr ""
+msgstr "Cina\n"
+"Tradisional"
 
 #: src/window.ui:1051
 msgid "Cyrillic"
@@ -172,7 +175,7 @@ msgstr ""
 
 #: src/window.ui:1158
 msgid "Myanmar"
-msgstr ""
+msgstr "Myanmar"
 
 #: src/window.ui:1171
 msgid "Oriya"
@@ -184,7 +187,7 @@ msgstr ""
 
 #: src/window.ui:1198
 msgid "Tamil"
-msgstr ""
+msgstr "Tamil"
 
 #: src/window.ui:1211
 msgid "Telugu"
@@ -192,23 +195,23 @@ msgstr ""
 
 #: src/window.ui:1224
 msgid "Thai"
-msgstr ""
+msgstr "Thailand"
 
 #: src/window.ui:1237
 msgid "Tibetan"
-msgstr ""
+msgstr "Tibet"
 
 #: src/window.ui:1250
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnam"
 
 #: src/window.ui:1263
 msgid "Devanagari"
-msgstr ""
+msgstr "Devanagari"
 
 #: src/window.ui:1277
 msgid "Greek"
-msgstr ""
+msgstr "Yunani"
 
 #: src/window.ui:1290
 msgid "Greek\n"
@@ -217,7 +220,7 @@ msgstr ""
 
 #: src/window.ui:1304
 msgid "Gujarati"
-msgstr ""
+msgstr "Gujarat"
 
 #: src/window.ui:1317
 msgid "Gurmukhi"
@@ -237,7 +240,7 @@ msgstr ""
 
 #: src/window.ui:1518
 msgid "Default font installation folder:"
-msgstr ""
+msgstr "Folder pemasangan font bawaan:"
 
 #: src/window.ui:1528
 msgid "Choose directory"
@@ -245,7 +248,7 @@ msgstr "Pilih direktori"
 
 #: src/window.ui:1571
 msgid "Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder."
-msgstr ""
+msgstr "Peringatan: Jika Anda tidak menemukan folder yang ingin digunakan untuk memasang fon, itu mungkin karena aplikasi ini tidak memiliki izin untuk mengaksesnya, untuk memperbaiki ini, pasang Flatseal dan berikan aplikasi ini izin untuk mengakses folder."
 
 #: src/window.ui:1565
 msgid "Reset"
@@ -269,7 +272,7 @@ msgstr ""
 
 #: src/window.py:60 src/window.py:530
 msgid "handwriting"
-msgstr ""
+msgstr "tulisan tangan"
 
 #: src/window.py:632
 msgid "Please choose a folder"
@@ -343,7 +346,7 @@ msgstr ""
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:101
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:129
 msgid "You can see installed fonts now!"
-msgstr "Anda dapat melihat font yang terpasang sekarang!"
+msgstr "Anda dapat melihat fon yang terpasang sekarang!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:68
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:86
@@ -376,7 +379,7 @@ msgstr "Memperbarui terjemahan"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:110
 msgid "Important bug fix, where if user didn't have .local/share/fonts folder, the app wouldn't start"
-msgstr ""
+msgstr "Perbaikan bug penting, yang di mana pengguna tidak memiliki folder .local/share/fonts, aplikasi tidak akan berjalan"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:115
 msgid "Fixes:"
@@ -400,23 +403,23 @@ msgstr "Memperbaiki Terjemahan Bahasa Spanyol"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:143
 msgid "This release brings major improvements:"
-msgstr ""
+msgstr "Peluncuran ini membawa peningkatan besar:"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:145
 msgid "Better resource usage"
-msgstr ""
+msgstr "Penggunaan daya lebih baik"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:146
 msgid "Added language support for de, es, fr, pt_BR, ru and tg (Special thanks to Ibragimov for ru and tg translations)"
-msgstr ""
+msgstr "Menambahkan dukungan bahasa untuk de, es, fr, pt_BR, ru dan tg (Terima kasih istimewa untuk Ibragimov untuk terjemahan ru dan tg)"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:147
 msgid "Added credits dialog!"
-msgstr ""
+msgstr "Menambahkan dialog kredit!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:148
 msgid "New, prettier icon!"
-msgstr ""
+msgstr "Ikon baru yang lebih indah!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:149
 msgid "You can now swipe back to fonts catalog with you trackpad or screen!"
@@ -424,20 +427,20 @@ msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:42
 msgid "Version 3.12.1"
-msgstr ""
+msgstr "Versi 3.12.1"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:44
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:57
 msgid "Translation Updates"
-msgstr ""
+msgstr "Pembaruan Terjemahan"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:45
 msgid "Added Dutch translation"
-msgstr ""
+msgstr "Menambahkan terjemahan bahasa Belanda"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:46
 msgid "Major performance improvements"
-msgstr ""
+msgstr "Peningkatan besar performa"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:47
 msgid "New experimental color mode"
@@ -445,7 +448,7 @@ msgstr ""
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:48
 msgid "Updated icon for holiday season"
-msgstr ""
+msgstr "Memperbarui ikon untuk musim liburan"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:49
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:59
@@ -509,7 +512,7 @@ msgstr "Memuat..."
 
 #: src/window.ui:771
 msgid "Something went wrong, check your internet connection."
-msgstr ""
+msgstr "Terjadi kesalahan, periksa koneksi internet Anda."
 
 #: src/window.ui:786
 msgid "page2"
@@ -545,7 +548,7 @@ msgstr "Font berhasil dipasang!"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:10
 msgid "Want to contribute to the project as a translator? Join my project here: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
-msgstr ""
+msgstr "Ingin berkontribusi ke proyek ini sebagai penerjemah? Bergabung pada proyek saya di sini: https://poeditor.com/join/project?hash=hfnXv8Iw4o"
 
 #: data/org.gustavoperedo.FontDownloader.appdata.xml.in:11
 msgid "For suggestions and bug fixes open an issue at https://github.com/GustavoPeredo/Font-Downloader/ or e-mail me at gustavomperedo@protonmail.com."
@@ -565,7 +568,7 @@ msgstr "Cari..."
 
 #: src/window.ui:1436
 msgid "Requires restart"
-msgstr ""
+msgstr "Mulai ulang dibutuhkan"
 
 #: src/window.ui:1593
 msgid "Reset all settings"
