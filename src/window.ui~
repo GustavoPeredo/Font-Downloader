@@ -601,7 +601,7 @@
                                 <property name="secondary-icon-name">face-smile-symbolic</property>
                                 <property name="secondary-icon-tooltip-text" translatable="yes">Insert Emoji</property>
                                 <property name="secondary-icon-tooltip-markup" translatable="yes">Insert Emoji</property>
-                                <property name="placeholder-text" translatable="yes">Type here your text...</property>
+                                <property name="placeholder-text" translatable="yes">Type your text here...</property>
                                 <property name="show-emoji-icon">True</property>
                               </object>
                               <packing>

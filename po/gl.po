@@ -180,7 +180,7 @@ msgid "Insert Emoji"
 msgstr "Inserir emoticona"
 
 #: src/window.ui:604
-msgid "Type here your text..."
+msgid "Type your text here..."
 msgstr "Escriba aquí o seu texto..."
 
 #: src/window.ui:634

@@ -50,7 +50,7 @@ msgid "Download"
 msgstr "Stáhnout"
 
 #: src/window.ui:604
-msgid "Type here your text..."
+msgid "Type your text here..."
 msgstr "Napište sem svůj text..."
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8

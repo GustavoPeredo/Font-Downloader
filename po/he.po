@@ -50,7 +50,7 @@ msgid "Download"
 msgstr "הורדה"
 
 #: src/window.ui:604
-msgid "Type here your text..."
+msgid "Type your text here..."
 msgstr "נא להקליד כאן טקסט…"
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8

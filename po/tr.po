@@ -56,7 +56,7 @@ msgid "Download"
 msgstr "İndir"
 
 #: src/window.ui:605
-msgid "Type here your text..."
+msgid "Type your text here..."
 msgstr "Metin türünü buraya yazın..."
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:9

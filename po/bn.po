@@ -61,7 +61,7 @@ msgstr "ডাউনলোড"
 
 #: src/window.ui:604
 #, fuzzy
-msgid "Type here your text..."
+msgid "Type your text here..."
 msgstr "আপনার টেক্সট এখানে টাইপ করুন..."
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8

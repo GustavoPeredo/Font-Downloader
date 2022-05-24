@@ -50,7 +50,7 @@ msgid "Download"
 msgstr "Descarregar"
 
 #: src/window.ui:604
-msgid "Type here your text..."
+msgid "Type your text here..."
 msgstr "Digite aqui um texto..."
 
 #. "Um instalador de fonte simples"... A ordem dessas palavras em português, ainda que relativamente livre, muda sutilmente o sentido. Normalmente, se dá preferência a colocar o advérbio depois do substantivo, exceto quando queremos especificar (dar outra nuança) ao sentido.
