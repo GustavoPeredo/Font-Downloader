@@ -50,8 +50,8 @@ msgid "Download"
 msgstr "Download"
 
 #: src/window.ui:605
-msgid "Type here your text..."
-msgstr "Type here your text..."
+msgid "Type your text here..."
+msgstr "Type your text here..."
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:9
 msgid "Simple font downloader written in GTK that installs fonts directly from Google Fonts."

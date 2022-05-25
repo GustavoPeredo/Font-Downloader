@@ -51,7 +51,7 @@ msgid "Download"
 msgstr "Pobierz"
 
 #: src/window.ui:604
-msgid "Type here your text..."
+msgid "Type your text here..."
 msgstr "Wpisz swój tekst..."
 
 #: data/org.gustavoperedo.FontDownloader.desktop.in:8
