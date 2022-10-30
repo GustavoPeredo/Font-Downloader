@@ -14,7 +14,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#Import nescessary libraries and modules
+#Import necessary libraries and modules
 #from gettext import gettext as _
 from gi.repository import Gdk, Gio, Gtk, GLib, Handy, GObject, WebKit2, Pango
 from os import path, makedirs, listdir, environ
@@ -142,7 +142,7 @@ class FontdownloaderWindow(Handy.Window):
     style_textbox = Gtk.Template.Child()
     text_buffer = Gtk.Template.Child()
 
-    #On initalization do:
+    #On initialization do:
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         #Creates temporary variables for our window
@@ -247,7 +247,7 @@ class FontdownloaderWindow(Handy.Window):
     #About dialog, courtesy of GeorgesStavracas
     def on_about(self, *args, **kwargs):
         authors = ['Gustavo Machado Peredo']
-        contributers = ['Georges Basile Stavracas Neto',
+        contributors = ['Georges Basile Stavracas Neto',
                         'Martin Abente Lahaye', 'Manuel Quiñones']
         translators = ['Gustavo Machado Peredo', 'Victor Ibragimov',
                        'Manuel Quiñones', 'Heimen Stoffels', 'Jiri Grönroos',
@@ -262,7 +262,7 @@ class FontdownloaderWindow(Handy.Window):
                        "drLaba", "Hugo", "nickavem"]
         dialog = Gtk.AboutDialog(transient_for=self, modal=True)
         dialog.props.authors = authors
-        dialog.add_credit_section(_("Contributers"), contributers)
+        dialog.add_credit_section(_("Contributors"), contributors)
         dialog.add_credit_section(_("Translators"), translators)
         dialog.props.copyright = 'Copyright \xa9 2021 Gustavo Peredo'
         dialog.props.license_type = Gtk.License.GPL_3_0
@@ -347,9 +347,9 @@ class FontdownloaderWindow(Handy.Window):
                     self.notification_label.set_label(_("Failed to install font. Check your internet connection and folder permissions"))
             else:
                 if is_download:
-                    self.notification_label.set_label(_("Font downloaded succesfully!"))
+                    self.notification_label.set_label(_("Font downloaded successfully!"))
                 else:
-                    self.notification_label.set_label(_("Font installed succesfully!"))
+                    self.notification_label.set_label(_("Font installed successfully!"))
                     if data['family'] in str(self.jsonOfInstalledFonts['items']):
                         for i in range(len(self.jsonOfInstalledFonts['items'])):
                             if (self.jsonOfInstalledFonts['items'][i]['family'] == data['family']):
@@ -388,9 +388,9 @@ class FontdownloaderWindow(Handy.Window):
                     self.notification_label.set_label(_("Failed to install font. Check your internet connection and folder permissions"))
             else:
                 if is_download:
-                    self.notification_label.set_label(_("Font downloaded succesfully!"))
+                    self.notification_label.set_label(_("Font downloaded successfully!"))
                 else:
-                    self.notification_label.set_label(_("Font installed succesfully!"))
+                    self.notification_label.set_label(_("Font installed successfully!"))
                     if data['family'] in str(self.jsonOfInstalledFonts['items']):
                         for i in range(len(self.jsonOfInstalledFonts['items'])):
                             if (self.jsonOfInstalledFonts['items'][i]['family'] == data['family']):
@@ -492,7 +492,7 @@ class FontdownloaderWindow(Handy.Window):
         for i in range(len(self.fonts_list)):
             self.fonts_list.remove(self.fonts_list.get_row_at_index(0))
 
-        #Add them if seen nescessary (this is faster than filtering them :P)
+        #Add them if seen necessary (this is faster than filtering them :P)
         for i in range(len(webfontsData['items'])):
             if webfontsData['items'][i]['category'] in filtered:
                 if searchBarText in webfontsData['items'][i]['family'].lower():
