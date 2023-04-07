@@ -41,8 +41,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/libhandy/1.0/libhandy-1.0.0.tar.xz",
-                    "sha256" : "a9398582f47b7d729205d6eac0c068fef35aaf249fdd57eea3724f8518d26699"
+                    "url" : "https://download.gnome.org/sources/libhandy/1.8/libhandy-1.8.2.tar.xz",
+                    "sha256" : "d11aa2cd3e570ac6d0efdba46d173147c11f45826457e924c05990bb2e0df9ad"
                 }
             ]
         },
@@ -52,10 +52,8 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/GustavoPeredo/Font-Downloader",
-                    "branch" : "release",
-                    "commit" : "bf2154f75edf1cc76078c6a08ec83799f3868fd1"
+                    "type" : "dir",
+                    "path" : "."
                 }
             ]
         }
