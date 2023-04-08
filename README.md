@@ -61,7 +61,7 @@ They are here and need your help! Don't be afraid to open an issue or contribute
 * ~~Show a little check for when a font is already installed~~
 * ~~Add new filters (depending on alphabet, will probably require a redesign of the app)~~
 * ~~Optimize code~~
-* ~~Update to libhandy 1.0 and update glade files acordingly~~
+* ~~Update to libhandy 1.0 and update glade files accordingly~~
 * ~~Find a way to remove the "back_button" without check-resize~~
 * ~~Fix fonts names~~
 * ~~Translate new strings~~
