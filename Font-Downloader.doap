@@ -1,0 +1,26 @@
+
+<Project xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:gnome="http://api.gnome.org/doap-extensions#" xmlns="http://usefulinc.com/ns/doap#">
+  <name xml:lang="en">Font Downloader</name>
+  <shortdesc xml:lang="en">Install fonts from online sources</shortdesc>
+
+  <homepage rdf:resource="https://github.com/GustavoPeredo/Font-Downloader" />
+  <bug-database rdf:resource="https://github.com/GustavoPeredo/Font-Downloader/issues" />
+
+  <programming-language>Python</programming-language>
+  <platform>GTK 3</platform>
+  <platform>Libhandy</platform>
+
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Gustavo Peredo</foaf:name>
+      <foaf:account>
+        <foaf:OnlineAccount>
+          <foaf:accountServiceHomepage rdf:resource="https://github.com"/>
+          <foaf:accountName>GustavoPeredo</foaf:accountName>
+        </foaf:OnlineAccount>
+      </foaf:account>
+    </foaf:Person>
+  </maintainer>
+</Project>
