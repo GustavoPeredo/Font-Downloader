@@ -226,6 +226,7 @@
     <release version="1.0.0" date="2020-09-16"/>
   </releases>
   <url type="homepage">https://github.com/GustavoPeredo/font-downloader</url>
+  <url type="vcs-browser">https://github.com/GustavoPeredo/font-downloader</url>
   <url type="bugtracker">https://github.com/GustavoPeredo/Font-Downloader/issues</url>
   <url type="translate">https://poeditor.com/join/project?hash=hfnXv8Iw4o</url>
   <developer_name>Gustavo Peredo</developer_name>
