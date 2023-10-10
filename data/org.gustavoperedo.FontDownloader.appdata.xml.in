@@ -227,6 +227,7 @@
   </releases>
   <url type="homepage">https://github.com/GustavoPeredo/font-downloader</url>
   <url type="bugtracker">https://github.com/GustavoPeredo/Font-Downloader/issues</url>
+  <url type="vcs-browser">https://github.com/GustavoPeredo/font-downloader</url>
   <url type="translate">https://poeditor.com/join/project?hash=hfnXv8Iw4o</url>
   <developer_name>Gustavo Peredo</developer_name>
   <launchable type="desktop-id">org.gustavoperedo.FontDownloader.desktop</launchable>
