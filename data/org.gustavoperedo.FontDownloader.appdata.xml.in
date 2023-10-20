@@ -231,8 +231,4 @@
   <developer_name>Gustavo Peredo</developer_name>
   <launchable type="desktop-id">org.gustavoperedo.FontDownloader.desktop</launchable>
   <content_rating type="oars-1.1"/>
-  <custom>
-    <value key="Purism::form_factor">workstation</value>
-    <value key="Purism::form_factor">mobile</value>
-  </custom>
 </component>
