@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gustavoperedo.FontDownloader",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44",
+    "runtime-version" : "45",
     "sdk" : "org.gnome.Sdk",
     "command" : "fontdownloader",
     "finish-args" : [
@@ -50,6 +50,7 @@
             "name" : "fontdownloader",
             "builddir" : true,
             "buildsystem" : "meson",
+            "run-tests" : true,
             "sources" : [
                 {
                     "type" : "dir",
