@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.38.2 -->
 <interface>
-  <requires lib="gtk+" version="3.24"/>
-  <requires lib="libhandy" version="2.0"/>
-  <requires lib="webkit2gtk" version="2.28"/>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita-1" version="1.0"/>
+  <requires lib="webkit2gtk" version="6.0"/>
   <object class="GtkPopover" id="hamburger_menu_popover">
-    <property name="can-focus">False</property>
+    <property name="focusable">False</property>
     <child>
       <object class="GtkBox" id="hamburger_menu_box">
         <property name="visible">True</property>
-        <property name="can-focus">False</property>
+        <property name="focusable">False</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
+            <property name="focusable">False</property>
             <property name="halign">center</property>
             <property name="margin-start">12</property>
             <property name="margin-end">12</property>
@@ -24,14 +24,12 @@
             <child>
               <object class="GtkRadioButton" id="light_mode_button">
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="receives-default">False</property>
+                <property name="focusable">True</property>
                 <property name="halign">center</property>
-                <property name="draw-indicator">False</property>
                 <child>
                   <object class="GtkImage">
                     <property name="visible">True</property>
-                    <property name="can-focus">False</property>
+                    <property name="focusable">False</property>
                     <property name="icon-name">emblem-ok-symbolic</property>
                   </object>
                 </child>
@@ -49,15 +47,13 @@
             <child>
               <object class="GtkRadioButton" id="dark_mode_button">
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="receives-default">False</property>
+                <property name="focusable">True</property>
                 <property name="halign">center</property>
-                <property name="draw-indicator">False</property>
                 <property name="group">light_mode_button</property>
                 <child>
                   <object class="GtkImage">
                     <property name="visible">True</property>
-                    <property name="can-focus">False</property>
+                    <property name="focusable">False</property>
                     <property name="icon-name">emblem-ok-symbolic</property>
                   </object>
                 </child>
@@ -82,7 +78,7 @@
         <child>
           <object class="GtkSeparator">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
+            <property name="focusable">False</property>
             <property name="margin-top">6</property>
             <property name="margin-bottom">6</property>
           </object>
@@ -95,7 +91,7 @@
         <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
+            <property name="focusable">False</property>
             <property name="halign">center</property>
             <property name="label" translatable="yes">Font type</property>
             <attributes>
@@ -111,16 +107,14 @@
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
+            <property name="focusable">False</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkCheckButton" id="all_check">
                 <property name="label" translatable="yes">All</property>
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="receives-default">False</property>
+                <property name="focusable">True</property>
                 <property name="active">True</property>
-                <property name="draw-indicator">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -132,10 +126,8 @@
               <object class="GtkCheckButton" id="serif_check">
                 <property name="label" translatable="yes">Serif</property>
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="receives-default">False</property>
+                <property name="focusable">True</property>
                 <property name="active">True</property>
-                <property name="draw-indicator">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -147,10 +139,8 @@
               <object class="GtkCheckButton" id="sans_check">
                 <property name="label" translatable="yes">Sans Serif</property>
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="receives-default">False</property>
+                <property name="focusable">True</property>
                 <property name="active">True</property>
-                <property name="draw-indicator">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -162,10 +152,8 @@
               <object class="GtkCheckButton" id="display_check">
                 <property name="label" translatable="yes">Display</property>
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="receives-default">False</property>
+                <property name="focusable">True</property>
                 <property name="active">True</property>
-                <property name="draw-indicator">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -177,10 +165,8 @@
               <object class="GtkCheckButton" id="handwriting_check">
                 <property name="label" translatable="yes">Handwriting</property>
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="receives-default">False</property>
+                <property name="focusable">True</property>
                 <property name="active">True</property>
-                <property name="draw-indicator">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -192,10 +178,8 @@
               <object class="GtkCheckButton" id="mono_check">
                 <property name="label" translatable="yes">Monospace</property>
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="receives-default">False</property>
+                <property name="focusable">True</property>
                 <property name="active">True</property>
-                <property name="draw-indicator">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -213,7 +197,7 @@
         <child>
           <object class="GtkSeparator">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
+            <property name="focusable">False</property>
             <property name="margin-top">6</property>
             <property name="margin-bottom">6</property>
           </object>
@@ -224,11 +208,10 @@
           </packing>
         </child>
         <child>
-          <object class="GtkModelButton" id="settings_button">
+          <object class="GtkButton" id="settings_button">
             <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="receives-default">False</property>
-            <property name="text" translatable="yes">Settings</property>
+            <property name="focusable">True</property>
+            <property name="label" translatable="yes">Settings</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -237,11 +220,10 @@
           </packing>
         </child>
         <child>
-          <object class="GtkModelButton" id="about_button">
+          <object class="GtkButton" id="about_button">
             <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="receives-default">False</property>
-            <property name="text" translatable="yes">About Font Downloader</property>
+            <property name="focusable">True</property>
+            <property name="label" translatable="yes">About Font Downloader</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -252,95 +234,49 @@
       </object>
     </child>
   </object>
-  <object class="GtkImage" id="image1">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">open-menu-symbolic</property>
-  </object>
-  <object class="GtkImage" id="image2">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">edit-find-symbolic</property>
-  </object>
-  <object class="GtkImage" id="image3">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">go-previous-symbolic</property>
-  </object>
-  <object class="GtkImage" id="image4">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">emblem-ok-symbolic</property>
-  </object>
-  <object class="GtkImage" id="image5">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">emblem-ok-symbolic</property>
-    <style>
-      <class name="color-button"/>
-      <class name="dark-color"/>
-    </style>
-  </object>
-  <object class="GtkImage" id="image6">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">document-open-symbolic</property>
-  </object>
-  <object class="GtkImage" id="image7">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">document-save-symbolic</property>
-  </object>
   <object class="GtkTextBuffer" id="text_buffer"/>
-  <template class="FontdownloaderWindow" parent="HdyWindow">
+  <template class="FontdownloaderWindow" parent="AdwApplicationWindow">
     <property name="name">FontdownloaderWindow</property>
-    <property name="can-focus">False</property>
-    <property name="title" translatable="yes">Font Downloader</property>
+    <property name="focusable">False</property>
     <property name="default-width">960</property>
     <property name="default-height">640</property>
     <property name="icon-name">org.gustavoperedo.FontDownloader</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
-        <property name="can-focus">False</property>
+        <property name="focusable">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="HdyLeaflet" id="header_leaflet">
+          <object class="AdwLeaflet" id="header_leaflet">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
+            <property name="focusable">False</property>
             <property name="hhomogeneous-folded">False</property>
             <property name="vhomogeneous-folded">False</property>
             <property name="visible-child">headerbar1</property>
             <property name="transition-type">slide</property>
             <child>
-              <object class="HdyHeaderBar" id="headerbar1">
+              <object class="AdwHeaderBar" id="headerbar1">
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
+                <property name="focusable">False</property>
                 <property name="hexpand">False</property>
-                <property name="title" translatable="yes">Font Downloader</property>
-                <property name="show-close-button">True</property>
+                <child type="title">
+                  <object class="AdwWindowTitle" id="headerbar1_title">
+                    <property name="title" translatable="yes">Font Downloader</property>
+                  </object>
+                </child>
                 <child>
                   <object class="GtkToggleButton" id="search_button">
                     <property name="visible">True</property>
-                    <property name="can-focus">True</property>
-                    <property name="receives-default">True</property>
-                    <property name="image">image2</property>
+                    <property name="focusable">True</property>
+                    <property name="icon-name">edit-find-symbolic</property>
                   </object>
                 </child>
                 <child>
                   <object class="GtkMenuButton" id="menu_button">
                     <property name="visible">True</property>
-                    <property name="can-focus">True</property>
-                    <property name="focus-on-click">False</property>
-                    <property name="receives-default">True</property>
+                    <property name="focusable">True</property>
                     <property name="popover">hamburger_menu_popover</property>
-                    <child>
-                      <object class="GtkImage">
-                        <property name="visible">True</property>
-                        <property name="can-focus">False</property>
-                        <property name="icon-name">open-menu-symbolic</property>
-                      </object>
-                    </child>
+                    <property name="icon-name">open-menu-symbolic</property>
                     <accelerator key="F10" signal="clicked"/>
                   </object>
                   <packing>
@@ -353,24 +289,23 @@
             <child>
               <object class="GtkSeparator">
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
+                <property name="focusable">False</property>
               </object>
             </child>
             <child>
-              <object class="HdyHeaderBar" id="headerbar2">
+              <object class="AdwHeaderBar" id="headerbar2">
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
+                <property name="focusable">False</property>
                 <property name="hexpand">True</property>
-                <property name="has-subtitle">False</property>
-                <property name="show-close-button">True</property>
+                <child type="title">
+                  <object class="AdwWindowTitle" id="headerbar2_title"/>
+                </child>
                 <child>
                   <object class="GtkButton" id="back_button">
                     <property name="visible">True</property>
                     <property name="sensitive">False</property>
-                    <property name="can-focus">True</property>
-                    <property name="receives-default">True</property>
-                    <property name="image">image3</property>
-                    <property name="always-show-image">True</property>
+                    <property name="focusable">True</property>
+                    <property name="icon-name">go-previous-symbolic</property>
                   </object>
                 </child>
                 <child>
@@ -378,8 +313,7 @@
                     <property name="label" translatable="yes">Install</property>
                     <property name="visible">True</property>
                     <property name="sensitive">False</property>
-                    <property name="can-focus">True</property>
-                    <property name="receives-default">True</property>
+                    <property name="focusable">True</property>
                     <style>
                       <class name="suggested-action"/>
                     </style>
@@ -393,9 +327,8 @@
                   <object class="GtkButton" id="main_download_button">
                     <property name="visible">True</property>
                     <property name="sensitive">False</property>
-                    <property name="can-focus">True</property>
-                    <property name="receives-default">True</property>
-                    <property name="image">image7</property>
+                    <property name="focusable">True</property>
+                    <property name="icon-name">document-save-symbolic</property>
                   </object>
                   <packing>
                     <property name="pack-type">end</property>
@@ -412,9 +345,9 @@
           </packing>
         </child>
         <child>
-          <object class="HdyLeaflet" id="leaflet">
+          <object class="AdwLeaflet" id="leaflet">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
+            <property name="focusable">False</property>
             <property name="hhomogeneous-folded">False</property>
             <property name="vhomogeneous-folded">False</property>
             <property name="visible-child">box1</property>
@@ -422,17 +355,17 @@
             <child>
               <object class="GtkBox" id="box1">
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
+                <property name="focusable">False</property>
                 <property name="hexpand">False</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="HdySearchBar" id="search_bar">
+                  <object class="GtkSearchBar" id="search_bar">
                     <property name="visible">True</property>
-                    <property name="can-focus">False</property>
+                    <property name="focusable">False</property>
                     <child>
                       <object class="GtkSearchEntry" id="search_entry">
                         <property name="visible">True</property>
-                        <property name="can-focus">True</property>
+                        <property name="focusable">True</property>
                         <property name="primary-icon-name">edit-find-symbolic</property>
                         <property name="primary-icon-activatable">False</property>
                         <property name="primary-icon-sensitive">False</property>
@@ -449,16 +382,16 @@
                 <child>
                   <object class="GtkScrolledWindow" id="scroll_window">
                     <property name="visible">True</property>
-                    <property name="can-focus">True</property>
+                    <property name="focusable">True</property>
                     <property name="vexpand">True</property>
                     <child>
                       <object class="GtkViewport">
                         <property name="visible">True</property>
-                        <property name="can-focus">False</property>
+                        <property name="focusable">False</property>
                         <child>
                           <object class="GtkListBox" id="fonts_list">
                             <property name="visible">True</property>
-                            <property name="can-focus">False</property>
+                            <property name="focusable">False</property>
                           </object>
                         </child>
                       </object>
@@ -478,18 +411,18 @@
             <child>
               <object class="GtkSeparator">
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
+                <property name="focusable">False</property>
               </object>
             </child>
             <child>
               <object class="GtkBox" id="box2">
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
+                <property name="focusable">False</property>
                 <property name="hexpand">True</property>
                 <property name="orientation">vertical</property>
                 <child>
                   <object class="GtkProgressBar" id="progress_bar">
-                    <property name="can-focus">False</property>
+                    <property name="focusable">False</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -500,23 +433,23 @@
                 <child>
                   <object class="GtkOverlay">
                     <property name="visible">True</property>
-                    <property name="can-focus">False</property>
+                    <property name="focusable">False</property>
                     <child>
                       <object class="GtkStack" id="preview_stack">
                         <property name="visible">True</property>
-                        <property name="can-focus">False</property>
+                        <property name="focusable">False</property>
                         <property name="transition-type">crossfade</property>
                         <child>
                           <object class="GtkBox">
                             <property name="visible">True</property>
-                            <property name="can-focus">False</property>
+                            <property name="focusable">False</property>
                             <property name="halign">center</property>
                             <property name="valign">center</property>
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkImage">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="margin-bottom">8</property>
@@ -533,7 +466,7 @@
                             <child>
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="label" translatable="yes">Welcome to Font Downloader!</property>
@@ -553,7 +486,7 @@
                             <child>
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="margin-top">12</property>
@@ -577,13 +510,13 @@
                         <child>
                           <object class="GtkBox" id="preview_box">
                             <property name="visible">True</property>
-                            <property name="can-focus">False</property>
+                            <property name="focusable">False</property>
                             <property name="hexpand">True</property>
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="WebKitWebView" type-func="webkit_web_view_get_type" id="font_preview">
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
+                                <property name="focusable">True</property>
                                 <child>
                                   <placeholder/>
                                 </child>
@@ -597,7 +530,7 @@
                             <child>
                               <object class="GtkEntry" id="text_entry">
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
+                                <property name="focusable">True</property>
                                 <property name="secondary-icon-name">face-smile-symbolic</property>
                                 <property name="secondary-icon-tooltip-text" translatable="yes">Insert Emoji</property>
                                 <property name="secondary-icon-tooltip-markup" translatable="yes">Insert Emoji</property>
@@ -612,12 +545,12 @@
                             </child>
                             <child>
                               <object class="GtkBox" id="developer_box">
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="orientation">vertical</property>
                                 <child>
                                   <object class="GtkSeparator">
                                     <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
+                                    <property name="focusable">False</property>
                                     <property name="margin-top">8</property>
                                     <property name="margin-bottom">8</property>
                                   </object>
@@ -630,7 +563,7 @@
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
+                                    <property name="focusable">False</property>
                                     <property name="label" translatable="yes">&lt;b&gt; Developer Window &lt;/b&gt;</property>
                                     <property name="use-markup">True</property>
                                   </object>
@@ -644,23 +577,23 @@
                                   <object class="GtkScrolledWindow">
                                     <property name="height-request">64</property>
                                     <property name="visible">True</property>
-                                    <property name="can-focus">True</property>
+                                    <property name="focusable">True</property>
                                     <property name="margin-start">8</property>
                                     <property name="margin-end">8</property>
                                     <property name="margin-bottom">8</property>
                                     <child>
                                       <object class="GtkViewport">
                                         <property name="visible">True</property>
-                                        <property name="can-focus">False</property>
+                                        <property name="focusable">False</property>
                                         <property name="shadow-type">none</property>
                                         <child>
                                           <object class="GtkBox">
                                             <property name="visible">True</property>
-                                            <property name="can-focus">False</property>
+                                            <property name="focusable">False</property>
                                             <child>
                                               <object class="GtkTextView" id="style_textbox">
                                                 <property name="visible">True</property>
-                                                <property name="can-focus">True</property>
+                                                <property name="focusable">True</property>
                                                 <property name="margin-top">8</property>
                                                 <property name="editable">False</property>
                                                 <property name="buffer">text_buffer</property>
@@ -699,14 +632,14 @@
                         <child>
                           <object class="GtkBox" id="loading_box">
                             <property name="visible">True</property>
-                            <property name="can-focus">False</property>
+                            <property name="focusable">False</property>
                             <property name="halign">center</property>
                             <property name="valign">center</property>
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkSpinner">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="active">True</property>
                               </object>
                               <packing>
@@ -718,7 +651,7 @@
                             <child>
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="margin-top">8</property>
@@ -743,14 +676,14 @@
                         <child>
                           <object class="GtkBox" id="failed_box">
                             <property name="visible">True</property>
-                            <property name="can-focus">False</property>
+                            <property name="focusable">False</property>
                             <property name="halign">center</property>
                             <property name="valign">center</property>
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkImage">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="pixel-size">64</property>
                                 <property name="icon-name">face-sad-symbolic</property>
                                 <property name="icon_size">6</property>
@@ -764,7 +697,7 @@
                             <child>
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="margin-top">8</property>
@@ -795,19 +728,19 @@
                     <child type="overlay">
                       <object class="GtkRevealer" id="revealer">
                         <property name="visible">True</property>
-                        <property name="can-focus">False</property>
+                        <property name="focusable">False</property>
                         <property name="halign">center</property>
                         <property name="valign">start</property>
                         <child>
                           <object class="GtkBox" id="box3">
                             <property name="visible">True</property>
-                            <property name="can-focus">False</property>
+                            <property name="focusable">False</property>
                             <property name="valign">start</property>
                             <property name="spacing">20</property>
                             <child>
                               <object class="GtkLabel" id="notification_label">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="wrap">True</property>
                               </object>
                               <packing>
@@ -819,13 +752,12 @@
                             <child>
                               <object class="GtkButton" id="dismiss_notification">
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
+                                <property name="focusable">True</property>
                                 <property name="relief">none</property>
                                 <child>
                                   <object class="GtkImage" id="image8">
                                     <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
+                                    <property name="focusable">False</property>
                                     <property name="icon-name">window-close-symbolic</property>
                                   </object>
                                 </child>
@@ -865,8 +797,8 @@
       </object>
     </child>
   </template>
-  <object class="HdyWindow" id="SettingsWindow">
-    <property name="can-focus">False</property>
+  <object class="AdwWindow" id="SettingsWindow">
+    <property name="focusable">False</property>
     <property name="modal">True</property>
     <property name="default-width">500</property>
     <property name="default-height">640</property>
@@ -876,19 +808,22 @@
     <child>
       <object class="GtkBox" id="box4">
         <property name="visible">True</property>
-        <property name="can-focus">False</property>
+        <property name="focusable">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="HdyHeaderBar" id="settings_headerbar">
+          <object class="AdwHeaderBar" id="settings_headerbar">
             <property name="visible">True</property>
-            <property name="can-focus">False</property>
-            <property name="title" translatable="yes">Settings</property>
+            <property name="focusable">False</property>
+            <child type="title">
+              <object class="AdwWindowTitle" id="settings_headerbar_title">
+                <property name="title" translatable="yes">Settings</property>
+              </object>
+            </child>
             <child>
               <object class="GtkButton" id="close_settings_button">
                 <property name="label" translatable="yes">Close</property>
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="receives-default">True</property>
+                <property name="focusable">True</property>
               </object>
               <packing>
                 <property name="pack-type">end</property>
@@ -904,15 +839,15 @@
         <child>
           <object class="GtkScrolledWindow">
             <property name="visible">True</property>
-            <property name="can-focus">True</property>
+            <property name="focusable">True</property>
             <child>
               <object class="GtkViewport">
                 <property name="visible">True</property>
-                <property name="can-focus">False</property>
+                <property name="focusable">False</property>
                 <child>
                   <object class="GtkBox">
                     <property name="visible">True</property>
-                    <property name="can-focus">False</property>
+                    <property name="focusable">False</property>
                     <property name="margin-start">12</property>
                     <property name="margin-end">12</property>
                     <property name="margin-top">12</property>
@@ -921,18 +856,18 @@
                     <child>
                       <object class="GtkBox">
                         <property name="visible">True</property>
-                        <property name="can-focus">False</property>
+                        <property name="focusable">False</property>
                         <property name="orientation">vertical</property>
                         <child>
                           <object class="GtkBox">
                             <property name="visible">True</property>
-                            <property name="can-focus">False</property>
+                            <property name="focusable">False</property>
                             <property name="margin-start">12</property>
                             <property name="margin-end">12</property>
                             <child>
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="label" translatable="yes">&lt;b&gt; Alphabets &lt;/b&gt;</property>
                                 <property name="use-markup">True</property>
                               </object>
@@ -946,9 +881,7 @@
                               <object class="GtkCheckButton" id="any_alphabet_button">
                                 <property name="label" translatable="yes">Any</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -968,7 +901,7 @@
                           <!-- n-columns=4 n-rows=7 -->
                           <object class="GtkGrid">
                             <property name="visible">True</property>
-                            <property name="can-focus">False</property>
+                            <property name="focusable">False</property>
                             <property name="margin-start">12</property>
                             <property name="margin-end">12</property>
                             <property name="margin-top">8</property>
@@ -981,10 +914,8 @@
                               <object class="GtkCheckButton" id="arabic_button">
                                 <property name="label" translatable="yes">Arabic</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
+                                <property name="focusable">True</property>
                                 <property name="hexpand">True</property>
-                                <property name="draw-indicator">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">0</property>
@@ -995,9 +926,7 @@
                               <object class="GtkCheckButton" id="bengali_button">
                                 <property name="label" translatable="yes">Bengali</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">0</property>
@@ -1009,9 +938,7 @@
                                 <property name="label" translatable="yes">Chinese 
 Hong Kong</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">0</property>
@@ -1023,9 +950,7 @@ Hong Kong</property>
                                 <property name="label" translatable="yes">Chinese
 Simplified</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">0</property>
@@ -1037,9 +962,7 @@ Simplified</property>
                                 <property name="label" translatable="yes">Chinese
 Traditional</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">0</property>
@@ -1050,9 +973,7 @@ Traditional</property>
                               <object class="GtkCheckButton" id="cyrillic_button">
                                 <property name="label" translatable="yes">Cyrillic</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">0</property>
@@ -1064,9 +985,7 @@ Traditional</property>
                                 <property name="label" translatable="yes">Cyrillic
 Extended</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">0</property>
@@ -1077,10 +996,8 @@ Extended</property>
                               <object class="GtkCheckButton" id="kannada_button">
                                 <property name="label" translatable="yes">Kannada</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
+                                <property name="focusable">True</property>
                                 <property name="hexpand">True</property>
-                                <property name="draw-indicator">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">2</property>
@@ -1091,9 +1008,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="khmer_button">
                                 <property name="label" translatable="yes">Khmer</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">2</property>
@@ -1104,9 +1019,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="korean_button">
                                 <property name="label" translatable="yes">Korean</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">2</property>
@@ -1117,9 +1030,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="latin_button">
                                 <property name="label" translatable="yes">Latin</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">2</property>
@@ -1131,9 +1042,7 @@ Extended</property>
                                 <property name="label" translatable="yes">Latin
 Extended</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">2</property>
@@ -1144,9 +1053,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="malayalam_button">
                                 <property name="label" translatable="yes">Malayalam</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">2</property>
@@ -1157,9 +1064,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="myanmar_button">
                                 <property name="label" translatable="yes">Myanmar</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">2</property>
@@ -1170,10 +1075,8 @@ Extended</property>
                               <object class="GtkCheckButton" id="oriya_button">
                                 <property name="label" translatable="yes">Oriya</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
+                                <property name="focusable">True</property>
                                 <property name="hexpand">True</property>
-                                <property name="draw-indicator">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">3</property>
@@ -1184,9 +1087,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="sinhala_button">
                                 <property name="label" translatable="yes">Sinhala</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">3</property>
@@ -1197,9 +1098,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="tamil_button">
                                 <property name="label" translatable="yes">Tamil</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">3</property>
@@ -1210,9 +1109,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="telugu_button">
                                 <property name="label" translatable="yes">Telugu</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">3</property>
@@ -1223,9 +1120,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="thai_button">
                                 <property name="label" translatable="yes">Thai</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">3</property>
@@ -1236,9 +1131,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="tibetan_button">
                                 <property name="label" translatable="yes">Tibetan</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">3</property>
@@ -1249,9 +1142,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="vietnamese_button">
                                 <property name="label" translatable="yes">Vietnamese</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">3</property>
@@ -1262,10 +1153,8 @@ Extended</property>
                               <object class="GtkCheckButton" id="devanagari_button">
                                 <property name="label" translatable="yes">Devanagari</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
+                                <property name="focusable">True</property>
                                 <property name="hexpand">True</property>
-                                <property name="draw-indicator">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">1</property>
@@ -1276,9 +1165,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="greek_button">
                                 <property name="label" translatable="yes">Greek</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">1</property>
@@ -1290,9 +1177,7 @@ Extended</property>
                                 <property name="label" translatable="yes">Greek
 Extended</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">1</property>
@@ -1303,9 +1188,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="gujarati_button">
                                 <property name="label" translatable="yes">Gujarati</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">1</property>
@@ -1316,9 +1199,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="gurmukhi_button">
                                 <property name="label" translatable="yes">Gurmukhi</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">1</property>
@@ -1329,9 +1210,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="hebrew_button">
                                 <property name="label" translatable="yes">Hebrew</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">1</property>
@@ -1342,9 +1221,7 @@ Extended</property>
                               <object class="GtkCheckButton" id="japanese_button">
                                 <property name="label" translatable="yes">Japanese</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
+                                <property name="focusable">True</property>
                               </object>
                               <packing>
                                 <property name="left-attach">1</property>
@@ -1368,16 +1245,16 @@ Extended</property>
                     <child>
                       <object class="GtkBox">
                         <property name="visible">True</property>
-                        <property name="can-focus">False</property>
+                        <property name="focusable">False</property>
                         <property name="orientation">vertical</property>
                         <child>
                           <object class="GtkBox">
                             <property name="visible">True</property>
-                            <property name="can-focus">False</property>
+                            <property name="focusable">False</property>
                             <child>
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="label" translatable="yes">&lt;b&gt; Settings &lt;/b&gt;</property>
                                 <property name="use-markup">True</property>
                               </object>
@@ -1400,7 +1277,7 @@ Extended</property>
                         <child>
                           <object class="GtkBox">
                             <property name="visible">True</property>
-                            <property name="can-focus">False</property>
+                            <property name="focusable">False</property>
                             <property name="margin-start">12</property>
                             <property name="margin-end">12</property>
                             <property name="margin-top">8</property>
@@ -1410,16 +1287,16 @@ Extended</property>
                             <child>
                               <object class="GtkBox">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <child>
                                   <object class="GtkBox">
                                     <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
+                                    <property name="focusable">False</property>
                                     <property name="orientation">vertical</property>
                                     <child>
                                       <object class="GtkLabel">
                                         <property name="visible">True</property>
-                                        <property name="can-focus">False</property>
+                                        <property name="focusable">False</property>
                                         <property name="label" translatable="yes">Colorful mode</property>
                                       </object>
                                       <packing>
@@ -1431,7 +1308,7 @@ Extended</property>
                                     <child>
                                       <object class="GtkLabel">
                                         <property name="visible">True</property>
-                                        <property name="can-focus">False</property>
+                                        <property name="focusable">False</property>
                                         <property name="halign">start</property>
                                         <property name="label" translatable="yes">Requires restart</property>
                                         <attributes>
@@ -1454,7 +1331,7 @@ Extended</property>
                                 <child>
                                   <object class="GtkSwitch" id="colorful_switch">
                                     <property name="visible">True</property>
-                                    <property name="can-focus">True</property>
+                                    <property name="focusable">True</property>
                                     <property name="halign">center</property>
                                     <property name="valign">center</property>
                                   </object>
@@ -1475,11 +1352,11 @@ Extended</property>
                             <child>
                               <object class="GtkBox">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
+                                    <property name="focusable">False</property>
                                     <property name="label" translatable="yes">Developer Window</property>
                                   </object>
                                   <packing>
@@ -1491,7 +1368,7 @@ Extended</property>
                                 <child>
                                   <object class="GtkSwitch" id="developer_switch">
                                     <property name="visible">True</property>
-                                    <property name="can-focus">True</property>
+                                    <property name="focusable">True</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -1510,11 +1387,11 @@ Extended</property>
                             <child>
                               <object class="GtkBox">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
+                                    <property name="focusable">False</property>
                                     <property name="label" translatable="yes">Default font installation folder:</property>
                                   </object>
                                   <packing>
@@ -1527,11 +1404,7 @@ Extended</property>
                                   <object class="GtkButton" id="folder_settings_button">
                                     <property name="label" translatable="yes">Choose directory</property>
                                     <property name="visible">True</property>
-                                    <property name="can-focus">True</property>
-                                    <property name="receives-default">True</property>
-                                    <property name="image">image6</property>
-                                    <property name="image-position">right</property>
-                                    <property name="always-show-image">True</property>
+                                    <property name="focusable">True</property>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -1550,12 +1423,12 @@ Extended</property>
                             <child>
                               <object class="GtkBox">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="focusable">False</property>
                                 <property name="spacing">8</property>
                                 <child>
                                   <object class="GtkImage">
                                     <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
+                                    <property name="focusable">False</property>
                                     <property name="icon-name">dialog-warning-symbolic</property>
                                   </object>
                                   <packing>
@@ -1567,7 +1440,7 @@ Extended</property>
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
+                                    <property name="focusable">False</property>
                                     <property name="label" translatable="yes">Warning: If you can't find the folder you are wishing to install fonts to, it might be because this application doesn't have access to it, to correct this, install Flatseal and give this application access to the folder.</property>
                                     <property name="justify">fill</property>
                                     <property name="wrap">True</property>
@@ -1592,8 +1465,7 @@ Extended</property>
                               <object class="GtkButton" id="reset_button">
                                 <property name="label" translatable="yes">Reset all settings</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
+                                <property name="focusable">True</property>
                                 <property name="halign">end</property>
                                 <style>
                                   <class name="destructive-action"/>
@@ -1644,11 +1516,5 @@ Extended</property>
       <widget name="headerbar1"/>
       <widget name="box1"/>
     </widgets>
-  </object>
-  <object class="HdyHeaderGroup" id="header_group">
-    <headerbars>
-      <headerbar name="headerbar1"/>
-      <headerbar name="headerbar2"/>
-    </headerbars>
   </object>
 </interface>

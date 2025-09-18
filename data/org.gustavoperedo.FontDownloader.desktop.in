@@ -10,3 +10,4 @@ Type=Application
 Categories=Utility;
 StartupNotify=true
 X-Purism-FormFactor=Workstation;Mobile;
+X-GNOME-UsesLibs=gtk;libadwaita-1;

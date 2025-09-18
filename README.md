@@ -19,12 +19,12 @@ One day I was bored of my terminal font and wanted to switch, unfortunately goin
 
 ## How to compile
 
-If you use GNOME Builder, simply cloning the project is enough, otherwise you need to install libhandy as a dependency.
+If you use GNOME Builder, simply cloning the project is enough, otherwise you need to install GTK 4 and libadwaita as dependencies.
 
 Dependencies in Fedora:
 ```
 sudo dnf install cmake meson ninja 
-sudo dnf install libhandy1-dev
+sudo dnf install gtk4 libadwaita
 ```
 
 

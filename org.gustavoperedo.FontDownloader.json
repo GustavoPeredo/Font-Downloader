@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gustavoperedo.FontDownloader",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44",
+    "runtime-version" : "46",
     "sdk" : "org.gnome.Sdk",
     "command" : "fontdownloader",
     "finish-args" : [
@@ -26,26 +26,6 @@
         "*.a"
     ],
     "modules" : [
-        {
-            "name" : "libhandy",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dprofiling=false",
-                "-Dintrospection=enabled",
-                "-Dgtk_doc=false",
-                "-Dtests=false",
-                "-Dexamples=false",
-                "-Dvapi=false",
-                "-Dglade_catalog=disabled"
-            ],
-            "sources" : [
-                {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/libhandy/1.8/libhandy-1.8.2.tar.xz",
-                    "sha256" : "d11aa2cd3e570ac6d0efdba46d173147c11f45826457e924c05990bb2e0df9ad"
-                }
-            ]
-        },
         {
             "name" : "fontdownloader",
             "builddir" : true,

@@ -15,25 +15,28 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import sys, os
+import sys
+
 import gi
 
-gi.require_version('Gtk', '3.0')
-gi.require_version('Handy', '1')
-gi.require_version('WebKit2', '4.1')
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
+gi.require_version('WebKit2', '6.0')
 gi.require_version('Pango', '1.0')
 
-from gi.repository import Gtk, Gio, Handy
-if True: #os.environ['XDG_SESSION_TYPE'].lower() == "wayland"
-    from .window import FontdownloaderWindow
-else:
-    from .windowX11 import FontdownloaderWindow
+from gi.repository import Adw, Gio
+
+Adw.init()
+
+from .window import FontdownloaderWindow
 
 
-class Application(Gtk.Application):
+class Application(Adw.Application):
     def __init__(self):
-        super().__init__(application_id='org.gustavoperedo.FontDownloader',
-                         flags=Gio.ApplicationFlags.FLAGS_NONE)
+        super().__init__(
+            application_id='org.gustavoperedo.FontDownloader',
+            flags=Gio.ApplicationFlags.FLAGS_NONE,
+        )
 
     def do_activate(self):
         win = self.props.active_window
