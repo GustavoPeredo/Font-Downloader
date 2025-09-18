@@ -10,7 +10,7 @@ prefix = get_option('prefix')
 
 localedir = join_paths(prefix, get_option('localedir'))
 
-dependency('libhandy-1', version: '>= 0.90.0')
+dependency('libadwaita-1', version: '>= 1.0.0')
 
 subdir('data')
 subdir('src')

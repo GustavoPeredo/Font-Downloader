@@ -11,7 +11,7 @@ gnome.compile_resources('fontdownloader',
 
 python = import('python')
 
-dependency('libhandy-1', version: '>= 0.90.0')
+dependency('libadwaita-1', version: '>= 1.0.0')
 
 conf = configuration_data()
 conf.set('PYTHON', python.find_installation('python3').path())
@@ -31,7 +31,6 @@ fontdownloader_sources = [
   '__init__.py',
   'main.py',
   'window.py',
-  'windowX11.py',
   'webfonts.json',
   'fsync.py',
 ]

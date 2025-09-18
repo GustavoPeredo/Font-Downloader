@@ -16,18 +16,16 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #Import necessary libraries and modules
 #from gettext import gettext as _
-from gi.repository import Gdk, Gio, Gtk, GLib, Handy, GObject, WebKit2, Pango
+from gi.repository import Adw, Gdk, Gio, Gtk, GLib, WebKit2, Pango
 from os import path, makedirs, listdir, environ
 import locale
 import json
 import threading
 from copy import deepcopy
 from .fsync import async_function
-from time import sleep
 from urllib.request import urlretrieve, urlopen
 
-#Init Webkit and Handy libs
-Handy.init()
+# Init WebKit
 WebKit2.WebView()
 
 locale.bindtextdomain('fontdownloader', path.join(path.dirname(__file__).split('fontdownloader')[0],'locale'))
@@ -62,7 +60,7 @@ class FontBox(Gtk.Box):
 
 #Here we import the main window template
 @Gtk.Template(resource_path='/org/gustavoperedo/FontDownloader/window.ui')
-class FontdownloaderWindow(Handy.Window):
+class FontdownloaderWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'FontdownloaderWindow'
     #Get settings schema
     settings = Gio.Settings.new('org.gustavoperedo.FontDownloader')
@@ -89,6 +87,7 @@ class FontdownloaderWindow(Handy.Window):
     about_button = Gtk.Template.Child()
     headerbar1 = Gtk.Template.Child()
     headerbar2 = Gtk.Template.Child()
+    headerbar2_title = Gtk.Template.Child()
     light_mode_button = Gtk.Template.Child()
     dark_mode_button = Gtk.Template.Child()
     colorful_switch = Gtk.Template.Child()
@@ -126,7 +125,6 @@ class FontdownloaderWindow(Handy.Window):
     vietnamese_button = Gtk.Template.Child()
     any_alphabet_button = Gtk.Template.Child()
     reset_button = Gtk.Template.Child()
-    header_group = Gtk.Template.Child()
     header_leaflet = Gtk.Template.Child()
     scroll_window = Gtk.Template.Child()
     preview_stack = Gtk.Template.Child()
@@ -172,6 +170,8 @@ class FontdownloaderWindow(Handy.Window):
         self.handwriting_check.connect('toggled', self.updateFilter)
         self.mono_check.connect('toggled', self.updateFilter)
         self.search_entry.connect('changed', self.updateFilter)
+        self.search_bar.connect_entry(self.search_entry)
+        self.search_bar.set_key_capture_widget(self)
         self.about_button.connect("clicked", self.on_about)
         self.light_mode_button.connect('clicked', self.changeTheme)
         self.dark_mode_button.connect('clicked', self.changeTheme)
@@ -182,10 +182,9 @@ class FontdownloaderWindow(Handy.Window):
         self.folder_settings_button.connect('clicked', self.on_open)
         self.any_alphabet_button.connect('clicked', self.anyAlphabet)
         self.reset_button.connect('clicked', self.reset)
-        self.header_group.connect('update-decoration-layouts', self.updateSize)
+        self.header_leaflet.connect('notify::folded', self.updateSize)
+        self.updateSize()
         self.scroll_window.connect('edge-reached', self.increaseSearch)
-        self.connect("key-press-event", self.toggleSearchKeyboard)
-        self.connect_after("key-press-event", self.toggleSearchKeyboardAfter)
         self.font_preview.connect("load-changed", self.webviewLoading)
         self.dismiss_notification.connect('clicked', self.removeNotification)
 
@@ -230,7 +229,6 @@ class FontdownloaderWindow(Handy.Window):
 
         #Select the first row and show all rows
         #self.fonts_list.select_row(self.fonts_list.get_row_at_index(0))
-        self.fonts_list.show()
         self.folder_settings_button.set_label(_('Default') if self.settings.get_string('default-directory')=='Default' else self.settings.get_string('default-directory'))
 
         for buttons in self.alphabet_buttons:
@@ -260,16 +258,20 @@ class FontdownloaderWindow(Handy.Window):
                        "Kblaesi", "Mauricemeysel", "Yaron",
                        "Albano_battistella", "TA", "Eshagh", "mostafadashti",
                        "drLaba", "Hugo", "nickavem"]
-        dialog = Gtk.AboutDialog(transient_for=self, modal=True)
-        dialog.props.authors = authors
-        dialog.add_credit_section(_("Contributors"), contributors)
-        dialog.add_credit_section(_("Translators"), translators)
-        dialog.props.copyright = 'Copyright \xa9 2021 Gustavo Peredo'
-        dialog.props.license_type = Gtk.License.GPL_3_0
-        dialog.props.logo_icon_name = 'org.gustavoperedo.FontDownloader'
-        dialog.props.program_name = _('Font Downloader')
+        about = Adw.AboutWindow(transient_for=self, modal=True)
+        about.set_application_name(_('Font Downloader'))
+        about.set_application_icon('org.gustavoperedo.FontDownloader')
+        about.set_license_type(Gtk.License.GPL_3_0)
+        about.set_copyright('Copyright \xa9 2021 Gustavo Peredo')
+        if hasattr(about, 'set_designers'):
+            about.set_developers(authors)
+            about.set_designers(contributors)
+        else:
+            about.set_developers(authors + contributors)
+        if hasattr(about, 'set_translator_credits'):
+            about.set_translator_credits('\n'.join(translators))
 
-        dialog.present()
+        about.present()
 
 
     def setup_css(self, *args, **kwargs):
@@ -283,10 +285,10 @@ class FontdownloaderWindow(Handy.Window):
 
         provider.load_from_file(provider_file)
 
-        Gtk.StyleContext.add_provider_for_screen(
-            Gdk.Screen.get_default(),
+        Gtk.StyleContext.add_provider_for_display(
+            Gdk.Display.get_default(),
             provider,
-            Gtk.STYLE_PROVIDER_PRIORITY_USER
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
         )
 
     def updateListOfInstalledFonts(self, *args, **kwargs):
@@ -425,7 +427,7 @@ class FontdownloaderWindow(Handy.Window):
     def installFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
         #to the '.local/share/fonts' directory
-        if environ['XDG_SESSION_TYPE'].lower() == "wayland":
+        if environ.get('XDG_SESSION_TYPE', '').lower() == "wayland":
             data = self.fonts_list.get_selected_row().get_child().data
             thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, self.defaultPath, data['files'], False, data))
             thread.daemon = True
@@ -439,24 +441,29 @@ class FontdownloaderWindow(Handy.Window):
     def downloadFont(self, *args, **kwargs):
         #This function gets the selected font's link and downloads
         #to the user's download directory
-        dialog = Gtk.FileChooserDialog("Please choose a folder", self,
-                Gtk.FileChooserAction.SELECT_FOLDER,
-                (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
-                 Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
         links = self.fonts_list.get_selected_row().get_child().data['files']
+        dialog = Gtk.FileDialog(title=_("Please choose a folder"))
 
-        response = dialog.run()
+        def on_folder_selected(file_dialog, result):
+            try:
+                folder = file_dialog.select_folder_finish(result)
+            except GLib.Error as error:
+                if error.matches(Gio.io_error_quark(), Gio.IOErrorEnum.CANCELLED):
+                    return
+                print(error)
+                return
 
-        if response == Gtk.ResponseType.OK:
-            absolutePath = dialog.get_filename()
-            if not path.exists(absolutePath):
-                makedirs(absolutePath)
-            dialog.destroy()
-            thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, absolutePath, links, True))
+            absolute_path = folder.get_path()
+            if not absolute_path:
+                return
+            if not path.exists(absolute_path):
+                makedirs(absolute_path)
+
+            thread = threading.Thread(target=GLib.idle_add, args=(self.updateProgressBar, absolute_path, links, True))
             thread.daemon = True
             thread.start()
-        elif response == Gtk.ResponseType.CANCEL:
-            dialog.destroy()
+
+        dialog.select_folder(self, None, on_folder_selected)
 
     def removeNotification(self, *args, **kwargs):
         self.revealer.set_reveal_child(False)
@@ -489,8 +496,10 @@ class FontdownloaderWindow(Handy.Window):
         searchBarText = self.search_entry.get_text().lower()
 
         #Remove all rows
-        for i in range(len(self.fonts_list)):
-            self.fonts_list.remove(self.fonts_list.get_row_at_index(0))
+        row = self.fonts_list.get_row_at_index(0)
+        while row:
+            self.fonts_list.remove(row)
+            row = self.fonts_list.get_row_at_index(0)
 
         #Add them if seen necessary (this is faster than filtering them :P)
         for i in range(len(webfontsData['items'])):
@@ -503,13 +512,13 @@ class FontdownloaderWindow(Handy.Window):
                             for j in self.jsonOfInstalledFonts['items']:
                                 if webfontsData['items'][i]['family'] == j['family']:
                                     if j['version'] == "System":
-                                        self.newBox.system_installed_box.show()
+                                        self.newBox.system_installed_box.set_visible(True)
                                     elif j['version'] != webfontsData['items'][i]['version']:
-                                        self.newBox.update_box.show()
+                                        self.newBox.update_box.set_visible(True)
                                     else:
-                                        self.newBox.installed_box.show()
+                                        self.newBox.installed_box.set_visible(True)
                             self.newBox.set_visible(True)
-                            self.fonts_list.add(self.newBox)
+                            self.fonts_list.append(self.newBox)
                             self.private_counter = self.private_counter + 1
                 elif searchBarText in "installed" or searchBarText in "update":
                     if (all(k in webfontsData['items'][i]['subsets'] for k in self.current_alphabet_list)) or (self.any_alphabet):
@@ -518,13 +527,13 @@ class FontdownloaderWindow(Handy.Window):
                                 if webfontsData['items'][i]['family'] == j['family']:
                                     self.newBox = FontBox(webfontsData['items'][i])
                                     if j['version'] == "System":
-                                        self.newBox.system_installed_box.show()
+                                        self.newBox.system_installed_box.set_visible(True)
                                     elif j['version'] != webfontsData['items'][i]['version']:
-                                        self.newBox.update_box.show()
+                                        self.newBox.update_box.set_visible(True)
                                     else:
-                                        self.newBox.installed_box.show()
-                                    self.newBox.set_visible(True)
-                                    self.fonts_list.add(self.newBox)
+                                        self.newBox.installed_box.set_visible(True)
+                            self.newBox.set_visible(True)
+                            self.fonts_list.append(self.newBox)
                                     self.private_counter = self.private_counter + 1
 
     def increaseSearch(self, *args, **kwargs):
@@ -578,10 +587,10 @@ class FontdownloaderWindow(Handy.Window):
         </html>
         """
         #Load the html, set title and subtitle
-        self.font_preview.load_html(self.html)
-        self.headerbar2.set_title(self.CurrentSelectedFont)
+        self.font_preview.load_html(self.html, None)
+        self.headerbar2_title.set_title(self.CurrentSelectedFont)
         font_category = self.fonts_list.get_selected_row().get_child().data['category']
-        self.headerbar2.set_subtitle(_('sans-serif')
+        self.headerbar2_title.set_subtitle(_('sans-serif')
             if font_category=='sans-serif'
             else (_('serif') if font_category=='serif' else (_('display')
             if font_category=='display' else (_('monospaced')
@@ -601,7 +610,7 @@ class FontdownloaderWindow(Handy.Window):
                 self.text_buffer.set_text(result.replace("\\n", "\n").replace(result[0:2], "\n").replace(result[-1], ""))
                 if not self.text_entry_active:
                     self.preview_stack.set_visible_child(self.preview_box)
-                if not self.text_entry.is_focus():
+                if not self.text_entry.has_focus():
                     self.text_entry_active = False
 
         @async_function(on_done=webview_show)
@@ -622,51 +631,18 @@ class FontdownloaderWindow(Handy.Window):
         self.updateFilter()
         self.search_bar.set_search_mode(not self.search_bar.get_search_mode())
 
-    #Thanks udayantandon for this implementation :)
-    #https://udayantandon.wordpress.com/2015/07/29/a-custom-searchbar-in-gtk-and-python/
-    def toggleSearchKeyboard(self, widget, event, *args):
-        keyname = Gdk.keyval_name(event.keyval)
-        if not self.text_entry_active:
-            if keyname == 'Escape' and self.search_button.get_active():
-                if self.search_entry.is_focus():
-                    self.search_button.set_active(False)
-                else:
-                    self.search_entry.grab_focus()
-                return True
-
-            if event.state & Gdk.ModifierType.CONTROL_MASK:
-                if keyname == 'f':
-                    self.search_button.set_active(True)
-                    return True
-
-        return False
-
-    def toggleSearchKeyboardAfter(self, widget, event, *args):
-        if not self.text_entry_active:
-            if (not self.search_button.get_active() or not self.search_entry.is_focus()):
-                if self.search_entry.im_context_filter_keypress(event):
-                    self.search_button.set_active(True)
-                    self.search_entry.grab_focus()
-
-                    # Text in entry is selected, deselect it
-                    l = self.search_entry.get_text_length()
-                    self.search_entry.select_region(l, l)
-
-                    return True
-
-        return False
-
     #If the user press back_button, return focus to list view
     def bringListForward(self, *args, **kwargs):
         self.leaflet.set_visible_child(self.box1)
         self.header_leaflet.set_visible_child(self.headerbar1)
 
     def changeTheme(self, *args, **kwargs):
+        style_manager = Adw.StyleManager.get_default()
         if self.dark_mode_button.get_active():
-            Gtk.Settings.get_default().set_property('gtk-application-prefer-dark-theme', True)
+            style_manager.set_color_scheme(Adw.ColorScheme.FORCE_DARK)
             self.settings.set_boolean('dark-mode', True)
         else:
-            Gtk.Settings.get_default().set_property('gtk-application-prefer-dark-theme', False)
+            style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
             self.settings.set_boolean('dark-mode', False)
 
     def flipSwitch(self, button, *args, **kwargs):
@@ -681,27 +657,30 @@ class FontdownloaderWindow(Handy.Window):
             self.settings.set_boolean('developer-window', False)
 
     def presentSettings(self, *args, **kwargs):
-        self.SettingsWindow.show()
+        self.SettingsWindow.present()
 
     def closeSettings(self, *args, **kwargs):
-        self.SettingsWindow.hide()
+        self.SettingsWindow.set_visible(False)
 
     def on_open(self, event):
-        dialog = Gtk.FileChooserDialog(_("Please choose a folder"), self,
-            Gtk.FileChooserAction.SELECT_FOLDER,
-            (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
-             Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
+        dialog = Gtk.FileDialog(title=_("Please choose a folder"))
 
-        response = dialog.run()
+        def on_folder_chosen(file_dialog, result):
+            try:
+                folder = file_dialog.select_folder_finish(result)
+            except GLib.Error as error:
+                if error.matches(Gio.io_error_quark(), Gio.IOErrorEnum.CANCELLED):
+                    return
+                print(error)
+                return
 
-        if response == Gtk.ResponseType.OK:
-            file_path = dialog.get_filename()
+            file_path = folder.get_path()
+            if not file_path:
+                return
             self.folder_settings_button.set_label(file_path)
             self.settings.set_string('default-directory', file_path)
-        elif response == Gtk.ResponseType.CANCEL:
-            pass
 
-        dialog.destroy()
+        dialog.select_folder(self, None, on_folder_chosen)
 
     def updateAlphabet(self, *args, **kwargs):
         self.current_alphabet_list = []
